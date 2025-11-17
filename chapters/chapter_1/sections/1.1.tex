@@ -1,0 +1,107 @@
+\section{Concentrado de notas}
+
+\begin{comment}
+Esto no es la estructura definitiva de la tesis. Voy a desarrollar una serie de bloques respondiéndome preguntas que pasaran por revisión. Una vez hechas las revisiones pasaré las notas revisadas en la estructura final
+\end{comment}
+
+\subsection{Antecedentes}
+La presente línea de investigación es continuación de dos avances fundamentales; el primero de ellos, presentado por \cite{alcantara} enfocado al análisis de sistemas de levitación magnética,
+donde se estudia específicamente el dispositivo ECP 730, para el cual se diseña un control de posición.
+Como consecuencia del contacto entre la superficie del imán en forma de disco y la barilla de cristal la cual se desplaza de manera vertical, en dicho dispositivo se presenta el fenómeno de atascamiento-deslizamiento.
+Por tanto, se plantea una estrategia de control basada en control conmutado que permite mejorar el desempeño del lazo de control.\\
+En el segundo trabajo realizado por \cite{perez}, de igual manera, se manifiesta el efecto de atascamiento-deslizamiento;
+sin embargo, en este escenario se estudia un motor de corriente directa(CD) de imanes permanentes, en el que se propone un controlador de doble efector, para controlar la posición del rotor.\\
+Es necesario aclarar que en ambos se validó la implemententación de las simulaciones demostrando su factibilidad para realizar físicamente los controladores. 
+
+\subsection{El por qué de mi tesis}
+El objetivo es desarrollar un esquema de control con doble efecto integral, conocido como PII (proporcional-integrador-integrador). El por qué de esta elección se fundamenta en fuertes razones, las cuales se detallarán a continuación:
+\begin{itemize}
+ \item Fácil diseño de un controlador, adecuado para realizar su implementación en escenarios reales.
+ \item Verificar que en efecto tiene un buen desempeño ante el efecto deslizamiento-atascamiento.
+\end{itemize}
+
+\begin{comment}
+    La afinidad por el control lineal para resolver dinámicas complejas y no lineales.
+\end{comment}
+
+\begin{comment}
+Al encontrarse en la mencionada zona el disco a levitar, podemos afirmar que el sistema está en lazo abierto, es decir, hay ausencia de control sobre el sistema.
+Por lo tanto, aplicar un controlador con doble efecto integral permite salir de esta zona siguiendo una trayectoria parabólica, que se traduce en tomara el control en un menor tiempo de la planta.
+Un solo integrador no permitiría una respuesta por debajo al tiempo que presentan dos integradores.
+
+Llevar a cabo el desarrollo de esta tarea implica realizar un análisis de las técnicas de control que se han utilizado para controlar este tipo de sistemas, luego analizaremos los modelos de fuerza electromagnética utilizados para modelar el sistema, realizaremos varias simulaciones de los distintos modelos y veremos su comportamiento. Consecutivamente diseñaremos el esquema de control con un solo integrador y realizaremos su correspondiente análisis. Finalmente con diseñaremos el controlador con doble efecto integral y su correspondiente análisis.
+\end{comment}
+
+\subsection{Objetivo general}
+Diseñar el sistema de control de posición para un Sistema de Levitación Magnética (SLM) en configuración inestable, considerando el fenómeno de atascamiento-deslizamiento.
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+\item Analizar las ecuaciones que representan las dinámicas del SLM sin considerar el efecto atascamiento-deslizamiento. 
+\item Diseñar un esquema de control, sin considerar el efecto de atascamiento-deslizamiento, al modelo linealizado.
+\item Simular el desempeño del controlador, en el modelo no lineal, sin considerar el efecto de atascamiento-deslizamiento.
+\item Simular el controlador en el modelo no lineal considerando el fenómeno de atascamiento-deslizamiento.
+\end{itemize}
+
+\begin{comment}
+ Tengo que hacer la demostración de la ecuaciones de la fuerza electromagnética que hacen que se reduzca al modelo de fuerza a la que vamos a tener como estudio.
+\end{comment}
+
+
+\subsection{Modelos matemáticos de la fuerza electromagnética}
+Fue llevado a cabo una extensa revisión de la bibliografía existente sobre los diferentes modelos de levitación magnética. Se analizaron diversos estudios y publicaciones científicas que abordaban este tema, encontrándose una gran cantidad de modelos equivalentes entre sí. La diferencia de estos modelos está en su representación de la fuerza electromagnética.
+
+Con el fin de mejorar la coherencia del modelo matemático y facilitar su simulación, se realiza la transformación de las ecuaciones diferenciales a su representación en espacio de estados, estableciendo las siguientes equivalencias:
+
+
+\begin{align*}
+    &x_{1}=x \\ \thinspace
+    &x_{2}=\dot{x} \\ \thinspace
+    &x_{3}=i \\ \thinspace
+    &u=v(t) \\ \thinspace
+\end{align*} 
+
+considerando que $(x_{1}t,x_{2},x_{3},u)$ son la posición, velocidad, corriente y voltaje de control, respectivamente.
+
+\begin{enumerate}
+    \item {
+        \begin{align*}
+        &F_{em}=\frac{L_{r}}{2a}i^2e^{-\frac{x}{a}} \\ \thinspace
+    \end{align*} 
+
+
+    Se observa una disminución en la inductancia terminal $L_{r}$ de la bobina cuando el objeto a levitar se encuentra cerca de $x=0$. La inductancia está influenciada por la posición $x$ de la bobina sobre el objeto  y presenta una decaída que sigue una escala de longitud $a$, la cual varía en función del tamaño del objeto y las dimensiones de la bobina.
+            
+            }
+    
+    \item {
+        \begin{align*}
+        &F_{em}=K_{1}\left(\frac{x_{3}}{x_{1}}\right)^2 \\ \thinspace
+    \end{align*} 
+
+    En esta ecuación, la fuerza electromagnética se comporta de manera lineal decreciente cuando se tienen valores negativos de la ganancia $K_{1}$. Sin embargo, la posición real nunca puede ser cero, ya que la esfera siempre se encontrará en una posición deseada distinta de cero. Desde el punto de vista matemático, la fuerza electromagnética podría ser infinita, lo cual generaría un problema en la simulación numérica. 
+
+            }
+
+    \item {
+        \begin{align*}
+        &F_{em_{u}}=\frac{u}{a(x_{1}+b)^N} \\ \thinspace
+    \end{align*} 
+    
+    En la expresión anterior \cite{naz}, se muestra una aproximación del modelo matemático dinámico, los parámetros a, b y N son determinadas por métodos numéricos o empíricos, en la región de interés. 
+          
+          }
+
+     \item {
+        \begin{align*}
+        &F_{em_{u}}=\frac{u}{a(x_{1}+b)^4} \\ \thinspace
+    \end{align*} 
+    
+    La expresión anterior \cite{maaz}\cite{730}, es una simplificación de la expresión anterior, que reduce la complejidad computacional y que muestra una correcta aproximación a la curva obtenida experimentalmente. 
+    
+          }
+
+\end{enumerate}
+
+
+

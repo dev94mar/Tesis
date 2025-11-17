@@ -1,0 +1,32 @@
+\chapter{Planteamiento del Problema y Justificación}
+\section{Planteamiento del problema}
+Dado el modelo físico del dispositivo de levitación magnética (\textbf{ECP-730}) en configuración inestable con efecto atascamiento-deslizamiento 
+diseñar un controlador de posición bajo el enfoque de control lineal.
+Se aplicarán técnicas de control clásico para plantear un controlador con doble efecto integral. 
+
+\section{Justificación}
+Controlar sistemas de levitación magnética con componentes mecánicos implica que se conviertan en complejos sistemas de ingeniería en los que la comunidad científica se ha interesado por años.
+La zona muerta, como miembro de la famila de las no linealidades no suaves, impone un reto
+al uso de controladores lineales para configuraciones de sistemas de este estilo. El mencionado fenómeno es capaz de causar inestabilidad en el sistema, 
+deterioro del desempeño en estado estable en lazo cerrado especialmente al alrededor del punto de equilibrio donde los desplazamientos suelen ser muy pequeños
+y por tanto se opera dentro de esta zona, presencia de oscilaciones de alta 
+frecuencia en la variable de control y si se adiciona la dinámica no lineal intrínsica de los electroimanes,
+se llegan a escenarios donde el diseño del controlador se convierte en un reto. Trabajos como \cite{khimani},\cite{mukesh},\cite{neelma}, evitan incluir en su modelado
+la zona muerta ya sea porque prefieren ignorarla o incluirlas como dinámicas no modelas y/o incertidumbres no estructuradas. Las estrategias de control que se han propuesto para resolver 
+esta problemática van desde proponer controladores robustos adaptativos difusos, QFT hasta PID \cite{kuo1},\cite{mukesh},\cite{maaz} que tienen un buen manejo del error en estado estable
+pero aun así la literatura es escasa. En lo que respecta a los modelos que se han propuesto para representar la zona muerta se encuentran los modelos lineales, no lineales, difusos,
+ asimétricos, simétricos, generalizados, inversa, zona muerta inversa, entre otros; desafortunadamente estos modelos y junto con los resultados que se muestran en los experimentos no son 
+ completamente representativos. Esto se debe a que la zona muerta es representada alrededor del voltaje de origen, esto no necesariamente ocurre en este caso de estudio, donde la posición
+ en la que se encuentra levitando depende del voltaje y por tanto donde se centrará la zona muerta. Esto conlleva a plantear la siguiente propuesta dado
+ el sistema de levitación magnética en su configuración inestable (dispositivo \textbf{ECP-730})  aplicara técnicas de control lineal para plantear un controlador con doble efecto integral, que permita solucionar 
+ el problema de regulación y seguimiento en el control de posición en puntos de equilibrio inestable con zona muerta dinámica.
+
+\newpage
+
+\begin{comment}
+Los resultados publicados no plantean el problema de regulación y seguimiento en el control de posición, en puntos de equilibrio inestable con efecto atascamiento-deslizamiento,
+en este proyecto se pretende diseñar un esquema de control que satisfaga condiciones de regulación.
+\end{comment}
+
+
+%\blindtext

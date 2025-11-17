@@ -1,0 +1,14 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[34] biber-darwin:340> INFO - === Mon Nov 17, 2025, 11:18:38
+[42] Biber.pm:419> INFO - Reading 'main.bcf'
+[80] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[88] Biber.pm:4419> INFO - Processing section 0
+[94] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography/referencias.bib' for section 0
+[95] bibtex.pm:1713> INFO - LaTeX decoding ...
+[102] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography/referencias.bib'
+[134] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[134] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[134] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'es-ES'
+[137] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[139] bbl.pm:763> INFO - Output to main.bbl

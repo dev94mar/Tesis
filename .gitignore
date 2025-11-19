@@ -7,3 +7,5 @@
 *.out
 *.fls
 *.fdb_latexmk
+.DS_Store
+main.run.xml

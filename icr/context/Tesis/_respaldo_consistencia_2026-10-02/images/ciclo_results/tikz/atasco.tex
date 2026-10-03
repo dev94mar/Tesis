@@ -1,0 +1,17 @@
+\input{images/ciclo_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[ciclo, height=6.2cm, xmin=0, xmax=0.45, ymin=0, ymax=0.42,
+    xlabel={tiempo desde el inicio del atascamiento [\si{s}]}, ylabel={cambio de voltaje [\si{V}]},
+    legend style={at={(0.98,0.03)}, anchor=south east}, legend cell align=left]
+  \addplot[ver, densely dashed, line width=0.9pt] coordinates {(0,0.3461) (0.45,0.3461)};
+  \addlegendentry{$u_e F_s/(mg)=0{,}346$ V}
+  \addplot[ctl2, line width=0.8pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pi.csv};
+  \addlegendentry{PI (simulación)}
+  \addplot[ctl2!70!black, dashed, line width=1pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pi_teo.csv};
+  \addlegendentry{PI: $K_i e_0 t$}
+  \addplot[tray, line width=0.8pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pii.csv};
+  \addlegendentry{PII (simulación)}
+  \addplot[tray!70!black, dashed, line width=1pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pii_teo.csv};
+  \addlegendentry{PII: $K_i e_0 t + K_{ii} e_0 t^2/2$}
+\end{axis}
+\end{tikzpicture}

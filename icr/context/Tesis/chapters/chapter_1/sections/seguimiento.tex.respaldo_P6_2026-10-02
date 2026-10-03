@@ -1,0 +1,223 @@
+\subsection{Seguimiento}
+
+Con el fin de evaluar el desempeño dinámico del controlador PII más allá del problema de regulación,
+se realizaron experimentos de seguimiento en los que la referencia de posición varía en el tiempo.
+Estas pruebas permiten analizar la interacción entre la acción de doble integración del controlador,
+la no linealidad de zona muerta del actuador y el efecto atascamiento-deslizamiento modelado con
+la fricción de Karnopp, todo ello en el intervalo de operación de $-3$ a $-2$ cm, en el que el actuador, limitado a $u\in[0;\,3{,}5]$~V, puede vencer la fricción estática en ambos sentidos.
+El precedente experimental más cercano es el presentado por Alcántara et al.\ \cite{alcantara},
+quienes demostraron en tiempo real tanto regulación como seguimiento para el mismo dispositivo
+ECP-730 en configuración repulsiva (estable), empleando un esquema de linealización por
+retroalimentación de estados combinado con un lazo externo con acción integral y control conmutado.
+El presente trabajo extiende ese resultado al caso de configuración atractiva (inestable),
+donde los puntos de equilibrio son inherentemente inestables y la tarea de seguimiento resulta
+más exigente al requerir estabilización simultánea.
+
+%=============================================================================
+\subsubsection{Seguimiento de referencia senoidal}
+%=============================================================================
+
+La referencia de posición utilizada en esta prueba tiene la forma
+
+\begin{equation}
+  r(t) = x_0 + A\,\sin(2\pi f\, t),
+  \label{eq:ref_senoidal}
+\end{equation}
+
+con valor nominal $x_0 = -2{,}5$ cm, amplitud $A = 0{,}5$ cm y frecuencia $f = 0{,}001$ Hz
+(periodo $T = 1000$ s).
+La amplitud fue seleccionada de modo que la referencia excursiona simétricamente entre
+$-3$ cm y $-2$ cm, el mismo intervalo de la prueba de regulación. Se simularon dos periodos (2000~s).
+
+\paragraph{Comportamiento esperado en régimen de seguimiento.}
+El controlador PII en lazo cerrado hace que la posición del levitante siga la referencia senoidal
+con un desfase pequeño y una atenuación de amplitud mínima en régimen permanente.
+La acción de doble integración actúa sobre el error acumulado de tal forma que, incluso en
+presencia de la zona muerta no centrada del actuador, el error de seguimiento converge a un
+valor prácticamente nulo en cada ciclo.
+Analíticamente, si el sistema linealizado en lazo cerrado tiene función de transferencia
+$T(s)$, la respuesta en estado estacionario ante una entrada senoidal de frecuencia $\omega_0 = 2\pi f$ es
+
+\[
+  e_{ss}(t) = A\bigl[1 - |T(j\omega_0)|\bigr]\sin(\omega_0 t)
+              - A\,|T(j\omega_0)|\,\angle T(j\omega_0)\cos(\omega_0 t),
+\]
+
+expresión que muestra que la magnitud del error depende de cuán próximo a la unidad sea
+$|T(j\omega_0)|$ en la frecuencia de la referencia.
+
+\paragraph{Transiciones atascamiento-deslizamiento.}
+Cada vez que la velocidad del levitante se anula, el sistema transita del régimen de deslizamiento al de atascamiento. Como se verá en los resultados, estas transiciones no ocurren solo cuando la referencia invierte su sentido ($t = T/4,\,3T/4,\ldots$), sino de forma continua, dando lugar a un ciclo límite.
+El modelo de Karnopp detecta el atascamiento cuando se satisface la condición
+
+\[
+  |v| \leq DV = 0{,}02 \text{ cm/s},
+\]
+
+y la fuerza magnética neta no supera la fricción estática máxima $F_s = 20$~kg\,cm/s$^2$.
+En esa condición, tanto la velocidad como la aceleración se anulan y el error de seguimiento
+crece transitoriamente.
+Una vez que la fuerza de control acumulada supera $F_s$ (\emph{breakaway}), el sistema
+abandona el estado de reposo y retoma el seguimiento de la referencia.
+El mecanismo de doble integración del PII acelera la recuperación del seguimiento tras cada
+evento de ruptura, pues el error acumulado durante el atascamiento genera una señal de control
+más energética que en un controlador PI simple.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/sen_posicion}
+    \caption[Seguimiento senoidal: posición]{Seguimiento de la referencia senoidal. Arriba, posición del levitante (línea continua) y referencia (discontinua) durante dos periodos; la banda sombreada marca la ventana de detalle de abajo (244--256~s, máximo de la referencia), donde se observa el ciclo límite de atascamiento-deslizamiento alrededor de la referencia.}
+    \label{fig:sen_pos}
+\end{figure}
+
+La figura~\ref{fig:sen_pos} muestra que, a la escala de la referencia, la posición sigue a la senoide sin desfase ni atenuación apreciables, en concordancia con $|T(j\omega_0)|\approx 1$. La ventana de detalle revela, sin embargo, que el seguimiento no es continuo: el levitante avanza en saltos y permanece atascado entre ellos, formando un ciclo límite de aproximadamente $0{,}02$~cm pico a pico y periodo cercano a 1~s.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/sen_velocidad}
+    \caption[Seguimiento senoidal: velocidad]{Velocidad del levitante durante el seguimiento senoidal. Los pulsos corresponden a los eventos de deslizamiento y los tramos en cero al régimen de atascamiento (75\,\% del tiempo).}
+    \label{fig:sen_vel}
+\end{figure}
+
+La figura~\ref{fig:sen_vel} muestra que la velocidad no evoluciona de forma suave: alterna pulsos de deslizamiento de hasta $\pm 1$~cm/s con tramos de velocidad nula. En los 2000~s simulados se registraron 4072 rupturas (unas dos por segundo) y el levitante permaneció atascado el 75\,\% del tiempo. El atascamiento, por tanto, no se limita a los instantes en que la referencia invierte su sentido, sino que ocurre de forma continua a lo largo de toda la prueba.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/sen_error}
+    \caption[Seguimiento senoidal: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia senoidal.}
+    \label{fig:sen_error}
+\end{figure}
+
+La figura~\ref{fig:sen_error} muestra que el error permanece acotado en una banda de $\pm 0{,}02$~cm (error máximo $0{,}0198$~cm, valor eficaz $0{,}0124$~cm) con media prácticamente nula. La amplitud de la banda varía ligeramente con la posición de la referencia, pero no se observan picos aislados: el error está dominado por el ciclo límite y no por la dinámica lineal de seguimiento.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/sen_control}
+    \caption[Seguimiento senoidal: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento senoidal. Abajo, detalle de 244 a 256~s: diente de sierra producido por la acción integral durante cada atascamiento.}
+    \label{fig:sen_ctrl}
+\end{figure}
+
+La figura~\ref{fig:sen_ctrl} muestra que el voltaje sigue la forma de la referencia entre $1{,}33$ y $2{,}78$~V, siempre dentro del rango admisible $u \in [0;\,3{,}5]$~V y sin saturar. El detalle revela un perfil en diente de sierra: durante cada atascamiento la acción integral del PII hace crecer el voltaje hasta vencer la fricción estática, y tras la ruptura el voltaje cae bruscamente.
+
+\FloatBarrier
+
+%=============================================================================
+\subsubsection{Seguimiento de referencia trapezoidal}
+%=============================================================================
+
+La referencia trapezoidal consiste en segmentos planos alternados en $x_1 = -2$ cm y
+$x_1 = -3$ cm, conectados por rampas lineales de duración $250$ s cada una.
+La señal describe así un perfil periódico de posición que combina fases de regulación
+(segmentos planos) con fases de transición (rampas), constituyendo un escenario más exigente
+que la referencia senoidal debido a la discontinuidad en la derivada de la referencia en los
+instantes de inicio y fin de cada rampa.
+
+\paragraph{Comportamiento durante la rampa.}
+En la fase de rampa, la referencia varía a velocidad constante
+$\dot{r} = (x_{f}-x_{i})/250 \text{ cm/s}$.
+El error de seguimiento en esta fase no es nulo de forma instantánea,
+pero converge asintóticamente gracias a la acción integral del PII.
+La doble integración permite que el error en régimen de rampa sea menor que con un
+controlador PI, ya que la segunda acción integral elimina el error de posición residual
+que en un PI quedaría como constante.
+
+\paragraph{Comportamiento en los segmentos planos.}
+Una vez que el levitante alcanza el nivel de referencia ($x_1 = -2$ cm o $x_1 = -3$ cm),
+el sistema opera en modo de regulación.
+En esta fase, el error de seguimiento converge a cero gracias a la acción integral del PII,
+incluso en presencia de la zona muerta del actuador, de acuerdo con los resultados del
+análisis de regulación presentado anteriormente.
+
+\paragraph{Efecto de ruptura al inicio de cada rampa.}
+El efecto de ruptura (\emph{breakaway}) se manifiesta al inicio de cada
+rampa, cuando el sistema debe abandonar el estado de atascamiento en el que se encontraba
+durante el segmento plano previo.
+En ese instante, la fuerza magnética acumulada por la acción integral debe superar la
+fricción estática máxima $F_s = 20$~kg\,cm/s$^2$ antes de que el levitante comience a desplazarse.
+En la simulación, este retraso es de aproximadamente un segundo al inicio de la primera rampa y no produce un pico de error mayor que la banda del ciclo límite.
+
+\paragraph{Señal de control durante la transición.}
+En cada atascamiento, la acción integral del controlador modifica el voltaje hasta que la fuerza neta supera la fricción estática; tras la ruptura, el voltaje cae bruscamente, lo que produce un perfil en diente de sierra.
+En todos los casos el voltaje se mantiene dentro del rango saturado $u \in [0;\,3{,}5]$ V,
+lo que confirma que el diseño del PII es compatible con las restricciones físicas del
+actuador.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/trap_posicion}
+    \caption[Seguimiento trapezoidal: posición]{Seguimiento de la referencia trapezoidal. Arriba, posición y referencia durante dos periodos; abajo, detalle de 246 a 266~s, que incluye el inicio de la primera rampa en $t=250$~s.}
+    \label{fig:trap_pos}
+\end{figure}
+
+La figura~\ref{fig:trap_pos} muestra que el levitante sigue las rampas y los segmentos planos sin error apreciable a la escala de la referencia. El detalle del inicio de la primera rampa muestra que el levitante permanece atascado alrededor de un segundo después de que la referencia comienza a moverse, y a partir de ahí sigue la rampa en escalones sucesivos de atascamiento-deslizamiento.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/trap_velocidad}
+    \caption[Seguimiento trapezoidal: velocidad]{Velocidad del levitante durante el seguimiento trapezoidal. El levitante permanece en reposo durante el primer segmento plano; a partir de la primera rampa, los pulsos de deslizamiento se mantienen durante el resto de la prueba.}
+    \label{fig:trap_vel}
+\end{figure}
+
+La figura~\ref{fig:trap_vel} muestra que el levitante permanece en reposo durante el primer segmento plano, en el que parte del equilibrio. A partir de la primera rampa aparecen pulsos de deslizamiento de hasta $\pm 1$~cm/s, que continúan también en los segmentos planos posteriores: una vez iniciado, el ciclo límite no se extingue. En total se registraron 4400 rupturas en 2500~s y el levitante estuvo atascado el 78\,\% del tiempo.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/trap_error}
+    \caption[Seguimiento trapezoidal: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia trapezoidal.}
+    \label{fig:trap_error}
+\end{figure}
+
+La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0{,}022$~cm (valor eficaz $0{,}0114$~cm) y media nula, tanto en las rampas como en los segmentos planos. La segunda acción integral del PII elimina el error constante que la rampa produciría con un controlador de tipo uno; no se observan picos aislados al inicio de las rampas, sino una banda de amplitud casi uniforme debida al ciclo límite.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/trap_control}
+    \caption[Seguimiento trapezoidal: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento trapezoidal. Abajo, detalle de 246 a 266~s.}
+    \label{fig:trap_ctrl}
+\end{figure}
+
+La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal entre $1{,}32$ y $2{,}78$~V, sin saturar. El detalle muestra cómo, al inicio de la rampa, el voltaje desciende de forma suave hasta que la fuerza neta vence la fricción estática, y a partir de ese instante adopta el mismo perfil en diente de sierra observado en la prueba senoidal.
+
+\FloatBarrier
+
+%=============================================================================
+\subsubsection{Análisis comparativo: regulación versus seguimiento}
+%=============================================================================
+
+Los resultados de las pruebas de seguimiento permiten establecer una comparación sistemática
+con el escenario de regulación presentado en la sección anterior.
+En el problema de regulación, la referencia es constante a trozos y el controlador actúa
+únicamente durante los transitorios de cambio de nivel; en las pruebas de seguimiento,
+la referencia varía de forma continua o con rampa, de modo que el controlador debe mantener
+un error de seguimiento pequeño en todo instante.
+
+La doble acción integral del PII proporciona ventajas cuantificables frente a un controlador
+PI simple en ambos escenarios.
+En régimen de rampa, un PI simple produce un error en estado estacionario proporcional
+a la pendiente de la referencia, mientras que el PII elimina dicho error gracias a la
+segunda integración.
+En las fases de atascamiento, el PII acumula más energía en sus estados internos durante el
+periodo de reposo, lo que reduce el tiempo necesario para superar la fricción estática
+(\emph{breakaway time}) y, en consecuencia, disminuye la magnitud del pico de error
+transitorio.
+Esta diferencia es especialmente relevante en el sistema ECP-730, donde la fricción
+viscosa tiene un coeficiente elevado ($c_1 = 8{,}563$~s$^{-1}$ por unidad de masa) y la zona muerta del actuador
+no está centrada, condiciones que dificultan el seguimiento con controladores de menor orden.
+
+En síntesis, los experimentos de regulación y seguimiento demuestran que el controlador PII
+diseñado es capaz de estabilizar el sistema de levitación magnética en configuración inestable
+y de mantener un desempeño de seguimiento aceptable bajo los efectos combinados de la
+zona muerta dinámica del actuador y la fricción de Karnopp, sin necesidad de compensación
+explícita de ninguna de estas dos no linealidades.

@@ -1,0 +1,17 @@
+\input{images/pii_design/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[diseno, width=0.85\textwidth, height=6cm, xmin=0, xmax=0.6, ymin=0, ymax=1.32,
+             xlabel={tiempo [\si{s}]}, ylabel={amplitud},
+             xtick={0,0.1,...,0.6}, x tick label style={/pgf/number format/fixed}]
+  \addplot[refc!55, densely dashed] coordinates {(0,1) (0.6,1)};
+  \addplot[refc!30, densely dotted, forget plot] coordinates {(0,0.98) (0.6,0.98)};
+  \addplot[refc!30, densely dotted, forget plot] coordinates {(0,1.02) (0.6,1.02)};
+  \addplot[tray, line width=1pt] table[x=t, y=y] {images/pii_design/tikz/escalon.csv};
+  \addplot[marg, only marks, mark=*, mark size=1.8pt] coordinates {(\PIItp,\PIIyp)};
+  \node[font=\small, anchor=south west, inner sep=2pt] at (axis cs:\PIItp,\PIIyp)
+    {sobrepaso \SI{\PIIos}{\percent}};
+  \draw[marg, densely dashed] (axis cs:\PIIts,0) -- (axis cs:\PIIts,0.98);
+  \node[font=\small, anchor=south west, fill=white, inner sep=2pt] at (axis cs:\PIIts,0.08)
+    {$t_s=\num{\PIIts}$~\si{s} (\SI{2}{\percent})};
+\end{axis}
+\end{tikzpicture}

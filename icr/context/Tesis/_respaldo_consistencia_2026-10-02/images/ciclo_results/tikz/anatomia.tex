@@ -1,0 +1,22 @@
+\input{images/ciclo_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[ciclo, name=p1, xmin=20, xmax=23, xticklabels={}, ylabel={$x_1$ [\si{cm}]}, ymin=-3.025, ymax=-2.975,
+    y tick label style={/pgf/number format/precision=2}]
+  \addplot[refc, densely dashed] coordinates {(20,-3) (23,-3)};
+  \addplot[tray, line width=1pt] table[x=t, y=x] {images/ciclo_results/tikz/anatomia_pii.csv};
+\end{axis}
+\begin{axis}[ciclo, name=p2, at={(p1.south west)}, anchor=north west, yshift=-0.25cm, xmin=20, xmax=23, xticklabels={},
+    ylabel={$x_2$ [\si{cm/s}]}]
+  \addplot[tray, line width=0.8pt] table[x=t, y=v] {images/ciclo_results/tikz/anatomia_pii.csv};
+\end{axis}
+\begin{axis}[ciclo, at={(p2.south west)}, anchor=north west, yshift=-0.25cm, xmin=20, xmax=23, ymin=1.88, ymax=2.92,
+    xlabel={tiempo [\si{s}]}, ylabel={$u$ [\si{V}]}]
+  \addplot[ver, densely dashed, line width=0.9pt] coordinates {(20,2.0473) (23,2.0473)};
+  \addplot[ver, densely dashed, line width=0.9pt] coordinates {(20,2.7394) (23,2.7394)};
+  \addplot[refc!60, densely dotted] coordinates {(20,2.3934) (23,2.3934)};
+  \addplot[tray, line width=1pt] table[x=t, y=u] {images/ciclo_results/tikz/anatomia_pii.csv};
+  \node[font=\scriptsize, anchor=south east, ver!70!black] at (axis cs:22.98,2.7394) {$u_e(1+F_s/mg)$};
+  \node[font=\scriptsize, anchor=north east, ver!70!black] at (axis cs:22.98,2.0473) {$u_e(1-F_s/mg)$};
+  \node[font=\scriptsize, anchor=south west, refc!80] at (axis cs:20.02,2.3934) {$u_e$};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,55 @@
+% Portada v5 "UAM Dato" (traducción de \portadadato de la plantilla del kit):
+%  - conjunto base con la Unidad Azcapotzalco, reconstrucción vectorial, a 5,4 cm
+%    (mínimo impreso 4,4 cm, numeral 2.5; área de seguridad, numeral 2.6);
+%  - bloque de evento arriba a la derecha, kicker de división, título, subtítulo,
+%    filete hairline, autor a la izquierda y fecha a la derecha;
+%  - dirección de tesis bajo el bloque de autor;
+%  - un solo acento rojo Azcapotzalco #CD032E (numeral 5.3).
+\begin{titlepage}
+	\thispagestyle{empty}
+	\color{uamblue}
+	\noindent
+	\begin{minipage}[t]{0.5\linewidth}
+		\raggedright\vspace{0pt}\includegraphics[width=5.4cm]{\assetPortada}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.45\linewidth}
+		\raggedleft\vspace{6pt}
+		{\escKicker\color{uamred}\MakeUppercase{Idónea comunicación de resultados}}\par\vspace{4pt}
+		{\escKicker\color{uamgray}\MakeUppercase{Unidad Azcapotzalco}}\par
+	\end{minipage}
+
+	\vspace{0.16\textheight}
+
+	\kicker{División de Ciencias Básicas e Ingeniería}
+	{\raggedright\escTitulo\color{uamblue}\institle\par}
+	\vspace{12pt}
+	{\escSubtitulo\color{uamgray}\insprog}\par
+
+	\vfill
+	{\color{hairline}\hrule height 0.5pt}\par\vspace{13pt}
+	\noindent
+	\begin{minipage}[t]{0.62\linewidth}
+		\raggedright
+		{\bfseries\fontsize{10}{13}\selectfont\color{uamblue}\insauthor}\par\vspace{3pt}
+		{\fontsize{8.5}{11}\selectfont\color{uamgray}Tesista \textperiodcentered{} \insprog}\par
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.33\linewidth}
+		\raggedleft{\escMeta\color{uamgray}m.\insversion{} \textperiodcentered{} \Date}\par
+	\end{minipage}
+
+	\vspace{16pt}
+	\noindent
+	\begin{minipage}[t]{0.48\linewidth}
+		\raggedright
+		\kickergris{Director de tesis}
+		{\bfseries\fontsize{10}{13}\selectfont\color{uamblue}\inssupervisor}\par\vspace{3pt}
+		{\fontsize{8.5}{11}\selectfont\color{uamgray}\insadscription}\par
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.48\linewidth}
+		\raggedright
+		\kickergris{Codirector de tesis}
+		{\bfseries\fontsize{10}{13}\selectfont\color{uamblue}\inscosupervisor}\par\vspace{3pt}
+		{\fontsize{8.5}{11}\selectfont\color{uamgray}\inscoadscription}\par
+	\end{minipage}
+
+\end{titlepage}

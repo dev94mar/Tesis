@@ -1,0 +1,13 @@
+{
+  "error_rms_cm": 0.012401884939374143,
+  "error_max_cm": 0.019762990323842544,
+  "error_medio_cm": -1.203889538925335E-6,
+  "frac_atascado": 0.752874,
+  "rupturas": 4072,
+  "rupturas_por_minuto": 122.16,
+  "u_max_V": 2.7828882214739492,
+  "u_min_V": 1.325449810907749,
+  "frac_saturado": 0,
+  "x_min_cm": -3.0156436961869821,
+  "x_max_cm": -1.9885436962388627
+}

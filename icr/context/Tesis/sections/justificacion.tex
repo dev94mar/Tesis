@@ -1,0 +1,22 @@
+\chapter{Planteamiento del problema, hipótesis y justificación}\label{chap:planteamiento}
+\begin{sloppypar}
+
+\section{Planteamiento del problema}
+
+Dado el modelo físico del sistema de levitación magnética ECP-730 en configuración atractiva, inestable en lazo abierto y con efecto atascamiento-deslizamiento, se busca diseñar un controlador de posición con las herramientas del control lineal clásico. Se propone un controlador con doble acción integral (PII), diseñado sobre el modelo linealizado y evaluado sobre el modelo no lineal con fricción estática y zona muerta.
+
+\section{Hipótesis}
+
+La hipótesis de este trabajo tiene dos partes, ambas referidas a un controlador lineal con doble acción integral diseñado sobre el modelo linealizado del sistema de levitación magnética en configuración atractiva. La primera es que el controlador estabiliza la posición del levitante en presencia de la fricción estática y de la zona muerta del actuador, sin necesidad de compensarlas explícitamente. La segunda es que, por la alta ganancia que proporciona a baja frecuencia, el controlador reduce el tiempo de atascamiento y la amplitud de las oscilaciones producidas por el atascamiento-deslizamiento respecto a un controlador con una sola acción integral.
+
+La segunda parte retoma la observación de Pérez-Gómez~\cite{perez} en un motor de CD y la de Hernández Alcántara~\cite{diana_tesis}, según la cual el sistema de control debe proporcionar alta ganancia en estado estacionario para reducir los efectos de la fricción y la zona muerta.
+
+\section{Justificación}
+
+Los sistemas de levitación magnética con componentes mecánicos en contacto son sistemas de ingeniería complejos que han interesado a la comunidad científica durante años. La zona muerta, una de las no linealidades no suaves, es un reto para los controladores lineales: puede causar inestabilidad y deteriora el desempeño en estado estacionario en lazo cerrado, sobre todo alrededor del punto de equilibrio, donde los desplazamientos son pequeños y el sistema opera dentro de ella. Allí provoca oscilaciones de alta frecuencia en la variable de control, y si a esto se añade la dinámica no lineal de los electroimanes, el diseño del esquema de control se vuelve difícil.
+
+Trabajos como~\cite{khimani,mukesh,neelma} no incluyen la zona muerta en su modelado, ya sea porque la ignoran o porque la tratan como dinámica no modelada o como incertidumbre no estructurada. Las estrategias de control propuestas para este problema van desde controladores robustos, adaptativos difusos y basados en la teoría de retroalimentación cuantitativa (QFT, \emph{Quantitative Feedback Theory}) hasta controladores proporcional-integral-derivativos (PID)~\cite{kuo1,mukesh,maaz}, que manejan bien el error en estado estacionario, pero la literatura sigue siendo escasa. En cuanto a la representación de la zona muerta, se han propuesto modelos lineales~\cite{salim}, no lineales~\cite{huanqing}, difusos~\cite{zhi}, asimétricos~\cite{gang}, simétricos~\cite{nizar} y generalizados~\cite{guanyu}, entre otros; sin embargo, estos modelos y los resultados experimentales que los acompañan no representan por completo el comportamiento real.
+
+Un controlador lineal de estructura sencilla, diseñado con técnicas clásicas, es atractivo por su facilidad de análisis e implementación. Evaluar si un controlador de este tipo estabiliza el sistema de levitación en su configuración inestable y qué desempeño alcanza frente a la fricción y a la zona muerta dinámica, que depende de la posición del cuerpo levitante, permite establecer el alcance de las estrategias lineales en este problema y orientar el diseño de estrategias más elaboradas.
+
+\end{sloppypar}

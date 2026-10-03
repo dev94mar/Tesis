@@ -1,0 +1,6 @@
+\input{images/regulation_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[regulacion, ylabel={velocidad [\si{cm/s}]}]
+  \addplot[tray, line width=0.8pt] table[x=t, y=v] {images/regulation_results/tikz/velocidad.csv};
+\end{axis}
+\end{tikzpicture}

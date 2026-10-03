@@ -1,0 +1,227 @@
+\section{Modelo de levitador magnético}
+
+La dinámica del imán en el sistema de levitación magnética ECP~\cite{730}, con la bobina superior activada, obedece la segunda ley de Newton,
+\begin{equation}
+m\ddot{x} = f_{\text{fld}}(u,x) - f_{\text{fr}} - mg .
+\label{eq:mec}
+\end{equation}
+En la ecuación de movimiento~\eqref{eq:mec}, $m$ es la masa del imán, en kilogramos, y $\ddot{x}$ su aceleración, en $\text{cm}/\text{s}^2$. La fuerza electromagnética $f_{\text{fld}}$ que ejerce la bobina depende del voltaje aplicado $u$ y de la posición $x$, y se opone al peso $mg$ del imán. La fuerza de fricción $f_{\text{fr}}$ proviene del contacto del imán con su varilla guía. Todas las fuerzas se expresan en $\text{kg}\cdot\text{cm}/\text{s}^2$, en coherencia con los parámetros de la tabla~\ref{tab:parametros}.
+
+La posición $x$ del imán levitante se mide sobre el eje vertical y crece hacia la bobina superior; con el modelo de fuerza que se adopta más adelante, la distancia entre el imán y esa bobina es $a-x$. Por ello, los valores negativos de $x$ que se emplean en este trabajo corresponden a posiciones más alejadas de la bobina, que requieren un voltaje de equilibrio mayor. La figura~\ref{fig:dispositivo} muestra el esquema del dispositivo y las fuerzas que actúan sobre el imán.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/dispositivo/configuracion}
+    \caption[Esquema del ECP-730 en configuración atractiva]{Esquema del sistema de levitación ECP-730 en configuración atractiva. La bobina superior atrae al imán, que se desliza sobre una varilla guía; el contacto entre ambos produce la fricción $f_{\text{fr}}$. La bobina inferior solo se emplea en la configuración repulsiva.}
+    \label{fig:dispositivo}
+\end{figure}
+
+\section{\texorpdfstring{Formas de $f_{\text{fld}}$}{Formas de fld}}
+
+La literatura documenta varias formas no lineales para la fuerza electromagnética, que dependen de cómo varía la inductancia de la bobina con la posición del objeto levitante. De acuerdo con Al-Muthair et al.~\cite{al}, la fuerza sobre una bola ferromagnética levitada se aproxima por
+\begin{equation}
+f_{\text{fld}} = C\left(\dfrac{i}{x}\right)^2 .
+\label{eq:fld_al}
+\end{equation}
+En la aproximación de Al-Muthair~\eqref{eq:fld_al}, la fuerza crece con el cuadrado de la intensidad de corriente $i$ y decrece con el cuadrado de la posición $x$ de la bola. La constante $C$ de la fuerza magnética reúne las propiedades del electroimán.
+
+Charara et al.~\cite{charara} calculan la fuerza electromagnética dentro de un cojinete magnético como
+\begin{equation}
+f_{\text{fld}} = K\,\frac{\operatorname{sign}(i)\,i^{2}}{e^{2}},
+\qquad
+K = 0{,}25 \cos\!\left(\frac{\pi}{8}\right)\!\mu\, n^{2} S .
+\label{eq:fld_charara}
+\end{equation}
+En el modelo del cojinete~\eqref{eq:fld_charara}, la fuerza conserva el signo de la corriente $i$ y decrece con el cuadrado del entrehierro $e$. La constante $K$ depende del área $S$ de la cara del polo, de la permeabilidad magnética del vacío $\mu$ y del número $n$ de vueltas del embobinado.
+
+El Hajjaji et al.~\cite{el} determinaron experimentalmente que la fuerza electromagnética sobre una esfera metálica tiene la forma
+\begin{equation}
+f_{\text{fld}} = \dfrac{i^{2}}{b_0 + b_1x + b_2x^3 + b_3x^4} .
+\label{eq:fld_hajjaji}
+\end{equation}
+Los coeficientes del ajuste experimental~\eqref{eq:fld_hajjaji} son $b_0=0{,}0304$, $b_1=0{,}7159$, $b_2=-0{,}9165$ y $b_3=1{,}1994$.
+
+Zhao et al.~\cite{zhao} calculan la fuerza del electroimán que hace levitar una bola metálica como
+\begin{equation}
+f_{\text{fld}} = \frac{L_0 x_0 i^2}{2x^2} .
+\label{eq:fld_zhao}
+\end{equation}
+La fuerza del modelo de Zhao~\eqref{eq:fld_zhao} crece con el cuadrado de la corriente $i$ del embobinado y decrece con el cuadrado de la posición $x$ de la bola. Su escala la fija la inductancia $L_0$ del sistema en el punto de equilibrio $x_0$.
+
+Zhang et al.~\cite{feifei} determinan, para un sistema similar, la fuerza electromagnética
+\begin{equation}
+f_{\text{fld}} = \frac{K i^2}{(H - x)^2} .
+\label{eq:fld_zhang}
+\end{equation}
+La fuerza del modelo de Zhang~\eqref{eq:fld_zhang} también crece con el cuadrado de la intensidad de la corriente $i$, y su denominador depende de la posición $x$ del objeto. Las constantes $K$ y $H$ son parámetros del sistema.
+
+Cada uno de estos modelos está condicionado por la configuración del sistema y por la metodología, analítica o experimental, con que se obtuvo. Por ello, en este trabajo se adopta el modelo del levitador ECP-730 que da el fabricante en su hoja de especificaciones~\cite{parks}, validado experimentalmente por Alcántara et al.~\cite{alcantara},
+\begin{equation}
+f_{\text{fld}} = \frac{u}{b(a-x)^4} .
+\label{eq:fld}
+\end{equation}
+La fuerza del fabricante~\eqref{eq:fld} es proporcional al voltaje $u$ aplicado en las terminales del embobinado del electroimán y decrece con la cuarta potencia de la distancia $a-x$ entre el imán, en la posición $x$, y la bobina. Los parámetros $a$ y $b$ son propios del dispositivo y se reúnen en la tabla~\ref{tab:parametros}.
+
+\section{Zona muerta dinámica no centrada en el origen}
+Pérez-Gómez~\cite{perez} sostiene que la zona muerta dura describe con mayor precisión el fenómeno observado en motores eléctricos, en los que esta no linealidad se centra en $u_e(t) = 0$, el único voltaje de equilibrio de los sistemas de control de posición angular.
+
+En los sistemas de levitación magnética, en cambio, cada posición tiene su propio voltaje de equilibrio $u_e$, y la zona muerta se centra en él,
+\begin{equation}
+v(t) = D\big(u(t)\big) =
+\begin{cases}
+m_r \big(u(t) - u_e - b_r\big) - h_r, & u(t) - u_e \ge b_r, \\[6pt]
+0, & b_l < u(t) - u_e < b_r, \\[6pt]
+m_l \big(u(t) - u_e - b_l\big) - h_l, & u(t) - u_e \le b_l.
+\end{cases}
+\label{eq:zm}
+\end{equation}
+La zona muerta~\eqref{eq:zm} transforma el voltaje comandado $u$ en la salida $v$ del actuador. Mientras la desviación $u-u_e$ permanece entre los umbrales $b_l$ y $b_r$, la salida es nula. Fuera de esa banda, la salida crece con las pendientes $m_r$ y $m_l$ y se desplaza por los saltos $h_r$ y $h_l$. Estos seis parámetros son desconocidos, pero sus signos se conocen: $m_r > 0$, $m_l > 0$, $b_r > 0$, $b_l < 0$, $h_r < 0$ y $h_l > 0$.
+
+Como estos parámetros no se conocen para el ECP-730, en las simulaciones se emplea una implementación simplificada con la misma asimetría de signos. Mientras el levitante está en movimiento, el actuador no responde a cambios del voltaje comandado comprendidos entre $-0{,}02$ y $+0{,}025$~V respecto al último voltaje aplicado, que se mantiene; los cambios mayores se transmiten sin modificación. Cuando el levitante está atascado, el voltaje comandado se aplica directamente. La identificación de los parámetros de $D(u)$ se propone como trabajo futuro.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{images/chapter_1/zm_levitador.eps}
+    \caption[Zona muerta centrada en el voltaje de equilibrio]{Zona muerta $v=D(u)$ centrada en el voltaje de equilibrio $u_e$, con pendientes $m_l$, $m_r$, umbrales $b_l$, $b_r$ y saltos $h_l$, $h_r$.}
+    \label{fig:zm}
+\end{figure}
+
+La figura~\ref{fig:zm} muestra la forma de $D(u)$: mientras el voltaje comandado se mantenga dentro de la banda $(u_e+b_l,\,u_e+b_r)$, la salida $v$ del actuador es nula.
+
+\section{Efecto atascamiento-deslizamiento}
+El atascamiento-deslizamiento es característico de los sistemas con fricción en los que el movimiento alterna intervalos de atascamiento, sin movimiento, con deslizamientos repentinos. Los modelos de fricción documentados buscan reproducir este comportamiento~\cite{armstrong,olsson,berman}. En este trabajo se emplea un modelo de fricción compuesto. Con velocidad nula, el sistema está en régimen de fricción estática; cuando la fuerza externa lo pone en movimiento, la fricción disminuye de golpe y el sistema pasa al régimen de fricción dinámica. La alternancia entre ambos regímenes es el efecto atascamiento-deslizamiento. La fuerza de fricción es
+\begin{equation}
+f_{\text{fr}} =
+\begin{cases}
+m\,c_1\,v,
+& v \neq 0, \\[6pt]
+\min\!\left(|F_e|,\,F_s\right)\,\operatorname{sign}(F_e),
+& v = 0 .
+\end{cases}
+\label{eq:friccion}
+\end{equation}
+En el régimen de deslizamiento, la fricción~\eqref{eq:friccion} es viscosa y proporcional a la velocidad relativa $v$ del imán, con el coeficiente $c_1$ de fricción viscosa por unidad de masa. En reposo, la fricción equilibra la fuerza externa $F_e(t)$ que actúa sobre el imán hasta un valor máximo $F_s$, la fricción estática máxima.
+
+Cuando las transiciones entre ambos regímenes se repiten de manera regular, dan lugar a un ciclo límite.
+
+
+
+La figura~\ref{lazo_de_control_con_zm} muestra el lazo de control completo, con la zona muerta entre el controlador y la planta.
+\begin{figure}[ht]
+    \centering
+       \includegraphics[width=0.6\textwidth]{images/chapter_1/lazo_de_control_con_zm.eps}
+    \caption{Lazo de control con zona muerta}
+    \label{lazo_de_control_con_zm}
+\end{figure}
+
+\section{Soluciones numéricas}
+El atascamiento-deslizamiento es difícil de simular en sistemas de control con componentes mecánicos, porque la fuerza de fricción es discontinua en la velocidad cero. Alrededor de ese punto la dificultad es más numérica que física, y existe una amplia variedad de estrategias para modelarla e implementarla, conocidas como modelos dinámicos de fricción~\cite{haessig}.
+
+El método de Karnopp~\cite{karnopp} introduce una banda de velocidad $|v| \le DV$ que se trata como velocidad cero, y con ella decide si el sistema está atascado o deslizando. Por su fácil implementación se emplea en aplicaciones prácticas de diseño de actuadores~\cite{liu,ravanbod,ravanbod1,bicakci,romano}, y por ello se utiliza también en las simulaciones de este trabajo.
+
+\section{Modelo linealizado del sistema de levitación magnética}
+Los parámetros del modelo no lineal ($a$, $b$, $c_1$, $m$, $g$) fueron identificados experimentalmente por Hernández Alcántara~\cite{diana_tesis} para el dispositivo ECP-730 en configuración repulsiva (estable en lazo abierto), mediante ensayos de estado estacionario y respuesta dinámica en lazo abierto. En el presente trabajo se adoptan esos mismos parámetros y se aplican a la configuración atractiva (inestable en lazo abierto), en la que la bobina superior atrae al imán levitante. La estructura funcional del modelo es idéntica en ambas configuraciones; en la atractiva, la fuerza magnética crece al disminuir la brecha entre el imán y la bobina, lo que hace que los puntos de equilibrio sean inestables. El modelo linealizado en espacio de estados para la configuración inestable es
+\begin{equation}
+\begin{aligned}
+\dot{x}
+&=
+\begin{bmatrix}
+0 & 1 \\[6pt]
+\dfrac{4g}{(a-x_1^{\ast})} & -c_1
+\end{bmatrix}x
++
+\begin{bmatrix}
+0 \\[6pt]
+\dfrac{1}{mb\,(a-x_1^{\ast})^4}
+\end{bmatrix}u,
+\\[10pt]
+y &= \begin{bmatrix} 1 & 0 \end{bmatrix} x .
+\end{aligned}
+\label{eq:lineal}
+\end{equation}
+En el modelo linealizado~\eqref{eq:lineal}, el vector de estado $x$ reúne la posición $x_1$ y la velocidad $x_2$ del imán, y la salida $y$ es la posición. La linealización se hace alrededor de la posición de equilibrio $x_1^{\ast}$. El coeficiente $c_1$ de fricción viscosa por unidad de masa aparece en la matriz de estado como un amortiguamiento.
+
+Su ecuación característica es
+\begin{equation}
+\lambda^2 + c_1\lambda - \dfrac{4g}{(a-x_1^{\ast})} = 0 .
+\label{eq:caracteristica}
+\end{equation}
+Como $a - x_1^{\ast} > 0$ para toda posición alcanzable, el término independiente de la ecuación característica~\eqref{eq:caracteristica} es negativo y la ecuación tiene siempre una raíz real positiva: todos los puntos de equilibrio de la configuración atractiva son inestables. En $x_1^{\ast}=-4$~cm las raíces son $\lambda_1 = -23{,}5057$ y $\lambda_2 = 14{,}9427$.
+
+Las matrices de controlabilidad y de observabilidad del modelo linealizado son
+\begin{equation}
+\mathcal{C}
+=
+\begin{bmatrix}
+0 & \beta\\[6pt]
+\beta & -c_1 \beta
+\end{bmatrix} ,
+\qquad
+\mathcal{O}
+=
+\begin{bmatrix}
+1 & 0\\[6pt]
+0 & 1
+\end{bmatrix} .
+\label{eq:ctrb_obsv}
+\end{equation}
+La constante $\beta = 1/[m\,b\,(a-x_1^{\ast})^4]$ es la ganancia con la que el voltaje entra en la aceleración del imán. Las dos matrices~\eqref{eq:ctrb_obsv} tienen rango completo, de modo que el sistema es controlable y observable: con la entrada de la planta se puede llevar el estado a cualquier punto del espacio de estados, y a partir de la salida se puede determinar en qué punto se encuentra.
+Los valores de $c_1$, $b$, $a$, $m$ y $g$ que se emplearon en los cálculos fueron identificados experimentalmente por Hernández Alcántara~\cite{diana_tesis}; se reúnen en la tabla~\ref{tab:parametros} junto con los parámetros del modelo de fricción y el intervalo de la señal de control. Las fuerzas se expresan en $\text{kg}\cdot\text{cm}/\text{s}^2$, unidades en las que el peso del imán es $mg = 138{,}3$. En la tesis de Hernández Alcántara~\cite{diana_tesis}, $c_1$ se reporta en $\text{kg}^{-1}$; dado que multiplica a la velocidad en la ecuación de aceleración, sus unidades consistentes son $\text{s}^{-1}$.
+
+\begin{table}[ht]
+\centering
+\caption{Parámetros del modelo}
+\label{tab:parametros}
+\begin{tabular}{|c|c|l|}
+\hline
+$a$ & $7{,}17184\;[\text{cm}]$ & parámetro de la fuerza electromagnética \\ \hline
+$b$ & $1{,}6163 \times 10^{-6}\;[\text{V}/(\text{N}\cdot\text{cm}^4)]$ & parámetro de la fuerza electromagnética \\ \hline
+$c_1$ & $8{,}563\;[\text{s}^{-1}]$ & fricción viscosa por unidad de masa \\ \hline
+$m$ & $0{,}141\;[\text{kg}]$ & masa del imán levitante \\ \hline
+$g$ & $981\;[\text{cm}/\text{s}^2]$ & aceleración de la gravedad \\ \hline
+$F_s$ & $20\;[\text{kg}\cdot\text{cm}/\text{s}^2]$ ($0{,}2$~N) & fricción estática máxima (Karnopp) \\ \hline
+$DV$ & $0{,}02\;[\text{cm}/\text{s}]$ & banda de velocidad nula (Karnopp) \\ \hline
+$u$ & $[0;\ 3{,}5]\;[\text{V}]$ & intervalo de la señal de control \\ \hline
+$[b_l,\,b_r]$ & $[-0{,}02;\ +0{,}025]\;[\text{V}]$ & banda de la zona muerta simulada \\ \hline
+\end{tabular}
+\end{table}
+
+
+\input{chapters/chapter_1/sections/lazo_abierto}
+
+\subsection{Control con doble acción integral}
+\label{sec:pii}
+El controlador se ajustó sobre el modelo linealizado en $x_1^*=-4$~cm, de forma interactiva en los editores de Bode y del lugar de las raíces del \emph{Control System Designer} de MATLAB. La motivación de la doble acción integral fue proporcionar alta ganancia a baja frecuencia, con la expectativa de acelerar la salida de la zona muerta y reducir el tiempo de atascamiento respecto a un PI; esa expectativa se evalúa en el capítulo~\ref{chap:resultados}. El controlador resultante es
+\begin{equation}
+C(s)=\frac{152{,}43\,(s+4{,}875)(s+1{,}861)(s+17{,}31)}
+{s^{2}(s+301{,}1)} .
+\label{eq:pii}
+\end{equation}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/bode}
+    \caption[Diagrama de Bode]{Diagrama de Bode del lazo abierto $L(s)=C(s)G(s)$ en $x_1^*=-4$~cm. Se indican el margen de ganancia (inferior, por el polo inestable de la planta) y el margen de fase.}
+    \label{bode_fase}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/nyquist}
+    \caption[Diagrama de Nyquist]{Diagrama de Nyquist de $L(s)$. Con un polo de lazo abierto en el semiplano derecho ($P=1$), la estabilidad en lazo cerrado exige un rodeo antihorario al punto $-1$.}
+    \label{nyquist}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/escalon}
+    \caption[Respuesta al escalón]{Respuesta al escalón unitario del lazo cerrado linealizado.}
+    \label{step_response}
+\end{figure}
+
+La estructura del controlador PII~\eqref{eq:pii} tiene tres partes. El doble integrador hace al lazo de tipo dos, lo que anula el error estacionario ante escalones y rampas. Los ceros en $-1{,}861$ y $-4{,}875$~rad/s compensan el atraso de fase de los dos integradores por debajo de la frecuencia de cruce. El par cero-polo en $-17{,}31$ y $-301{,}1$~rad/s actúa como red de adelanto, con su máximo aporte de fase cerca de $72$~rad/s. Con esta estructura, el lazo tiene un margen de fase de $59{,}9^\circ$ en $129{,}3$~rad/s (figura~\ref{bode_fase}). Como la planta tiene un polo inestable, el margen de ganancia es inferior: el lazo sigue siendo estable si la ganancia aumenta, pero se inestabiliza si disminuye por debajo de $0{,}14$ veces su valor nominal ($-17{,}1$~dB en $9{,}63$~rad/s). El diagrama de Nyquist (figura~\ref{nyquist}) rodea una vez el punto $-1$ en sentido antihorario, como exige el criterio con un polo inestable en lazo abierto. En lazo cerrado lineal, la respuesta al escalón (figura~\ref{step_response}) tiene un sobrepaso de $16{,}9$\,\% y un tiempo de establecimiento de $0{,}284$~s.    
+
+\FloatBarrier
+\newpage
+
+\input{chapters/chapter_1/sections/lineal_ad}

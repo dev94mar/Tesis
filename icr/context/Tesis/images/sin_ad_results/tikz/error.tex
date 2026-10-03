@@ -1,0 +1,17 @@
+\input{images/sin_ad_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[sinad, name=principal, xlabel={}, ylabel={error [\si{cm}]},
+             legend style={at={(0.99,0.03)}, anchor=south east}, legend cell align=left]
+  \addplot[conAD] table[x=t, y=e_ad] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{con AD}
+  \addplot[sinAD] table[x=t, y=e] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{sin AD}
+  \fill[ctl2, opacity=0.15] ({axis cs:15,0} |- {rel axis cs:0,0}) rectangle ({axis cs:40,0} |- {rel axis cs:0,1});
+\end{axis}
+\begin{axis}[sinad, detalle, at={(principal.south west)}, anchor=north west, yshift=-0.45cm,
+             xmin=15, xmax=40, ymin=-0.03, ymax=0.03, ylabel={detalle [\si{cm}]}]
+  \addplot[refc!60, thin] coordinates {(15,0) (40,0)};
+  \addplot[conAD] table[x=t, y=e_ad] {images/sin_ad_results/tikz/comparacion.csv};
+  \addplot[sinAD] table[x=t, y=e] {images/sin_ad_results/tikz/comparacion.csv};
+\end{axis}
+\end{tikzpicture}

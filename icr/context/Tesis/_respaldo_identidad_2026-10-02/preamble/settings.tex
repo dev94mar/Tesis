@@ -1,0 +1,105 @@
+
+%% inyecta los paquetet
+\input{packages/packages}
+%% ruta de las imagenes
+\graphicspath{ {images/} }
+
+\makeatletter
+  \renewcommand{\author}[2]{\gdef\insauthor{#2}\gdef\@author{#2}\gdef\insheadauthor{#1}\gdef\@author{#1}}
+  \newcommand{\programme}[1]{\gdef\insprog{#1}\gdef\@programme{#1}}
+  \renewcommand{\title}[2][1]{\gdef\institle{#2}\gdef\@title{#2}\gdef\insheadtitle{#2}\gdef\@title{\tiny#2}\gdef\insversion{\othertwodigits#1}\gdef\@title{#1}}
+  \newcommand{\supervisor}[2]{\gdef\inssupervisor{#1}\gdef\@supervisor{#1}\gdef\insadscription{#2}\gdef\@supervisor{#2}}
+  \newcommand{\cosupervisor}[2]{\gdef\inscosupervisor{#1}\gdef\@cosupervisor{#1}\gdef\inscoadscription{#2}\gdef\@cosupervisor{#2}}
+  \newcommand{\Date}{\leavevmode\hbox{\twodigits\day/\twodigits\month/\the\year}}
+  \def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+  \def\othertwodigits#1{\ifnum#1<10 0\fi#1}
+\makeatother
+
+\makeatletter
+\def\@makechapterhead#1{\thispagestyle{fancy}%
+  \vspace*{20\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+       	\Huge\centerline{\thechapter. #1}
+        \par\nobreak
+        \vskip 10\p@
+      \else
+      	\Huge \centerline{#1}\par\nobreak
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \vskip 10\p@
+    \cfoot{}
+	\rfoot{\thepage}
+    }}
+\makeatother
+
+
+\pagestyle{fancy}
+\setlength{\headsep}{25pt}
+	\rhead{\emph{\insheadauthor}}
+	\lhead{\begin{minipage}[b]{12cm}\emph{\footnotesize\insheadtitle}\end{minipage}}
+%	\rhead{\nouppercase{\textsl{\small\leftmark}}}
+	\renewcommand{\headrulewidth}{1pt}
+	\cfoot{}
+	\lfoot{\emph{m.\insversion.\Date}}
+	\rfoot{\thepage}
+	\renewcommand{\footrulewidth}{1pt}
+
+\makeatletter
+	\patchcmd\chapter
+	{\if@openright\cleardoublepage\else\clearpage\fi}
+	{\par}% Inserting a \par here!
+	{}{}
+\makeatother
+
+\makeatletter
+	\renewcommand{\chaptermark}[1]{\markboth{ \ #1}{}}
+\makeatother 
+
+\makeatletter
+	\renewcommand{\section}
+	{\@startsection{section}{1}{0mm}
+	{-\baselineskip}{0.5\baselineskip}
+	{\Large\bfseries}} % the style
+\makeatother
+
+\makeatletter
+	\renewcommand{\subsection}
+	{\vskip 10\p@\@startsection{subsection}{2}{0mm}
+	{-\baselineskip}{0.5\baselineskip}
+	{\normalfont\bfseries}} % the style
+\makeatother
+
+\makeatletter
+	\def\tableofcontents{\chapter{Contenido}\vskip1cm\@starttoc{toc}}
+	\def\listoffigures{\chapter{Índice de Figuras}\@starttoc{lof}}
+	\def\listoftables{\chapter{Índice de Tablas}\@starttoc{lot}}
+    \def\thebibliography{\chapter{Referencias}} 	
+\makeatother
+
+\renewcommand{\appendixname}{Anexos}
+
+\setlength{\parindent}{0pt}
+\setlength{\headheight}{24pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Dedication environment
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}%
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+      %Glossary
+%\makeglossary

@@ -1,0 +1,45 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema del ECP-730 en configuración atractiva}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Zona muerta centrada en el voltaje de equilibrio}}{19}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Lazo de control con zona muerta}}{19}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Lazo abierto en los puntos de equilibrio}}{21}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Retrato de fase en lazo abierto}}{22}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de Bode}}{24}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama de Nyquist}}{25}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Respuesta al escalón}}{26}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Sin AD: posición}}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Sin AD: velocidad}}{28}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sin AD: error}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Sin AD: señal de control}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Posición (regulación)}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Velocidad (regulación)}}{30}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Error (regulación)}}{31}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Señal de control (regulación)}}{31}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Modelo lineal con atascamiento-deslizamiento}}{32}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Seguimiento senoidal: posición}}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Seguimiento senoidal: velocidad}}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Seguimiento senoidal: error}}{34}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Seguimiento senoidal: señal de control}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Seguimiento trapezoidal: posición}}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Seguimiento trapezoidal: velocidad}}{37}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Seguimiento trapezoidal: error}}{37}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Seguimiento trapezoidal: señal de control}}{38}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Configuración estable}}{39}{figure.caption.35}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Familias PI y PII}}{41}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Anatomía del ciclo límite}}{43}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces PD, PI y PII con atascamiento-deslizamiento}}{44}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Voltaje durante el atascamiento}}{45}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Ciclo límite contra la ganancia}}{46}{figure.caption.41}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 

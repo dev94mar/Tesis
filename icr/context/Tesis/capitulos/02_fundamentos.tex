@@ -34,7 +34,7 @@ En un lazo de retroalimentación unitaria con función de transferencia de lazo 
 K_p=\lim_{s\to0}L(s), \qquad K_v=\lim_{s\to0}s\,L(s), \qquad K_a=\lim_{s\to0}s^2L(s) .
 \label{eq:constantes_error}
 \end{equation}
-Las constantes de posición $K_p$, de velocidad $K_v$ y de aceleración $K_a$ son finitas y distintas de cero solo para un tipo determinado, y se anulan o divergen para los demás. Ante un escalón de amplitud $R$, el error estacionario es $R/(1+K_p)$ y se anula si el tipo es uno o mayor. Ante una rampa de pendiente $\dot r$, el error es $\dot r/K_v$: constante con tipo uno y nulo con tipo dos o mayor.
+Las constantes de posición $K_p$, de velocidad $K_v$ y de aceleración $K_a$ son finitas y distintas de cero solo para un tipo determinado, y se anulan o divergen para los demás. Las expresiones del error que siguen suponen que el lazo cerrado es estable, y las constantes conservan su signo. Ante un escalón de amplitud $R$, el error estacionario es $R/(1+K_p)$ y se anula si el tipo es uno o mayor. Ante una rampa de pendiente $\dot r$, el error es $\dot r/K_v$: constante con tipo uno y nulo con tipo dos o mayor.
 
 Un controlador PI, con un integrador, da tipo uno a una planta sin polos en el origen, y un PII, con dos, le da tipo dos. Esta es la ventaja teórica de la segunda integración, y se refiere al seguimiento de rampas. La sección~\ref{sec:ventaja_rampa} contrasta esa ventaja con lo que ocurre cuando la planta tiene fricción.
 
@@ -47,7 +47,7 @@ Z=N+P .
 \end{equation}
 Con una planta estable, $P=0$ y basta que el diagrama no rodee el punto $-1$. Con un polo inestable, $P=1$, y para que el lazo cerrado sea estable ($Z=0$) el diagrama debe rodear una vez el punto $-1$ en sentido antihorario ($N=-1$). Esta es la situación de los diseños del capítulo~\ref{chap:controlador}.
 
-El margen de fase es la fase adicional que puede introducirse en el lazo, a la frecuencia en que $|L(j\omega)|=1$, antes de perder la estabilidad. El margen de ganancia es el factor por el que puede multiplicarse la ganancia, a la frecuencia $\omega_\pi$ en que la fase cruza $-180^\circ$, antes de perderla. Con plantas estables, el margen de ganancia indica cuánto puede \emph{aumentarse} la ganancia. Con plantas inestables ocurre lo contrario, porque el rodeo antihorario exige que el diagrama cruce el eje real negativo a la izquierda del punto $-1$, es decir, que la ganancia supere un mínimo. El margen relevante es entonces el \emph{inferior},
+El margen de fase es la fase adicional que puede introducirse en el lazo, a la frecuencia en que $|L(j\omega)|=1$, antes de perder la estabilidad. El margen de ganancia es el factor por el que puede multiplicarse la ganancia, a la frecuencia $\omega_\pi$ en que la fase cruza $-180^\circ$, antes de perderla. Con plantas estables, el margen de ganancia indica cuánto puede \emph{aumentarse} la ganancia. Con plantas inestables puede ocurrir lo contrario, porque el rodeo antihorario exige que el diagrama cruce el eje real negativo a la izquierda del punto $-1$, es decir, que la ganancia supere un mínimo. Una planta inestable puede tener también un límite superior de ganancia si el diagrama cruza el eje real negativo más de una vez; en los lazos de esta tesis el límite que importa es el mínimo. El margen relevante es entonces el \emph{inferior},
 \begin{equation}
 \mathrm{MG}_{\inf}=\frac{1}{|L(j\omega_\pi)|} ,
 \label{eq:margen_inferior}

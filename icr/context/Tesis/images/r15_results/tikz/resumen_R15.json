@@ -1,18 +1,23 @@
 {
+ "criterio": "escalon y rampa: diverge == false y frac_saturado == 0 (voltaje aplicado < 3,5 - 1e-4 V)",
+ "estables": 256,
  "validos": {
-  "PI": 54,
+  "PI": 57,
   "PII": 51
  },
- "estables": 256,
  "PI": {
   "ciclo_min": 0.013403177261352539,
-  "atasc_min": 0.21565625,
+  "kK_ciclo_min": 2.507876406233811,
+  "alpha_ciclo_min": 0.757858283255199,
+  "atasc_min": 0.1697948717948718,
   "erampa_min_1e3": 0.22829669316609702,
   "erampa_max_1e3": 4.803641764322917,
   "erms_rampa_min_1e3": 3.128279395775731
  },
  "PII": {
   "ciclo_min": 0.026126861572265625,
+  "kK_ciclo_min": 1.4650780257917604,
+  "alpha_ciclo_min": 0.435275281648062,
   "atasc_min": 0.20347058823529413,
   "erampa_min_1e3": 0.0033600330352783203,
   "erampa_max_1e3": 0.9285958607991537,

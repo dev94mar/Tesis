@@ -7,7 +7,7 @@
 % =========================================================
 clear; close all; clc
 
-REUSAR = true;   % true: si ya existen seguimiento_P5_*.mat, solo vuelve a exportar los CSV
+REUSAR = true;   % true: reutiliza seguimiento_P5_*.mat solo si su firma coincide con la actual
 
 aqui = fileparts(mfilename('fullpath'));
 dest = fullfile(aqui, '..', '..', '..', '..', 'context', 'Tesis', 'images', 'seguimiento_results', 'tikz');
@@ -20,9 +20,16 @@ casos = { ...
     struct('nombre', 'sen',  'Tfin', 2000, 'ref', @ref_senoidal,    'zoom', [244 256]), ...
     struct('nombre', 'trap', 'Tfin', 2500, 'ref', @ref_trapezoidal, 'zoom', [246 266])};
 
+% La caché se versiona con una firma: controlador, duración de cada caso y huellas
+% SHA-256 del simulador de la planta y de este script. Un MAT sin firma o con otra firma
+% se considera obsoleto y se vuelve a simular.
 res = cell(size(casos));
 archivos = cellfun(@(c) fullfile(aqui, ['seguimiento_P5_' c.nombre '.mat']), casos, 'UniformOutput', false);
-if REUSAR && all(cellfun(@isfile, archivos))
+firmas = cellfun(@(c) firma_cache(S.C, c, {fullfile(aqui, 'maglev_karnopp.m'), [mfilename('fullpath') '.m']}), ...
+                 casos, 'UniformOutput', false);
+vigente = @(i) isfile(archivos{i}) && ismember('firma', who('-file', archivos{i})) && ...
+               isequal(getfield(load(archivos{i}, 'firma'), 'firma'), firmas{i});
+if REUSAR && all(arrayfun(vigente, 1:numel(casos)))
     for i = 1:numel(casos), res{i} = load(archivos{i}); end
 else
     if isempty(gcp('nocreate')), parpool('Processes', numel(casos)); end
@@ -33,13 +40,27 @@ end
 
 for i = 1:numel(casos)
     r = res{i}; n = casos{i}.nombre;
-    if ~isfile(archivos{i}), save(archivos{i}, '-struct', 'r'); end
+    if ~isfield(r, 'firma') || ~isequal(r.firma, firmas{i})   % simulación nueva: siempre se guarda
+        r.firma = firmas{i}; save(archivos{i}, '-struct', 'r');
+    end
     exportar(dest, n, r, casos{i}.zoom);
     fid = fopen(fullfile(dest, ['seguimiento_' n '_metricas.json']), 'w');
     fprintf(fid, '%s', jsonencode(r.met, 'PrettyPrint', true)); fclose(fid);
     fprintf('== %s\n', n); disp(r.met)
 end
 fprintf('CSV escritos en %s\n', dest);
+
+% ---------------------------------------------------------
+function f = firma_cache(Cz, caso, fuentes)
+f = struct('Z', Cz.Z{1}(:)', 'P', Cz.P{1}(:)', 'K', Cz.K, 'nombre', caso.nombre, 'Tfin', caso.Tfin, ...
+           'sha256', {cellfun(@sha256_archivo, fuentes, 'UniformOutput', false)});
+end
+
+function h = sha256_archivo(ruta)
+md = java.security.MessageDigest.getInstance('SHA-256');
+fid = fopen(ruta, 'r'); bytes = fread(fid, inf, '*uint8'); fclose(fid);
+h = lower(reshape(dec2hex(typecast(md.digest(bytes), 'uint8'))', 1, []));
+end
 
 % ---------------------------------------------------------
 function r = ref_senoidal(t)

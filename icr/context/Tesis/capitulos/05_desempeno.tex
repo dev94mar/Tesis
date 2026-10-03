@@ -5,7 +5,7 @@ El capítulo~\ref{chap:controlador} diseñó el controlador PII sobre el modelo 
 \section{Intervalo de operación}
 \label{sec:intervalo}
 
-El actuador está acotado a $u\in[0;\,3{,}5]$~V, y la sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} muestra que esa cota deja al imán sostenido pero inmóvil en $-4$~cm, el punto de diseño. Para delimitar en qué posiciones sí puede desplazarse, se simularon 7503 escalones con distintas posiciones iniciales y finales, con el PII y con el PI, en presencia de atascamiento-deslizamiento. La tabla~\ref{tab:intervalo} resume el resultado con el PII.
+El actuador está acotado a $u\in[0;\,3{,}5]$~V, y la sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} muestra que con esa cota el imán puede sostenerse en $-4$~cm, el punto de diseño, pero no subir desde ahí. Para delimitar en qué posiciones sí puede desplazarse de forma regulada, se simularon 7503 escalones con distintas posiciones iniciales y finales, con el PII y con el PI, en presencia de atascamiento-deslizamiento. Una referencia se considera alcanzable si el imán se sostiene en la posición inicial antes del escalón, no diverge, y en los últimos 5~s de la simulación de 40~s el error se mantiene por debajo de $0{,}05$~cm. La tabla~\ref{tab:intervalo} resume el resultado con el PII.
 
 \begin{table}[ht]
 \centering
@@ -14,7 +14,7 @@ El actuador está acotado a $u\in[0;\,3{,}5]$~V, y la sección~\ref{sec:actuador
 \begin{tabular}{|c|c|}
 \hline
 Posición inicial [cm] & Referencias alcanzables [cm] \\ \hline
-$-4{,}0$ & ninguna: el imán se sostiene pero no se mueve \\ \hline
+$-4{,}0$ & ninguna: el imán se sostiene pero no sube \\ \hline
 $-3{,}5$ & de $-3{,}6$ a $-2{,}0$ \\ \hline
 $-3{,}0$ & de $-3{,}5$ a $-1{,}5$ \\ \hline
 $-2{,}0$ & de $-3{,}3$ a $-0{,}5$ \\ \hline
@@ -22,7 +22,7 @@ $-1{,}0$ & de $-2{,}5$ a $+0{,}5$ \\ \hline
 \end{tabular}
 \end{table}
 
-Los cambios de referencia son viables a partir de unos $-3{,}6$~cm. Por ello, las pruebas de este capítulo se realizan en el intervalo de $-3$ a $-2$~cm, con un escalón de $-2$ a $-3$~cm que deja margen respecto a ambos límites. Los márgenes de estabilidad del PII en ese intervalo se presentaron en la sección~\ref{sec:robustez_pii}.
+Desde $-4$~cm, el criterio marca también como alcanzable la referencia de $-3{,}95$~cm, pero solo porque está a menos de $0{,}05$~cm de la posición inicial, sin que el imán se mueva; la tabla no la cuenta. Los cambios de referencia son viables a partir de unos $-3{,}6$~cm. Por ello, las pruebas de este capítulo se realizan en el intervalo de $-3$ a $-2$~cm, con un escalón de $-2$ a $-3$~cm que deja margen respecto a ambos límites. Los márgenes de estabilidad del PII en ese intervalo se presentaron en la sección~\ref{sec:robustez_pii}.
 
 \section{Simulación no lineal sin atascamiento-deslizamiento}
 
@@ -72,7 +72,7 @@ La comparación con el caso con AD muestra que el transitorio es prácticamente 
 
 La prueba de regulación aplica el mismo escalón de $-2$ a $-3$~cm en $t=10$~s al lazo completo: PII, zona muerta y fricción de Karnopp, con la señal de control acotada a $u\in[0;\,3{,}5]$~V. Se simulan 40~s con un periodo de muestreo de 1~ms; el controlador parte del estado estacionario correspondiente a $x_1=-2$~cm, de modo que antes del escalón el imán permanece en reposo.
 
-La figura~\ref{posicion} muestra la respuesta. El imán alcanza un mínimo de $-3{,}237$~cm a los $0{,}15$~s del escalón, lo que equivale a un sobrepaso de $23{,}6$\,\%, y entra en la banda de $\pm0{,}05$~cm alrededor de la referencia a los $0{,}40$~s. A partir de ahí no se detiene sobre la referencia: oscila en un ciclo límite (\emph{hunting}, sección~\ref{sec:fund_friccion}) de $0{,}033$~cm pico a pico, con un error máximo de $0{,}018$~cm y un error medio de $6\times10^{-5}$~cm en los últimos 10~s. La velocidad (figura~\ref{velocidad}) alterna pulsos de deslizamiento con intervalos en cero, y el imán permanece atascado el 74\,\% del tiempo en estado estacionario. El error (figura~\ref{error}) refleja el mismo comportamiento.
+La figura~\ref{posicion} muestra la respuesta. El imán alcanza un mínimo de $-3{,}236$~cm a los $0{,}15$~s del escalón, lo que equivale a un sobrepaso de $23{,}6$\,\%, y entra en la banda de $\pm0{,}05$~cm alrededor de la referencia a los $0{,}40$~s. A partir de ahí no se detiene sobre la referencia: oscila en un ciclo límite (\emph{hunting}, sección~\ref{sec:fund_friccion}) de $0{,}033$~cm pico a pico. En esta tesis, «ciclo límite» designa esa oscilación persistente observada en simulaciones de duración finita; no se demuestra que sea una órbita periódica aislada ni que atraiga a todas las trayectorias. La oscilación tiene un error máximo de $0{,}018$~cm y un error medio de $6\times10^{-5}$~cm en los últimos 10~s. La velocidad (figura~\ref{velocidad}) alterna pulsos de deslizamiento con intervalos en cero, y el imán permanece atascado el 74\,\% del tiempo en estado estacionario. El error (figura~\ref{error}) refleja el mismo comportamiento.
 
 La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en el instante del escalón, el límite inferior del actuador, para dejar que el imán se aleje de la bobina. Alcanza un máximo de $3{,}28$~V durante el transitorio y en estado estacionario oscila en diente de sierra alrededor de su valor medio de $2{,}41$~V, sin llegar al límite superior. El capítulo~\ref{chap:doble_integral} analiza el origen de esta oscilación.
 
@@ -236,7 +236,7 @@ La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0{,}022$~cm (val
     \label{fig:trap_ctrl}
 \end{figure}
 
-La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal entre $1{,}32$ y $2{,}78$~V, sin saturar. El detalle muestra cómo, al inicio de la rampa, el voltaje desciende de forma suave hasta que la fuerza neta vence la fricción estática, y a partir de ese instante adopta el mismo perfil en diente de sierra de la prueba senoidal.
+La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal entre $1{,}32$ y $2{,}78$~V, sin alcanzar ninguna de las dos cotas del actuador. El detalle muestra cómo, al inicio de la rampa, el voltaje desciende de forma suave hasta que la fuerza neta vence la fricción estática, y a partir de ese instante adopta el mismo perfil en diente de sierra de la prueba senoidal.
 
 \FloatBarrier
 

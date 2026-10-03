@@ -6,7 +6,7 @@ Tras la corrección se comprobaron tres propiedades.
 
 \begin{itemize}
   \item El voltaje que anula la fuerza neta en $x_1=-4$~cm es $3{,}4826$~V, igual al voltaje de equilibrio del modelo linealizado.
-  \item El jacobiano de la función de la planta, calculado numéricamente en $x_1=-4$~cm, coincide con la matriz $A$ del modelo linealizado, con valores propios $14{,}9427$ y $-23{,}5057$.
+  \item El jacobiano de la función de la planta en la región de deslizamiento, calculado numéricamente en $x_1=-4$~cm con una velocidad de $0{,}5$~cm/s, fuera de la banda de Karnopp, coincide con la matriz $A$ del modelo linealizado, con valores propios $14{,}9427$ y $-23{,}5057$. El modelo de diseño corresponde a ese campo suave, sin fricción estática. En el equilibrio en reposo, dentro de la banda de Karnopp, el simulador mantiene al imán atascado y su jacobiano numérico local es la matriz nula.
   \item La fricción viscosa tiene signo opuesto a la velocidad: la aceleración que produce es $-8{,}563$~cm/s$^2$ con $v=+1$~cm/s y $+8{,}563$~cm/s$^2$ con $v=-1$~cm/s.
 \end{itemize}
 

@@ -18,15 +18,29 @@ Las figuras se escriben como CSV + TikZ en `../../context/Tesis/images/*/tikz/`.
 
 ## Script → sección de la tesis
 
-| Script | Sección (cap. 8) | Salida | Duración |
+| Script | Capítulo y sección (`capitulos/`) | Salida | Duración |
 |---|---|---|---|
-| `evidencia_P8.m` | 8.6.1 lazo abierto · 8.6.3 lineal con AD · 8.6.7 configuración estable | `images/p8_results/tikz/` | ~30 s |
-| `inestable/PII_inestable/diseno_PII_tikz.m` | 8.6.2 Bode, Nyquist, escalón | `images/pii_design/tikz/` | ~5 s |
-| `inestable/PII_inestable/regulacion_sinAD_P3.m` | 8.6.4 no lineal sin AD (OE3) | `images/sin_ad_results/tikz/` | ~10 s |
-| `inestable/PII_inestable/regulacion_P4.m` | 8.6.5 regulación (OE4) | `images/regulation_results/tikz/` | ~12 s |
-| `inestable/PII_inestable/seguimiento_P5.m` | 8.6.6 seguimiento senoidal y trapezoidal | `images/seguimiento_results/tikz/` | ~4.5 min (`REUSAR = true`: segundos) |
-| `inestable/comparar_PI_PII_P6.m` | 8.6.6 tabla PI vs PII | `inestable/comparar_PI_PII_P6.json` | ~2.5 min |
-| `R15_sintonizacion/familias_R15.m` → `simular_R15.py` (GPU) → `validar_R15.m` | 8.6.6 familias PI y PII | `images/r15_results/tikz/` | ~1 min + 31 s + 1 min |
+| `evidencia_P8.m` | 3, `sec:lazo_abierto` · 5, modelo lineal con AD y `Configuración estable` | `images/p8_results/tikz/` | ~30 s |
+| `inestable/PII_inestable/diseno_PII_tikz.m` | 4, Bode, Nyquist y escalón | `images/pii_design/tikz/` | ~5 s |
+| `verificacion_P1/barrido_3v5.py` (GPU) | 5, `sec:intervalo` | `verificacion_P1/barrido_3v5.json` | ~36 s |
+| `inestable/PII_inestable/regulacion_sinAD_P3.m` | 5, no lineal sin AD (OE3) | `images/sin_ad_results/tikz/` | ~10 s |
+| `inestable/PII_inestable/regulacion_P4.m` | 5, `sec:regulacion` (OE4) | `images/regulation_results/tikz/` | ~12 s |
+| `inestable/PII_inestable/seguimiento_P5.m` | 5, seguimiento senoidal y trapezoidal | `images/seguimiento_results/tikz/` | ~4.5 min (`REUSAR = true` con caché vigente: segundos) |
+| `inestable/comparar_PI_PII_P6.m` | 6, `sec:pi_pii` | `inestable/comparar_PI_PII_P6.json` | ~2.5 min |
+| `R15_sintonizacion/familias_R15.m` → `simular_R15.py` (GPU) → `exportar_R15.py` | 6, `sec:barrido_familias` | `images/r15_results/tikz/` | ~1 min + 31 s + 1 s |
+| `R15_sintonizacion/validar_R15.m` | 6, validación de casos representativos con `ode45` | consola | ~1 min |
+| `R15_sintonizacion/analisis_ciclo.m`, `exportar_ciclo.py` | 6, `sec:analisis_ciclo` y `sec:ventaja_rampa` | `images/ciclo_results/tikz/` | ~3 min |
+
+`exportar_R15.py` aplica el criterio de aceptación del barrido sin exclusiones manuales: en el escalón
+y en la rampa, sin divergencia y con el voltaje aplicado (después de la retención de la zona muerta)
+por debajo de 3.5 V. Produce 57 PI y 51 PII. `R15_sintonizacion/validacion_02/` guarda los resúmenes
+del segundo barrido de validación (doble precisión, 20 subpasos, `ode45`) que cita la sección
+`sec:barrido_familias`, y `numerica_auditoria1.json`, de la primera auditoría, con la sensibilidad
+del PII sin zona muerta que cita `sec:zm_modelo`. Los scripts que los generan están en `validacion/`
+de la raíz del proyecto.
+
+`seguimiento_P5.m` reutiliza los MAT solo si su firma (controlador, duración y huellas SHA-256 de
+`maglev_karnopp.m` y del propio script) coincide con la actual; los MAT sin firma se vuelven a simular.
 
 Orden de ejecución: `regulacion_P4.m` antes que `regulacion_sinAD_P3.m` y `evidencia_P8.m`,
 que leen `regulacion_P4.mat`. Las simulaciones largas usan Parallel Computing Toolbox (`parpool`).

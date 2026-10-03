@@ -29,8 +29,10 @@ R.pii = struct('K_ii', rp(i0(end)), 'K_i', rp(i0(1)), 'k_alta', kp, 'C_1rad', ab
 j0 = find(abs(pq) < 1e-9);
 R.pi  = struct('K_i', rq(j0), 'k_alta', kq, 'C_1rad', abs(freqresp(Cpi, 1)), 'C_10rad', abs(freqresp(Cpi, 10)), 'C_100rad', abs(freqresp(Cpi, 100)));
 G3 = tf(ss([0 1; 4*g/(a - x3) -c1], [0; 1/(m*b*(a - x3)^4)], [1 0], 0));
-R.pi.Kv = abs(dcgain(minreal(tf('s')*Cpi*G3)));       % constante de velocidad del lazo (tipo 1)
-R.pii.Ka = abs(dcgain(minreal(tf('s')^2*Cpii*G3)));   % constante de aceleración (tipo 2)
+% constantes de error con su signo, tal como las define el límite de eq:constantes_error
+R.pi.Kv = dcgain(minreal(tf('s')*Cpi*G3));            % constante de velocidad del lazo (tipo 1)
+R.pii.Ka = dcgain(minreal(tf('s')^2*Cpii*G3));        % constante de aceleración (tipo 2)
+R.pi.ess_rampa_005_cm = -0.05/R.pi.Kv;                % error estacionario ante la rampa de -0,05 cm/s
 
 %% 2-4) simulaciones del escalón -2 -> -3 cm
 Cpd = zpk(Cpii.Z{1}(abs(Cpii.Z{1} + 17.31) < 1e-2), -301.1, Cpii.K);   % PII sin integradores ni los ceros que los acompañan
@@ -53,8 +55,13 @@ k = 1:20:numel(sims.PII.t);
 writetable(table(sims.PII.t(k), sims.PD.x(k), sims.PI.x(k), sims.PII.x(k), sims.PD.u(k), 'VariableNames', {'t','x_pd','x_pi','x_pii','u_pd'}), fullfile(dest, 'pd_pi_pii.csv'));
 R.pd.error_final_cm = -3 - sims.PD.x(end);
 R.pd.u_final_V = sims.PD.u(end); R.pd.k_dc = dcgain(Cpd);
-R.pd.rigidez_fuerza_por_cm = dcgain(Cpd)/(b*(a - x3)^4);
-R.pd.error_max_teorico_cm = Fs/R.pd.rigidez_fuerza_por_cm;
+R.pd.rigidez_fuerza_por_cm = dcgain(Cpd)/(b*(a - x3)^4);           % solo la parte del controlador
+% rigidez neta del lazo: con x = r - e y u = u_e(r) + k_dc e, la fuerza neta
+% F(e) = u/[b(a - r + e)^4] - m g se linealiza como k_ef e, con k_ef = k_dc/[b(a-r)^4] - 4 m g/(a - r)
+R.pd.rigidez_neta_por_cm = R.pd.rigidez_fuerza_por_cm - 4*m*g/(a - x3);
+R.pd.error_max_teorico_cm = Fs/R.pd.rigidez_neta_por_cm;
+Fpd = @(e) (m*g*b*(a - x3)^4 + dcgain(Cpd)*e)./(b*(a - x3 + e).^4) - m*g;
+R.pd.banda_reposo_cm = [fzero(@(e) Fpd(e) + Fs, -0.04), fzero(@(e) Fpd(e) - Fs, 0.04)];   % desigualdad estática completa
 R.pd.v_final = sims.PD.v(end);
 fid = fopen(fullfile(dest, 'analisis_ciclo.json'), 'w'); fprintf(fid, '%s', jsonencode(R, 'PrettyPrint', true)); fclose(fid);
 disp(jsonencode(R, 'PrettyPrint', true))

@@ -5,8 +5,8 @@
     "programa": "Maestría en Ciencias en Ingeniería Electromagnética, UAM-Azcapotzalco",
     "director": "Dr. Jesús Ulises Liceaga Castro",
     "codirector": "Dr. César Simón López Monsalvo",
-    "generado": "2026-10-03",
-    "version": 4,
+    "generado": "2026-10-02",
+    "version": 3,
     "fuentes": [
       "icr/context/Tesis (LaTeX)",
       "icr/calculus/Final_Bien (MATLAB)"
@@ -64,11 +64,6 @@
         "version": 3,
         "fecha": "2026-10-02",
         "cambio": "Reestructuración integrada en siete capítulos (capitulos/01–07), identidad v5 «UAM Dato» y reglas de escritura matemática: fuentes de los nodos actualizadas, números de capítulo y tabla corregidos y revisiones R21–R23."
-      },
-      {
-        "version": 4,
-        "fecha": "2026-10-03",
-        "cambio": "Correcciones del segundo barrido de validación (H02-H13, N01-N03): datos de ZM, KARN y PAR, selección R15 de 57 PI y 51 PII, conclusiones acotadas y revisión R24. El estado «resuelta» indica que la corrección se aplicó, no que la tesis esté validada experimentalmente."
       }
     ]
   },
@@ -356,9 +351,9 @@
         "grado": 14,
         "grado_entrada": 6,
         "grado_salida": 8,
-        "intermediacion": 0.18963,
-        "cercania": 0.360721,
-        "pagerank": 0.010345,
+        "intermediacion": 0.19654,
+        "cercania": 0.360887,
+        "pagerank": 0.010415,
         "agrupamiento": 0.098901,
         "excentricidad": 6
       }
@@ -374,9 +369,9 @@
         "grado": 6,
         "grado_entrada": 2,
         "grado_salida": 4,
-        "intermediacion": 0.029214,
-        "cercania": 0.327273,
-        "pagerank": 0.003983,
+        "intermediacion": 0.030726,
+        "cercania": 0.327239,
+        "pagerank": 0.00401,
         "agrupamiento": 0.066667,
         "excentricidad": 5
       }
@@ -392,9 +387,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.025804,
-        "cercania": 0.300501,
-        "pagerank": 0.003454,
+        "intermediacion": 0.0245,
+        "cercania": 0.291057,
+        "pagerank": 0.003477,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -410,9 +405,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.007029,
-        "cercania": 0.332717,
-        "pagerank": 0.003454,
+        "intermediacion": 0.007891,
+        "cercania": 0.332714,
+        "pagerank": 0.003477,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -428,9 +423,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.005805,
-        "cercania": 0.267857,
-        "pagerank": 0.004562,
+        "intermediacion": 0.005899,
+        "cercania": 0.267964,
+        "pagerank": 0.004593,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -446,9 +441,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.006633,
-        "cercania": 0.29703,
-        "pagerank": 0.003454,
+        "intermediacion": 0.006756,
+        "cercania": 0.294893,
+        "pagerank": 0.003477,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -464,9 +459,9 @@
         "grado": 11,
         "grado_entrada": 5,
         "grado_salida": 6,
-        "intermediacion": 0.034584,
-        "cercania": 0.330275,
-        "pagerank": 0.005112,
+        "intermediacion": 0.041183,
+        "cercania": 0.327839,
+        "pagerank": 0.005147,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -482,9 +477,9 @@
         "grado": 9,
         "grado_entrada": 9,
         "grado_salida": 0,
-        "intermediacion": 0.087151,
-        "cercania": 0.271903,
-        "pagerank": 0.021435,
+        "intermediacion": 0.087628,
+        "cercania": 0.272036,
+        "pagerank": 0.02158,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -500,9 +495,9 @@
         "grado": 14,
         "grado_entrada": 13,
         "grado_salida": 1,
-        "intermediacion": 0.114893,
-        "cercania": 0.310345,
-        "pagerank": 0.027252,
+        "intermediacion": 0.115513,
+        "cercania": 0.304422,
+        "pagerank": 0.027437,
         "agrupamiento": 0.010989,
         "excentricidad": 6
       }
@@ -521,9 +516,9 @@
         "grado": 9,
         "grado_entrada": 3,
         "grado_salida": 6,
-        "intermediacion": 0.043886,
-        "cercania": 0.302013,
-        "pagerank": 0.005874,
+        "intermediacion": 0.04499,
+        "cercania": 0.301347,
+        "pagerank": 0.005913,
         "agrupamiento": 0.111111,
         "excentricidad": 6
       }
@@ -546,9 +541,9 @@
         "grado": 8,
         "grado_entrada": 5,
         "grado_salida": 3,
-        "intermediacion": 0.074328,
-        "cercania": 0.314136,
-        "pagerank": 0.007022,
+        "intermediacion": 0.075837,
+        "cercania": 0.308621,
+        "pagerank": 0.00707,
         "agrupamiento": 0.142857,
         "excentricidad": 5
       }
@@ -571,9 +566,9 @@
         "grado": 9,
         "grado_entrada": 8,
         "grado_salida": 1,
-        "intermediacion": 0.087089,
-        "cercania": 0.266272,
-        "pagerank": 0.020093,
+        "intermediacion": 0.087565,
+        "cercania": 0.264012,
+        "pagerank": 0.02023,
         "agrupamiento": 0.027778,
         "excentricidad": 6
       }
@@ -582,7 +577,7 @@
       "id": "ZM",
       "tipo": "mod",
       "etiqueta": "Zona muerta dinámica no centrada",
-      "texto": "\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_lA diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_rEn simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.\nImplementación simulada: mientras el levitante se mueve, el actuador no responde a cambios del voltaje comandado entre −0.02 y +0.025 V respecto al último voltaje aplicado; atascado, el voltaje pasa sin modificación. Los umbrales de D(u) son relativos a ue. La retención implementada no equivale a D(u): tiene memoria y se desactiva con el imán atascado; los resultados valen para esa implementación. Sin zona muerta, el ciclo del PII persiste con un 8 % menos de amplitud.",
+      "texto": "\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_lA diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_rEn simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.\nImplementación simulada: mientras el levitante se mueve, el actuador no responde a cambios del voltaje comandado entre −0.02 y +0.025 V respecto al último voltaje aplicado; atascado, el voltaje pasa sin modificación. Los umbrales de D(u) son relativos a ue (corregido en la verificación de consistencia).",
       "latex": [
         "v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_l<u<b_r\\\\ m_l(u-u_e-b_l)-h_l,& u\\le b_l\\end{cases}",
         "u_e=0",
@@ -604,19 +599,19 @@
         },
         "saturacion": {
           "min": 0,
-          "max": 3.5,
+          "max": 5,
           "unidad": "V"
         }
       },
-      "contenido_html": "<div class=\"math\">\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_l<u<b_r\\\\ m_l(u-u_e-b_l)-h_l,& u\\le b_l\\end{cases}\\]</div><p>A diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_r<0\\).</p><p>En simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.</p><p><b>Implementación simulada:</b> mientras el levitante se mueve, el actuador no responde a cambios del voltaje comandado entre −0.02 y +0.025 V respecto al último voltaje aplicado; atascado, el voltaje pasa sin modificación. Los umbrales de D(u) son relativos a u<sub>e</sub>. La retención implementada no equivale a D(u): tiene memoria y se desactiva con el imán atascado; los resultados valen para esa implementación. Sin zona muerta, el ciclo del PII persiste con un 8 % menos de amplitud.</p>",
+      "contenido_html": "<div class=\"math\">\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_l<u<b_r\\\\ m_l(u-u_e-b_l)-h_l,& u\\le b_l\\end{cases}\\]</div><p>A diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_r<0\\).</p><p>En simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.</p><p><b>Implementación simulada:</b> mientras el levitante se mueve, el actuador no responde a cambios del voltaje comandado entre −0.02 y +0.025 V respecto al último voltaje aplicado; atascado, el voltaje pasa sin modificación. Los umbrales de D(u) son relativos a u<sub>e</sub> (corregido en la verificación de consistencia).</p>",
       "metricas": {
-        "grado": 12,
-        "grado_entrada": 7,
+        "grado": 11,
+        "grado_entrada": 6,
         "grado_salida": 5,
-        "intermediacion": 0.122662,
-        "cercania": 0.357853,
-        "pagerank": 0.028699,
-        "agrupamiento": 0.015152,
+        "intermediacion": 0.110814,
+        "cercania": 0.34556,
+        "pagerank": 0.028753,
+        "agrupamiento": 0.018182,
         "excentricidad": 5
       }
     },
@@ -635,9 +630,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.042954,
-        "cercania": 0.304569,
-        "pagerank": 0.008927,
+        "intermediacion": 0.044405,
+        "cercania": 0.298333,
+        "pagerank": 0.008987,
         "agrupamiento": 0.035714,
         "excentricidad": 6
       }
@@ -658,19 +653,18 @@
         },
         "Fs": {
           "valor": 20,
-          "unidad": "kg·cm/s^2",
-          "equivalente": "0.2 N"
+          "unidad": "N"
         }
       },
       "contenido_html": "<p>Banda de velocidad \\(|v|\\le DV\\) tratada como velocidad cero para decidir entre atascamiento y deslizamiento.</p><div class=\"tbl\"><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>DV</td><td>0.02 cm/s</td></tr><tr><td>F<sub>s</sub></td><td>20 kg·cm/s² (0.2 N, 14 % del peso)</td></tr></table></div><p style='margin-top:10px'>Implementado en <code>maglev_karnopp.m</code>, corregido en P1: la fuerza magnética se dividía dos veces entre m y la fricción viscosa no se oponía al movimiento con v &lt; 0. Tras la corrección, el jacobiano coincide con el modelo linealizado.</p>",
       "metricas": {
-        "grado": 19,
-        "grado_entrada": 12,
+        "grado": 18,
+        "grado_entrada": 11,
         "grado_salida": 7,
-        "intermediacion": 0.139408,
-        "cercania": 0.352941,
-        "pagerank": 0.026837,
-        "agrupamiento": 0.023392,
+        "intermediacion": 0.139975,
+        "cercania": 0.341603,
+        "pagerank": 0.02688,
+        "agrupamiento": 0.013072,
         "excentricidad": 5
       }
     },
@@ -678,7 +672,7 @@
       "id": "PAR",
       "tipo": "mod",
       "etiqueta": "Parámetros del ECP-730",
-      "texto": "| | Valor\n | a | 7.17184 cm\n | b | 1.6163×10⁻⁶ V·s²/(kg·cm⁵), es decir, 1.6163×10⁻⁴ V/(N·cm⁴)\n | c₁ | 8.563 s⁻¹ (por unidad de masa)\n | m | 0.141 kg\n | g | 981 cm/s²\n | Fs | 20 kg·cm/s² (0.2 N)\n | DV | 0.02 cm/s\n | u | [0, 3.5] V\nIdentificados por Alcántara para la configuración repulsiva. Tabla 3.1 de la tesis, corregida en P7: b y g tenían valores erróneos, c₁ las unidades de su tesis (kg⁻¹) y Fs estaba en N.",
+      "texto": "| | Valor\n | a | 7.17184 cm\n | b | 1.6163×10⁻⁶ V/(N·cm⁴)\n | c₁ | 8.563 s⁻¹ (por unidad de masa)\n | m | 0.141 kg\n | g | 981 cm/s²\n | Fs | 20 kg·cm/s² (0.2 N)\n | DV | 0.02 cm/s\n | u | [0, 3.5] V\nIdentificados por Alcántara para la configuración repulsiva. Tabla 3.1 de la tesis, corregida en P7: b y g tenían valores erróneos, c₁ las unidades de su tesis (kg⁻¹) y Fs estaba en N.",
       "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · tab:parametros",
       "valores": {
         "a": {
@@ -687,13 +681,12 @@
         },
         "b": {
           "valor": 1.6163e-06,
-          "unidad": "V·s^2/(kg·cm^5)",
-          "equivalente_SI_mixto": "1.6163e-4 V/(N·cm^4)"
+          "unidad": "V/(N·cm^4)"
         },
         "c": {
           "valor": 8.563,
           "unidad": "1/s",
-          "nota": "por unidad de masa; el simulador corregido lo usa directamente como c1"
+          "nota": "el código lo usa como c2 = c1/m"
         },
         "m": {
           "valor": 0.141,
@@ -704,15 +697,15 @@
           "unidad": "cm/s^2"
         }
       },
-      "contenido_html": "<div class=\"tbl\"><table><tr><th></th><th>Valor</th></tr><tr><td>a</td><td>7.17184 cm</td></tr><tr><td>b</td><td>1.6163×10⁻⁶ V·s²/(kg·cm⁵), es decir, 1.6163×10⁻⁴ V/(N·cm⁴)</td></tr><tr><td>c₁</td><td>8.563 s⁻¹ (por unidad de masa)</td></tr><tr><td>m</td><td>0.141 kg</td></tr><tr><td>g</td><td>981 cm/s²</td></tr><tr><td>F<sub>s</sub></td><td>20 kg·cm/s² (0.2 N)</td></tr><tr><td>DV</td><td>0.02 cm/s</td></tr><tr><td>u</td><td>[0, 3.5] V</td></tr></table></div><p style='margin-top:10px'>Identificados por Alcántara para la configuración repulsiva. Tabla 3.1 de la tesis, corregida en P7: b y g tenían valores erróneos, c₁ las unidades de su tesis (kg⁻¹) y F<sub>s</sub> estaba en N.</p>",
+      "contenido_html": "<div class=\"tbl\"><table><tr><th></th><th>Valor</th></tr><tr><td>a</td><td>7.17184 cm</td></tr><tr><td>b</td><td>1.6163×10⁻⁶ V/(N·cm⁴)</td></tr><tr><td>c₁</td><td>8.563 s⁻¹ (por unidad de masa)</td></tr><tr><td>m</td><td>0.141 kg</td></tr><tr><td>g</td><td>981 cm/s²</td></tr><tr><td>F<sub>s</sub></td><td>20 kg·cm/s² (0.2 N)</td></tr><tr><td>DV</td><td>0.02 cm/s</td></tr><tr><td>u</td><td>[0, 3.5] V</td></tr></table></div><p style='margin-top:10px'>Identificados por Alcántara para la configuración repulsiva. Tabla 3.1 de la tesis, corregida en P7: b y g tenían valores erróneos, c₁ las unidades de su tesis (kg⁻¹) y F<sub>s</sub> estaba en N.</p>",
       "metricas": {
-        "grado": 9,
-        "grado_entrada": 7,
+        "grado": 8,
+        "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.04816,
-        "cercania": 0.337711,
-        "pagerank": 0.010256,
-        "agrupamiento": 0.055556,
+        "intermediacion": 0.033384,
+        "cercania": 0.316254,
+        "pagerank": 0.010186,
+        "agrupamiento": 0.071429,
         "excentricidad": 6
       }
     },
@@ -758,9 +751,9 @@
         "grado": 15,
         "grado_entrada": 6,
         "grado_salida": 9,
-        "intermediacion": 0.096597,
-        "cercania": 0.343511,
-        "pagerank": 0.015356,
+        "intermediacion": 0.103508,
+        "cercania": 0.342256,
+        "pagerank": 0.015401,
         "agrupamiento": 0.047619,
         "excentricidad": 5
       }
@@ -776,9 +769,9 @@
         "grado": 7,
         "grado_entrada": 2,
         "grado_salida": 5,
-        "intermediacion": 0.060737,
-        "cercania": 0.334572,
-        "pagerank": 0.010745,
+        "intermediacion": 0.069015,
+        "cercania": 0.332714,
+        "pagerank": 0.010777,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -807,9 +800,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.016364,
-        "cercania": 0.310345,
-        "pagerank": 0.004057,
+        "intermediacion": 0.020188,
+        "cercania": 0.306507,
+        "pagerank": 0.004079,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -838,9 +831,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.025005,
-        "cercania": 0.294118,
-        "pagerank": 0.004057,
+        "intermediacion": 0.02532,
+        "cercania": 0.293443,
+        "pagerank": 0.004079,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -871,9 +864,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.017051,
-        "cercania": 0.306644,
-        "pagerank": 0.004057,
+        "intermediacion": 0.019245,
+        "cercania": 0.306507,
+        "pagerank": 0.004079,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -898,8 +891,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.271903,
-        "pagerank": 0.004374,
+        "cercania": 0.271212,
+        "pagerank": 0.004398,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -979,9 +972,9 @@
         "grado": 3,
         "grado_entrada": 1,
         "grado_salida": 2,
-        "intermediacion": 0.002999,
-        "cercania": 0.279938,
-        "pagerank": 0.004057,
+        "intermediacion": 0.003566,
+        "cercania": 0.279687,
+        "pagerank": 0.004079,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -1015,9 +1008,9 @@
         "grado": 18,
         "grado_entrada": 4,
         "grado_salida": 14,
-        "intermediacion": 0.209856,
-        "cercania": 0.37422,
-        "pagerank": 0.005917,
+        "intermediacion": 0.233604,
+        "cercania": 0.373695,
+        "pagerank": 0.005956,
         "agrupamiento": 0.039216,
         "excentricidad": 5
       }
@@ -1071,9 +1064,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.04401,
-        "cercania": 0.276074,
-        "pagerank": 0.002966,
+        "intermediacion": 0.044253,
+        "cercania": 0.275809,
+        "pagerank": 0.002986,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1107,9 +1100,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.011111,
-        "cercania": 0.273556,
-        "pagerank": 0.002966,
+        "intermediacion": 0.011173,
+        "cercania": 0.273282,
+        "pagerank": 0.002986,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1162,9 +1155,9 @@
         "grado": 6,
         "grado_entrada": 1,
         "grado_salida": 5,
-        "intermediacion": 0.007918,
-        "cercania": 0.293638,
-        "pagerank": 0.003757,
+        "intermediacion": 0.011726,
+        "cercania": 0.289644,
+        "pagerank": 0.003781,
         "agrupamiento": 0.133333,
         "excentricidad": 6
       }
@@ -1219,9 +1212,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.000487,
-        "cercania": 0.254958,
-        "pagerank": 0.003346,
+        "intermediacion": 0.000514,
+        "cercania": 0.254261,
+        "pagerank": 0.003369,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -1251,8 +1244,8 @@
         "grado_entrada": 1,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.28125,
-        "pagerank": 0.002966,
+        "cercania": 0.281005,
+        "pagerank": 0.002986,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -1261,7 +1254,7 @@
       "id": "REG",
       "tipo": "sim",
       "etiqueta": "Regulación con AD (OE4)",
-      "texto": "PII de la tesis + zona muerta + Karnopp, escalón −2 → −3 cm en t = 10 s, u ∈ [0, 3.5] V, 40 s.\n | Medida | Valor\n | Sobrepaso | 23.6 %\n | Banda ±0.05 cm | 0.40 s\n | Ciclo límite | 0.033 cm pico a pico\n | Tiempo atascado | 74 %\n | u máximo | 3.28 V, sin alcanzar 3.5 V (toca 0 V en el escalón)",
+      "texto": "PII de la tesis + zona muerta + Karnopp, escalón −2 → −3 cm en t = 10 s, u ∈ [0, 3.5] V, 40 s.\n | Medida | Valor\n | Sobrepaso | 23.6 %\n | Banda ±0.05 cm | 0.40 s\n | Ciclo límite | 0.033 cm pico a pico\n | Tiempo atascado | 74 %\n | u máximo | 3.28 V, sin saturar",
       "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/regulacion_P4.m",
       "valores": {
         "pasos": 1000000,
@@ -1285,15 +1278,15 @@
         "controlador": "PII.mat",
         "integrador": "ode45 por intervalo de 1 ms (ZOH)"
       },
-      "contenido_html": "<p>PII de la tesis + zona muerta + Karnopp, escalón −2 → −3 cm en t = 10 s, u ∈ [0, 3.5] V, 40 s.</p><div class=\"tbl\"><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Sobrepaso</td><td>23.6 %</td></tr><tr><td>Banda ±0.05 cm</td><td>0.40 s</td></tr><tr><td>Ciclo límite</td><td>0.033 cm pico a pico</td></tr><tr><td>Tiempo atascado</td><td>74 %</td></tr><tr><td>u máximo</td><td>3.28 V, sin alcanzar 3.5 V (toca 0 V en el escalón)</td></tr></table></div>",
+      "contenido_html": "<p>PII de la tesis + zona muerta + Karnopp, escalón −2 → −3 cm en t = 10 s, u ∈ [0, 3.5] V, 40 s.</p><div class=\"tbl\"><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Sobrepaso</td><td>23.6 %</td></tr><tr><td>Banda ±0.05 cm</td><td>0.40 s</td></tr><tr><td>Ciclo límite</td><td>0.033 cm pico a pico</td></tr><tr><td>Tiempo atascado</td><td>74 %</td></tr><tr><td>u máximo</td><td>3.28 V, sin saturar</td></tr></table></div>",
       "metricas": {
-        "grado": 15,
-        "grado_entrada": 8,
+        "grado": 14,
+        "grado_entrada": 7,
         "grado_salida": 7,
-        "intermediacion": 0.095983,
-        "cercania": 0.359281,
-        "pagerank": 0.010299,
-        "agrupamiento": 0.047619,
+        "intermediacion": 0.100546,
+        "cercania": 0.353755,
+        "pagerank": 0.010178,
+        "agrupamiento": 0.032967,
         "excentricidad": 5
       }
     },
@@ -1324,9 +1317,9 @@
         "grado": 12,
         "grado_entrada": 6,
         "grado_salida": 6,
-        "intermediacion": 0.074858,
-        "cercania": 0.322581,
-        "pagerank": 0.011617,
+        "intermediacion": 0.076613,
+        "cercania": 0.322523,
+        "pagerank": 0.011689,
         "agrupamiento": 0.015152,
         "excentricidad": 6
       }
@@ -1354,9 +1347,9 @@
         "grado": 10,
         "grado_entrada": 4,
         "grado_salida": 6,
-        "intermediacion": 0.056622,
-        "cercania": 0.320285,
-        "pagerank": 0.00688,
+        "intermediacion": 0.058314,
+        "cercania": 0.320215,
+        "pagerank": 0.006919,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1394,9 +1387,9 @@
         "grado": 9,
         "grado_entrada": 3,
         "grado_salida": 6,
-        "intermediacion": 0.011081,
-        "cercania": 0.298013,
-        "pagerank": 0.004159,
+        "intermediacion": 0.013442,
+        "cercania": 0.295868,
+        "pagerank": 0.004187,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -1417,8 +1410,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.251046,
-        "pagerank": 0.004434,
+        "cercania": 0.25,
+        "pagerank": 0.004457,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1439,8 +1432,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.216606,
-        "pagerank": 0.003448,
+        "cercania": 0.216445,
+        "pagerank": 0.003471,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1460,9 +1453,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.011111,
-        "cercania": 0.217129,
-        "pagerank": 0.005664,
+        "intermediacion": 0.011173,
+        "cercania": 0.21697,
+        "pagerank": 0.005702,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1483,8 +1476,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.215054,
-        "pagerank": 0.005129,
+        "cercania": 0.214886,
+        "pagerank": 0.005163,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1505,8 +1498,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.265096,
-        "pagerank": 0.004966,
+        "cercania": 0.262079,
+        "pagerank": 0.004976,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -1527,8 +1520,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.264706,
-        "pagerank": 0.003858,
+        "cercania": 0.261696,
+        "pagerank": 0.003861,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1549,8 +1542,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.264706,
-        "pagerank": 0.003858,
+        "cercania": 0.261696,
+        "pagerank": 0.003861,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1570,9 +1563,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.004453,
-        "cercania": 0.276923,
-        "pagerank": 0.004596,
+        "intermediacion": 0.004621,
+        "cercania": 0.274119,
+        "pagerank": 0.004604,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1594,8 +1587,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.22756,
-        "pagerank": 0.003757,
+        "cercania": 0.227157,
+        "pagerank": 0.003781,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1617,8 +1610,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.234987,
-        "pagerank": 0.003757,
+        "cercania": 0.234908,
+        "pagerank": 0.003781,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1640,8 +1633,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.256046,
-        "pagerank": 0.004057,
+        "cercania": 0.25535,
+        "pagerank": 0.004079,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1663,8 +1656,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.22756,
-        "pagerank": 0.003757,
+        "cercania": 0.227157,
+        "pagerank": 0.003781,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1686,8 +1679,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.233766,
-        "pagerank": 0.006401,
+        "cercania": 0.230077,
+        "pagerank": 0.006444,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1709,8 +1702,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.26393,
-        "pagerank": 0.007486,
+        "cercania": 0.257184,
+        "pagerank": 0.007513,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1732,8 +1725,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.232258,
-        "pagerank": 0.003439,
+        "cercania": 0.231865,
+        "pagerank": 0.003463,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1748,9 +1741,9 @@
         "grado": 9,
         "grado_entrada": 6,
         "grado_salida": 3,
-        "intermediacion": 0.071614,
-        "cercania": 0.332717,
-        "pagerank": 0.010943,
+        "intermediacion": 0.074415,
+        "cercania": 0.330869,
+        "pagerank": 0.01099,
         "agrupamiento": 0.0,
         "excentricidad": 6
       },
@@ -1766,9 +1759,9 @@
         "grado": 3,
         "grado_entrada": 3,
         "grado_salida": 0,
-        "intermediacion": 0.007083,
-        "cercania": 0.28481,
-        "pagerank": 0.006241,
+        "intermediacion": 0.007122,
+        "cercania": 0.28278,
+        "pagerank": 0.006259,
         "agrupamiento": 0.0,
         "excentricidad": 5
       },
@@ -1784,9 +1777,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.000688,
-        "cercania": 0.251046,
-        "pagerank": 0.00816,
+        "intermediacion": 0.000696,
+        "cercania": 0.25035,
+        "pagerank": 0.008194,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -1802,9 +1795,9 @@
         "grado": 7,
         "grado_entrada": 6,
         "grado_salida": 1,
-        "intermediacion": 0.006524,
-        "cercania": 0.28481,
-        "pagerank": 0.006192,
+        "intermediacion": 0.01197,
+        "cercania": 0.279251,
+        "pagerank": 0.00621,
         "agrupamiento": 0.190476,
         "excentricidad": 6
       },
@@ -1820,9 +1813,9 @@
         "grado": 3,
         "grado_entrada": 3,
         "grado_salida": 0,
-        "intermediacion": 0.001464,
-        "cercania": 0.283465,
-        "pagerank": 0.006748,
+        "intermediacion": 0.001542,
+        "cercania": 0.28278,
+        "pagerank": 0.006787,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       },
@@ -1838,9 +1831,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.002755,
-        "cercania": 0.28754,
-        "pagerank": 0.010067,
+        "intermediacion": 0.003262,
+        "cercania": 0.281447,
+        "pagerank": 0.010068,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1856,8 +1849,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.019687,
+        "cercania": 0.209112,
+        "pagerank": 0.01982,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1873,8 +1866,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.005866,
+        "cercania": 0.254986,
+        "pagerank": 0.005889,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1890,8 +1883,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.26393,
-        "pagerank": 0.007486,
+        "cercania": 0.257184,
+        "pagerank": 0.007513,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1907,8 +1900,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.216606,
-        "pagerank": 0.003448,
+        "cercania": 0.216445,
+        "pagerank": 0.003471,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1923,9 +1916,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001042,
-        "cercania": 0.262009,
-        "pagerank": 0.006557,
+        "intermediacion": 0.001025,
+        "cercania": 0.256815,
+        "pagerank": 0.006554,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1940,9 +1933,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.000991,
-        "cercania": 0.273141,
-        "pagerank": 0.004374,
+        "intermediacion": 0.001023,
+        "cercania": 0.272451,
+        "pagerank": 0.004398,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1957,9 +1950,9 @@
         "grado": 4,
         "grado_entrada": 4,
         "grado_salida": 0,
-        "intermediacion": 0.001886,
-        "cercania": 0.285714,
-        "pagerank": 0.00468,
+        "intermediacion": 0.002301,
+        "cercania": 0.285032,
+        "pagerank": 0.004712,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -1975,9 +1968,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.004299,
-        "cercania": 0.289855,
-        "pagerank": 0.002607,
+        "intermediacion": 0.004098,
+        "cercania": 0.286859,
+        "pagerank": 0.002625,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       },
@@ -1997,8 +1990,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.265096,
-        "pagerank": 0.002607,
+        "cercania": 0.262079,
+        "pagerank": 0.002625,
         "agrupamiento": 1.0,
         "excentricidad": 6
       },
@@ -2025,9 +2018,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.005628,
-        "cercania": 0.271084,
-        "pagerank": 0.002607,
+        "intermediacion": 0.006092,
+        "cercania": 0.264402,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       },
@@ -2047,8 +2040,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.252809,
-        "pagerank": 0.002607,
+        "cercania": 0.240591,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2068,8 +2061,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.244233,
-        "pagerank": 0.002607,
+        "cercania": 0.244202,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2088,9 +2081,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.000472,
-        "cercania": 0.248276,
-        "pagerank": 0.002607,
+        "intermediacion": 0.000477,
+        "cercania": 0.248266,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2110,8 +2103,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.002607,
+        "cercania": 0.209112,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2131,8 +2124,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.233766,
-        "pagerank": 0.002607,
+        "cercania": 0.230077,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2158,8 +2151,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.232258,
-        "pagerank": 0.002607,
+        "cercania": 0.231865,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2182,8 +2175,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.239362,
-        "pagerank": 0.002607,
+        "cercania": 0.236148,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2205,9 +2198,9 @@
         "grado": 7,
         "grado_entrada": 0,
         "grado_salida": 7,
-        "intermediacion": 0.027627,
-        "cercania": 0.320285,
-        "pagerank": 0.002607,
+        "intermediacion": 0.032076,
+        "cercania": 0.31794,
+        "pagerank": 0.002625,
         "agrupamiento": 0.095238,
         "excentricidad": 5
       }
@@ -2229,9 +2222,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.00043,
-        "cercania": 0.266667,
-        "pagerank": 0.002607,
+        "intermediacion": 0.000515,
+        "cercania": 0.256815,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2253,9 +2246,9 @@
         "grado": 5,
         "grado_entrada": 0,
         "grado_salida": 5,
-        "intermediacion": 0.002275,
-        "cercania": 0.288462,
-        "pagerank": 0.002607,
+        "intermediacion": 0.003161,
+        "cercania": 0.285032,
+        "pagerank": 0.002625,
         "agrupamiento": 0.4,
         "excentricidad": 6
       }
@@ -2278,8 +2271,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.002607,
+        "cercania": 0.209112,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2301,9 +2294,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.011111,
-        "cercania": 0.21102,
-        "pagerank": 0.004823,
+        "intermediacion": 0.011173,
+        "cercania": 0.209602,
+        "pagerank": 0.004856,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2326,8 +2319,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.002607,
+        "cercania": 0.209112,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2350,8 +2343,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.002607,
+        "cercania": 0.209112,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2374,8 +2367,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.288925,
-        "pagerank": 0.002607,
+        "cercania": 0.285486,
+        "pagerank": 0.002625,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -2398,8 +2391,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.288925,
-        "pagerank": 0.002607,
+        "cercania": 0.285486,
+        "pagerank": 0.002625,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -2422,8 +2415,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.002607,
+        "cercania": 0.254986,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2446,8 +2439,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.002607,
+        "cercania": 0.254986,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2470,8 +2463,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.002607,
+        "cercania": 0.254986,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2494,8 +2487,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.002607,
+        "cercania": 0.254986,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2518,8 +2511,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261248,
-        "pagerank": 0.002607,
+        "cercania": 0.254986,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2542,8 +2535,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2566,8 +2559,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2590,8 +2583,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2614,8 +2607,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2638,8 +2631,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2662,8 +2655,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2686,8 +2679,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2710,8 +2703,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2733,9 +2726,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.004436,
-        "cercania": 0.278207,
-        "pagerank": 0.002607,
+        "intermediacion": 0.005242,
+        "cercania": 0.277519,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2758,8 +2751,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2782,8 +2775,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.237154,
-        "pagerank": 0.002607,
+        "cercania": 0.233681,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2806,8 +2799,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2830,8 +2823,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2854,8 +2847,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2878,8 +2871,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2902,8 +2895,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2926,8 +2919,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2950,8 +2943,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2974,8 +2967,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.214031,
-        "pagerank": 0.002607,
+        "cercania": 0.214115,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2997,9 +2990,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.007958,
-        "cercania": 0.279503,
-        "pagerank": 0.004547,
+        "intermediacion": 0.008314,
+        "cercania": 0.279687,
+        "pagerank": 0.004578,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -3008,8 +3001,8 @@
       "id": "VIA",
       "tipo": "calc",
       "etiqueta": "Rango viable con u ≤ 3.5 V",
-      "texto": "Para despegar hacia la bobina hay que vencer la fricción estática: \\(u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e\\). En −4 cm, \\(u_e=3.48\\) V pero hacen falta ≈ 3.99 V: el imán se sostiene pero no sube; por debajo de ≈ 2.98 V se despega hacia abajo y cae sin recuperación. Alcanzable: error < 0.05 cm en los últimos 5 s (−3.95 cm desde −4 cumple solo por tolerancia).\n | Posición inicial [cm] | Referencias alcanzables [cm]\n | −4.0 | solo se sostiene\n | −3.5 | −3.6 a −2.0\n | −3.0 | −3.5 a −1.5\n | −2.0 | −3.3 a −0.5\n | −1.0 | −2.5 a +0.5\nPor eso las pruebas se hicieron en el intervalo de −3 a −2 cm.",
-      "contenido_html": "<p>Para despegar hacia la bobina hay que vencer la fricción estática: \\(u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e\\). En −4 cm, \\(u_e=3.48\\) V pero hacen falta ≈ 3.99 V: el imán se sostiene pero no sube; por debajo de ≈ 2.98 V se despega hacia abajo y cae sin recuperación. Alcanzable: error < 0.05 cm en los últimos 5 s (−3.95 cm desde −4 cumple solo por tolerancia).</p><div class=\"tbl\"><table><tr><th>Posición inicial [cm]</th><th>Referencias alcanzables [cm]</th></tr><tr><td>−4.0</td><td>solo se sostiene</td></tr><tr><td>−3.5</td><td>−3.6 a −2.0</td></tr><tr><td>−3.0</td><td>−3.5 a −1.5</td></tr><tr><td>−2.0</td><td>−3.3 a −0.5</td></tr><tr><td>−1.0</td><td>−2.5 a +0.5</td></tr></table></div><p style='margin-top:10px'>Por eso las pruebas se hicieron en el intervalo de −3 a −2 cm.</p>",
+      "texto": "Para despegar hacia la bobina hay que vencer la fricción estática: \\(u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e\\). En −4 cm, \\(u_e=3.48\\) V pero hacen falta ≈ 3.99 V: el imán se sostiene pero no se mueve.\n | Posición inicial [cm] | Referencias alcanzables [cm]\n | −4.0 | solo se sostiene\n | −3.5 | −3.6 a −2.0\n | −3.0 | −3.5 a −1.5\n | −2.0 | −3.3 a −0.5\n | −1.0 | −2.5 a +0.5\nPor eso las pruebas se hicieron en el intervalo de −3 a −2 cm.",
+      "contenido_html": "<p>Para despegar hacia la bobina hay que vencer la fricción estática: \\(u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e\\). En −4 cm, \\(u_e=3.48\\) V pero hacen falta ≈ 3.99 V: el imán se sostiene pero no se mueve.</p><div class=\"tbl\"><table><tr><th>Posición inicial [cm]</th><th>Referencias alcanzables [cm]</th></tr><tr><td>−4.0</td><td>solo se sostiene</td></tr><tr><td>−3.5</td><td>−3.6 a −2.0</td></tr><tr><td>−3.0</td><td>−3.5 a −1.5</td></tr><tr><td>−2.0</td><td>−3.3 a −0.5</td></tr><tr><td>−1.0</td><td>−2.5 a +0.5</td></tr></table></div><p style='margin-top:10px'>Por eso las pruebas se hicieron en el intervalo de −3 a −2 cm.</p>",
       "latex": [
         "u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e",
         "u_e=3.48"
@@ -3017,13 +3010,13 @@
       "fuente": "icr/context/Tesis/capitulos/05_desempeno.tex · sec:intervalo (tab:intervalo); análisis estático en 03_modelo.tex · sec:actuador_estatico",
       "verificacion": "GPU (MLX) + MATLAB",
       "metricas": {
-        "grado": 8,
-        "grado_entrada": 5,
+        "grado": 7,
+        "grado_entrada": 4,
         "grado_salida": 3,
-        "intermediacion": 0.042202,
-        "cercania": 0.334572,
-        "pagerank": 0.007855,
-        "agrupamiento": 0.107143,
+        "intermediacion": 0.053153,
+        "cercania": 0.324275,
+        "pagerank": 0.00775,
+        "agrupamiento": 0.0,
         "excentricidad": 6
       }
     },
@@ -3039,9 +3032,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.022697,
-        "cercania": 0.261248,
-        "pagerank": 0.003346,
+        "intermediacion": 0.023072,
+        "cercania": 0.254986,
+        "pagerank": 0.003369,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3057,9 +3050,9 @@
         "grado": 4,
         "grado_entrada": 3,
         "grado_salida": 1,
-        "intermediacion": 0.010292,
-        "cercania": 0.308219,
-        "pagerank": 0.006141,
+        "intermediacion": 0.012621,
+        "cercania": 0.30809,
+        "pagerank": 0.006175,
         "agrupamiento": 0.166667,
         "excentricidad": 5
       }
@@ -3080,9 +3073,9 @@
         "grado": 4,
         "grado_entrada": 2,
         "grado_salida": 2,
-        "intermediacion": 0.017535,
-        "cercania": 0.278207,
-        "pagerank": 0.006728,
+        "intermediacion": 0.017427,
+        "cercania": 0.272036,
+        "pagerank": 0.006756,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3098,9 +3091,9 @@
         "grado": 5,
         "grado_entrada": 2,
         "grado_salida": 3,
-        "intermediacion": 0.01857,
-        "cercania": 0.245232,
-        "pagerank": 0.004449,
+        "intermediacion": 0.019131,
+        "cercania": 0.242547,
+        "pagerank": 0.004479,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3116,9 +3109,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.064276,
-        "cercania": 0.354331,
-        "pagerank": 0.014641,
+        "intermediacion": 0.074308,
+        "cercania": 0.352362,
+        "pagerank": 0.014694,
         "agrupamiento": 0.071429,
         "excentricidad": 5
       }
@@ -3137,9 +3130,9 @@
         "grado": 10,
         "grado_entrada": 4,
         "grado_salida": 6,
-        "intermediacion": 0.07899,
-        "cercania": 0.306122,
-        "pagerank": 0.009941,
+        "intermediacion": 0.08319,
+        "cercania": 0.305983,
+        "pagerank": 0.010009,
         "agrupamiento": 0.022222,
         "excentricidad": 5
       }
@@ -3155,9 +3148,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.059638,
-        "cercania": 0.326679,
-        "pagerank": 0.012521,
+        "intermediacion": 0.062034,
+        "cercania": 0.326642,
+        "pagerank": 0.012606,
         "agrupamiento": 0.035714,
         "excentricidad": 6
       }
@@ -3178,8 +3171,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.234681,
-        "pagerank": 0.004016,
+        "cercania": 0.2346,
+        "pagerank": 0.004043,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3200,8 +3193,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.234681,
-        "pagerank": 0.004016,
+        "cercania": 0.2346,
+        "pagerank": 0.004043,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3222,8 +3215,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.234681,
-        "pagerank": 0.004016,
+        "cercania": 0.2346,
+        "pagerank": 0.004043,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3244,8 +3237,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.234681,
-        "pagerank": 0.004016,
+        "cercania": 0.2346,
+        "pagerank": 0.004043,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3266,8 +3259,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244233,
-        "pagerank": 0.004253,
+        "cercania": 0.244202,
+        "pagerank": 0.004281,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3288,8 +3281,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244233,
-        "pagerank": 0.004253,
+        "cercania": 0.244202,
+        "pagerank": 0.004281,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3310,8 +3303,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244233,
-        "pagerank": 0.004253,
+        "cercania": 0.244202,
+        "pagerank": 0.004281,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3332,8 +3325,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244233,
-        "pagerank": 0.004253,
+        "cercania": 0.244202,
+        "pagerank": 0.004281,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3354,8 +3347,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.242915,
-        "pagerank": 0.003582,
+        "cercania": 0.242877,
+        "pagerank": 0.003605,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3376,8 +3369,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.242915,
-        "pagerank": 0.003582,
+        "cercania": 0.242877,
+        "pagerank": 0.003605,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3398,8 +3391,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.242915,
-        "pagerank": 0.003582,
+        "cercania": 0.242877,
+        "pagerank": 0.003605,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3408,8 +3401,8 @@
       "id": "F_TRAP_U",
       "tipo": "fig",
       "etiqueta": "Fig. Control (trapezoidal)",
-      "texto": "Sigue el perfil trapezoidal sin alcanzar ninguna de las dos cotas del actuador.",
-      "contenido_html": "<p>Sigue el perfil trapezoidal sin alcanzar ninguna de las dos cotas del actuador.</p>",
+      "texto": "Sigue el perfil trapezoidal sin saturar.",
+      "contenido_html": "<p>Sigue el perfil trapezoidal sin saturar.</p>",
       "figura": {
         "png": "img/seg_trap_control.png",
         "original": "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.tex"
@@ -3420,8 +3413,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.242915,
-        "pagerank": 0.003582,
+        "cercania": 0.242877,
+        "pagerank": 0.003605,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3442,8 +3435,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.197152,
-        "pagerank": 0.003868,
+        "cercania": 0.195415,
+        "pagerank": 0.003894,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3463,9 +3456,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001063,
-        "cercania": 0.229885,
-        "pagerank": 0.006727,
+        "intermediacion": 0.001187,
+        "cercania": 0.225725,
+        "pagerank": 0.006765,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3486,8 +3479,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.262009,
-        "pagerank": 0.008829,
+        "cercania": 0.260933,
+        "pagerank": 0.00887,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3508,8 +3501,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.246575,
-        "pagerank": 0.007929,
+        "cercania": 0.246556,
+        "pagerank": 0.007982,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3531,8 +3524,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.207373,
-        "pagerank": 0.003318,
+        "cercania": 0.203409,
+        "pagerank": 0.003341,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3554,8 +3547,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.207373,
-        "pagerank": 0.003318,
+        "cercania": 0.203409,
+        "pagerank": 0.003341,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3564,18 +3557,18 @@
       "id": "K6",
       "tipo": "conc",
       "etiqueta": "El actuador limita el rango de operación",
-      "texto": "Con 3.5 V, en −4 cm el imán se sostiene pero no sube, y si baja cae; los cambios de referencia son viables desde ≈ −3.6 cm.",
-      "contenido_html": "<p>Con 3.5 V, en −4 cm el imán se sostiene pero no sube, y si baja cae; los cambios de referencia son viables desde ≈ −3.6 cm.</p>",
+      "texto": "Con 3.5 V, en −4 cm el imán se sostiene pero no se mueve; los cambios de referencia son viables desde ≈ −3.6 cm.",
+      "contenido_html": "<p>Con 3.5 V, en −4 cm el imán se sostiene pero no se mueve; los cambios de referencia son viables desde ≈ −3.6 cm.</p>",
       "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
-        "grado": 2,
-        "grado_entrada": 2,
+        "grado": 1,
+        "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.269461,
-        "pagerank": 0.004971,
-        "agrupamiento": 1.0,
-        "excentricidad": 6
+        "cercania": 0.245205,
+        "pagerank": 0.004821,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
       }
     },
     {
@@ -3589,9 +3582,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.003739,
-        "cercania": 0.27439,
-        "pagerank": 0.010238,
+        "intermediacion": 0.00393,
+        "cercania": 0.273282,
+        "pagerank": 0.010288,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3608,8 +3601,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.246575,
-        "pagerank": 0.007929,
+        "cercania": 0.246556,
+        "pagerank": 0.007982,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3618,17 +3611,17 @@
       "id": "K9",
       "tipo": "conc",
       "etiqueta": "La doble acción integral no mejora al PI",
-      "texto": "En las familias y condiciones ensayadas, ningún PII aceptado alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm, o 0.019 cm con el criterio de recorte estricto); no es una demostración general ni una validación experimental; el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.",
-      "contenido_html": "<p>En las familias y condiciones ensayadas, ningún PII aceptado alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm, o 0.019 cm con el criterio de recorte estricto); no es una demostración general ni una validación experimental; el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.</p>",
+      "texto": "En 256 variantes estables, ningún PII alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm); el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.",
+      "contenido_html": "<p>En 256 variantes estables, ningún PII alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm); el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.</p>",
       "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
-        "grado": 9,
-        "grado_entrada": 7,
+        "grado": 8,
+        "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.009787,
-        "cercania": 0.307167,
-        "pagerank": 0.010414,
-        "agrupamiento": 0.277778,
+        "intermediacion": 0.014656,
+        "cercania": 0.287781,
+        "pagerank": 0.010173,
+        "agrupamiento": 0.214286,
         "excentricidad": 6
       }
     },
@@ -3643,9 +3636,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001063,
-        "cercania": 0.229885,
-        "pagerank": 0.006727,
+        "intermediacion": 0.001187,
+        "cercania": 0.225725,
+        "pagerank": 0.006765,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3660,9 +3653,9 @@
         "grado": 6,
         "grado_entrada": 6,
         "grado_salida": 0,
-        "intermediacion": 0.002714,
-        "cercania": 0.272315,
-        "pagerank": 0.02552,
+        "intermediacion": 0.004649,
+        "cercania": 0.264402,
+        "pagerank": 0.025303,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -3682,8 +3675,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.25,
-        "pagerank": 0.002607,
+        "cercania": 0.248957,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3703,8 +3696,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.244565,
-        "pagerank": 0.002607,
+        "cercania": 0.244536,
+        "pagerank": 0.002625,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -3723,9 +3716,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.006969,
-        "cercania": 0.266667,
-        "pagerank": 0.002607,
+        "intermediacion": 0.008509,
+        "cercania": 0.265579,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3745,8 +3738,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.257511,
-        "pagerank": 0.002607,
+        "cercania": 0.257554,
+        "pagerank": 0.002625,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -3766,8 +3759,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.178571,
-        "pagerank": 0.002607,
+        "cercania": 0.178465,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3786,9 +3779,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.00378,
-        "cercania": 0.294599,
-        "pagerank": 0.002607,
+        "intermediacion": 0.006119,
+        "cercania": 0.28871,
+        "pagerank": 0.002625,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -3805,9 +3798,9 @@
         "grado": 4,
         "grado_entrada": 0,
         "grado_salida": 4,
-        "intermediacion": 3.1e-05,
-        "cercania": 0.255682,
-        "pagerank": 0.002607,
+        "intermediacion": 5.5e-05,
+        "cercania": 0.246556,
+        "pagerank": 0.002625,
         "agrupamiento": 0.833333,
         "excentricidad": 7
       },
@@ -3827,8 +3820,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.265579,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -3848,8 +3841,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.265579,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -3869,8 +3862,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.174419,
-        "pagerank": 0.002607,
+        "cercania": 0.17345,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 8
       },
@@ -3895,8 +3888,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210526,
-        "pagerank": 0.002607,
+        "cercania": 0.209112,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3918,9 +3911,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.001109,
-        "cercania": 0.27735,
-        "pagerank": 0.002607,
+        "intermediacion": 0.00132,
+        "cercania": 0.276662,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3942,9 +3935,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.003664,
-        "cercania": 0.283019,
-        "pagerank": 0.002607,
+        "intermediacion": 0.005188,
+        "cercania": 0.28278,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3966,9 +3959,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.001109,
-        "cercania": 0.27735,
-        "pagerank": 0.002607,
+        "intermediacion": 0.00132,
+        "cercania": 0.276662,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3977,18 +3970,18 @@
       "id": "SINT",
       "tipo": "sim",
       "etiqueta": "Barrido de familias PI y PII",
-      "contenido_html": "<p>Ganancia ×0.5–3 y ceros de baja frecuencia ×0.25–4 sobre el PI y el PII de la tesis. 256 variantes linealmente estables con MF ≥ 30° en −3, −2.5 y −2 cm; 57 PI y 51 PII completan, sin divergir y con el voltaje aplicado (tras la retención) por debajo de 3.5 V, el escalón −2 → −3 cm y una rampa de −0.05 cm/s (12 veces la trapezoidal). 512 trayectorias en GPU (31 s); exportador con criterio explícito en exportar_R15.py. Repetidas en doble precisión: diferencia mediana < 1 %, un PI con 16 % confirmado por ode45; con 20 subpasos los PII aceptados son 52. Si se excluye todo recorte superior previo a la retención: 53 PI y 50 PII, mejor PI 0.019 cm (cociente 1.4 en lugar de 1.9).</p><div class=\"tbl\"><table><tr><th></th><th>PI</th><th>PII</th></tr><tr><td>Ciclo límite mínimo</td><td>0.013 cm</td><td>0.026 cm</td></tr><tr><td>Atascamiento medio mínimo</td><td>0.17 s</td><td>0.20 s</td></tr><tr><td>Error medio en rampa (controladores de la tesis)</td><td>0.56×10⁻³ cm</td><td>0.13×10⁻³ cm</td></tr><tr><td>Error eficaz en rampa (controladores de la tesis)</td><td>7.5×10⁻³ cm</td><td>7.7×10⁻³ cm</td></tr></table></div><p style='margin-top:10px'>El ciclo límite baja con la ganancia proporcional, no con el segundo integrador.</p>",
-      "texto": "Ganancia ×0.5–3 y ceros de baja frecuencia ×0.25–4 sobre el PI y el PII de la tesis. 256 variantes linealmente estables con MF ≥ 30° en −3, −2.5 y −2 cm; 57 PI y 51 PII completan, sin divergir y con el voltaje aplicado (tras la retención) por debajo de 3.5 V, el escalón −2 → −3 cm y una rampa de −0.05 cm/s (12 veces la trapezoidal). 512 trayectorias en GPU (31 s); exportador con criterio explícito en exportar_R15.py. Repetidas en doble precisión: diferencia mediana < 1 %, un PI con 16 % confirmado por ode45; con 20 subpasos los PII aceptados son 52. Si se excluye todo recorte superior previo a la retención: 53 PI y 50 PII, mejor PI 0.019 cm (cociente 1.4 en lugar de 1.9).\n | | PI | PII\n | Ciclo límite mínimo | 0.013 cm | 0.026 cm\n | Atascamiento medio mínimo | 0.17 s | 0.20 s\n | Error medio en rampa (controladores de la tesis) | 0.56×10⁻³ cm | 0.13×10⁻³ cm\n | Error eficaz en rampa (controladores de la tesis) | 7.5×10⁻³ cm | 7.7×10⁻³ cm\nEl ciclo límite baja con la ganancia proporcional, no con el segundo integrador.",
+      "contenido_html": "<p>Ganancia ×0.5–3 y ceros de baja frecuencia ×0.25–4 sobre el PI y el PII de la tesis. 256 variantes estables con MF ≥ 30° en −3 a −2 cm; 54 PI y 51 PII completan sin saturar el escalón −2 → −3 cm y una rampa de −0.05 cm/s (12 veces la trapezoidal). 512 trayectorias en GPU (31 s), extremos validados con ode45.</p><div class=\"tbl\"><table><tr><th></th><th>PI</th><th>PII</th></tr><tr><td>Ciclo límite mínimo</td><td>0.013 cm</td><td>0.026 cm</td></tr><tr><td>Atascamiento medio mínimo</td><td>0.22 s</td><td>0.20 s</td></tr><tr><td>Error medio en rampa (controladores de la tesis)</td><td>0.56×10⁻³ cm</td><td>0.13×10⁻³ cm</td></tr><tr><td>Error eficaz en rampa (controladores de la tesis)</td><td>7.5×10⁻³ cm</td><td>7.7×10⁻³ cm</td></tr></table></div><p style='margin-top:10px'>El ciclo límite baja con la ganancia proporcional, no con el segundo integrador.</p>",
+      "texto": "Ganancia ×0.5–3 y ceros de baja frecuencia ×0.25–4 sobre el PI y el PII de la tesis. 256 variantes estables con MF ≥ 30° en −3 a −2 cm; 54 PI y 51 PII completan sin saturar el escalón −2 → −3 cm y una rampa de −0.05 cm/s (12 veces la trapezoidal). 512 trayectorias en GPU (31 s), extremos validados con ode45.\n | | PI | PII\n | Ciclo límite mínimo | 0.013 cm | 0.026 cm\n | Atascamiento medio mínimo | 0.22 s | 0.20 s\n | Error medio en rampa (controladores de la tesis) | 0.56×10⁻³ cm | 0.13×10⁻³ cm\n | Error eficaz en rampa (controladores de la tesis) | 7.5×10⁻³ cm | 7.7×10⁻³ cm\nEl ciclo límite baja con la ganancia proporcional, no con el segundo integrador.",
       "fuente": "icr/calculus/Final_Bien/R15_sintonizacion/simular_R15.py",
       "verificacion": "GPU (MLX) + MATLAB",
       "metricas": {
-        "grado": 10,
-        "grado_entrada": 5,
+        "grado": 9,
+        "grado_entrada": 4,
         "grado_salida": 5,
-        "intermediacion": 0.028758,
-        "cercania": 0.315236,
-        "pagerank": 0.004887,
-        "agrupamiento": 0.244444,
+        "intermediacion": 0.034459,
+        "cercania": 0.28871,
+        "pagerank": 0.00478,
+        "agrupamiento": 0.25,
         "excentricidad": 6
       }
     },
@@ -3996,22 +3989,22 @@
       "id": "F_R15",
       "tipo": "fig",
       "etiqueta": "Fig. Familias PI y PII",
-      "contenido_html": "<p>Ciclo límite frente a duración media del atascamiento para los 57 PI y 51 PII cuyo voltaje aplicado no alcanza 3.5 V en el escalón ni en la rampa.</p>",
-      "texto": "Ciclo límite frente a duración media del atascamiento para los 57 PI y 51 PII cuyo voltaje aplicado no alcanza 3.5 V en el escalón ni en la rampa.",
+      "contenido_html": "<p>Ciclo límite frente a duración media del atascamiento para las variantes que operan sin saturar.</p>",
+      "texto": "Ciclo límite frente a duración media del atascamiento para las variantes que operan sin saturar.",
       "figura": {
         "png": "img/r15_familias.png",
         "original": "icr/context/Tesis/images/r15_results/tikz/familias.tex"
       },
       "fuente": "icr/context/Tesis/images/r15_results/tikz/familias.tex",
       "metricas": {
-        "grado": 2,
-        "grado_entrada": 2,
+        "grado": 1,
+        "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.27907,
-        "pagerank": 0.003576,
-        "agrupamiento": 1.0,
-        "excentricidad": 6
+        "cercania": 0.224311,
+        "pagerank": 0.003437,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
       }
     },
     {
@@ -4030,9 +4023,9 @@
         "grado": 4,
         "grado_entrada": 2,
         "grado_salida": 2,
-        "intermediacion": 0.004086,
-        "cercania": 0.298013,
-        "pagerank": 0.006728,
+        "intermediacion": 0.008056,
+        "cercania": 0.296849,
+        "pagerank": 0.006756,
         "agrupamiento": 0.166667,
         "excentricidad": 6
       }
@@ -4041,18 +4034,18 @@
       "id": "CICLO",
       "tipo": "sim",
       "etiqueta": "Anatomía del ciclo límite",
-      "contenido_html": "<p>Cuatro fases: atascamiento (la acción integral cambia el voltaje), ruptura (el voltaje alcanza el borde de la banda), deslizamiento (el imán cruza la referencia) y nuevo atascamiento del otro lado.</p><div class=\"tbl\"><table><tr><th></th><th>PI</th><th>PII</th></tr><tr><td>Cambio de voltaje por atascamiento</td><td>0.33 V</td><td>0.34 V</td></tr><tr><td>Error al atascarse</td><td>0.015 cm</td><td>0.016 cm</td></tr><tr><td>Duración del atascamiento</td><td>0.26 s</td><td>0.35 s</td></tr><tr><td>Predicción K<sub>i</sub>e₀</td><td>0.25 s</td><td>—</td></tr><tr><td>Periodo del ciclo</td><td>0.74 s</td><td>0.98 s</td></tr><tr><td>Ciclo pico a pico</td><td>0.031 cm</td><td>0.033 cm</td></tr></table></div><p style='margin-top:10px'>Con el PII, el voltaje durante el atascamiento es una parábola (curvatura ≈ K<sub>ii</sub>e₀), pero con estado inicial nulo el término cuadrático solo dominaría después de 2K<sub>i</sub>/K<sub>ii</sub> = 1.6 s; la integral acumulada q₀ cambia ese umbral y reduce la pendiente inicial.</p>",
-      "texto": "Cuatro fases: atascamiento (la acción integral cambia el voltaje), ruptura (el voltaje alcanza el borde de la banda), deslizamiento (el imán cruza la referencia) y nuevo atascamiento del otro lado.\n | | PI | PII\n | Cambio de voltaje por atascamiento | 0.33 V | 0.34 V\n | Error al atascarse | 0.015 cm | 0.016 cm\n | Duración del atascamiento | 0.26 s | 0.35 s\n | Predicción Kie₀ | 0.25 s | —\n | Periodo del ciclo | 0.74 s | 0.98 s\n | Ciclo pico a pico | 0.031 cm | 0.033 cm\nCon el PII, el voltaje durante el atascamiento es una parábola (curvatura ≈ Kiie₀), pero con estado inicial nulo el término cuadrático solo dominaría después de 2Ki/Kii = 1.6 s; la integral acumulada q₀ cambia ese umbral y reduce la pendiente inicial.",
+      "contenido_html": "<p>Cuatro fases: atascamiento (la acción integral cambia el voltaje), ruptura (el voltaje alcanza el borde de la banda), deslizamiento (el imán cruza la referencia) y nuevo atascamiento del otro lado.</p><div class=\"tbl\"><table><tr><th></th><th>PI</th><th>PII</th></tr><tr><td>Cambio de voltaje por atascamiento</td><td>0.33 V</td><td>0.34 V</td></tr><tr><td>Error al atascarse</td><td>0.015 cm</td><td>0.016 cm</td></tr><tr><td>Duración del atascamiento</td><td>0.26 s</td><td>0.35 s</td></tr><tr><td>Predicción K<sub>i</sub>e₀</td><td>0.25 s</td><td>—</td></tr><tr><td>Periodo del ciclo</td><td>0.74 s</td><td>0.98 s</td></tr><tr><td>Ciclo pico a pico</td><td>0.031 cm</td><td>0.033 cm</td></tr></table></div><p style='margin-top:10px'>Con el PII, el voltaje durante el atascamiento es una parábola (curvatura ≈ K<sub>ii</sub>e₀), pero el término cuadrático solo domina después de 2K<sub>i</sub>/K<sub>ii</sub> = 1.6 s.</p>",
+      "texto": "Cuatro fases: atascamiento (la acción integral cambia el voltaje), ruptura (el voltaje alcanza el borde de la banda), deslizamiento (el imán cruza la referencia) y nuevo atascamiento del otro lado.\n | | PI | PII\n | Cambio de voltaje por atascamiento | 0.33 V | 0.34 V\n | Error al atascarse | 0.015 cm | 0.016 cm\n | Duración del atascamiento | 0.26 s | 0.35 s\n | Predicción Kie₀ | 0.25 s | —\n | Periodo del ciclo | 0.74 s | 0.98 s\n | Ciclo pico a pico | 0.031 cm | 0.033 cm\nCon el PII, el voltaje durante el atascamiento es una parábola (curvatura ≈ Kiie₀), pero el término cuadrático solo domina después de 2Ki/Kii = 1.6 s.",
       "fuente": "icr/calculus/Final_Bien/R15_sintonizacion/analisis_ciclo.m",
       "verificacion": "MATLAB",
       "metricas": {
-        "grado": 12,
-        "grado_entrada": 7,
+        "grado": 11,
+        "grado_entrada": 6,
         "grado_salida": 5,
-        "intermediacion": 0.062647,
-        "cercania": 0.351562,
-        "pagerank": 0.013967,
-        "agrupamiento": 0.121212,
+        "intermediacion": 0.074624,
+        "cercania": 0.342256,
+        "pagerank": 0.01389,
+        "agrupamiento": 0.090909,
         "excentricidad": 6
       }
     },
@@ -4060,8 +4053,8 @@
       "id": "PDFF",
       "tipo": "sim",
       "etiqueta": "PD con prealimentación",
-      "contenido_html": "<p>\\(C_{PD}(s)=152.43\\,(s+17.31)/(s+301.1)\\) más \\(u_e(r)\\): el PII sin integradores. El imán llega, se atasca y queda en reposo: <b>sin ciclo límite</b>. Error final de 0.002 cm, dentro de la banda de reposo: con la rigidez neta \\(k_{ef}=506.5-4mg/(a-r)=452.1\\), \\(F_s/k_{ef}=0.044\\) cm; sin linealizar, de −0.043 a +0.045 cm.</p><p>Muestra que la acción integral es la causa del ciclo (<i>hunting</i>).</p>",
-      "texto": "\\(C_{PD}(s)=152.43\\,(s+17.31)/(s+301.1)\\) más \\(u_e(r)\\): el PII sin integradores. El imán llega, se atasca y queda en reposo: sin ciclo límite. Error final de 0.002 cm, dentro de la banda de reposo: con la rigidez neta \\(k_{ef}=506.5-4mg/(a-r)=452.1\\), \\(F_s/k_{ef}=0.044\\) cm; sin linealizar, de −0.043 a +0.045 cm.\nMuestra que la acción integral es la causa del ciclo (hunting).",
+      "contenido_html": "<p>\\(C_{PD}(s)=152.43\\,(s+17.31)/(s+301.1)\\) más \\(u_e(r)\\): el PII sin integradores. El imán llega, se atasca y queda en reposo: <b>sin ciclo límite</b>. Error final de 0.002 cm, dentro de la banda teórica \\(\\pm F_s/506.5 = \\pm0.039\\) cm.</p><p>Muestra que la acción integral es la causa del ciclo (<i>hunting</i>).</p>",
+      "texto": "\\(C_{PD}(s)=152.43\\,(s+17.31)/(s+301.1)\\) más \\(u_e(r)\\): el PII sin integradores. El imán llega, se atasca y queda en reposo: sin ciclo límite. Error final de 0.002 cm, dentro de la banda teórica \\(\\pm F_s/506.5 = \\pm0.039\\) cm.\nMuestra que la acción integral es la causa del ciclo (hunting).",
       "latex": [
         "C_{PD}(s)=152.43\\,(s+17.31)/(s+301.1)",
         "u_e(r)",
@@ -4070,12 +4063,12 @@
       "fuente": "icr/calculus/Final_Bien/R15_sintonizacion/analisis_ciclo.m",
       "verificacion": "MATLAB",
       "metricas": {
-        "grado": 4,
-        "grado_entrada": 2,
+        "grado": 3,
+        "grado_entrada": 1,
         "grado_salida": 2,
-        "intermediacion": 0.014526,
-        "cercania": 0.309278,
-        "pagerank": 0.003105,
+        "intermediacion": 0.012728,
+        "cercania": 0.278383,
+        "pagerank": 0.002986,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4092,9 +4085,9 @@
         "grado": 3,
         "grado_entrada": 1,
         "grado_salida": 2,
-        "intermediacion": 0.01115,
-        "cercania": 0.245232,
-        "pagerank": 0.003438,
+        "intermediacion": 0.011278,
+        "cercania": 0.229782,
+        "pagerank": 0.003437,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4103,8 +4096,8 @@
       "id": "KV",
       "tipo": "calc",
       "etiqueta": "Error en rampa (tipo 1 frente a tipo 2)",
-      "contenido_html": "<p>PI: \\(e_{ss}=\\dot r/K_v\\) con \\(K_v=-91.6\\) s⁻¹ en −3 cm (signo de la planta inestable); con \\(\\dot r=-0.05\\) cm/s el error es positivo. PII: tipo 2, error nulo.</p><div class=\"tbl\"><table><tr><th>Pendiente</th><th>PI teórico</th><th>PI simulado</th><th>PII simulado</th></tr><tr><td>0.004 cm/s (trapezoidal)</td><td>4×10⁻⁵ cm</td><td>—</td><td>—</td></tr><tr><td>0.05 cm/s</td><td>5.5×10⁻⁴ cm</td><td>5.6×10⁻⁴ cm</td><td>1.3×10⁻⁴ cm</td></tr></table></div><p style='margin-top:10px'>Ambos son más de diez veces menores que el error eficaz del ciclo límite (≈7.6×10⁻³ cm).</p>",
-      "texto": "PI: \\(e_{ss}=\\dot r/K_v\\) con \\(K_v=-91.6\\) s⁻¹ en −3 cm (signo de la planta inestable); con \\(\\dot r=-0.05\\) cm/s el error es positivo. PII: tipo 2, error nulo.\n | Pendiente | PI teórico | PI simulado | PII simulado\n | 0.004 cm/s (trapezoidal) | 4×10⁻⁵ cm | — | —\n | 0.05 cm/s | 5.5×10⁻⁴ cm | 5.6×10⁻⁴ cm | 1.3×10⁻⁴ cm\nAmbos son más de diez veces menores que el error eficaz del ciclo límite (≈7.6×10⁻³ cm).",
+      "contenido_html": "<p>PI: \\(e_{ss}=\\dot r/K_v\\) con \\(K_v=91.6\\) s⁻¹ en −3 cm. PII: tipo 2, error nulo.</p><div class=\"tbl\"><table><tr><th>Pendiente</th><th>PI teórico</th><th>PI simulado</th><th>PII simulado</th></tr><tr><td>0.004 cm/s (trapezoidal)</td><td>4×10⁻⁵ cm</td><td>—</td><td>—</td></tr><tr><td>0.05 cm/s</td><td>5.5×10⁻⁴ cm</td><td>5.6×10⁻⁴ cm</td><td>1.3×10⁻⁴ cm</td></tr></table></div><p style='margin-top:10px'>Ambos son más de diez veces menores que el error eficaz del ciclo límite (≈7.6×10⁻³ cm).</p>",
+      "texto": "PI: \\(e_{ss}=\\dot r/K_v\\) con \\(K_v=91.6\\) s⁻¹ en −3 cm. PII: tipo 2, error nulo.\n | Pendiente | PI teórico | PI simulado | PII simulado\n | 0.004 cm/s (trapezoidal) | 4×10⁻⁵ cm | — | —\n | 0.05 cm/s | 5.5×10⁻⁴ cm | 5.6×10⁻⁴ cm | 1.3×10⁻⁴ cm\nAmbos son más de diez veces menores que el error eficaz del ciclo límite (≈7.6×10⁻³ cm).",
       "latex": [
         "e_{ss}=\\dot r/K_v",
         "K_v=91.6"
@@ -4112,14 +4105,14 @@
       "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:ventaja_rampa",
       "verificacion": "MATLAB + GPU",
       "metricas": {
-        "grado": 3,
-        "grado_entrada": 2,
+        "grado": 2,
+        "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.000726,
-        "cercania": 0.275229,
-        "pagerank": 0.003384,
-        "agrupamiento": 0.333333,
-        "excentricidad": 6
+        "intermediacion": 0.000102,
+        "cercania": 0.231865,
+        "pagerank": 0.003268,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
       }
     },
     {
@@ -4138,8 +4131,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.267062,
-        "pagerank": 0.007841,
+        "cercania": 0.263623,
+        "pagerank": 0.007857,
         "agrupamiento": 1.0,
         "excentricidad": 7
       }
@@ -4160,8 +4153,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.260492,
-        "pagerank": 0.004981,
+        "cercania": 0.25535,
+        "pagerank": 0.004986,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4182,8 +4175,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.236531,
-        "pagerank": 0.003927,
+        "cercania": 0.218027,
+        "pagerank": 0.003894,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4204,8 +4197,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.197152,
-        "pagerank": 0.004068,
+        "cercania": 0.187043,
+        "pagerank": 0.004086,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -4221,9 +4214,9 @@
         "grado": 5,
         "grado_entrada": 4,
         "grado_salida": 1,
-        "intermediacion": 0.00647,
-        "cercania": 0.283912,
-        "pagerank": 0.007356,
+        "intermediacion": 0.009696,
+        "cercania": 0.28189,
+        "pagerank": 0.007318,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -4232,18 +4225,18 @@
       "id": "K12",
       "tipo": "conc",
       "etiqueta": "La ganancia fija la amplitud del ciclo",
-      "contenido_html": "<p>La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; en atascamientos de unos 0.35 s el término integral simple aporta la mayor parte del cambio de voltaje.</p>",
-      "texto": "La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; en atascamientos de unos 0.35 s el término integral simple aporta la mayor parte del cambio de voltaje.",
+      "contenido_html": "<p>La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; la duración del atascamiento la fija el término integral simple.</p>",
+      "texto": "La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; la duración del atascamiento la fija el término integral simple.",
       "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
       "metricas": {
-        "grado": 4,
-        "grado_entrada": 3,
+        "grado": 3,
+        "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.008048,
-        "cercania": 0.292208,
-        "pagerank": 0.006581,
-        "agrupamiento": 0.166667,
-        "excentricidad": 6
+        "intermediacion": 0.005814,
+        "cercania": 0.259045,
+        "pagerank": 0.006447,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
       }
     },
     {
@@ -4260,9 +4253,9 @@
         "grado": 5,
         "grado_entrada": 0,
         "grado_salida": 5,
-        "intermediacion": 0.0272,
-        "cercania": 0.340265,
-        "pagerank": 0.002607,
+        "intermediacion": 0.03426,
+        "cercania": 0.338374,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -4278,9 +4271,9 @@
         "grado": 7,
         "grado_entrada": 6,
         "grado_salida": 1,
-        "intermediacion": 0.006187,
-        "cercania": 0.295082,
-        "pagerank": 0.006628,
+        "intermediacion": 0.007971,
+        "cercania": 0.292007,
+        "pagerank": 0.006673,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -4289,18 +4282,18 @@
       "id": "K13",
       "tipo": "conc",
       "etiqueta": "Evaluación de la hipótesis",
-      "contenido_html": "<p><b>Parte 1 confirmada:</b> el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. <b>Parte 2 sin respaldo en las simulaciones de las familias ensayadas:</b> la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.</p>",
-      "texto": "Parte 1 confirmada: el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. Parte 2 sin respaldo en las simulaciones de las familias ensayadas: la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.",
+      "contenido_html": "<p><b>Parte 1 confirmada:</b> el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. <b>Parte 2 rechazada:</b> la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.</p>",
+      "texto": "Parte 1 confirmada: el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. Parte 2 rechazada: la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.",
       "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
-        "grado": 6,
-        "grado_entrada": 6,
+        "grado": 5,
+        "grado_entrada": 5,
         "grado_salida": 0,
-        "intermediacion": 0.008418,
-        "cercania": 0.311958,
-        "pagerank": 0.021446,
-        "agrupamiento": 0.133333,
-        "excentricidad": 6
+        "intermediacion": 0.007946,
+        "cercania": 0.287319,
+        "pagerank": 0.021292,
+        "agrupamiento": 0.1,
+        "excentricidad": 7
       }
     },
     {
@@ -4314,9 +4307,9 @@
         "grado": 16,
         "grado_entrada": 13,
         "grado_salida": 3,
-        "intermediacion": 0.127955,
-        "cercania": 0.360721,
-        "pagerank": 0.019496,
+        "intermediacion": 0.139377,
+        "cercania": 0.359438,
+        "pagerank": 0.019628,
         "agrupamiento": 0.033333,
         "excentricidad": 5
       }
@@ -4325,16 +4318,16 @@
       "id": "APA",
       "tipo": "mod",
       "etiqueta": "Anexo A: implementación de las simulaciones",
-      "contenido_html": "<p>Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4, precisión simple); repetidos en doble precisión con diferencia mediana &lt; 1 % y un caso del 16 %. Tabla de programas por sección.</p>",
-      "texto": "Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4, precisión simple); repetidos en doble precisión con diferencia mediana < 1 % y un caso del 16 %. Tabla de programas por sección.",
+      "contenido_html": "<p>Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4) validados con ode45 (&lt; 8 %). Tabla de programas por sección.</p>",
+      "texto": "Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4) validados con ode45 (< 8 %). Tabla de programas por sección.",
       "fuente": "icr/context/Tesis/chapters/apendices/simulacion.tex",
       "metricas": {
-        "grado": 4,
-        "grado_entrada": 4,
+        "grado": 3,
+        "grado_entrada": 3,
         "grado_salida": 0,
-        "intermediacion": 0.012186,
-        "cercania": 0.299501,
-        "pagerank": 0.005653,
+        "intermediacion": 0.008248,
+        "cercania": 0.279687,
+        "pagerank": 0.005545,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4343,17 +4336,17 @@
       "id": "APB",
       "tipo": "mod",
       "etiqueta": "Anexo B: verificación del simulador",
-      "contenido_html": "<p>Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: u<sub>e</sub>(−4) = 3.4826 V, jacobiano igual a la matriz A en la región de deslizamiento (v = 0.5 cm/s; en reposo dentro de la banda de Karnopp es la matriz nula), fricción con signo opuesto a la velocidad.</p>",
-      "texto": "Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: ue(−4) = 3.4826 V, jacobiano igual a la matriz A en la región de deslizamiento (v = 0.5 cm/s; en reposo dentro de la banda de Karnopp es la matriz nula), fricción con signo opuesto a la velocidad.",
+      "contenido_html": "<p>Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: u<sub>e</sub>(−4) = 3.4826 V, jacobiano igual a la matriz A, fricción con signo opuesto a la velocidad.</p>",
+      "texto": "Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: ue(−4) = 3.4826 V, jacobiano igual a la matriz A, fricción con signo opuesto a la velocidad.",
       "fuente": "icr/context/Tesis/chapters/apendices/verificacion.tex",
       "metricas": {
-        "grado": 2,
-        "grado_entrada": 2,
+        "grado": 1,
+        "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.286624,
-        "pagerank": 0.006004,
-        "agrupamiento": 1.0,
+        "cercania": 0.254986,
+        "pagerank": 0.005889,
+        "agrupamiento": 0.0,
         "excentricidad": 6
       }
     },
@@ -4372,9 +4365,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001875,
-        "cercania": 0.267857,
-        "pagerank": 0.003809,
+        "intermediacion": 0.001988,
+        "cercania": 0.265579,
+        "pagerank": 0.003834,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4395,8 +4388,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.26393,
-        "pagerank": 0.007486,
+        "cercania": 0.257184,
+        "pagerank": 0.007513,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4419,8 +4412,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.264793,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4443,8 +4436,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.264793,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4467,8 +4460,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.264793,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4491,8 +4484,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.264793,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4511,9 +4504,9 @@
         "grado": 6,
         "grado_entrada": 0,
         "grado_salida": 6,
-        "intermediacion": 0.014731,
-        "cercania": 0.314685,
-        "pagerank": 0.002607,
+        "intermediacion": 0.01642,
+        "cercania": 0.311304,
+        "pagerank": 0.002625,
         "agrupamiento": 0.266667,
         "excentricidad": 6
       }
@@ -4533,8 +4526,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265487,
-        "pagerank": 0.002607,
+        "cercania": 0.265579,
+        "pagerank": 0.002625,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4553,9 +4546,9 @@
         "grado": 7,
         "grado_entrada": 0,
         "grado_salida": 7,
-        "intermediacion": 0.072383,
-        "cercania": 0.323741,
-        "pagerank": 0.002607,
+        "intermediacion": 0.072806,
+        "cercania": 0.316814,
+        "pagerank": 0.002625,
         "agrupamiento": 0.238095,
         "excentricidad": 6
       }
@@ -4574,32 +4567,11 @@
         "grado": 8,
         "grado_entrada": 0,
         "grado_salida": 8,
-        "intermediacion": 0.031312,
-        "cercania": 0.333333,
-        "pagerank": 0.002607,
+        "intermediacion": 0.038486,
+        "cercania": 0.330869,
+        "pagerank": 0.002625,
         "agrupamiento": 0.25,
         "excentricidad": 6
-      }
-    },
-    {
-      "id": "R24",
-      "tipo": "rev",
-      "etiqueta": "Segundo barrido de validación",
-      "contenido_html": "<p>La auditoría del 3 de octubre de 2026 (validacion/barrido_02/VEREDICTO.md) encontró la unidad de b incompatible, datos obsoletos en el grafo, 54 PI publicados frente a 57 según el filtro, conclusiones más generales que el barrido, la retención de voltaje descrita como D(u), la fórmula del atascamiento sin estado inicial, Kv sin signo, la rigidez del PD sin la planta, el jacobiano sin precisar la región, «sin saturar» ambiguo, el movimiento desde −4 cm exagerado, la caché de seguimiento sin versión y la sensibilidad numérica del barrido sin informar.</p><p><b>Resolución:</b> Unidad de b, grafo, exportador R15 reproducible (57 PI y 51 PII), conclusiones acotadas a las familias ensayadas, zona muerta implementada distinguida de D(u), fórmula con q₀, Kv con signo, rigidez neta del PD, jacobiano en deslizamiento, criterio de saturación explícito y alternativo, movimiento desde −4 cm y criterio de alcanzable, caché versionada con firma y sensibilidad del barrido (doble precisión, 20 subpasos, ode45). Las conclusiones siguen siendo de simulación.</p>",
-      "texto": "La auditoría del 3 de octubre de 2026 (validacion/barrido_02/VEREDICTO.md) encontró la unidad de b incompatible, datos obsoletos en el grafo, 54 PI publicados frente a 57 según el filtro, conclusiones más generales que el barrido, la retención de voltaje descrita como D(u), la fórmula del atascamiento sin estado inicial, Kv sin signo, la rigidez del PD sin la planta, el jacobiano sin precisar la región, «sin saturar» ambiguo, el movimiento desde −4 cm exagerado, la caché de seguimiento sin versión y la sensibilidad numérica del barrido sin informar.\nResolución: Unidad de b, grafo, exportador R15 reproducible (57 PI y 51 PII), conclusiones acotadas a las familias ensayadas, zona muerta implementada distinguida de D(u), fórmula con q₀, Kv con signo, rigidez neta del PD, jacobiano en deslizamiento, criterio de saturación explícito y alternativo, movimiento desde −4 cm y criterio de alcanzable, caché versionada con firma y sensibilidad del barrido (doble precisión, 20 subpasos, ode45). Las conclusiones siguen siendo de simulación.",
-      "prioridad": "alta",
-      "estado": "resuelta",
-      "resuelta_en": "validación 2026-10-03",
-      "resolucion": "Correcciones aplicadas; no equivale a validación experimental.",
-      "metricas": {
-        "grado": 16,
-        "grado_entrada": 0,
-        "grado_salida": 16,
-        "intermediacion": 0.093919,
-        "cercania": 0.351562,
-        "pagerank": 0.002607,
-        "agrupamiento": 0.091667,
-        "excentricidad": 5
       }
     }
   ],
@@ -6439,109 +6411,13 @@
       "origen": "R23",
       "destino": "K13",
       "relacion": "afecta_a"
-    },
-    {
-      "id": "e307",
-      "origen": "R24",
-      "destino": "PAR",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e308",
-      "origen": "R24",
-      "destino": "ZM",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e309",
-      "origen": "R24",
-      "destino": "KARN",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e310",
-      "origen": "R24",
-      "destino": "SINT",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e311",
-      "origen": "R24",
-      "destino": "F_R15",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e312",
-      "origen": "R24",
-      "destino": "K9",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e313",
-      "origen": "R24",
-      "destino": "K12",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e314",
-      "origen": "R24",
-      "destino": "K13",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e315",
-      "origen": "R24",
-      "destino": "CICLO",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e316",
-      "origen": "R24",
-      "destino": "KV",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e317",
-      "origen": "R24",
-      "destino": "PDFF",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e318",
-      "origen": "R24",
-      "destino": "VIA",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e319",
-      "origen": "R24",
-      "destino": "K6",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e320",
-      "origen": "R24",
-      "destino": "APA",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e321",
-      "origen": "R24",
-      "destino": "APB",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e322",
-      "origen": "R24",
-      "destino": "REG",
-      "relacion": "afecta_a"
     }
   ],
   "metricas_globales": {
-    "nodos": 181,
-    "aristas": 322,
-    "densidad": 0.019767,
-    "grado_medio": 3.558,
+    "nodos": 180,
+    "aristas": 306,
+    "densidad": 0.018994,
+    "grado_medio": 3.4,
     "componentes_conexas": 1,
     "diametro": 8,
     "radio": 5,
@@ -6561,7 +6437,6 @@
       "OG",
       "PII",
       "R19",
-      "R24",
       "REG",
       "SINAD",
       "TF",
@@ -6569,8 +6444,8 @@
       "ZM",
       "ref:alcantara"
     ],
-    "longitud_media_camino": 3.8141,
-    "agrupamiento_medio": 0.116297,
+    "longitud_media_camino": 3.8799,
+    "agrupamiento_medio": 0.095685,
     "nodos_por_tipo": {
       "tesis": 1,
       "obj": 6,
@@ -6580,7 +6455,7 @@
       "fig": 40,
       "conc": 13,
       "fut": 9,
-      "rev": 24,
+      "rev": 23,
       "ref": 43
     },
     "aristas_por_relacion": {
@@ -6601,7 +6476,7 @@
       "implica": 4,
       "concluye": 1,
       "motiva": 17,
-      "afecta_a": 75,
+      "afecta_a": 59,
       "citada_en": 61,
       "incluye": 1,
       "se_analiza_en": 2,
@@ -6633,16 +6508,16 @@
       "mod->fut": 6,
       "calc->fut": 4,
       "sim->fut": 3,
-      "rev->calc": 8,
-      "rev->sim": 15,
-      "rev->fig": 5,
-      "rev->mod": 26,
+      "rev->calc": 6,
+      "rev->sim": 11,
+      "rev->fig": 4,
+      "rev->mod": 21,
       "ref->mod": 51,
       "ref->conc": 4,
       "ref->fut": 3,
       "ref->sim": 1,
       "tesis->sim": 1,
-      "rev->conc": 10,
+      "rev->conc": 6,
       "rev->obj": 4,
       "rev->tesis": 6,
       "rev->ref": 1,
@@ -6656,7 +6531,7 @@
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
-        "grado": 19
+        "grado": 18
       },
       {
         "id": "PII",
@@ -6669,18 +6544,8 @@
         "grado": 16
       },
       {
-        "id": "R24",
-        "etiqueta": "Segundo barrido de validación",
-        "grado": 16
-      },
-      {
         "id": "LIN",
         "etiqueta": "Modelo linealizado (x* = −4 cm)",
-        "grado": 15
-      },
-      {
-        "id": "REG",
-        "etiqueta": "Regulación con AD (OE4)",
         "grado": 15
       },
       {
@@ -6694,118 +6559,128 @@
         "grado": 14
       },
       {
-        "id": "ZM",
-        "etiqueta": "Zona muerta dinámica no centrada",
-        "grado": 12
+        "id": "REG",
+        "etiqueta": "Regulación con AD (OE4)",
+        "grado": 14
       },
       {
         "id": "SIN",
         "etiqueta": "Seguimiento senoidal",
         "grado": 12
+      },
+      {
+        "id": "ANT",
+        "etiqueta": "Antecedentes directos",
+        "grado": 11
+      },
+      {
+        "id": "ZM",
+        "etiqueta": "Zona muerta dinámica no centrada",
+        "grado": 11
       }
     ],
     "top_intermediacion": [
       {
         "id": "PII",
         "etiqueta": "Controlador PII",
-        "intermediacion": 0.209856
+        "intermediacion": 0.233604
       },
       {
         "id": "T",
         "etiqueta": "Control PII del SLM inestable",
-        "intermediacion": 0.18963
+        "intermediacion": 0.19654
       },
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
-        "intermediacion": 0.139408
+        "intermediacion": 0.139975
       },
       {
         "id": "MARCO",
         "etiqueta": "Fundamentos teóricos",
-        "intermediacion": 0.127955
-      },
-      {
-        "id": "ZM",
-        "etiqueta": "Zona muerta dinámica no centrada",
-        "intermediacion": 0.122662
+        "intermediacion": 0.139377
       },
       {
         "id": "SOA",
         "etiqueta": "Estado del arte: control y zona muerta",
-        "intermediacion": 0.114893
+        "intermediacion": 0.115513
+      },
+      {
+        "id": "ZM",
+        "etiqueta": "Zona muerta dinámica no centrada",
+        "intermediacion": 0.110814
       },
       {
         "id": "LIN",
         "etiqueta": "Modelo linealizado (x* = −4 cm)",
-        "intermediacion": 0.096597
+        "intermediacion": 0.103508
       },
       {
         "id": "REG",
         "etiqueta": "Regulación con AD (OE4)",
-        "intermediacion": 0.095983
-      },
-      {
-        "id": "R24",
-        "etiqueta": "Segundo barrido de validación",
-        "intermediacion": 0.093919
+        "intermediacion": 0.100546
       },
       {
         "id": "APP",
         "etiqueta": "Aplicaciones de la levitación",
-        "intermediacion": 0.087151
+        "intermediacion": 0.087628
+      },
+      {
+        "id": "FALT",
+        "etiqueta": "Modelos alternativos de f_fld",
+        "intermediacion": 0.087565
       }
     ],
     "top_pagerank": [
       {
         "id": "ZM",
         "etiqueta": "Zona muerta dinámica no centrada",
-        "pagerank": 0.028699
+        "pagerank": 0.028753
       },
       {
         "id": "SOA",
         "etiqueta": "Estado del arte: control y zona muerta",
-        "pagerank": 0.027252
+        "pagerank": 0.027437
       },
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
-        "pagerank": 0.026837
+        "pagerank": 0.02688
       },
       {
         "id": "W9",
         "etiqueta": "Estructuras de control frente al ciclo límite",
-        "pagerank": 0.02552
-      },
-      {
-        "id": "K13",
-        "etiqueta": "Evaluación de la hipótesis",
-        "pagerank": 0.021446
+        "pagerank": 0.025303
       },
       {
         "id": "APP",
         "etiqueta": "Aplicaciones de la levitación",
-        "pagerank": 0.021435
+        "pagerank": 0.02158
+      },
+      {
+        "id": "K13",
+        "etiqueta": "Evaluación de la hipótesis",
+        "pagerank": 0.021292
       },
       {
         "id": "FALT",
         "etiqueta": "Modelos alternativos de f_fld",
-        "pagerank": 0.020093
+        "pagerank": 0.02023
       },
       {
         "id": "W2",
         "etiqueta": "Comparar modelos de f_fld",
-        "pagerank": 0.019687
+        "pagerank": 0.01982
       },
       {
         "id": "MARCO",
         "etiqueta": "Fundamentos teóricos",
-        "pagerank": 0.019496
+        "pagerank": 0.019628
       },
       {
         "id": "LIN",
         "etiqueta": "Modelo linealizado (x* = −4 cm)",
-        "pagerank": 0.015356
+        "pagerank": 0.015401
       }
     ],
     "cobertura_objetivos": {

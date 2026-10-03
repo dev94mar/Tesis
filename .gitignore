@@ -1,11 +1,17 @@
-*.pdf
+.DS_Store
+*.zip
+
+# LaTeX build artifacts
 *.aux
 *.bbl
 *.bcf
 *.blg
+*.fdb_latexmk
+*.fls
 *.log
 *.out
-*.fls
-*.fdb_latexmk
-.DS_Store
-main.run.xml
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot

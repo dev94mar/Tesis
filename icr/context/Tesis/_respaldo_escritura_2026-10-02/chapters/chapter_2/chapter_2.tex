@@ -1,0 +1,112 @@
+\chapter{Resultados de simulación}
+\label{chap:resultados}
+
+\section{Intervalo de operación del actuador}
+\label{sec:intervalo}
+
+El voltaje que puede aplicar el actuador está acotado a $u\in[0;\,3{,}5]$~V, y esa cota determina en qué posiciones puede operar el sistema. Para sostener el imán en $x_1$ se necesita el voltaje de equilibrio $u_e(x_1)=mgb(a-x_1)^4$, que crece rápidamente al alejarse de la bobina: $1{,}58$~V en $-2$~cm, $2{,}39$~V en $-3$~cm, $3{,}48$~V en $-4$~cm y $4{,}91$~V en $-5$~cm. Para mover el imán no basta con alcanzar $u_e$: hay que vencer además la fricción estática, lo que exige llegar a $u_e(1\pm F_s/mg)$, es decir, a un $14{,}5$\,\% por encima o por debajo del equilibrio (sección~\ref{sec:analisis_ciclo}).
+
+En $x_1=-4$~cm, el punto en que se linealizó el modelo para el diseño, el imán puede sostenerse con $3{,}48$~V, pero no desplazarse: para despegarlo hacia la bobina se requieren unos $3{,}99$~V. Para delimitar el intervalo útil se simularon 7503 escalones con distintas posiciones iniciales y finales, con el PII y con el PI, en presencia de atascamiento-deslizamiento. La tabla~\ref{tab:intervalo} resume el resultado con el PII.
+
+\begin{table}[ht]
+\centering
+\caption{Referencias alcanzables con $u\le3{,}5$~V desde distintas posiciones iniciales (PII, con atascamiento-deslizamiento).}
+\label{tab:intervalo}
+\begin{tabular}{|c|c|}
+\hline
+Posición inicial [cm] & Referencias alcanzables [cm] \\ \hline
+$-4{,}0$ & ninguna: el imán se sostiene pero no se mueve \\ \hline
+$-3{,}5$ & de $-3{,}6$ a $-2{,}0$ \\ \hline
+$-3{,}0$ & de $-3{,}5$ a $-1{,}5$ \\ \hline
+$-2{,}0$ & de $-3{,}3$ a $-0{,}5$ \\ \hline
+$-1{,}0$ & de $-2{,}5$ a $+0{,}5$ \\ \hline
+\end{tabular}
+\end{table}
+
+Los cambios de referencia son viables a partir de unos $-3{,}6$~cm. Por eso, las pruebas de este capítulo se realizan en el intervalo de $-3$ a $-2$~cm, con un escalón de $-2$ a $-3$~cm que tiene margen respecto a ambos límites. El controlador diseñado en $-4$~cm sigue siendo estable en ese intervalo, con márgenes de fase de $54{,}5^\circ$ en $-3$~cm, $51{,}1^\circ$ en $-2{,}5$~cm y $47{,}4^\circ$ en $-2$~cm.
+
+\section{Simulación no lineal sin atascamiento-deslizamiento}
+
+Antes de incorporar el efecto atascamiento-deslizamiento, el controlador PII se evaluó sobre el modelo no lineal del levitador considerando únicamente la fuerza electromagnética no lineal y la fricción viscosa,
+\[
+m\ddot{x} = \frac{u}{b\,(a-x)^4} - m g - m c_1 \dot{x},
+\]
+es decir, sin fricción estática (modelo de Karnopp) ni zona muerta en el actuador. Se emplearon las mismas condiciones que en la prueba de regulación de la sección siguiente: escalón de referencia de $-2$ a $-3$~cm en $t=10$~s, señal de control acotada a $u\in[0;\,3{,}5]$~V y controlador inicializado en el estado estacionario correspondiente a $x_1=-2$~cm. Para facilitar la comparación, en cada figura se superpone el resultado con atascamiento-deslizamiento.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/posicion}
+    \caption[Sin AD: posición]{Posición del levitante con el modelo no lineal sin atascamiento-deslizamiento (sin AD) y con él (con AD). Abajo, detalle del transitorio entre 9,8 y 12~s.}
+    \label{fig:sinad_pos}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/velocidad}
+    \caption[Sin AD: velocidad]{Velocidad del levitante sin y con atascamiento-deslizamiento.}
+    \label{fig:sinad_vel}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/error}
+    \caption[Sin AD: error]{Error de posición sin y con atascamiento-deslizamiento. Abajo, detalle entre 15 y 40~s.}
+    \label{fig:sinad_error}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/control}
+    \caption[Sin AD: señal de control]{Señal de control sin y con atascamiento-deslizamiento.}
+    \label{fig:sinad_ctrl}
+\end{figure}
+
+La figura~\ref{fig:sinad_pos} muestra que, sin atascamiento-deslizamiento, el lazo cerrado no lineal alcanza la nueva referencia con un sobrepaso de $23{,}7$\,\% a los $0{,}15$~s del escalón y entra en la banda de $\pm 2$\,\% del cambio de referencia en $0{,}48$~s. Este sobrepaso se encuentra entre los que predice el modelo linealizado en $x_1^*=-3$~cm ($19{,}2$\,\%) y en $x_1^*=-2$~cm ($24{,}7$\,\%), lo que confirma la coherencia entre el modelo empleado para el diseño y la planta no lineal. La velocidad (figura~\ref{fig:sinad_vel}) se anula una vez concluido el transitorio, el error (figura~\ref{fig:sinad_error}) converge a cero y la señal de control (figura~\ref{fig:sinad_ctrl}) converge al voltaje de equilibrio $u_e=2{,}3934$~V correspondiente a $x_1=-3$~cm, sin alcanzar la saturación superior.
+
+La comparación con el caso con atascamiento-deslizamiento muestra que el transitorio es prácticamente idéntico (sobrepaso de $23{,}6$\,\%): la diferencia aparece en estado estacionario, donde la fricción estática y la zona muerta sustituyen la convergencia asintótica por un ciclo límite de $0{,}033$~cm pico a pico, que se describe en la sección siguiente y se analiza en la sección~\ref{sec:analisis_ciclo}. Con ello se cumple el tercer objetivo específico.
+
+\FloatBarrier
+\newpage
+
+\section{Regulación}
+
+La prueba de regulación aplica un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s al lazo con el PII, la zona muerta y la fricción de Karnopp, con la señal de control acotada a $u\in[0;\,3{,}5]$~V. Se simulan 40~s con un periodo de muestreo de 1~ms; el controlador parte del estado estacionario correspondiente a $x_1=-2$~cm, de modo que antes del escalón el levitante permanece en reposo.
+
+La figura~\ref{posicion} muestra la respuesta. El levitante alcanza un mínimo de $-3{,}237$~cm a los $0{,}15$~s del escalón, lo que equivale a un sobrepaso de $23{,}6$\,\%, y entra en la banda de $\pm0{,}05$~cm alrededor de la referencia a los $0{,}40$~s. A partir de ahí no se detiene sobre la referencia: oscila en un ciclo límite de $0{,}033$~cm pico a pico, con un error máximo de $0{,}018$~cm y un error medio de $6\times10^{-5}$~cm en los últimos 10~s. La velocidad (figura~\ref{velocidad}) alterna pulsos de deslizamiento con intervalos en cero; el levitante permanece atascado el 74\,\% del tiempo en estado estacionario. El error (figura~\ref{error}) refleja el mismo comportamiento.
+
+La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en el instante del escalón, que es el límite inferior del actuador, para dejar que el imán se aleje de la bobina; alcanza un máximo de $3{,}28$~V durante el transitorio y en estado estacionario oscila en diente de sierra alrededor de su valor medio de $2{,}41$~V, sin llegar al límite superior. El mecanismo del ciclo límite se analiza en la sección~\ref{sec:analisis_ciclo}.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/posicion}
+    \caption[Posición (regulación)]{Posición del levitante ante un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s (PII, $u\in[0;\,3{,}5]$~V). El recuadro amplía el transitorio y el ciclo límite de atascamiento-deslizamiento.}
+    \label{posicion}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/velocidad}
+    \caption[Velocidad (regulación)]{Velocidad del levitante. Los tramos en cero corresponden al régimen de atascamiento.}
+    \label{velocidad}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/error}
+    \caption[Error (regulación)]{Error de posición $e=r-x_1$.}
+    \label{error}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/control}
+    \caption[Señal de control (regulación)]{Señal de control antes y después de la zona muerta.}
+    \label{senal_control}
+\end{figure}
+
+\FloatBarrier
+\newpage
+
+\input{chapters/chapter_1/sections/seguimiento}
+\input{chapters/chapter_1/sections/analisis_ciclo}
+\input{chapters/chapter_1/sections/config_estable}

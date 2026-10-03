@@ -1,0 +1,14 @@
+\input{images/p8_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[pocho, name=principal, xmin=0, xmax=40, ymin=0.8, ymax=2.3, xlabel={},
+    ylabel={posición [\si{cm}]}, legend style={at={(0.99,0.03)}, anchor=south east}, legend cell align=left]
+  \addplot[ctl2, line width=0.8pt] table[x=t, y=x_pi] {images/p8_results/tikz/estable.csv}; \addlegendentry{PI}
+  \addplot[tray, line width=0.8pt] table[x=t, y=x_pii] {images/p8_results/tikz/estable.csv}; \addlegendentry{PII (tesis)}
+\end{axis}
+\begin{axis}[pocho, at={(principal.south west)}, anchor=north west, yshift=-0.45cm, height=4.4cm,
+    xmin=0, xmax=40, ymin=-0.2, ymax=3.8, xlabel={tiempo [\si{s}]}, ylabel={$u$ [\si{V}]}]
+  \addplot[ctl2, line width=0.7pt] table[x=t, y=u_pi] {images/p8_results/tikz/estable.csv};
+  \addplot[tray, line width=0.7pt] table[x=t, y=u_pii] {images/p8_results/tikz/estable.csv};
+  \addplot[red!70!black, densely dotted, line width=0.8pt] coordinates {(0,3.5) (40,3.5)};
+\end{axis}
+\end{tikzpicture}

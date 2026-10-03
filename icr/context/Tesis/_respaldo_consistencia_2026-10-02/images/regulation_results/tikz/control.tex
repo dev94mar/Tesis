@@ -1,0 +1,12 @@
+\input{images/regulation_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[regulacion, ylabel={señal de control [\si{V}]}, ymin=-0.2, ymax=3.8,
+             legend pos=south east, legend cell align=left]
+  \addplot[ctl2!45, line width=1.6pt] table[x=t, y=u_antes] {images/regulation_results/tikz/control.csv};
+  \addlegendentry{antes de la zona muerta}
+  \addplot[tray, line width=0.7pt] table[x=t, y=u_desp] {images/regulation_results/tikz/control.csv};
+  \addlegendentry{después de la zona muerta}
+  \addplot[red!70!black, densely dotted, line width=0.8pt] coordinates {(0,3.5) (40,3.5)};
+  \addlegendentry{$u_{\max}=\SI{3,5}{V}$}
+\end{axis}
+\end{tikzpicture}

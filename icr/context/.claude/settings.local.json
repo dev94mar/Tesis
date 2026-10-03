@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s https://api.github.com/repos/matlab/matlab-mcp-server/releases/latest)",
+      "Bash(python3 -c \"import sys,json; r=json.load\\(sys.stdin\\); [print\\(a['name'], a['browser_download_url']\\) for a in r.get\\('assets',[]\\)]\")",
+      "Bash(mkdir -p ~/.local/bin)",
+      "Bash(curl -L -o ~/.local/bin/matlab-mcp-server https://github.com/matlab/matlab-mcp-server/releases/download/v0.11.0/matlab-mcp-server-macos-arm64)",
+      "Bash(chmod +x ~/.local/bin/matlab-mcp-server)",
+      "Bash(claude mcp *)",
+      "mcp__matlab__detect_matlab_toolboxes",
+      "mcp__matlab__check_matlab_code",
+      "mcp__matlab__run_matlab_file",
+      "mcp__matlab__evaluate_matlab_code"
+    ]
+  }
+}

@@ -1,0 +1,4314 @@
+{
+  "meta": {
+    "titulo": "Control de posición para un sistema de levitación magnética en configuración inestable con efecto atascamiento-deslizamiento",
+    "autor": "Lázaro Marino Ávalos Carvajal",
+    "programa": "Maestría en Ciencias en Ingeniería Electromagnética, UAM-Azcapotzalco",
+    "director": "Dr. Jesús Ulises Liceaga Castro",
+    "codirector": "Dr. César Simón López Monsalvo",
+    "generado": "2026-10-02",
+    "version": 1,
+    "fuentes": [
+      "icr/context/Tesis (LaTeX)",
+      "icr/calculus/Final_Bien (MATLAB)"
+    ],
+    "descripcion": "Grafo dirigido de conocimiento. Las aristas van del concepto que aporta al que lo usa; las referencias apuntan a los nodos donde se citan y las revisiones a los nodos que afectan. Las métricas por nodo se calculan sobre el grafo no dirigido salvo grado_entrada, grado_salida y pagerank.",
+    "visualizacion": "https://claude.ai/artifact/Y7uySLcteBHYDp2HuKTgQf",
+    "consultar": "python3 consultar.py --help"
+  },
+  "tipos_nodo": {
+    "tesis": {
+      "nombre": "Tesis"
+    },
+    "obj": {
+      "nombre": "Objetivo"
+    },
+    "mod": {
+      "nombre": "Modelo"
+    },
+    "calc": {
+      "nombre": "Cálculo"
+    },
+    "sim": {
+      "nombre": "Simulación"
+    },
+    "fig": {
+      "nombre": "Figura"
+    },
+    "conc": {
+      "nombre": "Conclusión"
+    },
+    "fut": {
+      "nombre": "Trabajo futuro"
+    },
+    "ref": {
+      "nombre": "Referencia"
+    },
+    "rev": {
+      "nombre": "Revisión"
+    }
+  },
+  "relaciones": {
+    "tiene_objetivo": "la tesis declara el objetivo",
+    "se_desglosa_en": "objetivo general → específico",
+    "se_enmarca_en": "la tesis se apoya en ese contexto",
+    "se_aborda_con": "el objetivo usa ese modelo",
+    "deriva_en": "el origen se usa para construir el destino",
+    "se_ilustra_en": "figura que representa el modelo",
+    "produce": "el modelo da lugar al cálculo",
+    "parametriza": "el cálculo fija un parámetro del modelo",
+    "se_visualiza_en": "figura que muestra el cálculo",
+    "se_cumple_con": "el cálculo cumple el objetivo",
+    "se_usa_en": "entra en la simulación",
+    "se_valida_con": "la simulación valida el objetivo",
+    "genera": "la simulación produce la figura",
+    "sustenta": "evidencia para la conclusión",
+    "implica": "una conclusión lleva a otra",
+    "concluye": "conclusión principal de la tesis",
+    "motiva": "origen de un trabajo futuro",
+    "afecta_a": "la revisión señala un problema en el destino",
+    "citada_en": "la referencia se cita en ese nodo"
+  },
+  "bibliografia": {
+    "730": {
+      "autores": "Educational Control Products",
+      "anio": 1999,
+      "titulo": "Manual for Model 730, Magnetic Levitation System"
+    },
+    "parks": {
+      "autores": "T. Parks",
+      "anio": 1999,
+      "titulo": "Manual for Model 730: Magnetic Levitation System"
+    },
+    "alcantara": {
+      "autores": "D. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro",
+      "anio": 2013,
+      "titulo": "Control conmutado para un sistema de levitación magnética con atascamiento-deslizamiento"
+    },
+    "diana_tesis": {
+      "autores": "D. Hernández Alcántara",
+      "anio": 2010,
+      "titulo": "Identificación y control de un sistema de levitación magnética (tesis)"
+    },
+    "perez": {
+      "autores": "C. A. Pérez Gómez",
+      "anio": 2021,
+      "titulo": "Estrategia de control para el problema de zona muerta en procesos electromecánicos"
+    },
+    "arturo_tesis": {
+      "autores": "C. A. Pérez Gómez",
+      "anio": 2021,
+      "titulo": "Estrategia de control para el problema de zona muerta en procesos electromecánicos (tesis)"
+    },
+    "al": {
+      "autores": "N. F. Al-Muthair, M. Zribi",
+      "anio": 2004,
+      "titulo": "Sliding mode control of magnetic levitation system"
+    },
+    "charara": {
+      "autores": "A. Charara, J. De Miras, B. Caron",
+      "anio": 1996,
+      "titulo": "Nonlinear control of a magnetic levitation system without premagnetization"
+    },
+    "gregory": {
+      "autores": "G. D. Buckner",
+      "anio": 2001,
+      "titulo": "Intelligent bounds on modeling uncertainties: applications to sliding mode control of a magnetic levitation system"
+    },
+    "zhao": {
+      "autores": "F. Zhao, S. C. Loh, J. A. May",
+      "anio": 1999,
+      "titulo": "Phase-space nonlinear control toolbox: the maglev experience"
+    },
+    "feifei": {
+      "autores": "F. Zhang, K. Suyama",
+      "anio": 1999,
+      "titulo": "Nonlinear feedback control of magnetic levitating system by exact linearization approach"
+    },
+    "karnopp": {
+      "autores": "D. Karnopp",
+      "anio": 1985,
+      "titulo": "Computer simulation of stick-slip friction in mechanical dynamic systems"
+    },
+    "haessig": {
+      "autores": "D. A. Haessig, B. Friedland",
+      "anio": 1991,
+      "titulo": "On the modeling and simulation of friction"
+    },
+    "liu": {
+      "autores": "L. Liu, H. Liu, Z. Wu, D. Yuan",
+      "anio": 2009,
+      "titulo": "A new method for the determination of the zero velocity region of the Karnopp model based on the statistics theory"
+    },
+    "ravanbod": {
+      "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
+      "anio": 2003,
+      "titulo": "Friction identification using the Karnopp model, applied to an electropneumatic actuator"
+    },
+    "ravanbod1": {
+      "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
+      "anio": 2001,
+      "titulo": "Stiction friction identification of Karnopp model using describing function"
+    },
+    "bicakci": {
+      "autores": "S. Bicakci, D. Akdas, A. D. Karaoglan",
+      "anio": 2014,
+      "titulo": "Optimizing Karnopp friction model parameters of a pendulum using RSM"
+    },
+    "romano": {
+      "autores": "R. A. Romano, C. Garcia",
+      "anio": 2007,
+      "titulo": "Comparison between two friction model parameter estimation methods applied to control valves"
+    },
+    "khimani": {
+      "autores": "D. Khimani, S. Karnik, M. Patil",
+      "anio": 2018,
+      "titulo": "Implementation of high performance nonlinear feedback control on magnetic levitation system"
+    },
+    "mukesh": {
+      "autores": "M. D. Patil, P. S. V. Nataraj, V. A. Vyawahare",
+      "anio": 2015,
+      "titulo": "Real time implementation of robust QFT controller and prefilter for magnetic levitation system"
+    },
+    "neelma": {
+      "autores": "N. Naz, M. B. Malik, A. Zaheer, M. Salman",
+      "anio": 2013,
+      "titulo": "Sampled data sliding mode control of magnetic levitation system using extended Kalman filter estimator"
+    },
+    "kuo1": {
+      "autores": "K.-H. Su, C.-Y. Li",
+      "anio": 2016,
+      "titulo": "Supervisory fuzzy model control for magnetic levitation system"
+    },
+    "maaz": {
+      "autores": "M. T. Malik, H. M. Obaid",
+      "anio": 2023,
+      "titulo": "Sampled-data nonlinear control of ECP-730 magnetic levitation system"
+    },
+    "salim": {
+      "autores": "S. Ibrir, W. F. Xie, C.-Y. Su",
+      "anio": 2007,
+      "titulo": "Adaptive tracking of nonlinear systems with non-symmetric dead-zone input"
+    },
+    "huanqing": {
+      "autores": "H. Wang, H. R. Karimi, P. X. Liu, H. Yang",
+      "anio": 2017,
+      "titulo": "Adaptive neural control of nonlinear systems with unknown control directions and input dead-zone"
+    },
+    "zhi": {
+      "autores": "Z. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen",
+      "anio": 2015,
+      "titulo": "Adaptive tracking control for a class of nonlinear systems with a fuzzy dead-zone input"
+    },
+    "gang": {
+      "autores": "G. Tao, P. V. Kokotović",
+      "anio": 1994,
+      "titulo": "Adaptive control of plants with unknown dead-zones"
+    },
+    "nizar": {
+      "autores": "N. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath",
+      "anio": 2011,
+      "titulo": "Adaptive control of a DC motor with uncertain deadzone nonlinearity at the input"
+    },
+    "guanyu": {
+      "autores": "G. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu",
+      "anio": 2017,
+      "titulo": "Fuzzy adaptive inverse compensation method to tracking control of uncertain nonlinear systems"
+    },
+    "mingda": {
+      "autores": "M. Zhai, Z. Long, X. Li",
+      "anio": 2019,
+      "titulo": "Fault-tolerant control of magnetic levitation system based on state observer in high speed maglev train"
+    },
+    "hyung": {
+      "autores": "H.-S. Han, D.-S. Kim",
+      "anio": 2016,
+      "titulo": "Magnetic Levitation: Maglev Technology and Applications"
+    },
+    "ali": {
+      "autores": "A. Charara, J. De Miras, B. Caron",
+      "anio": 1996,
+      "titulo": "Nonlinear control of a magnetic levitation system without premagnetization"
+    },
+    "debarghya": {
+      "autores": "D. Dutta, P. K. Biswas, S. Debnath, F. Ahmad",
+      "anio": 2025,
+      "titulo": "Advancements and challenges in active magnetic bearings: a comprehensive review"
+    },
+    "gang1": {
+      "autores": "G. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding",
+      "anio": 2019,
+      "titulo": "Design and implementation of a novel passive magnetically levitated nutation blood pump for the ventricular-assist device"
+    },
+    "mir": {
+      "autores": "M. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura",
+      "anio": 2002,
+      "titulo": "Design and control of a microrobotic system using magnetic levitation"
+    },
+    "bryton": {
+      "autores": "B. Praslicka et al.",
+      "anio": 2023,
+      "titulo": "Design and analysis of a novel, low-cost, high-speed cycloidal magnetic gear for aerospace servo actuator applications"
+    },
+    "song": {
+      "autores": "L. Song et al.",
+      "anio": 2022,
+      "titulo": "Motion control of capsule robot based on adaptive magnetic levitation using electromagnetic coil"
+    },
+    "sajjad": {
+      "autores": "S. Rahmani Dabbagh et al.",
+      "anio": 2022,
+      "titulo": "Biomedical applications of magnetic levitation"
+    }
+  },
+  "nodos": [
+    {
+      "id": "T",
+      "tipo": "tesis",
+      "etiqueta": "Control PII del SLM inestable",
+      "texto": "Diseño de un controlador con doble efecto integral (PII) para el sistema de levitación magnética ECP-730 en configuración atractiva (inestable en lazo abierto), con zona muerta dinámica no centrada y fricción con atascamiento-deslizamiento modelada por Karnopp.\nEl grafo conecta objetivos, modelos, cálculos, simulaciones, figuras, conclusiones y referencias. Selecciona cualquier nodo para ver su contenido y sus vecinos.",
+      "contenido_html": "<p>Diseño de un controlador con doble efecto integral (PII) para el sistema de levitación magnética ECP-730 en configuración atractiva (inestable en lazo abierto), con zona muerta dinámica no centrada y fricción con atascamiento-deslizamiento modelada por Karnopp.</p><p>El grafo conecta objetivos, modelos, cálculos, simulaciones, figuras, conclusiones y referencias. Selecciona cualquier nodo para ver su contenido y sus vecinos.</p>",
+      "metricas": {
+        "grado": 5,
+        "grado_entrada": 0,
+        "grado_salida": 5,
+        "intermediacion": 0.237082,
+        "cercania": 0.315476,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "OG",
+      "tipo": "obj",
+      "etiqueta": "Objetivo general",
+      "texto": "Diseñar un esquema de control de posición del SLM en configuración inestable considerando el fenómeno de atascamiento-deslizamiento.",
+      "fuente": "icr/context/Tesis/sections/objetivos.tex",
+      "contenido_html": "<p>Diseñar un esquema de control de posición del SLM en configuración inestable considerando el fenómeno de atascamiento-deslizamiento.</p>",
+      "metricas": {
+        "grado": 5,
+        "grado_entrada": 1,
+        "grado_salida": 4,
+        "intermediacion": 0.101891,
+        "cercania": 0.31454,
+        "pagerank": 0.004987,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "OE1",
+      "tipo": "obj",
+      "etiqueta": "OE1 · Analizar dinámica sin AD",
+      "texto": "Analizar las ecuaciones que representan las dinámicas del SLM sin considerar el efecto atascamiento-deslizamiento.\nMetodología, fase 1: revisión bibliográfica del modelo no lineal y simulación en los puntos de equilibrio.",
+      "fuente": "icr/context/Tesis/sections/objetivos.tex",
+      "contenido_html": "<p>Analizar las ecuaciones que representan las dinámicas del SLM sin considerar el efecto atascamiento-deslizamiento.</p><p>Metodología, fase 1: revisión bibliográfica del modelo no lineal y simulación en los puntos de equilibrio.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.035809,
+        "cercania": 0.295265,
+        "pagerank": 0.005322,
+        "agrupamiento": 0.333333,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "OE2",
+      "tipo": "obj",
+      "etiqueta": "OE2 · Diseñar control lineal",
+      "texto": "Diseñar un esquema de control, sin efecto atascamiento-deslizamiento, sobre el modelo linealizado.\nMetodología, fase 2: linealización y diseño del controlador con doble efecto integral.",
+      "fuente": "icr/context/Tesis/sections/objetivos.tex",
+      "contenido_html": "<p>Diseñar un esquema de control, sin efecto atascamiento-deslizamiento, sobre el modelo linealizado.</p><p>Metodología, fase 2: linealización y diseño del controlador con doble efecto integral.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 1,
+        "grado_salida": 2,
+        "intermediacion": 0.068665,
+        "cercania": 0.288043,
+        "pagerank": 0.005322,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "OE3",
+      "tipo": "obj",
+      "etiqueta": "OE3 · Simular no lineal sin AD",
+      "texto": "Simular el desempeño del controlador en el modelo no lineal sin efecto atascamiento-deslizamiento.\nMetodología, fase 3a.",
+      "fuente": "icr/context/Tesis/sections/objetivos.tex",
+      "contenido_html": "<p>Simular el desempeño del controlador en el modelo no lineal sin efecto atascamiento-deslizamiento.</p><p>Metodología, fase 3a.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 1,
+        "grado_salida": 1,
+        "intermediacion": 0.002394,
+        "cercania": 0.276762,
+        "pagerank": 0.005322,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "OE4",
+      "tipo": "obj",
+      "etiqueta": "OE4 · Simular no lineal con AD",
+      "texto": "Simular el controlador en el modelo no lineal considerando el fenómeno de atascamiento-deslizamiento.\nMetodología, fase 3b.",
+      "fuente": "icr/context/Tesis/sections/objetivos.tex",
+      "contenido_html": "<p>Simular el controlador en el modelo no lineal considerando el fenómeno de atascamiento-deslizamiento.</p><p>Metodología, fase 3b.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.026484,
+        "cercania": 0.284182,
+        "pagerank": 0.005322,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "ANT",
+      "tipo": "mod",
+      "etiqueta": "Antecedentes directos",
+      "texto": "La línea de investigación continúa dos trabajos:\nAlcántara et al.: ECP-730 en configuración repulsiva (estable), con atascamiento-deslizamiento por el contacto imán–varilla. Proponen control conmutado.\nPérez-Gómez: motor de CD de imanes permanentes con zona muerta. Propone controlador de doble efecto integral.",
+      "fuente": "icr/context/Tesis/sections/antecedentes.tex",
+      "contenido_html": "<p>La línea de investigación continúa dos trabajos:</p><ul><li><b>Alcántara et al.</b>: ECP-730 en configuración repulsiva (estable), con atascamiento-deslizamiento por el contacto imán–varilla. Proponen control conmutado.</li><li><b>Pérez-Gómez</b>: motor de CD de imanes permanentes con zona muerta. Propone controlador de doble efecto integral.</li></ul>",
+      "metricas": {
+        "grado": 8,
+        "grado_entrada": 3,
+        "grado_salida": 5,
+        "intermediacion": 0.116772,
+        "cercania": 0.32716,
+        "pagerank": 0.006799,
+        "agrupamiento": 0.142857,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "APP",
+      "tipo": "mod",
+      "etiqueta": "Aplicaciones de la levitación",
+      "texto": "Contexto de la introducción: trenes maglev, suspensión activa, cojinetes magnéticos, bombas de asistencia ventricular, microrrobótica, aeroespacial, médica y biomédica.",
+      "fuente": "icr/context/Tesis/sections/introduccion.tex",
+      "contenido_html": "<p>Contexto de la introducción: trenes maglev, suspensión activa, cojinetes magnéticos, bombas de asistencia ventricular, microrrobótica, aeroespacial, médica y biomédica.</p>",
+      "metricas": {
+        "grado": 10,
+        "grado_entrada": 10,
+        "grado_salida": 0,
+        "intermediacion": 0.167675,
+        "cercania": 0.260442,
+        "pagerank": 0.035783,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "SOA",
+      "tipo": "mod",
+      "etiqueta": "Estado del arte: control y zona muerta",
+      "texto": "Justificación: varios trabajos omiten la zona muerta o la tratan como dinámica no modelada. Las estrategias van de controladores adaptativos difusos y QFT a PID. Los modelos de zona muerta incluyen lineales, no lineales, difusos, asimétricos, simétricos y generalizados.",
+      "fuente": "icr/context/Tesis/sections/justificacion.tex",
+      "contenido_html": "<p>Justificación: varios trabajos omiten la zona muerta o la tratan como dinámica no modelada. Las estrategias van de controladores adaptativos difusos y QFT a PID. Los modelos de zona muerta incluyen lineales, no lineales, difusos, asimétricos, simétricos y generalizados.</p>",
+      "metricas": {
+        "grado": 13,
+        "grado_entrada": 12,
+        "grado_salida": 1,
+        "intermediacion": 0.21106,
+        "cercania": 0.286486,
+        "pagerank": 0.04484,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "MEC",
+      "tipo": "mod",
+      "etiqueta": "Ecuación mecánica",
+      "texto": "\\[m\\ddot{x}=f_{\\text{fld}}(i,x)-f_{\\text{fr}}-mg\\]\nBalance de fuerzas del ECP-730 con el imán superior activado: fuerza electromagnética, fricción y gravedad.",
+      "latex": [
+        "m\\ddot{x}=f_{\\text{fld}}(i,x)-f_{\\text{fr}}-mg"
+      ],
+      "fuente": "icr/context/Tesis/chapters/chapter_1/sections/final.tex",
+      "contenido_html": "<div class=\"math\">\\[m\\ddot{x}=f_{\\text{fld}}(i,x)-f_{\\text{fr}}-mg\\]</div><p>Balance de fuerzas del ECP-730 con el imán superior activado: fuerza electromagnética, fricción y gravedad.</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 2,
+        "grado_salida": 4,
+        "intermediacion": 0.115415,
+        "cercania": 0.290411,
+        "pagerank": 0.009393,
+        "agrupamiento": 0.066667,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "FFLD",
+      "tipo": "mod",
+      "etiqueta": "Fuerza electromagnética",
+      "texto": "\\[f_{\\text{fld}}=\\frac{u}{b\\,(a-x)^4}\\]\nModelo del fabricante, validado experimentalmente por Alcántara et al. \\(u\\) es el voltaje en la bobina, \\(x\\) la posición; \\(a\\) y \\(b\\) son parámetros identificados.",
+      "latex": [
+        "f_{\\text{fld}}=\\frac{u}{b\\,(a-x)^4}",
+        "u",
+        "x",
+        "a",
+        "b"
+      ],
+      "fuente": "icr/context/Tesis/chapters/chapter_1/sections/final.tex",
+      "contenido_html": "<div class=\"math\">\\[f_{\\text{fld}}=\\frac{u}{b\\,(a-x)^4}\\]</div><p>Modelo del fabricante, validado experimentalmente por Alcántara et al. \\(u\\) es el voltaje en la bobina, \\(x\\) la posición; \\(a\\) y \\(b\\) son parámetros identificados.</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 4,
+        "grado_salida": 2,
+        "intermediacion": 0.152548,
+        "cercania": 0.286486,
+        "pagerank": 0.011993,
+        "agrupamiento": 0.133333,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "FALT",
+      "tipo": "mod",
+      "etiqueta": "Modelos alternativos de f_fld",
+      "texto": "| Fuente | Forma\n | Al-Muthair | \\(C(i/x)^2\\)\n | Charara | \\(K\\,\\mathrm{sign}(i)\\,i^2/e^2\\)\n | El Hajjaji | \\(i^2/(b_0+b_1x+b_2x^3+b_3x^4)\\)\n | Zhao | \\(L_0x_0i^2/(2x^2)\\)\n | Zhang (Feifei) | \\(Ki^2/(H-x)^2\\)\nNo hay un modelo único. Depende de la configuración y de si se obtuvo analítica o experimentalmente.",
+      "latex": [
+        "C(i/x)^2",
+        "K\\,\\mathrm{sign}(i)\\,i^2/e^2",
+        "i^2/(b_0+b_1x+b_2x^3+b_3x^4)",
+        "L_0x_0i^2/(2x^2)",
+        "Ki^2/(H-x)^2"
+      ],
+      "fuente": "icr/context/Tesis/chapters/chapter_1/sections/final.tex",
+      "contenido_html": "<table><tr><th>Fuente</th><th>Forma</th></tr>\n <tr><td>Al-Muthair</td><td>\\(C(i/x)^2\\)</td></tr>\n <tr><td>Charara</td><td>\\(K\\,\\mathrm{sign}(i)\\,i^2/e^2\\)</td></tr>\n <tr><td>El Hajjaji</td><td>\\(i^2/(b_0+b_1x+b_2x^3+b_3x^4)\\)</td></tr>\n <tr><td>Zhao</td><td>\\(L_0x_0i^2/(2x^2)\\)</td></tr>\n <tr><td>Zhang (Feifei)</td><td>\\(Ki^2/(H-x)^2\\)</td></tr></table><p style=\"margin-top:10px\">No hay un modelo único. Depende de la configuración y de si se obtuvo analítica o experimentalmente.</p>",
+      "metricas": {
+        "grado": 8,
+        "grado_entrada": 7,
+        "grado_salida": 1,
+        "intermediacion": 0.121993,
+        "cercania": 0.240363,
+        "pagerank": 0.032366,
+        "agrupamiento": 0.035714,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ZM",
+      "tipo": "mod",
+      "etiqueta": "Zona muerta dinámica no centrada",
+      "texto": "\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_lA diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_rEn simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.",
+      "latex": [
+        "v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_l<u<b_r\\\\ m_l(u-u_e-b_l)-h_l,& u\\le b_l\\end{cases}",
+        "u_e=0",
+        "u_e",
+        "m_r,m_l,b_r,h_l>0",
+        "b_l,h_r<0",
+        "-0.02",
+        "+0.025"
+      ],
+      "fuente": "icr/context/Tesis/chapters/chapter_1/sections/final.tex",
+      "valores": {
+        "banda_inferior": {
+          "valor": -0.02,
+          "unidad": "V"
+        },
+        "banda_superior": {
+          "valor": 0.025,
+          "unidad": "V"
+        },
+        "saturacion": {
+          "min": 0,
+          "max": 5,
+          "unidad": "V"
+        }
+      },
+      "contenido_html": "<div class=\"math\">\\[v=D(u)=\\begin{cases}m_r(u-u_e-b_r)-h_r,& u\\ge b_r\\\\ 0,& b_l<u<b_r\\\\ m_l(u-u_e-b_l)-h_l,& u\\le b_l\\end{cases}\\]</div><p>A diferencia del motor de CD (único equilibrio \\(u_e=0\\)), el SLM tiene un voltaje de equilibrio por cada posición, así que la zona muerta se centra en \\(u_e\\). Signos conocidos: \\(m_r,m_l,b_r,h_l>0\\); \\(b_l,h_r<0\\).</p><p>En simulación se implementa como una banda de retención de \\(-0.02\\) a \\(+0.025\\) V alrededor del último voltaje en movimiento.</p>",
+      "metricas": {
+        "grado": 7,
+        "grado_entrada": 4,
+        "grado_salida": 3,
+        "intermediacion": 0.188185,
+        "cercania": 0.320242,
+        "pagerank": 0.05353,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "FRIC",
+      "tipo": "mod",
+      "etiqueta": "Fricción y atascamiento-deslizamiento",
+      "texto": "\\[f_{\\text{fric}}=\\begin{cases}c\\,v,& v\\ne0\\\\ \\min(|F_e|,F_s)\\,\\mathrm{sign}(F_e),& v=0\\end{cases}\\]\nCon \\(v=0\\) el sistema está en fricción estática. Cuando la fuerza externa lo pone en movimiento, cae a fricción dinámica. La alternancia entre ambos regímenes es el efecto atascamiento-deslizamiento y produce ciclos límite.",
+      "latex": [
+        "f_{\\text{fric}}=\\begin{cases}c\\,v,& v\\ne0\\\\ \\min(|F_e|,F_s)\\,\\mathrm{sign}(F_e),& v=0\\end{cases}",
+        "v=0"
+      ],
+      "fuente": "icr/context/Tesis/chapters/chapter_1/sections/final.tex",
+      "contenido_html": "<div class=\"math\">\\[f_{\\text{fric}}=\\begin{cases}c\\,v,& v\\ne0\\\\ \\min(|F_e|,F_s)\\,\\mathrm{sign}(F_e),& v=0\\end{cases}\\]</div><p>Con \\(v=0\\) el sistema está en fricción estática. Cuando la fuerza externa lo pone en movimiento, cae a fricción dinámica. La alternancia entre ambos regímenes es el efecto atascamiento-deslizamiento y produce ciclos límite.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 2,
+        "grado_salida": 2,
+        "intermediacion": 0.076616,
+        "cercania": 0.261728,
+        "pagerank": 0.009882,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "KARN",
+      "tipo": "mod",
+      "etiqueta": "Método de Karnopp",
+      "texto": "Introduce una banda de velocidad \\(|v|\\le DV\\) que se trata como velocidad cero para decidir entre atascamiento y deslizamiento. Es fácil de implementar y se usa en el diseño de actuadores.\n | Parámetro | Valor\n | DV | 0.02 cm/s\n | Fs | 20 N\nImplementado en maglev_karnopp.m con una sujeción adicional que fuerza \\(v=0\\) dentro de la banda.",
+      "latex": [
+        "|v|\\le DV",
+        "v=0"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/maglev_karnopp.m",
+      "valores": {
+        "DV": {
+          "valor": 0.02,
+          "unidad": "cm/s"
+        },
+        "Fs": {
+          "valor": 20,
+          "unidad": "N"
+        }
+      },
+      "contenido_html": "<p>Introduce una banda de velocidad \\(|v|\\le DV\\) que se trata como velocidad cero para decidir entre atascamiento y deslizamiento. Es fácil de implementar y se usa en el diseño de actuadores.</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>DV</td><td>0.02 cm/s</td></tr><tr><td>F<sub>s</sub></td><td>20 N</td></tr></table><p style=\"margin-top:10px\">Implementado en <code>maglev_karnopp.m</code> con una sujeción adicional que fuerza \\(v=0\\) dentro de la banda.</p>",
+      "metricas": {
+        "grado": 11,
+        "grado_entrada": 9,
+        "grado_salida": 2,
+        "intermediacion": 0.170409,
+        "cercania": 0.271795,
+        "pagerank": 0.035031,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "PAR",
+      "tipo": "mod",
+      "etiqueta": "Parámetros del ECP-730",
+      "texto": "| | Valor (código)\n | a | 7.17184 cm\n | b | 1.6163×10⁻⁶ V/(N·cm⁴)\n | c | 8.563\n | m | 0.141 kg\n | g | 981 cm/s²\nIdentificados por Alcántara para la configuración repulsiva y reutilizados aquí para la atractiva.",
+      "fuente": "icr/calculus/Final_Bien/inestable/linealization_inestable.m",
+      "valores": {
+        "a": {
+          "valor": 7.17184,
+          "unidad": "cm"
+        },
+        "b": {
+          "valor": 1.6163e-06,
+          "unidad": "V/(N·cm^4)"
+        },
+        "c": {
+          "valor": 8.563,
+          "unidad": "1/s",
+          "nota": "el código lo usa como c2 = c1/m"
+        },
+        "m": {
+          "valor": 0.141,
+          "unidad": "kg"
+        },
+        "g": {
+          "valor": 981,
+          "unidad": "cm/s^2"
+        }
+      },
+      "contenido_html": "<div class=\"tbl\"><table><tr><th></th><th>Valor (código)</th></tr><tr><td>a</td><td>7.17184 cm</td></tr><tr><td>b</td><td>1.6163×10⁻⁶ V/(N·cm⁴)</td></tr><tr><td>c</td><td>8.563</td></tr><tr><td>m</td><td>0.141 kg</td></tr><tr><td>g</td><td>981 cm/s²</td></tr></table></div><p style=\"margin-top:10px\">Identificados por Alcántara para la configuración repulsiva y reutilizados aquí para la atractiva.</p>",
+      "metricas": {
+        "grado": 7,
+        "grado_entrada": 5,
+        "grado_salida": 2,
+        "intermediacion": 0.08717,
+        "cercania": 0.301994,
+        "pagerank": 0.019269,
+        "agrupamiento": 0.047619,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "LIN",
+      "tipo": "mod",
+      "etiqueta": "Modelo linealizado (x* = −4 cm)",
+      "texto": "\\[\\dot x=\\begin{bmatrix}0&1\\\\ \\dfrac{4g}{a-x_1^*}&-c_2\\end{bmatrix}x+\\begin{bmatrix}0\\\\ \\dfrac{1}{mb(a-x_1^*)^4}\\end{bmatrix}u,\\quad y=[1\\;\\,0]\\,x\\]\n\\[\\lambda^2+c_2\\lambda-\\frac{4g}{a-x_1^*}=0\\]\nJacobiano simbólico en linealization_inestable.m. Como \\(a>x_1\\) en todo el rango, el término constante es negativo y siempre hay un polo en el semiplano derecho.",
+      "latex": [
+        "\\dot x=\\begin{bmatrix}0&1\\\\ \\dfrac{4g}{a-x_1^*}&-c_2\\end{bmatrix}x+\\begin{bmatrix}0\\\\ \\dfrac{1}{mb(a-x_1^*)^4}\\end{bmatrix}u,\\quad y=[1\\;\\,0]\\,x",
+        "\\lambda^2+c_2\\lambda-\\frac{4g}{a-x_1^*}=0",
+        "a>x_1"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/linealization_inestable.m",
+      "valores": {
+        "x_eq": {
+          "valor": -4,
+          "unidad": "cm"
+        },
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            351.24,
+            -8.563
+          ]
+        ],
+        "B": [
+          0,
+          281.7
+        ],
+        "C": [
+          1,
+          0
+        ],
+        "D": 0
+      },
+      "contenido_html": "<div class=\"math\">\\[\\dot x=\\begin{bmatrix}0&1\\\\ \\dfrac{4g}{a-x_1^*}&-c_2\\end{bmatrix}x+\\begin{bmatrix}0\\\\ \\dfrac{1}{mb(a-x_1^*)^4}\\end{bmatrix}u,\\quad y=[1\\;\\,0]\\,x\\]</div><div class=\"math\">\\[\\lambda^2+c_2\\lambda-\\frac{4g}{a-x_1^*}=0\\]</div><p>Jacobiano simbólico en <code>linealization_inestable.m</code>. Como \\(a>x_1\\) en todo el rango, el término constante es negativo y siempre hay un polo en el semiplano derecho.</p>",
+      "metricas": {
+        "grado": 10,
+        "grado_entrada": 3,
+        "grado_salida": 7,
+        "intermediacion": 0.186858,
+        "cercania": 0.31085,
+        "pagerank": 0.01671,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "LAZO",
+      "tipo": "mod",
+      "etiqueta": "Lazo de control con zona muerta",
+      "texto": "Estructura de simulación: referencia → error → PII → saturación [0, 5] V → zona muerta → planta no lineal con Karnopp → posición. Integración con ode45 en intervalos de T = 1 ms, con el voltaje retenido (ZOH).",
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/Refactor_PII_inestable.m",
+      "contenido_html": "<p>Estructura de simulación: referencia → error → PII → saturación [0, 5] V → zona muerta → planta no lineal con Karnopp → posición. Integración con <code>ode45</code> en intervalos de T = 1 ms, con el voltaje retenido (ZOH).</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 2,
+        "grado_salida": 4,
+        "intermediacion": 0.183204,
+        "cercania": 0.312684,
+        "pagerank": 0.034317,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "UEQ",
+      "tipo": "calc",
+      "etiqueta": "Voltaje de equilibrio",
+      "texto": "\\[u_e=m\\,g\\,b\\,(a-x_1^*)^4=3.4826\\ \\text{V}\\quad(x_1^*=-4\\ \\text{cm})\\]\nCalculado del modelo linealizado. Ver la revisión sobre el simulador, que usa otra escala de fuerza.",
+      "latex": [
+        "u_e=m\\,g\\,b\\,(a-x_1^*)^4=3.4826\\ \\text{V}\\quad(x_1^*=-4\\ \\text{cm})"
+      ],
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "u_e": {
+          "valor": 3.4826,
+          "unidad": "V"
+        },
+        "x_eq": {
+          "valor": -4,
+          "unidad": "cm"
+        }
+      },
+      "contenido_html": "<div class=\"math\">\\[u_e=m\\,g\\,b\\,(a-x_1^*)^4=3.4826\\ \\text{V}\\quad(x_1^*=-4\\ \\text{cm})\\]</div><p>Calculado del modelo linealizado. Ver la revisión sobre el simulador, que usa otra escala de fuerza.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 2,
+        "grado_salida": 1,
+        "intermediacion": 0.061486,
+        "cercania": 0.298592,
+        "pagerank": 0.007499,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "POL",
+      "tipo": "calc",
+      "etiqueta": "Polos en lazo abierto",
+      "texto": "\\[\\lambda_1=-23.5057,\\qquad \\lambda_2=+14.9427\\]\nUn polo inestable: el punto de equilibrio es un punto silla. Coincide con el comentario final de linealization_inestable.m y con la conclusión del OE2.",
+      "latex": [
+        "\\lambda_1=-23.5057,\\qquad \\lambda_2=+14.9427"
+      ],
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "lambda_estable": {
+          "valor": -23.5057,
+          "unidad": "1/s"
+        },
+        "lambda_inestable": {
+          "valor": 14.9427,
+          "unidad": "1/s"
+        }
+      },
+      "contenido_html": "<div class=\"math\">\\[\\lambda_1=-23.5057,\\qquad \\lambda_2=+14.9427\\]</div><p>Un polo inestable: el punto de equilibrio es un punto silla. Coincide con el comentario final de <code>linealization_inestable.m</code> y con la conclusión del OE2.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.048499,
+        "cercania": 0.282667,
+        "pagerank": 0.006291,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "TF",
+      "tipo": "calc",
+      "etiqueta": "Función de transferencia G(s)",
+      "texto": "\\[G(s)=\\frac{281.7}{s^2+8.563\\,s-351.2}\\]\nCon \\(b_0=1/(mb(a-x_1^*)^4)=281.7\\) y \\(4g/(a-x_1^*)=351.2\\).",
+      "latex": [
+        "G(s)=\\frac{281.7}{s^2+8.563\\,s-351.2}",
+        "b_0=1/(mb(a-x_1^*)^4)=281.7",
+        "4g/(a-x_1^*)=351.2"
+      ],
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "numerador": [
+          281.7
+        ],
+        "denominador": [
+          1,
+          8.563,
+          -351.2
+        ]
+      },
+      "contenido_html": "<div class=\"math\">\\[G(s)=\\frac{281.7}{s^2+8.563\\,s-351.2}\\]</div><p>Con \\(b_0=1/(mb(a-x_1^*)^4)=281.7\\) y \\(4g/(a-x_1^*)=351.2\\).</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.05162,
+        "cercania": 0.261084,
+        "pagerank": 0.006291,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "CO",
+      "tipo": "calc",
+      "etiqueta": "Controlabilidad y observabilidad",
+      "texto": "\\[\\mathcal C=\\begin{bmatrix}0&b_0\\\\ b_0&-c_2b_0\\end{bmatrix},\\qquad \\mathcal O=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}\\]\nrank(ctrb(A,B)) = 2, rank(obsv(A,C)) = 2. El sistema es completamente controlable y observable.",
+      "latex": [
+        "\\mathcal C=\\begin{bmatrix}0&b_0\\\\ b_0&-c_2b_0\\end{bmatrix},\\qquad \\mathcal O=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}"
+      ],
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "rango_controlabilidad": 2,
+        "rango_observabilidad": 2,
+        "orden": 2
+      },
+      "contenido_html": "<div class=\"math\">\\[\\mathcal C=\\begin{bmatrix}0&b_0\\\\ b_0&-c_2b_0\\end{bmatrix},\\qquad \\mathcal O=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}\\]</div><p><code>rank(ctrb(A,B)) = 2</code>, <code>rank(obsv(A,C)) = 2</code>. El sistema es completamente controlable y observable.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.237668,
+        "pagerank": 0.006291,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "BAR",
+      "tipo": "calc",
+      "etiqueta": "Barrido de equilibrios",
+      "texto": "El modelo linealizado cambia con el punto de operación. Esto motiva el trabajo futuro de ganancia programada.\n | x* [cm] | ue [V] | λ inestable | λ estable\n | −5.0 | 4.907 | 14.177 | −22.740\n | −4.0 | 3.483 | 14.943 | −23.506\n | −3.0 | 2.393 | 15.821 | −24.384\n | −2.0 | 1.582 | 16.841 | −25.404\n | −1.0 | 0.997 | 18.046 | −26.609\n | −0.5 | 0.775 | 18.736 | −27.299\n | 0.5 | 0.443 | 20.345 | −28.908\n | 2.0 | 0.160 | 23.594 | −32.157\n | 3.8 | 0.029 | 30.100 | −38.663\nCuanto más cerca de la bobina, más rápido el polo inestable.",
+      "verificacion": "MATLAB, calculado para este grafo",
+      "valores": {
+        "columnas": [
+          "x_eq_cm",
+          "u_e_V",
+          "lambda_inestable",
+          "lambda_estable"
+        ],
+        "filas": [
+          [
+            -5.0,
+            4.9072,
+            14.177,
+            -22.74
+          ],
+          [
+            -4.0,
+            3.4826,
+            14.943,
+            -23.506
+          ],
+          [
+            -3.0,
+            2.3934,
+            15.821,
+            -24.384
+          ],
+          [
+            -2.0,
+            1.5821,
+            16.841,
+            -25.404
+          ],
+          [
+            -1.0,
+            0.997,
+            18.046,
+            -26.609
+          ],
+          [
+            -0.5,
+            0.7745,
+            18.736,
+            -27.299
+          ],
+          [
+            0.5,
+            0.443,
+            20.345,
+            -28.908
+          ],
+          [
+            2.0,
+            0.16,
+            23.594,
+            -32.157
+          ],
+          [
+            3.8,
+            0.0289,
+            30.1,
+            -38.663
+          ]
+        ]
+      },
+      "contenido_html": "<p>El modelo linealizado cambia con el punto de operación. Esto motiva el trabajo futuro de ganancia programada.</p><div class=\"tbl\"><table><tr><th>x* [cm]</th><th>u<sub>e</sub> [V]</th><th>λ inestable</th><th>λ estable</th></tr>\n<tr><td>−5.0</td><td>4.907</td><td>14.177</td><td>−22.740</td></tr>\n<tr><td>−4.0</td><td>3.483</td><td>14.943</td><td>−23.506</td></tr>\n<tr><td>−3.0</td><td>2.393</td><td>15.821</td><td>−24.384</td></tr>\n<tr><td>−2.0</td><td>1.582</td><td>16.841</td><td>−25.404</td></tr>\n<tr><td>−1.0</td><td>0.997</td><td>18.046</td><td>−26.609</td></tr>\n<tr><td>−0.5</td><td>0.775</td><td>18.736</td><td>−27.299</td></tr>\n<tr><td>0.5</td><td>0.443</td><td>20.345</td><td>−28.908</td></tr>\n<tr><td>2.0</td><td>0.160</td><td>23.594</td><td>−32.157</td></tr>\n<tr><td>3.8</td><td>0.029</td><td>30.100</td><td>−38.663</td></tr></table></div><p style=\"margin-top:10px\">Cuanto más cerca de la bobina, más rápido el polo inestable.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 1,
+        "grado_salida": 1,
+        "intermediacion": 0.018868,
+        "cercania": 0.238739,
+        "pagerank": 0.006291,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "PII",
+      "tipo": "calc",
+      "etiqueta": "Controlador PII",
+      "texto": "\\[C(s)=\\frac{152.43\\,(s+4.875)(s+1.861)(s+17.31)}{s^2\\,(s+301.1)}\\]\nDoble integrador: error nulo ante escalón y rampa, y acción acumulada para salir de la zona muerta. Coincide con PII_lic.mat.",
+      "latex": [
+        "C(s)=\\frac{152.43\\,(s+4.875)(s+1.861)(s+17.31)}{s^2\\,(s+301.1)}"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/PII_lic.mat",
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "ganancia": 152.43,
+        "ceros": [
+          -4.875,
+          -1.861,
+          -17.31
+        ],
+        "polos": [
+          0,
+          0,
+          -301.1
+        ],
+        "archivo": "PII_lic.mat"
+      },
+      "contenido_html": "<div class=\"math\">\\[C(s)=\\frac{152.43\\,(s+4.875)(s+1.861)(s+17.31)}{s^2\\,(s+301.1)}\\]</div><p>Doble integrador: error nulo ante escalón y rampa, y acción acumulada para salir de la zona muerta. Coincide con <code>PII_lic.mat</code>.</p>",
+      "metricas": {
+        "grado": 7,
+        "grado_entrada": 3,
+        "grado_salida": 4,
+        "intermediacion": 0.136861,
+        "cercania": 0.263682,
+        "pagerank": 0.009515,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "MRG",
+      "tipo": "calc",
+      "etiqueta": "Márgenes de estabilidad",
+      "texto": "| Medida | Valor\n | Margen de fase | 59.86° @ 129.29 rad/s\n | Margen de ganancia | 0.140 (−17.1 dB) @ 9.63 rad/s\nComo la planta es inestable en lazo abierto, el margen de ganancia es inferior: el lazo sigue estable si la ganancia aumenta, pero se inestabiliza si cae por debajo de 0.14 veces la nominal.\nPolos en lazo cerrado: \\(-143.3\\pm133.7j,\\ -14.10,\\ -7.28,\\ -1.71\\).",
+      "latex": [
+        "-143.3\\pm133.7j,\\ -14.10,\\ -7.28,\\ -1.71"
+      ],
+      "verificacion": "MATLAB, calculado para este grafo",
+      "valores": {
+        "margen_fase": {
+          "valor": 59.8604,
+          "unidad": "grados",
+          "frecuencia_rad_s": 129.2942
+        },
+        "margen_ganancia": {
+          "valor": 0.1401,
+          "dB": -17.07,
+          "frecuencia_rad_s": 9.632,
+          "nota": "margen inferior: planta inestable en lazo abierto"
+        },
+        "polos_lazo_cerrado": [
+          [
+            -143.28,
+            133.71
+          ],
+          [
+            -143.28,
+            -133.71
+          ],
+          [
+            -14.1,
+            0
+          ],
+          [
+            -7.28,
+            0
+          ],
+          [
+            -1.71,
+            0
+          ]
+        ]
+      },
+      "contenido_html": "<table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Margen de fase</td><td>59.86° @ 129.29 rad/s</td></tr><tr><td>Margen de ganancia</td><td>0.140 (−17.1 dB) @ 9.63 rad/s</td></tr></table><p style=\"margin-top:10px\">Como la planta es inestable en lazo abierto, el margen de ganancia es inferior: el lazo sigue estable si la ganancia aumenta, pero se inestabiliza si cae por debajo de 0.14 veces la nominal.</p><p>Polos en lazo cerrado: \\(-143.3\\pm133.7j,\\ -14.10,\\ -7.28,\\ -1.71\\).</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.056065,
+        "cercania": 0.211577,
+        "pagerank": 0.006284,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "STP",
+      "tipo": "calc",
+      "etiqueta": "Respuesta al escalón (lineal)",
+      "texto": "| Medida | Valor\n | Tiempo de subida | 9.3 ms\n | Tiempo de establecimiento | 0.284 s\n | Sobreimpulso | 16.9 %\n | Pico | 1.169 @ 23.8 ms\nLazo cerrado lineal con PII_lic.mat.",
+      "verificacion": "MATLAB, calculado para este grafo",
+      "valores": {
+        "tiempo_subida": {
+          "valor": 0.0093,
+          "unidad": "s"
+        },
+        "tiempo_establecimiento": {
+          "valor": 0.2841,
+          "unidad": "s"
+        },
+        "sobreimpulso": {
+          "valor": 16.8835,
+          "unidad": "%"
+        },
+        "pico": {
+          "valor": 1.1688,
+          "tiempo_s": 0.0238
+        }
+      },
+      "contenido_html": "<table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Tiempo de subida</td><td>9.3 ms</td></tr><tr><td>Tiempo de establecimiento</td><td>0.284 s</td></tr><tr><td>Sobreimpulso</td><td>16.9 %</td></tr><tr><td>Pico</td><td>1.169 @ 23.8 ms</td></tr></table><p style=\"margin-top:10px\">Lazo cerrado lineal con <code>PII_lic.mat</code>.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 1,
+        "grado_salida": 1,
+        "intermediacion": 0.018868,
+        "cercania": 0.209901,
+        "pagerank": 0.006284,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "PI",
+      "tipo": "calc",
+      "etiqueta": "Controlador PI (comparación)",
+      "texto": "\\[C_{PI}(s)=\\frac{178.14\\,(s+15)(s+12.91)}{s\\,(s+400)}\\]\n | Medida | Valor\n | Margen de fase | 64.1° @ 118.6 rad/s\n | Margen de ganancia | 0.140 @ 11.69 rad/s\n | Sobreimpulso | 17.6 %\n | ts | 0.240 s\nEn lineal el PI es igual de rápido. La ventaja del PII aparece con zona muerta y rampas.",
+      "latex": [
+        "C_{PI}(s)=\\frac{178.14\\,(s+15)(s+12.91)}{s\\,(s+400)}"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/PI_inestable/PI.mat",
+      "verificacion": "MATLAB, calculado para este grafo",
+      "valores": {
+        "ganancia": 178.14,
+        "ceros": [
+          -15,
+          -12.91
+        ],
+        "polos": [
+          0,
+          -400
+        ],
+        "archivo": "PI.mat",
+        "margen_fase": {
+          "valor": 64.0929,
+          "unidad": "grados",
+          "frecuencia_rad_s": 118.6496
+        },
+        "margen_ganancia": {
+          "valor": 0.1402,
+          "frecuencia_rad_s": 11.686
+        },
+        "tiempo_subida": {
+          "valor": 0.0102,
+          "unidad": "s"
+        },
+        "tiempo_establecimiento": {
+          "valor": 0.2402,
+          "unidad": "s"
+        },
+        "sobreimpulso": {
+          "valor": 17.5965,
+          "unidad": "%"
+        }
+      },
+      "contenido_html": "<div class=\"math\">\\[C_{PI}(s)=\\frac{178.14\\,(s+15)(s+12.91)}{s\\,(s+400)}\\]</div><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Margen de fase</td><td>64.1° @ 118.6 rad/s</td></tr><tr><td>Margen de ganancia</td><td>0.140 @ 11.69 rad/s</td></tr><tr><td>Sobreimpulso</td><td>17.6 %</td></tr><tr><td>t<sub>s</sub></td><td>0.240 s</td></tr></table><p style=\"margin-top:10px\">En lineal el PI es igual de rápido. La ventaja del PII aparece con zona muerta y rampas.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 1,
+        "grado_salida": 1,
+        "intermediacion": 0.001303,
+        "cercania": 0.216327,
+        "pagerank": 0.006045,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "PIIS",
+      "tipo": "calc",
+      "etiqueta": "PII usado en simulación",
+      "texto": "\\[C_{sim}(s)=\\frac{186.11\\,(s+6.395)(s+14.36)(s+1.861)}{s^2\\,(s+400)}\\]\n | Medida | Valor\n | Margen de fase | 66.3° @ 123.1 rad/s\n | Sobreimpulso | 15.1 %\n | ts | 0.700 s\nEs el contenido de PII.mat, que cargan los scripts de regulación y seguimiento. No es el C(s) impreso en la tesis.",
+      "latex": [
+        "C_{sim}(s)=\\frac{186.11\\,(s+6.395)(s+14.36)(s+1.861)}{s^2\\,(s+400)}"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/PII.mat",
+      "verificacion": "MATLAB, verificado",
+      "valores": {
+        "ganancia": 186.11,
+        "ceros": [
+          -6.395,
+          -14.36,
+          -1.861
+        ],
+        "polos": [
+          0,
+          0,
+          -400
+        ],
+        "archivo": "PII.mat",
+        "margen_fase": {
+          "valor": 66.2874,
+          "unidad": "grados",
+          "frecuencia_rad_s": 123.1322
+        },
+        "margen_ganancia": {
+          "valor": 0.1648,
+          "frecuencia_rad_s": 9.8497
+        },
+        "tiempo_subida": {
+          "valor": 0.0102,
+          "unidad": "s"
+        },
+        "tiempo_establecimiento": {
+          "valor": 0.7002,
+          "unidad": "s"
+        },
+        "sobreimpulso": {
+          "valor": 15.0827,
+          "unidad": "%"
+        }
+      },
+      "contenido_html": "<div class=\"math\">\\[C_{sim}(s)=\\frac{186.11\\,(s+6.395)(s+14.36)(s+1.861)}{s^2\\,(s+400)}\\]</div><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Margen de fase</td><td>66.3° @ 123.1 rad/s</td></tr><tr><td>Sobreimpulso</td><td>15.1 %</td></tr><tr><td>t<sub>s</sub></td><td>0.700 s</td></tr></table><p style=\"margin-top:10px\">Es el contenido de <code>PII.mat</code>, que cargan los scripts de regulación y seguimiento. No es el C(s) impreso en la tesis.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 1,
+        "grado_salida": 3,
+        "intermediacion": 0.008966,
+        "cercania": 0.265,
+        "pagerank": 0.00547,
+        "agrupamiento": 0.166667,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "TJW",
+      "tipo": "calc",
+      "etiqueta": "Error senoidal teórico",
+      "texto": "\\[e_{ss}(t)=A\\big[1-|T(j\\omega_0)|\\big]\\sin\\omega_0t-A|T(j\\omega_0)|\\angle T(j\\omega_0)\\cos\\omega_0t\\]\nPara \\(f=0.001\\) Hz, \\(|T(j\\omega_0)|=1.0000\\): la atenuación es despreciable y el error lineal es casi cero.",
+      "latex": [
+        "e_{ss}(t)=A\\big[1-|T(j\\omega_0)|\\big]\\sin\\omega_0t-A|T(j\\omega_0)|\\angle T(j\\omega_0)\\cos\\omega_0t",
+        "f=0.001",
+        "|T(j\\omega_0)|=1.0000"
+      ],
+      "verificacion": "MATLAB, calculado para este grafo",
+      "valores": {
+        "frecuencia": {
+          "valor": 0.001,
+          "unidad": "Hz"
+        },
+        "magnitud_T": 1.0
+      },
+      "contenido_html": "<div class=\"math\">\\[e_{ss}(t)=A\\big[1-|T(j\\omega_0)|\\big]\\sin\\omega_0t-A|T(j\\omega_0)|\\angle T(j\\omega_0)\\cos\\omega_0t\\]</div><p>Para \\(f=0.001\\) Hz, \\(|T(j\\omega_0)|=1.0000\\): la atenuación es despreciable y el error lineal es casi cero.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 1,
+        "grado_salida": 1,
+        "intermediacion": 0.016869,
+        "cercania": 0.235033,
+        "pagerank": 0.006284,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "REG",
+      "tipo": "sim",
+      "etiqueta": "Regulación con AD",
+      "texto": "PII + saturación + zona muerta + planta no lineal con Karnopp. 10⁶ pasos de 1 ms (1000 s), cambio de referencia en t = 500 s.\nError en estado estacionario prácticamente nulo en ambos niveles.\nOscilaciones pequeñas tipo ciclo límite (~0.005 cm) por atascamiento-deslizamiento.\nSeñal de control dentro de [0, 5] V, con pico de saturación en el cambio.",
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/Refactor_PII_inestable.m",
+      "valores": {
+        "pasos": 1000000,
+        "T": {
+          "valor": 0.001,
+          "unidad": "s"
+        },
+        "duracion": {
+          "valor": 1000,
+          "unidad": "s"
+        },
+        "cambio_referencia_s": 500,
+        "referencia_script_cm": [
+          -4.5,
+          -4.0
+        ],
+        "referencia_texto_cm": [
+          -4,
+          -5
+        ],
+        "controlador": "PII.mat",
+        "integrador": "ode45 por intervalo de 1 ms (ZOH)"
+      },
+      "contenido_html": "<p>PII + saturación + zona muerta + planta no lineal con Karnopp. 10⁶ pasos de 1 ms (1000 s), cambio de referencia en t = 500 s.</p><ul><li>Error en estado estacionario prácticamente nulo en ambos niveles.</li><li>Oscilaciones pequeñas tipo ciclo límite (~0.005 cm) por atascamiento-deslizamiento.</li><li>Señal de control dentro de [0, 5] V, con pico de saturación en el cambio.</li></ul>",
+      "metricas": {
+        "grado": 13,
+        "grado_entrada": 7,
+        "grado_salida": 6,
+        "intermediacion": 0.20628,
+        "cercania": 0.333333,
+        "pagerank": 0.022759,
+        "agrupamiento": 0.025641,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "SIN",
+      "tipo": "sim",
+      "etiqueta": "Seguimiento senoidal",
+      "texto": "\\(r(t)=x_0+A\\sin(2\\pi ft)\\), \\(A=0.25\\) cm, \\(f=0.001\\) Hz (T = 1000 s). Los cruces por cero de la velocidad activan el atascamiento en Karnopp. El doble integrador acelera la recuperación tras cada ruptura.",
+      "latex": [
+        "r(t)=x_0+A\\sin(2\\pi ft)",
+        "A=0.25",
+        "f=0.001"
+      ],
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_sinusoidal.m",
+      "estado": "Figuras sin generar",
+      "valores": {
+        "amplitud": {
+          "valor": 0.25,
+          "unidad": "cm"
+        },
+        "frecuencia": {
+          "valor": 0.001,
+          "unidad": "Hz"
+        },
+        "offset_texto_cm": -4,
+        "offset_script_cm": -4.25,
+        "controlador": "PII.mat"
+      },
+      "contenido_html": "<p>\\(r(t)=x_0+A\\sin(2\\pi ft)\\), \\(A=0.25\\) cm, \\(f=0.001\\) Hz (T = 1000 s). Los cruces por cero de la velocidad activan el atascamiento en Karnopp. El doble integrador acelera la recuperación tras cada ruptura.</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 6,
+        "grado_salida": 0,
+        "intermediacion": 0.051635,
+        "cercania": 0.269036,
+        "pagerank": 0.025389,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "TRAP",
+      "tipo": "sim",
+      "etiqueta": "Seguimiento trapezoidal",
+      "texto": "Planos en −4 y −5 cm unidos por rampas de 250 s (pendiente ±1/250 cm/s). El pico de error aparece al inicio de cada rampa, cuando hay que vencer Fs = 20 N. En la rampa el PII no deja error residual, a diferencia del PI.",
+      "fuente": "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_trapezoidal.m",
+      "estado": "Figuras sin generar",
+      "valores": {
+        "niveles_cm": [
+          -4,
+          -5
+        ],
+        "duracion_rampa": {
+          "valor": 250,
+          "unidad": "s"
+        },
+        "pendiente_cm_s": 0.004,
+        "controlador": "PII.mat"
+      },
+      "contenido_html": "<p>Planos en −4 y −5 cm unidos por rampas de 250 s (pendiente ±1/250 cm/s). El pico de error aparece al inicio de cada rampa, cuando hay que vencer F<sub>s</sub> = 20 N. En la rampa el PII no deja error residual, a diferencia del PI.</p>",
+      "metricas": {
+        "grado": 5,
+        "grado_entrada": 4,
+        "grado_salida": 1,
+        "intermediacion": 0.014804,
+        "cercania": 0.260442,
+        "pagerank": 0.016424,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "CMP",
+      "tipo": "sim",
+      "etiqueta": "Comparación PI vs PII",
+      "texto": "Mismo modelo, mismas condiciones iniciales, escalón de −4 a −5 cm a mitad de 200 s. Genera posición, error, voltaje y velocidad de ambos controladores.\nNota: el PII se satura a [0, 10] V y el PI a [0, 5] V, así que la comparación no es en igualdad de actuador.",
+      "fuente": "icr/calculus/Final_Bien/inestable/compare_PI_vs_PII.m",
+      "estado": "No incluida en la tesis",
+      "valores": {
+        "duracion": {
+          "valor": 200,
+          "unidad": "s"
+        },
+        "referencia_cm": [
+          -4,
+          -5
+        ],
+        "saturacion_PI_V": [
+          0,
+          5
+        ],
+        "saturacion_PII_V": [
+          0,
+          10
+        ],
+        "controladores": [
+          "PI.mat",
+          "PII_lic.mat"
+        ]
+      },
+      "contenido_html": "<p>Mismo modelo, mismas condiciones iniciales, escalón de −4 a −5 cm a mitad de 200 s. Genera posición, error, voltaje y velocidad de ambos controladores.</p><p>Nota: el PII se satura a [0, 10] V y el PI a [0, 5] V, así que la comparación no es en igualdad de actuador.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 2,
+        "grado_salida": 1,
+        "intermediacion": 0.018556,
+        "cercania": 0.242563,
+        "pagerank": 0.011422,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_LAZO",
+      "tipo": "fig",
+      "etiqueta": "Fig. Lazo con zona muerta",
+      "texto": "Diagrama de bloques del lazo de control con zona muerta.",
+      "fuente": "icr/context/Tesis/images/chapter_1/lazo_de_control_con_zm.eps",
+      "figura": {
+        "png": "img/lazo_zm.png",
+        "original": "icr/context/Tesis/images/chapter_1/lazo_de_control_con_zm.eps"
+      },
+      "contenido_html": "<p>Diagrama de bloques del lazo de control con zona muerta.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.238739,
+        "pagerank": 0.011555,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_BODE",
+      "tipo": "fig",
+      "etiqueta": "Fig. Bode (magnitud)",
+      "texto": "Diagrama de Bode del lazo abierto compensado C(s)G(s).",
+      "fuente": "icr/context/Tesis/images/pii_design/bode_mag.pdf",
+      "figura": {
+        "png": "img/bode.png",
+        "original": "icr/context/Tesis/images/pii_design/bode_mag.pdf"
+      },
+      "contenido_html": "<p>Diagrama de Bode del lazo abierto compensado C(s)G(s).</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.174917,
+        "pagerank": 0.006043,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "F_NYQ",
+      "tipo": "fig",
+      "etiqueta": "Fig. Nyquist",
+      "texto": "Con un polo en el semiplano derecho, la estabilidad en lazo cerrado exige un rodeo antihorario a −1.",
+      "fuente": "icr/context/Tesis/images/pii_design/nyquist.pdf",
+      "figura": {
+        "png": "img/nyquist.png",
+        "original": "icr/context/Tesis/images/pii_design/nyquist.pdf"
+      },
+      "contenido_html": "<p>Con un polo en el semiplano derecho, la estabilidad en lazo cerrado exige un rodeo antihorario a −1.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.174917,
+        "pagerank": 0.006043,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "F_STEP",
+      "tipo": "fig",
+      "etiqueta": "Fig. Respuesta escalón",
+      "texto": "Respuesta al escalón del lazo cerrado lineal.",
+      "fuente": "icr/context/Tesis/images/pii_design/step_response.pdf",
+      "figura": {
+        "png": "img/step.png",
+        "original": "icr/context/Tesis/images/pii_design/step_response.pdf"
+      },
+      "contenido_html": "<p>Respuesta al escalón del lazo cerrado lineal.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.17377,
+        "pagerank": 0.009604,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "F_POS",
+      "tipo": "fig",
+      "etiqueta": "Fig. Posición (regulación)",
+      "texto": "Posición del levitante y referencia. La figura muestra −4.5 cm → −4 cm en t = 500 s.",
+      "fuente": "icr/context/Tesis/images/regulation_results/figura101.eps",
+      "figura": {
+        "png": "img/reg_pos.png",
+        "original": "icr/context/Tesis/images/regulation_results/figura101.eps"
+      },
+      "contenido_html": "<p>Posición del levitante y referencia. La figura muestra −4.5 cm → −4 cm en t = 500 s.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 2,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.251185,
+        "pagerank": 0.009298,
+        "agrupamiento": 1.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_VEL",
+      "tipo": "fig",
+      "etiqueta": "Fig. Velocidad (regulación)",
+      "texto": "La velocidad converge a cero en el equilibrio, con pulsos por las rupturas del atascamiento.",
+      "fuente": "icr/context/Tesis/images/regulation_results/figura2.eps",
+      "figura": {
+        "png": "img/reg_vel.png",
+        "original": "icr/context/Tesis/images/regulation_results/figura2.eps"
+      },
+      "contenido_html": "<p>La velocidad converge a cero en el equilibrio, con pulsos por las rupturas del atascamiento.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.250591,
+        "pagerank": 0.007487,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_ERR",
+      "tipo": "fig",
+      "etiqueta": "Fig. Error (regulación)",
+      "texto": "Error de posición r − x₁.",
+      "fuente": "icr/context/Tesis/images/regulation_results/figura3.eps",
+      "figura": {
+        "png": "img/reg_err.png",
+        "original": "icr/context/Tesis/images/regulation_results/figura3.eps"
+      },
+      "contenido_html": "<p>Error de posición r − x₁.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.250591,
+        "pagerank": 0.007487,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_U",
+      "tipo": "fig",
+      "etiqueta": "Fig. Señal de control",
+      "texto": "Voltaje antes y después de la zona muerta. Se mantiene en [0, 5] V; en estado estacionario ronda 0.5 V.",
+      "fuente": "icr/context/Tesis/images/regulation_results/figura4.eps",
+      "figura": {
+        "png": "img/reg_u.png",
+        "original": "icr/context/Tesis/images/regulation_results/figura4.eps"
+      },
+      "contenido_html": "<p>Voltaje antes y después de la zona muerta. Se mantiene en [0, 5] V; en estado estacionario ronda 0.5 V.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 2,
+        "grado_salida": 1,
+        "intermediacion": 0.023816,
+        "cercania": 0.265,
+        "pagerank": 0.008694,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "F_PZ",
+      "tipo": "fig",
+      "etiqueta": "Fig. Mapa de polos y ceros",
+      "texto": "Polos de G(s): uno a cada lado del eje imaginario.",
+      "fuente": "icr/context/Tesis/images/chapter_1/pole_zero_map.eps",
+      "figura": {
+        "png": "img/pzmap.png",
+        "original": "icr/context/Tesis/images/chapter_1/pole_zero_map.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Polos de G(s): uno a cada lado del eje imaginario.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.220833,
+        "pagerank": 0.006045,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_RL",
+      "tipo": "fig",
+      "etiqueta": "Fig. Lugar de las raíces",
+      "texto": "Lugar de las raíces de G(s) sin compensar.",
+      "fuente": "icr/context/Tesis/images/chapter_1/root_locus.eps",
+      "figura": {
+        "png": "img/rlocus.png",
+        "original": "icr/context/Tesis/images/chapter_1/root_locus.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Lugar de las raíces de G(s) sin compensar.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.207436,
+        "pagerank": 0.006045,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "F_PH",
+      "tipo": "fig",
+      "etiqueta": "Fig. Retrato de fase",
+      "texto": "Retrato de fase del sistema.",
+      "fuente": "icr/context/Tesis/images/chapter_1/phase_portrait.eps",
+      "figura": {
+        "png": "img/phase.png",
+        "original": "icr/context/Tesis/images/chapter_1/phase_portrait.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Retrato de fase del sistema.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.237668,
+        "pagerank": 0.006291,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_PHL",
+      "tipo": "fig",
+      "etiqueta": "Fig. Retrato de fase linealizado",
+      "texto": "Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.",
+      "fuente": "icr/context/Tesis/images/chapter_1/phase_portrait_li.eps",
+      "figura": {
+        "png": "img/phase_li.png",
+        "original": "icr/context/Tesis/images/chapter_1/phase_portrait_li.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.220833,
+        "pagerank": 0.006045,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "F_FR",
+      "tipo": "fig",
+      "etiqueta": "Fig. Fricción",
+      "texto": "Curva de fricción estática y dinámica.",
+      "fuente": "icr/context/Tesis/images/zm_fricc/friccion.eps",
+      "figura": {
+        "png": "img/friccion.png",
+        "original": "icr/context/Tesis/images/zm_fricc/friccion.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Curva de fricción estática y dinámica.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.207843,
+        "pagerank": 0.008462,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "F_ZM",
+      "tipo": "fig",
+      "etiqueta": "Fig. Zona muerta dinámica",
+      "texto": "Zona muerta desplazada al voltaje de equilibrio: de (ucl, ueq, ucr) a (u′cl, u′eq, u′cr) al cambiar la posición.",
+      "fuente": "icr/context/Tesis/images/zm_fricc/zm_dinamica.eps",
+      "figura": {
+        "png": "img/zm_dinamica.png",
+        "original": "icr/context/Tesis/images/zm_fricc/zm_dinamica.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Zona muerta desplazada al voltaje de equilibrio: de (u<sub>cl</sub>, u<sub>eq</sub>, u<sub>cr</sub>) a (u′<sub>cl</sub>, u′<sub>eq</sub>, u′<sub>cr</sub>) al cambiar la posición.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.243119,
+        "pagerank": 0.019429,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "F_CONF",
+      "tipo": "fig",
+      "etiqueta": "Fig. Configuración inestable",
+      "texto": "Esquema del ECP-730 en configuración atractiva.",
+      "fuente": "icr/context/Tesis/images/configurations/configuracion_inestable.eps",
+      "figura": {
+        "png": "img/config.png",
+        "original": "icr/context/Tesis/images/configurations/configuracion_inestable.eps"
+      },
+      "estado": "No incluida en el documento",
+      "contenido_html": "<p>Esquema del ECP-730 en configuración atractiva.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.225532,
+        "pagerank": 0.006258,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "K1",
+      "tipo": "conc",
+      "etiqueta": "El PII estabiliza el SLM inestable con AD",
+      "texto": "El controlador PII estabiliza el sistema inestable (polo en +14.94) en presencia de zona muerta y fricción de Karnopp, sin compensar explícitamente ninguna de las dos no linealidades.",
+      "contenido_html": "<p>El controlador PII estabiliza el sistema inestable (polo en +14.94) en presencia de zona muerta y fricción de Karnopp, sin compensar explícitamente ninguna de las dos no linealidades.</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 3,
+        "grado_salida": 3,
+        "intermediacion": 0.0958,
+        "cercania": 0.316418,
+        "pagerank": 0.009994,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "K2",
+      "tipo": "conc",
+      "etiqueta": "Error en estado estacionario nulo",
+      "texto": "La doble acción integral da error nulo ante escalón y elimina el error en rampa que un PI dejaría proporcional a la pendiente.",
+      "contenido_html": "<p>La doble acción integral da error nulo ante escalón y elimina el error en rampa que un PI dejaría proporcional a la pendiente.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 2,
+        "grado_salida": 0,
+        "intermediacion": 0.001766,
+        "cercania": 0.252983,
+        "pagerank": 0.021447,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "K3",
+      "tipo": "conc",
+      "etiqueta": "Control implementable en [0, 5] V",
+      "texto": "La señal de control respeta los límites del actuador del ECP-730 en transitorio y en estado estacionario.",
+      "contenido_html": "<p>La señal de control respeta los límites del actuador del ECP-730 en transitorio y en estado estacionario.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.209901,
+        "pagerank": 0.011653,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "K4",
+      "tipo": "conc",
+      "etiqueta": "Valida la hipótesis de Pérez-Gómez",
+      "texto": "Los controladores con doble efecto integral reducen las oscilaciones por zona muerta, porque las ganancias altas aceleran la salida de la no linealidad. Aquí se confirma en una planta inestable en lazo abierto, caso que el motor de CD no requería.",
+      "contenido_html": "<p>Los controladores con doble efecto integral reducen las oscilaciones por zona muerta, porque las ganancias altas aceleran la salida de la no linealidad. Aquí se confirma en una planta inestable en lazo abierto, caso que el motor de CD no requería.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 3,
+        "grado_salida": 0,
+        "intermediacion": 0.002067,
+        "cercania": 0.260442,
+        "pagerank": 0.009457,
+        "agrupamiento": 0.333333,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "K5",
+      "tipo": "conc",
+      "etiqueta": "Extiende a Alcántara a la configuración atractiva",
+      "texto": "Alcántara resolvió el caso repulsivo con control conmutado. Esta tesis impone alta ganancia en baja frecuencia de forma estructural (doble integrador), sin conmutación, en la configuración inestable.",
+      "contenido_html": "<p>Alcántara resolvió el caso repulsivo con control conmutado. Esta tesis impone alta ganancia en baja frecuencia de forma estructural (doble integrador), sin conmutación, en la configuración inestable.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 3,
+        "grado_salida": 0,
+        "intermediacion": 0.001483,
+        "cercania": 0.271795,
+        "pagerank": 0.008854,
+        "agrupamiento": 0.333333,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "W1",
+      "tipo": "fut",
+      "etiqueta": "Validación experimental en el ECP-730",
+      "texto": "Implementar el PII en el equipo real y, si hay discrepancias, reidentificar (a, b, c₁, m) con ensayos en lazo abierto.",
+      "contenido_html": "<p>Implementar el PII en el equipo real y, si hay discrepancias, reidentificar (a, b, c₁, m) con ensayos en lazo abierto.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 2,
+        "grado_salida": 0,
+        "intermediacion": 0.002788,
+        "cercania": 0.272494,
+        "pagerank": 0.015283,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "W2",
+      "tipo": "fut",
+      "etiqueta": "Comparar modelos de f_fld",
+      "texto": "Evaluar los modelos de Zhao, El Hajjaji, Zhang y Al-Muthair en precisión y costo computacional.",
+      "contenido_html": "<p>Evaluar los modelos de Zhao, El Hajjaji, Zhang y Al-Muthair en precisión y costo computacional.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.194139,
+        "pagerank": 0.031773,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "W3",
+      "tipo": "fut",
+      "etiqueta": "Comparar modelos de fricción",
+      "texto": "Karnopp frente a LuGre, Stribeck, Dahl y elastoplástico, en fidelidad del transitorio de ruptura y costo.",
+      "contenido_html": "<p>Karnopp frente a LuGre, Stribeck, Dahl y elastoplástico, en fidelidad del transitorio de ruptura y costo.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.019151,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "W4",
+      "tipo": "fut",
+      "etiqueta": "Identificar la zona muerta en línea",
+      "texto": "Estimar mr, ml, br, bl, hr, hl con mínimos cuadrados recursivos o MRAC, para compensarla en la ley de control.",
+      "contenido_html": "<p>Estimar m<sub>r</sub>, m<sub>l</sub>, b<sub>r</sub>, b<sub>l</sub>, h<sub>r</sub>, h<sub>l</sub> con mínimos cuadrados recursivos o MRAC, para compensarla en la ley de control.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.243119,
+        "pagerank": 0.019429,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "W5",
+      "tipo": "fut",
+      "etiqueta": "Control robusto H∞ / QFT",
+      "texto": "Garantizar estabilidad y desempeño ante incertidumbre en b, c₁ y m.",
+      "contenido_html": "<p>Garantizar estabilidad y desempeño ante incertidumbre en b, c₁ y m.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.174917,
+        "pagerank": 0.006043,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "W6",
+      "tipo": "fut",
+      "etiqueta": "Ganancia programada",
+      "texto": "Ajustar el PII según el punto de operación en x* ∈ [−5, −0.5] cm, ya que los polos cambian con x*.",
+      "contenido_html": "<p>Ajustar el PII según el punto de operación en x* ∈ [−5, −0.5] cm, ya que los polos cambian con x*.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 1,
+        "grado_salida": 0,
+        "intermediacion": 0.0,
+        "cercania": 0.193078,
+        "pagerank": 0.00961,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "W7",
+      "tipo": "fut",
+      "etiqueta": "Observador de velocidad",
+      "texto": "Extender los observadores de Luenberger y no lineal de Alcántara a la configuración inestable.",
+      "contenido_html": "<p>Extender los observadores de Luenberger y no lineal de Alcántara a la configuración inestable.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 2,
+        "grado_salida": 0,
+        "intermediacion": 0.005599,
+        "cercania": 0.271795,
+        "pagerank": 0.006895,
+        "agrupamiento": 0.0,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "W8",
+      "tipo": "fut",
+      "etiqueta": "Control conmutado PI–PD",
+      "texto": "Implementar el esquema conmutado de Alcántara y Pérez-Gómez en la configuración inestable y compararlo con el PII en tiempo de atascamiento, error y complejidad.",
+      "contenido_html": "<p>Implementar el esquema conmutado de Alcántara y Pérez-Gómez en la configuración inestable y compararlo con el PII en tiempo de atascamiento, error y complejidad.</p>",
+      "metricas": {
+        "grado": 4,
+        "grado_entrada": 4,
+        "grado_salida": 0,
+        "intermediacion": 0.026704,
+        "cercania": 0.282667,
+        "pagerank": 0.016939,
+        "agrupamiento": 0.333333,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "R1",
+      "tipo": "rev",
+      "etiqueta": "C(s) impreso ≠ PII simulado",
+      "texto": "La tesis presenta C(s) = 152.43(s+4.875)(s+1.861)(s+17.31)/(s²(s+301.1)), que es PII_lic.mat. Los scripts de regulación y seguimiento cargan PII.mat, que es otro controlador: 186.11(s+6.395)(s+14.36)(s+1.861)/(s²(s+400)).\nAcción: regenerar las figuras con PII_lic.mat o publicar el controlador de PII.mat.",
+      "prioridad": "alta",
+      "contenido_html": "<p>La tesis presenta C(s) = 152.43(s+4.875)(s+1.861)(s+17.31)/(s²(s+301.1)), que es <code>PII_lic.mat</code>. Los scripts de regulación y seguimiento cargan <code>PII.mat</code>, que es otro controlador: 186.11(s+6.395)(s+14.36)(s+1.861)/(s²(s+400)).</p><p><b>Acción:</b> regenerar las figuras con <code>PII_lic.mat</code> o publicar el controlador de <code>PII.mat</code>.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 0,
+        "grado_salida": 3,
+        "intermediacion": 0.035793,
+        "cercania": 0.273902,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.333333,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "R2",
+      "tipo": "rev",
+      "etiqueta": "Referencia de regulación: texto vs figura",
+      "texto": "Las conclusiones dicen que la referencia cambia de −4 a −5 cm en t = 500 s. La figura de posición (y Refactor_PII_inestable.m) muestra −4.5 → −4 cm.",
+      "prioridad": "alta",
+      "contenido_html": "<p>Las conclusiones dicen que la referencia cambia de −4 a −5 cm en t = 500 s. La figura de posición (y <code>Refactor_PII_inestable.m</code>) muestra −4.5 → −4 cm.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 0,
+        "grado_salida": 2,
+        "intermediacion": 0.0,
+        "cercania": 0.251185,
+        "pagerank": 0.004262,
+        "agrupamiento": 1.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "R3",
+      "tipo": "rev",
+      "etiqueta": "Escala de fuerza en el simulador",
+      "texto": "maglev_karnopp.m calcula \\(F_{ext}=u/(b\\,m\\,(a-x)^4)-mg\\) y luego \\(\\dot v=F_{ext}/m\\): la fuerza magnética queda dividida por \\(m\\) dos veces. El voltaje de equilibrio simulado es \\(\\approx0.49\\) V, frente a 3.48 V del modelo linealizado.\nCoincide con los ≈0.5 V de la figura de señal de control. Además, el término de fricción usa \\(c_1|v|\\), que no se opone al movimiento cuando \\(v<0\\).",
+      "latex": [
+        "F_{ext}=u/(b\\,m\\,(a-x)^4)-mg",
+        "\\dot v=F_{ext}/m",
+        "m",
+        "\\approx0.49",
+        "c_1|v|",
+        "v<0"
+      ],
+      "prioridad": "alta",
+      "contenido_html": "<p><code>maglev_karnopp.m</code> calcula \\(F_{ext}=u/(b\\,m\\,(a-x)^4)-mg\\) y luego \\(\\dot v=F_{ext}/m\\): la fuerza magnética queda dividida por \\(m\\) dos veces. El voltaje de equilibrio simulado es \\(\\approx0.49\\) V, frente a 3.48 V del modelo linealizado.</p><p>Coincide con los ≈0.5 V de la figura de señal de control. Además, el término de fricción usa \\(c_1|v|\\), que no se opone al movimiento cuando \\(v<0\\).</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 0,
+        "grado_salida": 3,
+        "intermediacion": 0.023139,
+        "cercania": 0.263027,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "R4",
+      "tipo": "rev",
+      "etiqueta": "Tabla de parámetros: b y g",
+      "texto": "La tabla dice b = 1.6163×10⁴ V/(N·cm⁴) y g = 9.981 cm/s². El código y las conclusiones usan b = 1.6163×10⁻⁶ y g = 981 cm/s².\nAdemás, c₁ aparece en kg⁻¹ (tabla) y en kg/s (conclusiones). El código usa c = 8.563 directamente como c₂ = c₁/m.",
+      "prioridad": "media",
+      "contenido_html": "<p>La tabla dice b = 1.6163×10⁴ V/(N·cm⁴) y g = 9.981 cm/s². El código y las conclusiones usan b = 1.6163×10⁻⁶ y g = 981 cm/s².</p><p>Además, c₁ aparece en kg⁻¹ (tabla) y en kg/s (conclusiones). El código usa c = 8.563 directamente como c₂ = c₁/m.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.232456,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "R5",
+      "tipo": "rev",
+      "etiqueta": "Seguimiento senoidal: offset",
+      "texto": "El texto dice x₀ = −4 cm (excursión −4.25 a −3.75 cm). El script usa x0_ref = −4.25 (excursión −4.5 a −4.0 cm).",
+      "prioridad": "media",
+      "contenido_html": "<p>El texto dice x₀ = −4 cm (excursión −4.25 a −3.75 cm). El script usa <code>x0_ref = −4.25</code> (excursión −4.5 a −4.0 cm).</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.212425,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "R6",
+      "tipo": "rev",
+      "etiqueta": "Figuras de seguimiento pendientes",
+      "texto": "Las 8 figuras de seguimiento (senoidal y trapezoidal) están comentadas en seguimiento.tex, pero el texto las cita con \\ref y las describe en condicional («mostraría»).",
+      "prioridad": "media",
+      "contenido_html": "<p>Las 8 figuras de seguimiento (senoidal y trapezoidal) están comentadas en <code>seguimiento.tex</code>, pero el texto las cita con \\ref y las describe en condicional («mostraría»).</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 0,
+        "grado_salida": 2,
+        "intermediacion": 0.000209,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "R7",
+      "tipo": "rev",
+      "etiqueta": "Clave de cita de El Hajjaji",
+      "texto": "El texto atribuye la fuerza experimental a El Hajjaji et al. pero usa \\cite{gregory}, que apunta a Buckner (2001). La entrada correcta, el, existe en el .bib sin citar. La clave ali (suspensión activa) duplica el artículo de Charara.",
+      "prioridad": "baja",
+      "contenido_html": "<p>El texto atribuye la fuerza experimental a El Hajjaji et al. pero usa \\cite{gregory}, que apunta a Buckner (2001). La entrada correcta, <code>el</code>, existe en el .bib sin citar. La clave <code>ali</code> (suspensión activa) duplica el artículo de Charara.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 2,
+        "grado_salida": 1,
+        "intermediacion": 0.021054,
+        "cercania": 0.212851,
+        "pagerank": 0.007885,
+        "agrupamiento": 0.333333,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "R8",
+      "tipo": "rev",
+      "etiqueta": "Marcador [ci] y variables sin usar",
+      "texto": "La sección de atascamiento-deslizamiento tiene un marcador literal «[ci]». La lista de variables menciona Fc y Fv, que no aparecen en la ecuación de fricción.",
+      "prioridad": "baja",
+      "contenido_html": "<p>La sección de atascamiento-deslizamiento tiene un marcador literal «[ci]». La lista de variables menciona F<sub>c</sub> y F<sub>v</sub>, que no aparecen en la ecuación de fricción.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207843,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:730",
+      "tipo": "ref",
+      "etiqueta": "Educational Control Products (1999)",
+      "texto": "Manual for Model 730, Magnetic Levitation System\nEducational Control Products, 1999.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · 730",
+      "referencia": {
+        "clave": "730",
+        "autores": "Educational Control Products",
+        "anio": 1999,
+        "titulo": "Manual for Model 730, Magnetic Levitation System"
+      },
+      "contenido_html": "<p><b>Manual for Model 730, Magnetic Levitation System</b></p><p>Educational Control Products, 1999.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.225532,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "ref:parks",
+      "tipo": "ref",
+      "etiqueta": "Parks (1999)",
+      "texto": "Manual for Model 730: Magnetic Levitation System\nT. Parks, 1999.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · parks",
+      "referencia": {
+        "clave": "parks",
+        "autores": "T. Parks",
+        "anio": 1999,
+        "titulo": "Manual for Model 730: Magnetic Levitation System"
+      },
+      "contenido_html": "<p><b>Manual for Model 730: Magnetic Levitation System</b></p><p>T. Parks, 1999.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:alcantara",
+      "tipo": "ref",
+      "etiqueta": "Hernández Alcántara (2013)",
+      "texto": "Control conmutado para un sistema de levitación magnética con atascamiento-deslizamiento\nD. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro, 2013.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · alcantara",
+      "referencia": {
+        "clave": "alcantara",
+        "autores": "D. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro",
+        "anio": 2013,
+        "titulo": "Control conmutado para un sistema de levitación magnética con atascamiento-deslizamiento"
+      },
+      "contenido_html": "<p><b>Control conmutado para un sistema de levitación magnética con atascamiento-deslizamiento</b></p><p>D. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro, 2013.</p>",
+      "metricas": {
+        "grado": 6,
+        "grado_entrada": 0,
+        "grado_salida": 6,
+        "intermediacion": 0.09246,
+        "cercania": 0.321212,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.133333,
+        "excentricidad": 5
+      }
+    },
+    {
+      "id": "ref:diana_tesis",
+      "tipo": "ref",
+      "etiqueta": "Hernández Alcántara (2010)",
+      "texto": "Identificación y control de un sistema de levitación magnética (tesis)\nD. Hernández Alcántara, 2010.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · diana_tesis",
+      "referencia": {
+        "clave": "diana_tesis",
+        "autores": "D. Hernández Alcántara",
+        "anio": 2010,
+        "titulo": "Identificación y control de un sistema de levitación magnética (tesis)"
+      },
+      "contenido_html": "<p><b>Identificación y control de un sistema de levitación magnética (tesis)</b></p><p>D. Hernández Alcántara, 2010.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.232456,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "ref:perez",
+      "tipo": "ref",
+      "etiqueta": "Pérez Gómez (2021)",
+      "texto": "Estrategia de control para el problema de zona muerta en procesos electromecánicos\nC. A. Pérez Gómez, 2021.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · perez",
+      "referencia": {
+        "clave": "perez",
+        "autores": "C. A. Pérez Gómez",
+        "anio": 2021,
+        "titulo": "Estrategia de control para el problema de zona muerta en procesos electromecánicos"
+      },
+      "contenido_html": "<p><b>Estrategia de control para el problema de zona muerta en procesos electromecánicos</b></p><p>C. A. Pérez Gómez, 2021.</p>",
+      "metricas": {
+        "grado": 3,
+        "grado_entrada": 0,
+        "grado_salida": 3,
+        "intermediacion": 0.000838,
+        "cercania": 0.256659,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.666667,
+        "excentricidad": 6
+      }
+    },
+    {
+      "id": "ref:arturo_tesis",
+      "tipo": "ref",
+      "etiqueta": "Pérez Gómez (2021)",
+      "texto": "Estrategia de control para el problema de zona muerta en procesos electromecánicos (tesis)\nC. A. Pérez Gómez, 2021.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · arturo_tesis",
+      "referencia": {
+        "clave": "arturo_tesis",
+        "autores": "C. A. Pérez Gómez",
+        "anio": 2021,
+        "titulo": "Estrategia de control para el problema de zona muerta en procesos electromecánicos (tesis)"
+      },
+      "contenido_html": "<p><b>Estrategia de control para el problema de zona muerta en procesos electromecánicos (tesis)</b></p><p>C. A. Pérez Gómez, 2021.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.243119,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:al",
+      "tipo": "ref",
+      "etiqueta": "Al-Muthair (2004)",
+      "texto": "Sliding mode control of magnetic levitation system\nN. F. Al-Muthair, M. Zribi, 2004.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · al",
+      "referencia": {
+        "clave": "al",
+        "autores": "N. F. Al-Muthair, M. Zribi",
+        "anio": 2004,
+        "titulo": "Sliding mode control of magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Sliding mode control of magnetic levitation system</b></p><p>N. F. Al-Muthair, M. Zribi, 2004.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.194139,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "ref:charara",
+      "tipo": "ref",
+      "etiqueta": "Charara (1996)",
+      "texto": "Nonlinear control of a magnetic levitation system without premagnetization\nA. Charara, J. De Miras, B. Caron, 1996.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · charara",
+      "referencia": {
+        "clave": "charara",
+        "autores": "A. Charara, J. De Miras, B. Caron",
+        "anio": 1996,
+        "titulo": "Nonlinear control of a magnetic levitation system without premagnetization"
+      },
+      "contenido_html": "<p><b>Nonlinear control of a magnetic levitation system without premagnetization</b></p><p>A. Charara, J. De Miras, B. Caron, 1996.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.194139,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "ref:gregory",
+      "tipo": "ref",
+      "etiqueta": "Buckner (2001)",
+      "texto": "Intelligent bounds on modeling uncertainties: applications to sliding mode control of a magnetic levitation system\nG. D. Buckner, 2001.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gregory",
+      "referencia": {
+        "clave": "gregory",
+        "autores": "G. D. Buckner",
+        "anio": 2001,
+        "titulo": "Intelligent bounds on modeling uncertainties: applications to sliding mode control of a magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Intelligent bounds on modeling uncertainties: applications to sliding mode control of a magnetic levitation system</b></p><p>G. D. Buckner, 2001.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 0,
+        "grado_salida": 2,
+        "intermediacion": 0.0,
+        "cercania": 0.203065,
+        "pagerank": 0.004262,
+        "agrupamiento": 1.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "ref:zhao",
+      "tipo": "ref",
+      "etiqueta": "Zhao (1999)",
+      "texto": "Phase-space nonlinear control toolbox: the maglev experience\nF. Zhao, S. C. Loh, J. A. May, 1999.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · zhao",
+      "referencia": {
+        "clave": "zhao",
+        "autores": "F. Zhao, S. C. Loh, J. A. May",
+        "anio": 1999,
+        "titulo": "Phase-space nonlinear control toolbox: the maglev experience"
+      },
+      "contenido_html": "<p><b>Phase-space nonlinear control toolbox: the maglev experience</b></p><p>F. Zhao, S. C. Loh, J. A. May, 1999.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.194139,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "ref:feifei",
+      "tipo": "ref",
+      "etiqueta": "Zhang (1999)",
+      "texto": "Nonlinear feedback control of magnetic levitating system by exact linearization approach\nF. Zhang, K. Suyama, 1999.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · feifei",
+      "referencia": {
+        "clave": "feifei",
+        "autores": "F. Zhang, K. Suyama",
+        "anio": 1999,
+        "titulo": "Nonlinear feedback control of magnetic levitating system by exact linearization approach"
+      },
+      "contenido_html": "<p><b>Nonlinear feedback control of magnetic levitating system by exact linearization approach</b></p><p>F. Zhang, K. Suyama, 1999.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.194139,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 8
+      }
+    },
+    {
+      "id": "ref:karnopp",
+      "tipo": "ref",
+      "etiqueta": "Karnopp (1985)",
+      "texto": "Computer simulation of stick-slip friction in mechanical dynamic systems\nD. Karnopp, 1985.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · karnopp",
+      "referencia": {
+        "clave": "karnopp",
+        "autores": "D. Karnopp",
+        "anio": 1985,
+        "titulo": "Computer simulation of stick-slip friction in mechanical dynamic systems"
+      },
+      "contenido_html": "<p><b>Computer simulation of stick-slip friction in mechanical dynamic systems</b></p><p>D. Karnopp, 1985.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:haessig",
+      "tipo": "ref",
+      "etiqueta": "Haessig (1991)",
+      "texto": "On the modeling and simulation of friction\nD. A. Haessig, B. Friedland, 1991.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · haessig",
+      "referencia": {
+        "clave": "haessig",
+        "autores": "D. A. Haessig, B. Friedland",
+        "anio": 1991,
+        "titulo": "On the modeling and simulation of friction"
+      },
+      "contenido_html": "<p><b>On the modeling and simulation of friction</b></p><p>D. A. Haessig, B. Friedland, 1991.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:liu",
+      "tipo": "ref",
+      "etiqueta": "Liu (2009)",
+      "texto": "A new method for the determination of the zero velocity region of the Karnopp model based on the statistics theory\nL. Liu, H. Liu, Z. Wu, D. Yuan, 2009.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · liu",
+      "referencia": {
+        "clave": "liu",
+        "autores": "L. Liu, H. Liu, Z. Wu, D. Yuan",
+        "anio": 2009,
+        "titulo": "A new method for the determination of the zero velocity region of the Karnopp model based on the statistics theory"
+      },
+      "contenido_html": "<p><b>A new method for the determination of the zero velocity region of the Karnopp model based on the statistics theory</b></p><p>L. Liu, H. Liu, Z. Wu, D. Yuan, 2009.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:ravanbod",
+      "tipo": "ref",
+      "etiqueta": "Ravanbod-Shirazi (2003)",
+      "texto": "Friction identification using the Karnopp model, applied to an electropneumatic actuator\nL. Ravanbod-Shirazi, A. Besançon-Voda, 2003.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ravanbod",
+      "referencia": {
+        "clave": "ravanbod",
+        "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
+        "anio": 2003,
+        "titulo": "Friction identification using the Karnopp model, applied to an electropneumatic actuator"
+      },
+      "contenido_html": "<p><b>Friction identification using the Karnopp model, applied to an electropneumatic actuator</b></p><p>L. Ravanbod-Shirazi, A. Besançon-Voda, 2003.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:ravanbod1",
+      "tipo": "ref",
+      "etiqueta": "Ravanbod-Shirazi (2001)",
+      "texto": "Stiction friction identification of Karnopp model using describing function\nL. Ravanbod-Shirazi, A. Besançon-Voda, 2001.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ravanbod1",
+      "referencia": {
+        "clave": "ravanbod1",
+        "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
+        "anio": 2001,
+        "titulo": "Stiction friction identification of Karnopp model using describing function"
+      },
+      "contenido_html": "<p><b>Stiction friction identification of Karnopp model using describing function</b></p><p>L. Ravanbod-Shirazi, A. Besançon-Voda, 2001.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:bicakci",
+      "tipo": "ref",
+      "etiqueta": "Bicakci (2014)",
+      "texto": "Optimizing Karnopp friction model parameters of a pendulum using RSM\nS. Bicakci, D. Akdas, A. D. Karaoglan, 2014.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · bicakci",
+      "referencia": {
+        "clave": "bicakci",
+        "autores": "S. Bicakci, D. Akdas, A. D. Karaoglan",
+        "anio": 2014,
+        "titulo": "Optimizing Karnopp friction model parameters of a pendulum using RSM"
+      },
+      "contenido_html": "<p><b>Optimizing Karnopp friction model parameters of a pendulum using RSM</b></p><p>S. Bicakci, D. Akdas, A. D. Karaoglan, 2014.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:romano",
+      "tipo": "ref",
+      "etiqueta": "Romano (2007)",
+      "texto": "Comparison between two friction model parameter estimation methods applied to control valves\nR. A. Romano, C. Garcia, 2007.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · romano",
+      "referencia": {
+        "clave": "romano",
+        "autores": "R. A. Romano, C. Garcia",
+        "anio": 2007,
+        "titulo": "Comparison between two friction model parameter estimation methods applied to control valves"
+      },
+      "contenido_html": "<p><b>Comparison between two friction model parameter estimation methods applied to control valves</b></p><p>R. A. Romano, C. Garcia, 2007.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.214141,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:khimani",
+      "tipo": "ref",
+      "etiqueta": "Khimani (2018)",
+      "texto": "Implementation of high performance nonlinear feedback control on magnetic levitation system\nD. Khimani, S. Karnik, M. Patil, 2018.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · khimani",
+      "referencia": {
+        "clave": "khimani",
+        "autores": "D. Khimani, S. Karnik, M. Patil",
+        "anio": 2018,
+        "titulo": "Implementation of high performance nonlinear feedback control on magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Implementation of high performance nonlinear feedback control on magnetic levitation system</b></p><p>D. Khimani, S. Karnik, M. Patil, 2018.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:mukesh",
+      "tipo": "ref",
+      "etiqueta": "Patil (2015)",
+      "texto": "Real time implementation of robust QFT controller and prefilter for magnetic levitation system\nM. D. Patil, P. S. V. Nataraj, V. A. Vyawahare, 2015.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mukesh",
+      "referencia": {
+        "clave": "mukesh",
+        "autores": "M. D. Patil, P. S. V. Nataraj, V. A. Vyawahare",
+        "anio": 2015,
+        "titulo": "Real time implementation of robust QFT controller and prefilter for magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Real time implementation of robust QFT controller and prefilter for magnetic levitation system</b></p><p>M. D. Patil, P. S. V. Nataraj, V. A. Vyawahare, 2015.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:neelma",
+      "tipo": "ref",
+      "etiqueta": "Naz (2013)",
+      "texto": "Sampled data sliding mode control of magnetic levitation system using extended Kalman filter estimator\nN. Naz, M. B. Malik, A. Zaheer, M. Salman, 2013.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · neelma",
+      "referencia": {
+        "clave": "neelma",
+        "autores": "N. Naz, M. B. Malik, A. Zaheer, M. Salman",
+        "anio": 2013,
+        "titulo": "Sampled data sliding mode control of magnetic levitation system using extended Kalman filter estimator"
+      },
+      "contenido_html": "<p><b>Sampled data sliding mode control of magnetic levitation system using extended Kalman filter estimator</b></p><p>N. Naz, M. B. Malik, A. Zaheer, M. Salman, 2013.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:kuo1",
+      "tipo": "ref",
+      "etiqueta": "Su (2016)",
+      "texto": "Supervisory fuzzy model control for magnetic levitation system\nK.-H. Su, C.-Y. Li, 2016.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · kuo1",
+      "referencia": {
+        "clave": "kuo1",
+        "autores": "K.-H. Su, C.-Y. Li",
+        "anio": 2016,
+        "titulo": "Supervisory fuzzy model control for magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Supervisory fuzzy model control for magnetic levitation system</b></p><p>K.-H. Su, C.-Y. Li, 2016.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:maaz",
+      "tipo": "ref",
+      "etiqueta": "Malik (2023)",
+      "texto": "Sampled-data nonlinear control of ECP-730 magnetic levitation system\nM. T. Malik, H. M. Obaid, 2023.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · maaz",
+      "referencia": {
+        "clave": "maaz",
+        "autores": "M. T. Malik, H. M. Obaid",
+        "anio": 2023,
+        "titulo": "Sampled-data nonlinear control of ECP-730 magnetic levitation system"
+      },
+      "contenido_html": "<p><b>Sampled-data nonlinear control of ECP-730 magnetic levitation system</b></p><p>M. T. Malik, H. M. Obaid, 2023.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:salim",
+      "tipo": "ref",
+      "etiqueta": "Ibrir (2007)",
+      "texto": "Adaptive tracking of nonlinear systems with non-symmetric dead-zone input\nS. Ibrir, W. F. Xie, C.-Y. Su, 2007.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · salim",
+      "referencia": {
+        "clave": "salim",
+        "autores": "S. Ibrir, W. F. Xie, C.-Y. Su",
+        "anio": 2007,
+        "titulo": "Adaptive tracking of nonlinear systems with non-symmetric dead-zone input"
+      },
+      "contenido_html": "<p><b>Adaptive tracking of nonlinear systems with non-symmetric dead-zone input</b></p><p>S. Ibrir, W. F. Xie, C.-Y. Su, 2007.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:huanqing",
+      "tipo": "ref",
+      "etiqueta": "Wang (2017)",
+      "texto": "Adaptive neural control of nonlinear systems with unknown control directions and input dead-zone\nH. Wang, H. R. Karimi, P. X. Liu, H. Yang, 2017.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · huanqing",
+      "referencia": {
+        "clave": "huanqing",
+        "autores": "H. Wang, H. R. Karimi, P. X. Liu, H. Yang",
+        "anio": 2017,
+        "titulo": "Adaptive neural control of nonlinear systems with unknown control directions and input dead-zone"
+      },
+      "contenido_html": "<p><b>Adaptive neural control of nonlinear systems with unknown control directions and input dead-zone</b></p><p>H. Wang, H. R. Karimi, P. X. Liu, H. Yang, 2017.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:zhi",
+      "tipo": "ref",
+      "etiqueta": "Liu (2015)",
+      "texto": "Adaptive tracking control for a class of nonlinear systems with a fuzzy dead-zone input\nZ. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen, 2015.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · zhi",
+      "referencia": {
+        "clave": "zhi",
+        "autores": "Z. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen",
+        "anio": 2015,
+        "titulo": "Adaptive tracking control for a class of nonlinear systems with a fuzzy dead-zone input"
+      },
+      "contenido_html": "<p><b>Adaptive tracking control for a class of nonlinear systems with a fuzzy dead-zone input</b></p><p>Z. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen, 2015.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:gang",
+      "tipo": "ref",
+      "etiqueta": "Tao (1994)",
+      "texto": "Adaptive control of plants with unknown dead-zones\nG. Tao, P. V. Kokotović, 1994.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gang",
+      "referencia": {
+        "clave": "gang",
+        "autores": "G. Tao, P. V. Kokotović",
+        "anio": 1994,
+        "titulo": "Adaptive control of plants with unknown dead-zones"
+      },
+      "contenido_html": "<p><b>Adaptive control of plants with unknown dead-zones</b></p><p>G. Tao, P. V. Kokotović, 1994.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:nizar",
+      "tipo": "ref",
+      "etiqueta": "Ahmad (2011)",
+      "texto": "Adaptive control of a DC motor with uncertain deadzone nonlinearity at the input\nN. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath, 2011.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · nizar",
+      "referencia": {
+        "clave": "nizar",
+        "autores": "N. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath",
+        "anio": 2011,
+        "titulo": "Adaptive control of a DC motor with uncertain deadzone nonlinearity at the input"
+      },
+      "contenido_html": "<p><b>Adaptive control of a DC motor with uncertain deadzone nonlinearity at the input</b></p><p>N. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath, 2011.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:guanyu",
+      "tipo": "ref",
+      "etiqueta": "Lai (2017)",
+      "texto": "Fuzzy adaptive inverse compensation method to tracking control of uncertain nonlinear systems\nG. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu, 2017.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · guanyu",
+      "referencia": {
+        "clave": "guanyu",
+        "autores": "G. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu",
+        "anio": 2017,
+        "titulo": "Fuzzy adaptive inverse compensation method to tracking control of uncertain nonlinear systems"
+      },
+      "contenido_html": "<p><b>Fuzzy adaptive inverse compensation method to tracking control of uncertain nonlinear systems</b></p><p>G. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu, 2017.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.223158,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:mingda",
+      "tipo": "ref",
+      "etiqueta": "Zhai (2019)",
+      "texto": "Fault-tolerant control of magnetic levitation system based on state observer in high speed maglev train\nM. Zhai, Z. Long, X. Li, 2019.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mingda",
+      "referencia": {
+        "clave": "mingda",
+        "autores": "M. Zhai, Z. Long, X. Li",
+        "anio": 2019,
+        "titulo": "Fault-tolerant control of magnetic levitation system based on state observer in high speed maglev train"
+      },
+      "contenido_html": "<p><b>Fault-tolerant control of magnetic levitation system based on state observer in high speed maglev train</b></p><p>M. Zhai, Z. Long, X. Li, 2019.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:hyung",
+      "tipo": "ref",
+      "etiqueta": "Han (2016)",
+      "texto": "Magnetic Levitation: Maglev Technology and Applications\nH.-S. Han, D.-S. Kim, 2016.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · hyung",
+      "referencia": {
+        "clave": "hyung",
+        "autores": "H.-S. Han, D.-S. Kim",
+        "anio": 2016,
+        "titulo": "Magnetic Levitation: Maglev Technology and Applications"
+      },
+      "contenido_html": "<p><b>Magnetic Levitation: Maglev Technology and Applications</b></p><p>H.-S. Han, D.-S. Kim, 2016.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:ali",
+      "tipo": "ref",
+      "etiqueta": "Charara (1996)",
+      "texto": "Nonlinear control of a magnetic levitation system without premagnetization\nA. Charara, J. De Miras, B. Caron, 1996.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ali",
+      "referencia": {
+        "clave": "ali",
+        "autores": "A. Charara, J. De Miras, B. Caron",
+        "anio": 1996,
+        "titulo": "Nonlinear control of a magnetic levitation system without premagnetization"
+      },
+      "contenido_html": "<p><b>Nonlinear control of a magnetic levitation system without premagnetization</b></p><p>A. Charara, J. De Miras, B. Caron, 1996.</p>",
+      "metricas": {
+        "grado": 2,
+        "grado_entrada": 0,
+        "grado_salida": 2,
+        "intermediacion": 0.022377,
+        "cercania": 0.218107,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:debarghya",
+      "tipo": "ref",
+      "etiqueta": "Dutta (2025)",
+      "texto": "Advancements and challenges in active magnetic bearings: a comprehensive review\nD. Dutta, P. K. Biswas, S. Debnath, F. Ahmad, 2025.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · debarghya",
+      "referencia": {
+        "clave": "debarghya",
+        "autores": "D. Dutta, P. K. Biswas, S. Debnath, F. Ahmad",
+        "anio": 2025,
+        "titulo": "Advancements and challenges in active magnetic bearings: a comprehensive review"
+      },
+      "contenido_html": "<p><b>Advancements and challenges in active magnetic bearings: a comprehensive review</b></p><p>D. Dutta, P. K. Biswas, S. Debnath, F. Ahmad, 2025.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:gang1",
+      "tipo": "ref",
+      "etiqueta": "Chen (2019)",
+      "texto": "Design and implementation of a novel passive magnetically levitated nutation blood pump for the ventricular-assist device\nG. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding, 2019.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gang1",
+      "referencia": {
+        "clave": "gang1",
+        "autores": "G. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding",
+        "anio": 2019,
+        "titulo": "Design and implementation of a novel passive magnetically levitated nutation blood pump for the ventricular-assist device"
+      },
+      "contenido_html": "<p><b>Design and implementation of a novel passive magnetically levitated nutation blood pump for the ventricular-assist device</b></p><p>G. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding, 2019.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:mir",
+      "tipo": "ref",
+      "etiqueta": "Khamesee (2002)",
+      "texto": "Design and control of a microrobotic system using magnetic levitation\nM. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura, 2002.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mir",
+      "referencia": {
+        "clave": "mir",
+        "autores": "M. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura",
+        "anio": 2002,
+        "titulo": "Design and control of a microrobotic system using magnetic levitation"
+      },
+      "contenido_html": "<p><b>Design and control of a microrobotic system using magnetic levitation</b></p><p>M. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura, 2002.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:bryton",
+      "tipo": "ref",
+      "etiqueta": "Praslicka et al. (2023)",
+      "texto": "Design and analysis of a novel, low-cost, high-speed cycloidal magnetic gear for aerospace servo actuator applications\nB. Praslicka et al., 2023.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · bryton",
+      "referencia": {
+        "clave": "bryton",
+        "autores": "B. Praslicka et al.",
+        "anio": 2023,
+        "titulo": "Design and analysis of a novel, low-cost, high-speed cycloidal magnetic gear for aerospace servo actuator applications"
+      },
+      "contenido_html": "<p><b>Design and analysis of a novel, low-cost, high-speed cycloidal magnetic gear for aerospace servo actuator applications</b></p><p>B. Praslicka et al., 2023.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:song",
+      "tipo": "ref",
+      "etiqueta": "Song et al. (2022)",
+      "texto": "Motion control of capsule robot based on adaptive magnetic levitation using electromagnetic coil\nL. Song et al., 2022.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · song",
+      "referencia": {
+        "clave": "song",
+        "autores": "L. Song et al.",
+        "anio": 2022,
+        "titulo": "Motion control of capsule robot based on adaptive magnetic levitation using electromagnetic coil"
+      },
+      "contenido_html": "<p><b>Motion control of capsule robot based on adaptive magnetic levitation using electromagnetic coil</b></p><p>L. Song et al., 2022.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    },
+    {
+      "id": "ref:sajjad",
+      "tipo": "ref",
+      "etiqueta": "Rahmani Dabbagh et al. (2022)",
+      "texto": "Biomedical applications of magnetic levitation\nS. Rahmani Dabbagh et al., 2022.",
+      "fuente": "icr/context/Tesis/bibliography/referencias.bib · sajjad",
+      "referencia": {
+        "clave": "sajjad",
+        "autores": "S. Rahmani Dabbagh et al.",
+        "anio": 2022,
+        "titulo": "Biomedical applications of magnetic levitation"
+      },
+      "contenido_html": "<p><b>Biomedical applications of magnetic levitation</b></p><p>S. Rahmani Dabbagh et al., 2022.</p>",
+      "metricas": {
+        "grado": 1,
+        "grado_entrada": 0,
+        "grado_salida": 1,
+        "intermediacion": 0.0,
+        "cercania": 0.207031,
+        "pagerank": 0.004262,
+        "agrupamiento": 0.0,
+        "excentricidad": 7
+      }
+    }
+  ],
+  "aristas": [
+    {
+      "id": "e001",
+      "origen": "T",
+      "destino": "OG",
+      "relacion": "tiene_objetivo"
+    },
+    {
+      "id": "e002",
+      "origen": "OG",
+      "destino": "OE1",
+      "relacion": "se_desglosa_en"
+    },
+    {
+      "id": "e003",
+      "origen": "OG",
+      "destino": "OE2",
+      "relacion": "se_desglosa_en"
+    },
+    {
+      "id": "e004",
+      "origen": "OG",
+      "destino": "OE3",
+      "relacion": "se_desglosa_en"
+    },
+    {
+      "id": "e005",
+      "origen": "OG",
+      "destino": "OE4",
+      "relacion": "se_desglosa_en"
+    },
+    {
+      "id": "e006",
+      "origen": "T",
+      "destino": "ANT",
+      "relacion": "se_enmarca_en"
+    },
+    {
+      "id": "e007",
+      "origen": "T",
+      "destino": "APP",
+      "relacion": "se_enmarca_en"
+    },
+    {
+      "id": "e008",
+      "origen": "T",
+      "destino": "SOA",
+      "relacion": "se_enmarca_en"
+    },
+    {
+      "id": "e009",
+      "origen": "OE1",
+      "destino": "MEC",
+      "relacion": "se_aborda_con"
+    },
+    {
+      "id": "e010",
+      "origen": "OE1",
+      "destino": "FFLD",
+      "relacion": "se_aborda_con"
+    },
+    {
+      "id": "e011",
+      "origen": "OE1",
+      "destino": "PAR",
+      "relacion": "se_aborda_con"
+    },
+    {
+      "id": "e012",
+      "origen": "MEC",
+      "destino": "FFLD",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e013",
+      "origen": "MEC",
+      "destino": "FRIC",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e014",
+      "origen": "FFLD",
+      "destino": "FALT",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e015",
+      "origen": "FFLD",
+      "destino": "PAR",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e016",
+      "origen": "ANT",
+      "destino": "ZM",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e017",
+      "origen": "ANT",
+      "destino": "PAR",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e018",
+      "origen": "SOA",
+      "destino": "ZM",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e019",
+      "origen": "FRIC",
+      "destino": "KARN",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e020",
+      "origen": "ZM",
+      "destino": "LAZO",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e021",
+      "origen": "KARN",
+      "destino": "LAZO",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e022",
+      "origen": "ZM",
+      "destino": "F_ZM",
+      "relacion": "se_ilustra_en"
+    },
+    {
+      "id": "e023",
+      "origen": "FRIC",
+      "destino": "F_FR",
+      "relacion": "se_ilustra_en"
+    },
+    {
+      "id": "e024",
+      "origen": "MEC",
+      "destino": "F_CONF",
+      "relacion": "se_ilustra_en"
+    },
+    {
+      "id": "e025",
+      "origen": "OE2",
+      "destino": "LIN",
+      "relacion": "se_aborda_con"
+    },
+    {
+      "id": "e026",
+      "origen": "MEC",
+      "destino": "LIN",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e027",
+      "origen": "PAR",
+      "destino": "LIN",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e028",
+      "origen": "LIN",
+      "destino": "UEQ",
+      "relacion": "produce"
+    },
+    {
+      "id": "e029",
+      "origen": "LIN",
+      "destino": "POL",
+      "relacion": "produce"
+    },
+    {
+      "id": "e030",
+      "origen": "LIN",
+      "destino": "TF",
+      "relacion": "produce"
+    },
+    {
+      "id": "e031",
+      "origen": "LIN",
+      "destino": "CO",
+      "relacion": "produce"
+    },
+    {
+      "id": "e032",
+      "origen": "LIN",
+      "destino": "BAR",
+      "relacion": "produce"
+    },
+    {
+      "id": "e033",
+      "origen": "UEQ",
+      "destino": "ZM",
+      "relacion": "parametriza"
+    },
+    {
+      "id": "e034",
+      "origen": "POL",
+      "destino": "F_PZ",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e035",
+      "origen": "TF",
+      "destino": "F_RL",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e036",
+      "origen": "POL",
+      "destino": "F_PHL",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e037",
+      "origen": "LIN",
+      "destino": "F_PH",
+      "relacion": "se_ilustra_en"
+    },
+    {
+      "id": "e038",
+      "origen": "OE2",
+      "destino": "PII",
+      "relacion": "se_cumple_con"
+    },
+    {
+      "id": "e039",
+      "origen": "TF",
+      "destino": "PII",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e040",
+      "origen": "PII",
+      "destino": "MRG",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e041",
+      "origen": "PII",
+      "destino": "STP",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e042",
+      "origen": "PII",
+      "destino": "TJW",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e043",
+      "origen": "MRG",
+      "destino": "F_BODE",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e044",
+      "origen": "MRG",
+      "destino": "F_NYQ",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e045",
+      "origen": "STP",
+      "destino": "F_STEP",
+      "relacion": "se_visualiza_en"
+    },
+    {
+      "id": "e046",
+      "origen": "PI",
+      "destino": "CMP",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e047",
+      "origen": "PII",
+      "destino": "CMP",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e048",
+      "origen": "TF",
+      "destino": "PI",
+      "relacion": "deriva_en"
+    },
+    {
+      "id": "e049",
+      "origen": "LAZO",
+      "destino": "F_LAZO",
+      "relacion": "se_ilustra_en"
+    },
+    {
+      "id": "e050",
+      "origen": "OE3",
+      "destino": "REG",
+      "relacion": "se_valida_con"
+    },
+    {
+      "id": "e051",
+      "origen": "OE4",
+      "destino": "REG",
+      "relacion": "se_valida_con"
+    },
+    {
+      "id": "e052",
+      "origen": "OE4",
+      "destino": "SIN",
+      "relacion": "se_valida_con"
+    },
+    {
+      "id": "e053",
+      "origen": "OE4",
+      "destino": "TRAP",
+      "relacion": "se_valida_con"
+    },
+    {
+      "id": "e054",
+      "origen": "LAZO",
+      "destino": "REG",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e055",
+      "origen": "LAZO",
+      "destino": "SIN",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e056",
+      "origen": "LAZO",
+      "destino": "TRAP",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e057",
+      "origen": "PIIS",
+      "destino": "REG",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e058",
+      "origen": "PIIS",
+      "destino": "SIN",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e059",
+      "origen": "PIIS",
+      "destino": "TRAP",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e060",
+      "origen": "TJW",
+      "destino": "SIN",
+      "relacion": "se_usa_en"
+    },
+    {
+      "id": "e061",
+      "origen": "REG",
+      "destino": "F_POS",
+      "relacion": "genera"
+    },
+    {
+      "id": "e062",
+      "origen": "REG",
+      "destino": "F_VEL",
+      "relacion": "genera"
+    },
+    {
+      "id": "e063",
+      "origen": "REG",
+      "destino": "F_ERR",
+      "relacion": "genera"
+    },
+    {
+      "id": "e064",
+      "origen": "REG",
+      "destino": "F_U",
+      "relacion": "genera"
+    },
+    {
+      "id": "e065",
+      "origen": "REG",
+      "destino": "K1",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e066",
+      "origen": "POL",
+      "destino": "K1",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e067",
+      "origen": "REG",
+      "destino": "K2",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e068",
+      "origen": "TRAP",
+      "destino": "K2",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e069",
+      "origen": "F_U",
+      "destino": "K3",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e070",
+      "origen": "K1",
+      "destino": "K4",
+      "relacion": "implica"
+    },
+    {
+      "id": "e071",
+      "origen": "K1",
+      "destino": "K5",
+      "relacion": "implica"
+    },
+    {
+      "id": "e072",
+      "origen": "ANT",
+      "destino": "K4",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e073",
+      "origen": "ANT",
+      "destino": "K5",
+      "relacion": "sustenta"
+    },
+    {
+      "id": "e074",
+      "origen": "T",
+      "destino": "K1",
+      "relacion": "concluye"
+    },
+    {
+      "id": "e075",
+      "origen": "K1",
+      "destino": "W1",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e076",
+      "origen": "PAR",
+      "destino": "W1",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e077",
+      "origen": "FALT",
+      "destino": "W2",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e078",
+      "origen": "KARN",
+      "destino": "W3",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e079",
+      "origen": "ZM",
+      "destino": "W4",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e080",
+      "origen": "MRG",
+      "destino": "W5",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e081",
+      "origen": "BAR",
+      "destino": "W6",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e082",
+      "origen": "LIN",
+      "destino": "W7",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e083",
+      "origen": "ANT",
+      "destino": "W8",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e084",
+      "origen": "CMP",
+      "destino": "W8",
+      "relacion": "motiva"
+    },
+    {
+      "id": "e085",
+      "origen": "R1",
+      "destino": "PII",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e086",
+      "origen": "R1",
+      "destino": "PIIS",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e087",
+      "origen": "R1",
+      "destino": "REG",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e088",
+      "origen": "R2",
+      "destino": "REG",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e089",
+      "origen": "R2",
+      "destino": "F_POS",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e090",
+      "origen": "R3",
+      "destino": "KARN",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e091",
+      "origen": "R3",
+      "destino": "UEQ",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e092",
+      "origen": "R3",
+      "destino": "F_U",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e093",
+      "origen": "R4",
+      "destino": "PAR",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e094",
+      "origen": "R5",
+      "destino": "SIN",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e095",
+      "origen": "R6",
+      "destino": "SIN",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e096",
+      "origen": "R6",
+      "destino": "TRAP",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e097",
+      "origen": "R7",
+      "destino": "FALT",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e098",
+      "origen": "R8",
+      "destino": "FRIC",
+      "relacion": "afecta_a"
+    },
+    {
+      "id": "e099",
+      "origen": "ref:730",
+      "destino": "MEC",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e100",
+      "origen": "ref:parks",
+      "destino": "FFLD",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e101",
+      "origen": "ref:alcantara",
+      "destino": "ANT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e102",
+      "origen": "ref:alcantara",
+      "destino": "FFLD",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e103",
+      "origen": "ref:alcantara",
+      "destino": "K5",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e104",
+      "origen": "ref:alcantara",
+      "destino": "W7",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e105",
+      "origen": "ref:alcantara",
+      "destino": "W8",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e106",
+      "origen": "ref:alcantara",
+      "destino": "REG",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e107",
+      "origen": "ref:diana_tesis",
+      "destino": "PAR",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e108",
+      "origen": "ref:perez",
+      "destino": "ANT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e109",
+      "origen": "ref:perez",
+      "destino": "K4",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e110",
+      "origen": "ref:perez",
+      "destino": "W8",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e111",
+      "origen": "ref:arturo_tesis",
+      "destino": "ZM",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e112",
+      "origen": "ref:al",
+      "destino": "FALT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e113",
+      "origen": "ref:charara",
+      "destino": "FALT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e114",
+      "origen": "ref:gregory",
+      "destino": "FALT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e115",
+      "origen": "ref:gregory",
+      "destino": "R7",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e116",
+      "origen": "ref:zhao",
+      "destino": "FALT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e117",
+      "origen": "ref:feifei",
+      "destino": "FALT",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e118",
+      "origen": "ref:karnopp",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e119",
+      "origen": "ref:haessig",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e120",
+      "origen": "ref:liu",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e121",
+      "origen": "ref:ravanbod",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e122",
+      "origen": "ref:ravanbod1",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e123",
+      "origen": "ref:bicakci",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e124",
+      "origen": "ref:romano",
+      "destino": "KARN",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e125",
+      "origen": "ref:khimani",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e126",
+      "origen": "ref:mukesh",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e127",
+      "origen": "ref:neelma",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e128",
+      "origen": "ref:kuo1",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e129",
+      "origen": "ref:maaz",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e130",
+      "origen": "ref:salim",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e131",
+      "origen": "ref:huanqing",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e132",
+      "origen": "ref:zhi",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e133",
+      "origen": "ref:gang",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e134",
+      "origen": "ref:nizar",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e135",
+      "origen": "ref:guanyu",
+      "destino": "SOA",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e136",
+      "origen": "ref:mingda",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e137",
+      "origen": "ref:hyung",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e138",
+      "origen": "ref:ali",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e139",
+      "origen": "ref:ali",
+      "destino": "R7",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e140",
+      "origen": "ref:debarghya",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e141",
+      "origen": "ref:gang1",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e142",
+      "origen": "ref:mir",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e143",
+      "origen": "ref:bryton",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e144",
+      "origen": "ref:song",
+      "destino": "APP",
+      "relacion": "citada_en"
+    },
+    {
+      "id": "e145",
+      "origen": "ref:sajjad",
+      "destino": "APP",
+      "relacion": "citada_en"
+    }
+  ],
+  "metricas_globales": {
+    "nodos": 107,
+    "aristas": 145,
+    "densidad": 0.025569,
+    "grado_medio": 2.7103,
+    "componentes_conexas": 1,
+    "diametro": 8,
+    "radio": 5,
+    "centro": [
+      "ANT",
+      "F_U",
+      "K1",
+      "LAZO",
+      "LIN",
+      "MEC",
+      "OE1",
+      "OE2",
+      "OE3",
+      "OE4",
+      "OG",
+      "PAR",
+      "POL",
+      "R1",
+      "REG",
+      "T",
+      "UEQ",
+      "W7",
+      "W8",
+      "ref:alcantara"
+    ],
+    "longitud_media_camino": 4.2548,
+    "agrupamiento_medio": 0.059986,
+    "nodos_por_tipo": {
+      "tesis": 1,
+      "obj": 5,
+      "mod": 12,
+      "calc": 11,
+      "sim": 4,
+      "fig": 15,
+      "conc": 5,
+      "fut": 8,
+      "rev": 8,
+      "ref": 38
+    },
+    "aristas_por_relacion": {
+      "tiene_objetivo": 1,
+      "se_desglosa_en": 4,
+      "se_enmarca_en": 3,
+      "se_aborda_con": 4,
+      "deriva_en": 17,
+      "se_ilustra_en": 5,
+      "produce": 5,
+      "parametriza": 1,
+      "se_visualiza_en": 6,
+      "se_cumple_con": 1,
+      "se_usa_en": 9,
+      "se_valida_con": 4,
+      "genera": 4,
+      "sustenta": 7,
+      "implica": 2,
+      "concluye": 1,
+      "motiva": 10,
+      "afecta_a": 14,
+      "citada_en": 47
+    },
+    "aristas_por_par_de_tipos": {
+      "tesis->obj": 1,
+      "obj->obj": 4,
+      "tesis->mod": 3,
+      "obj->mod": 4,
+      "mod->mod": 12,
+      "mod->fig": 5,
+      "mod->calc": 5,
+      "calc->mod": 1,
+      "calc->fig": 6,
+      "obj->calc": 1,
+      "calc->calc": 5,
+      "calc->sim": 6,
+      "obj->sim": 4,
+      "mod->sim": 3,
+      "sim->fig": 4,
+      "sim->conc": 3,
+      "calc->conc": 1,
+      "fig->conc": 1,
+      "conc->conc": 2,
+      "mod->conc": 2,
+      "tesis->conc": 1,
+      "conc->fut": 1,
+      "mod->fut": 6,
+      "calc->fut": 2,
+      "sim->fut": 1,
+      "rev->calc": 3,
+      "rev->sim": 5,
+      "rev->fig": 2,
+      "rev->mod": 4,
+      "ref->mod": 39,
+      "ref->conc": 2,
+      "ref->fut": 3,
+      "ref->sim": 1,
+      "ref->rev": 2
+    },
+    "top_grado": [
+      {
+        "id": "SOA",
+        "etiqueta": "Estado del arte: control y zona muerta",
+        "grado": 13
+      },
+      {
+        "id": "REG",
+        "etiqueta": "Regulación con AD",
+        "grado": 13
+      },
+      {
+        "id": "KARN",
+        "etiqueta": "Método de Karnopp",
+        "grado": 11
+      },
+      {
+        "id": "APP",
+        "etiqueta": "Aplicaciones de la levitación",
+        "grado": 10
+      },
+      {
+        "id": "LIN",
+        "etiqueta": "Modelo linealizado (x* = −4 cm)",
+        "grado": 10
+      },
+      {
+        "id": "ANT",
+        "etiqueta": "Antecedentes directos",
+        "grado": 8
+      },
+      {
+        "id": "FALT",
+        "etiqueta": "Modelos alternativos de f_fld",
+        "grado": 8
+      },
+      {
+        "id": "ZM",
+        "etiqueta": "Zona muerta dinámica no centrada",
+        "grado": 7
+      },
+      {
+        "id": "PAR",
+        "etiqueta": "Parámetros del ECP-730",
+        "grado": 7
+      },
+      {
+        "id": "PII",
+        "etiqueta": "Controlador PII",
+        "grado": 7
+      }
+    ],
+    "top_intermediacion": [
+      {
+        "id": "T",
+        "etiqueta": "Control PII del SLM inestable",
+        "intermediacion": 0.237082
+      },
+      {
+        "id": "SOA",
+        "etiqueta": "Estado del arte: control y zona muerta",
+        "intermediacion": 0.21106
+      },
+      {
+        "id": "REG",
+        "etiqueta": "Regulación con AD",
+        "intermediacion": 0.20628
+      },
+      {
+        "id": "ZM",
+        "etiqueta": "Zona muerta dinámica no centrada",
+        "intermediacion": 0.188185
+      },
+      {
+        "id": "LIN",
+        "etiqueta": "Modelo linealizado (x* = −4 cm)",
+        "intermediacion": 0.186858
+      },
+      {
+        "id": "LAZO",
+        "etiqueta": "Lazo de control con zona muerta",
+        "intermediacion": 0.183204
+      },
+      {
+        "id": "KARN",
+        "etiqueta": "Método de Karnopp",
+        "intermediacion": 0.170409
+      },
+      {
+        "id": "APP",
+        "etiqueta": "Aplicaciones de la levitación",
+        "intermediacion": 0.167675
+      },
+      {
+        "id": "FFLD",
+        "etiqueta": "Fuerza electromagnética",
+        "intermediacion": 0.152548
+      },
+      {
+        "id": "PII",
+        "etiqueta": "Controlador PII",
+        "intermediacion": 0.136861
+      }
+    ],
+    "top_pagerank": [
+      {
+        "id": "ZM",
+        "etiqueta": "Zona muerta dinámica no centrada",
+        "pagerank": 0.05353
+      },
+      {
+        "id": "SOA",
+        "etiqueta": "Estado del arte: control y zona muerta",
+        "pagerank": 0.04484
+      },
+      {
+        "id": "APP",
+        "etiqueta": "Aplicaciones de la levitación",
+        "pagerank": 0.035783
+      },
+      {
+        "id": "KARN",
+        "etiqueta": "Método de Karnopp",
+        "pagerank": 0.035031
+      },
+      {
+        "id": "LAZO",
+        "etiqueta": "Lazo de control con zona muerta",
+        "pagerank": 0.034317
+      },
+      {
+        "id": "FALT",
+        "etiqueta": "Modelos alternativos de f_fld",
+        "pagerank": 0.032366
+      },
+      {
+        "id": "W2",
+        "etiqueta": "Comparar modelos de f_fld",
+        "pagerank": 0.031773
+      },
+      {
+        "id": "SIN",
+        "etiqueta": "Seguimiento senoidal",
+        "pagerank": 0.025389
+      },
+      {
+        "id": "REG",
+        "etiqueta": "Regulación con AD",
+        "pagerank": 0.022759
+      },
+      {
+        "id": "K2",
+        "etiqueta": "Error en estado estacionario nulo",
+        "pagerank": 0.021447
+      }
+    ],
+    "cobertura_objetivos": {
+      "OG": {
+        "mod": [
+          "FALT",
+          "FFLD",
+          "FRIC",
+          "KARN",
+          "LAZO",
+          "LIN",
+          "MEC",
+          "PAR",
+          "ZM"
+        ],
+        "calc": [
+          "BAR",
+          "CO",
+          "MRG",
+          "PI",
+          "PII",
+          "POL",
+          "STP",
+          "TF",
+          "TJW",
+          "UEQ"
+        ],
+        "sim": [
+          "CMP",
+          "REG",
+          "SIN",
+          "TRAP"
+        ],
+        "fig": [
+          "F_BODE",
+          "F_CONF",
+          "F_ERR",
+          "F_FR",
+          "F_LAZO",
+          "F_NYQ",
+          "F_PH",
+          "F_PHL",
+          "F_POS",
+          "F_PZ",
+          "F_RL",
+          "F_STEP",
+          "F_U",
+          "F_VEL",
+          "F_ZM"
+        ],
+        "conc": [
+          "K1",
+          "K2",
+          "K3",
+          "K4",
+          "K5"
+        ],
+        "fut": [
+          "W1",
+          "W2",
+          "W3",
+          "W4",
+          "W5",
+          "W6",
+          "W7",
+          "W8"
+        ],
+        "total": 55
+      },
+      "OE1": {
+        "mod": [
+          "FALT",
+          "FFLD",
+          "FRIC",
+          "KARN",
+          "LAZO",
+          "LIN",
+          "MEC",
+          "PAR",
+          "ZM"
+        ],
+        "calc": [
+          "BAR",
+          "CO",
+          "MRG",
+          "PI",
+          "PII",
+          "POL",
+          "STP",
+          "TF",
+          "TJW",
+          "UEQ"
+        ],
+        "sim": [
+          "CMP",
+          "REG",
+          "SIN",
+          "TRAP"
+        ],
+        "fig": [
+          "F_BODE",
+          "F_CONF",
+          "F_ERR",
+          "F_FR",
+          "F_LAZO",
+          "F_NYQ",
+          "F_PH",
+          "F_PHL",
+          "F_POS",
+          "F_PZ",
+          "F_RL",
+          "F_STEP",
+          "F_U",
+          "F_VEL",
+          "F_ZM"
+        ],
+        "conc": [
+          "K1",
+          "K2",
+          "K3",
+          "K4",
+          "K5"
+        ],
+        "fut": [
+          "W1",
+          "W2",
+          "W3",
+          "W4",
+          "W5",
+          "W6",
+          "W7",
+          "W8"
+        ],
+        "total": 51
+      },
+      "OE2": {
+        "mod": [
+          "LAZO",
+          "LIN",
+          "ZM"
+        ],
+        "calc": [
+          "BAR",
+          "CO",
+          "MRG",
+          "PI",
+          "PII",
+          "POL",
+          "STP",
+          "TF",
+          "TJW",
+          "UEQ"
+        ],
+        "sim": [
+          "CMP",
+          "REG",
+          "SIN",
+          "TRAP"
+        ],
+        "fig": [
+          "F_BODE",
+          "F_ERR",
+          "F_LAZO",
+          "F_NYQ",
+          "F_PH",
+          "F_PHL",
+          "F_POS",
+          "F_PZ",
+          "F_RL",
+          "F_STEP",
+          "F_U",
+          "F_VEL",
+          "F_ZM"
+        ],
+        "conc": [
+          "K1",
+          "K2",
+          "K3",
+          "K4",
+          "K5"
+        ],
+        "fut": [
+          "W1",
+          "W4",
+          "W5",
+          "W6",
+          "W7",
+          "W8"
+        ],
+        "total": 41
+      },
+      "OE3": {
+        "mod": [],
+        "calc": [],
+        "sim": [
+          "REG"
+        ],
+        "fig": [
+          "F_ERR",
+          "F_POS",
+          "F_U",
+          "F_VEL"
+        ],
+        "conc": [
+          "K1",
+          "K2",
+          "K3",
+          "K4",
+          "K5"
+        ],
+        "fut": [
+          "W1"
+        ],
+        "total": 11
+      },
+      "OE4": {
+        "mod": [],
+        "calc": [],
+        "sim": [
+          "REG",
+          "SIN",
+          "TRAP"
+        ],
+        "fig": [
+          "F_ERR",
+          "F_POS",
+          "F_U",
+          "F_VEL"
+        ],
+        "conc": [
+          "K1",
+          "K2",
+          "K3",
+          "K4",
+          "K5"
+        ],
+        "fut": [
+          "W1"
+        ],
+        "total": 13
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+\chapter{Fundamentos teóricos}\label{chap:fundamentos}
+
+El capítulo~\ref{chap:introduccion} planteó el problema de forma intuitiva. Para resolverlo hacen falta herramientas precisas, y este capítulo las reúne en su forma general, sin referirse todavía al levitador. Cada sección responde a una pregunta que aparece más adelante. La linealización y el punto silla explican por qué el sistema es inestable, la controlabilidad dice si un controlador puede estabilizarlo, y el tipo del sistema y el criterio de Nyquist fundamentan el diseño. La fricción, la zona muerta y los ciclos límite, por su parte, permiten interpretar lo que ocurre cuando ese diseño se somete a las no linealidades. En cada caso se indica el capítulo en que se usa el concepto.
+
+\section{Linealización y punto silla}\label{sec:fund_linealizacion}
+
+Un sistema no lineal $\dot{x}=f(x,u)$ tiene un punto de equilibrio $(x^*,u^*)$ cuando $f(x^*,u^*)=0$. Para desviaciones pequeñas $\delta x = x-x^*$ y $\delta u = u-u^*$, su comportamiento se aproxima por el sistema lineal
+\begin{equation}
+\delta\dot{x} = A\,\delta x + B\,\delta u, \qquad
+A=\left.\frac{\partial f}{\partial x}\right|_{(x^*,u^*)}, \quad
+B=\left.\frac{\partial f}{\partial u}\right|_{(x^*,u^*)} .
+\label{eq:linealizacion}
+\end{equation}
+La matriz $A$ es el jacobiano del campo $f$ respecto al estado, y $B$ el jacobiano respecto a la entrada, ambos evaluados en el equilibrio. La aproximación~\eqref{eq:linealizacion} solo vale cerca de ese punto, de modo que cada equilibrio tiene su propio modelo lineal y el diseño de un controlador sobre él es un diseño local.
+
+La estabilidad local se lee en los valores propios de $A$. Si todos tienen parte real negativa, el equilibrio es asintóticamente estable; si alguno tiene parte real positiva, es inestable~\cite{khalil2}. En un sistema de segundo orden, la ecuación característica de $A$ tiene término independiente $\det A$, el producto de los dos valores propios. Cuando $\det A<0$, uno es positivo y otro negativo, y el equilibrio es un \emph{punto silla}. Existe entonces una única dirección, la variedad estable, por la que las trayectorias se aproximan al equilibrio, y cualquier perturbación con componente fuera de ella crece exponencialmente a lo largo de la variedad inestable. Solo una retroalimentación que modifique $A$ puede estabilizar un punto silla. La sección~\ref{sec:linealizado} muestra que todos los equilibrios de la configuración atractiva son de este tipo, y la sección~\ref{sec:fund_nyquist} explica qué consecuencias tiene para el diseño.
+
+El sistema linealizado es controlable si la matriz de controlabilidad
+\begin{equation}
+\mathcal{C}=[B\;\; AB]
+\label{eq:controlabilidad}
+\end{equation}
+tiene rango completo, y observable con la salida $y=C\,\delta x$ si la matriz de observabilidad
+\begin{equation}
+\mathcal{O}=[C^\top\;\; (CA)^\top]^\top
+\label{eq:observabilidad}
+\end{equation}
+tiene rango completo. La controlabilidad~\eqref{eq:controlabilidad} garantiza que una retroalimentación adecuada puede ubicar los polos del lazo cerrado donde se desee~\cite{ogata}. Es, por tanto, la condición que justifica intentar el diseño del capítulo~\ref{chap:controlador} sobre un equilibrio inestable, y la observabilidad~\eqref{eq:observabilidad} la que permite hacerlo con la medición de la posición como única salida.
+
+\section{Tipo del sistema y error en estado estacionario}\label{sec:fund_tipo}
+
+En un lazo de retroalimentación unitaria con función de transferencia de lazo abierto $L(s)=C(s)G(s)$, el \emph{tipo} del sistema es el número de polos de $L(s)$ en el origen. El tipo determina el error en estado estacionario ante referencias polinomiales a través de las constantes de error~\cite{ogata,gene},
+\begin{equation}
+K_p=\lim_{s\to0}L(s), \qquad K_v=\lim_{s\to0}s\,L(s), \qquad K_a=\lim_{s\to0}s^2L(s) .
+\label{eq:constantes_error}
+\end{equation}
+Las constantes de posición $K_p$, de velocidad $K_v$ y de aceleración $K_a$ son finitas y distintas de cero solo para un tipo determinado, y se anulan o divergen para los demás. Ante un escalón de amplitud $R$, el error estacionario es $R/(1+K_p)$ y se anula si el tipo es uno o mayor. Ante una rampa de pendiente $\dot r$, el error es $\dot r/K_v$: constante con tipo uno y nulo con tipo dos o mayor.
+
+Un controlador PI, con un integrador, da tipo uno a una planta sin polos en el origen, y un PII, con dos, le da tipo dos. Esta es la ventaja teórica de la segunda integración, y se refiere al seguimiento de rampas. La sección~\ref{sec:ventaja_rampa} contrasta esa ventaja con lo que ocurre cuando la planta tiene fricción.
+
+\section{Márgenes de estabilidad y criterio de Nyquist con plantas inestables}\label{sec:fund_nyquist}
+
+El criterio de Nyquist relaciona el número $Z$ de polos inestables del lazo cerrado con el número $P$ de polos inestables de $L(s)$ y el número $N$ de rodeos en sentido horario que el diagrama de Nyquist de $L(j\omega)$ da alrededor del punto $-1$~\cite{gene},
+\begin{equation}
+Z=N+P .
+\label{eq:nyquist}
+\end{equation}
+Con una planta estable, $P=0$ y basta que el diagrama no rodee el punto $-1$. Con un polo inestable, $P=1$, y para que el lazo cerrado sea estable ($Z=0$) el diagrama debe rodear una vez el punto $-1$ en sentido antihorario ($N=-1$). Esta es la situación de los diseños del capítulo~\ref{chap:controlador}.
+
+El margen de fase es la fase adicional que puede introducirse en el lazo, a la frecuencia en que $|L(j\omega)|=1$, antes de perder la estabilidad. El margen de ganancia es el factor por el que puede multiplicarse la ganancia, a la frecuencia $\omega_\pi$ en que la fase cruza $-180^\circ$, antes de perderla. Con plantas estables, el margen de ganancia indica cuánto puede \emph{aumentarse} la ganancia. Con plantas inestables ocurre lo contrario, porque el rodeo antihorario exige que el diagrama cruce el eje real negativo a la izquierda del punto $-1$, es decir, que la ganancia supere un mínimo. El margen relevante es entonces el \emph{inferior},
+\begin{equation}
+\mathrm{MG}_{\inf}=\frac{1}{|L(j\omega_\pi)|} ,
+\label{eq:margen_inferior}
+\end{equation}
+que cuantifica cuánto puede \emph{disminuirse} la ganancia antes de que el lazo se vuelva inestable. Como $|L(j\omega_\pi)|>1$ en un lazo estable, el margen inferior~\eqref{eq:margen_inferior} es menor que uno, o negativo si se expresa en decibeles. El capítulo~\ref{chap:controlador} lo emplea como medida de robustez, porque indica cuánta ganancia puede perder el lazo antes de volverse inestable.
+
+\section{Fricción, método de Karnopp y atascamiento-deslizamiento}\label{sec:fund_friccion}
+
+Aquí interesa la forma matemática de las componentes habituales de la fricción~\cite{olsson,armstrong}. Para un cuerpo con velocidad $v$ sobre el que actúa una fuerza externa neta $F_a$, la fricción es una función de la velocidad cuando hay deslizamiento, y una fuerza de reacción que iguala a $F_a$ mientras el cuerpo está detenido y $|F_a|$ no supera $F_s$. En el deslizamiento, la fricción suma un término de Coulomb de magnitud $F_c$ y signo opuesto a la velocidad, y un término viscoso de coeficiente $c_v$,
+\begin{equation}
+f_d(v)=F_c\,\mathrm{sgn}(v)+c_v\,v ,
+\label{eq:friccion_deslizamiento}
+\end{equation}
+con $F_c\le F_s$. El efecto Stribeck añade una caída continua entre $F_s$ y $F_c$ a velocidades pequeñas, que en este trabajo se omite: el modelo de la sección~\ref{sec:friccion_modelo} pasa directamente de la fricción estática a la viscosa en cuanto el imán se despega. La discontinuidad de la fricción en $v=0$ es lo que produce el \emph{atascamiento-deslizamiento}: un intervalo de reposo, o \emph{atascamiento}, termina cuando $|F_a|$ supera $F_s$, y sigue un \emph{deslizamiento} que ocurre con la fuerza menor~\eqref{eq:friccion_deslizamiento}~\cite{berman,armstrong}.
+
+Esa discontinuidad impide integrar numéricamente el modelo sin tratamiento especial~\cite{haessig}. El método de Karnopp~\cite{karnopp} la regulariza declarando que toda velocidad con $|v|\le DV$ es velocidad cero. La fricción queda definida por
+\begin{equation}
+f_{\text{fr}} =
+\begin{cases}
+f_d(v), & |v|>DV, \\
+F_a, & |v|\le DV \;\text{ y }\; |F_a|\le F_s, \\
+F_s\,\mathrm{sgn}(F_a), & |v|\le DV \;\text{ y }\; |F_a|>F_s .
+\end{cases}
+\label{eq:karnopp}
+\end{equation}
+El primer caso es el deslizamiento. El segundo es el atascamiento, en el que la fricción cancela exactamente la fuerza aplicada y el cuerpo no acelera. El tercero es el despegue: la fuerza aplicada vence el máximo estático y el cuerpo vuelve a moverse. La banda $DV$ es un parámetro numérico y no físico, y se elige lo bastante pequeña para no alterar la dinámica de interés. El método es general, y la sección~\ref{sec:friccion_modelo} lo particulariza con los valores de $F_s$ y $DV$ del imán.
+
+El efecto de la fricción sobre un lazo con acción integral recibe el nombre de \emph{hunting}~\cite{olsson,armstrong}. Con el cuerpo atascado, el error $e$ es casi constante, y la salida del integrador crece de forma lineal,
+\begin{equation}
+u_I(t)=K_i\int_{t_0}^{t} e(\tau)\,d\tau \approx K_i\,e\,(t-t_0) ,
+\label{eq:integrador_atascado}
+\end{equation}
+con $K_i$ la ganancia integral y $t_0$ el instante en que comienza el atascamiento. La ecuación~\eqref{eq:integrador_atascado} dice que el voltaje de control cambia aunque el cuerpo no se mueva, y lo hace hasta que la fuerza resultante alcanza $F_s$ y se produce el despegue del tercer caso de la ecuación~\eqref{eq:karnopp}. Como el integrador acumuló más de lo necesario, el cuerpo cruza la referencia, se detiene del otro lado y el proceso se repite. Sin acción integral la señal de control es constante durante el atascamiento y el ciclo no aparece, pero el cuerpo puede quedar detenido con un error permanente. El capítulo~\ref{chap:desempeno} describe el \emph{hunting} observado en simulación, y el capítulo~\ref{chap:doble_integral} lo explica con el mecanismo que acaba de esbozarse y evalúa si añadir una segunda integración lo atenúa.
+
+\section{Zona muerta}\label{sec:fund_zona_muerta}
+
+La zona muerta es una no linealidad no suave en la que la salida de un actuador permanece nula mientras su entrada no supera ciertos umbrales~\cite{gang}. Con umbrales $b_l<0<b_r$ y pendientes $m_l$ y $m_r$, la salida es
+\begin{equation}
+D(u)=
+\begin{cases}
+m_r\,(u-b_r), & u\ge b_r, \\
+0, & b_l<u<b_r, \\
+m_l\,(u-b_l), & u\le b_l .
+\end{cases}
+\label{eq:zona_muerta}
+\end{equation}
+Dentro del intervalo $(b_l,b_r)$, cambios de la entrada no se transmiten a la planta, y fuera de él la salida crece linealmente. El efecto sobre un lazo es análogo al de la fricción estática, porque ambos impiden que una acción de control pequeña modifique la salida. Una zona muerta puede dejar errores en estado estacionario y producir oscilaciones en lazo cerrado. La forma~\eqref{eq:zona_muerta} está centrada en el origen de la entrada, que es la hipótesis habitual. La sección~\ref{sec:zm_modelo} la desplaza al voltaje de equilibrio de cada posición, y el capítulo~\ref{chap:desempeno} muestra su efecto sobre el lazo.
+
+\section{Ciclos límite}\label{sec:fund_ciclos}
+
+Un ciclo límite es una órbita periódica aislada en el espacio de estados de un sistema no lineal: las trayectorias cercanas se aproximan a ella o se alejan de ella, pero no hay otras órbitas periódicas arbitrariamente próximas~\cite{khalil2,jean}. A diferencia de las oscilaciones de un sistema lineal, cuya amplitud depende de las condiciones iniciales, la amplitud y el periodo de un ciclo límite dependen solo de los parámetros del sistema. Un sistema lineal no puede presentar ciclos límite. Si aparece uno en un lazo cerrado diseñado sobre un modelo lineal, alguna no linealidad, como la fricción estática o la zona muerta, domina el comportamiento en estado estacionario.
+
+Con estos conceptos queda armado lo necesario para el resto del trabajo. El capítulo~\ref{chap:modelo} los aplica al levitador: obtiene su ecuación de movimiento, la linealiza, identifica el punto silla y particulariza la fricción y la zona muerta.

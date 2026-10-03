@@ -1,0 +1,30 @@
+% Generado a partir de calculus/Final_Bien/evidencia_P8.m (simulador corregido).
+\subsection{Configuración estable}
+
+En la configuración repulsiva la fuerza electromagnética es $u/[b(a+x)^4]$ y el modelo linealizado tiene la matriz de estado $\bigl[\begin{smallmatrix}0&1\\-4g/(a+x_1^*)&-c_1\end{smallmatrix}\bigr]$, cuyos polos son complejos con parte real negativa: $-4{,}28\pm21{,}49j$ en $x_1^*=1$~cm y $-4{,}28\pm20{,}24j$ en $x_1^*=2$~cm (factor de amortiguamiento cercano a $0{,}2$). Se evaluaron en esta configuración tres controladores diseñados durante el trabajo: el PI de la comparación de la tabla~\ref{tab:pi_pii}, una versión preliminar del PII y el PII definitivo $C(s)$ presentado en la sección de diseño. Con la planta linealizada en $x_1^*=1{,}5$~cm, los tres estabilizan el lazo, con márgenes de fase de $50{,}7^\circ$, $51{,}0^\circ$ y $43{,}3^\circ$, respectivamente. Es decir, el mismo controlador diseñado para la configuración inestable estabiliza también la estable, aunque con un margen de fase menor.
+
+\begin{table}[ht]
+\centering
+\caption{Configuración estable: escalón de 1 a 2~cm con zona muerta, fricción de Karnopp y $u\in[0;\,3{,}5]$~V.}
+\label{tab:p8_estable}
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & PI & PII preliminar & PII (tesis) \\ \hline
+Margen de fase (lineal, $x_1^*=1{,}5$~cm) & $50{,}7^\circ$ & $51{,}0^\circ$ & $43{,}3^\circ$ \\ \hline
+Sobrepaso (lineal) & $19{,}7$\,\% & $18{,}6$\,\% & $26{,}8$\,\% \\ \hline
+Sobrepaso (no lineal con AD) & $10{,}5$\,\% & $11{,}1$\,\% & $9{,}8$\,\% \\ \hline
+Entrada en la banda de $\pm5$\,\% & $0{,}24$~s & $0{,}36$~s & $0{,}35$~s \\ \hline
+Ciclo límite pico a pico & $0{,}018$~cm & $0{,}023$~cm & $0{,}020$~cm \\ \hline
+\end{tabular}
+\end{table}
+
+La figura~\ref{fig:p8_estable} y la tabla~\ref{tab:p8_estable} muestran que los tres controladores llevan el levitante de 1 a 2~cm y que, como en la configuración atractiva, la zona muerta y la fricción estática producen un ciclo límite en estado estacionario, aquí de menor amplitud. En el transitorio la señal de control alcanza brevemente la saturación de $3{,}5$~V.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/p8_results/tikz/estable}
+    \caption[Configuración estable]{Regulación en la configuración estable (repulsiva) con el PI y con el PII de la tesis, escalón de 1 a 2~cm. Arriba, posición; abajo, señal de control.}
+    \label{fig:p8_estable}
+\end{figure}
+
+\FloatBarrier

@@ -1,0 +1,124 @@
+format long
+clear
+close all
+clc
+
+% Parameters
+m = 0.141;          % mass  
+a = 7.17184;        % constant
+b = 1.6163e-6;      % constant
+c1 = 8.563;         % friction coefficient
+g = 981;            % gravity acceleration
+
+numero_de_iteracion = 1000000;
+tfin = numero_de_iteracion - 1;
+
+T = 0.001;       % fixed integration step
+h = 0;           % current time
+
+load('PII_lic.mat')
+[num, den] = zp2tf(C.Z{:}, C.P{:}, C.K);
+[A, B, C, D] = tf2ss(num, den);   % rename C -> Cc
+
+% Initial conditions
+u = 1;
+y0 = [-4; 0];                 % plant: position & velocity
+x0 = zeros(size(C,2),1);     % controller states
+
+% Preallocation
+[yv, yp, voltaje_despues_de_ZM, volaje_antes_de_la_ZM, tc, error_save] = ...
+    deal(zeros(tfin+1,1));
+
+% References
+ref1 = -4.5;
+ref2 = -5;
+
+
+
+for k = 0:tfin
+    lapzo = [h, h + T];
+
+    % ======== PLANT RK4 INTEGRATION =========
+    fplant = @(t, y) [ y(2);
+                       -c1*y(2) - g + u/(b*m*(a - y(1))^4) ];
+
+    [t_rk, x_rk] = rk4_fixedstep(fplant, lapzo, y0, T);
+    y = x_rk(1,:)';   
+    
+    y0 = y';             % update plant IC for next step
+
+    yp(k+1) = y(1);
+    yv(k+1) = y(2);
+
+    % ======== ZM detection =========
+    if abs(y(2)) <= 0.001
+        ZM = 0;
+    else
+        uzm = u;
+        ZM = 1;
+    end
+
+    % ======== Reference selection =========
+    if k <= tfin/2
+        R = ref1;
+    else
+        R = ref2;
+    end
+
+    % ======== Error =========
+    error = R - y(1);
+    error_save(k+1) = error;
+
+    % ======== CONTROLLER RK4 =========
+    fctrl = @(t, x) (A*x + B*error);
+
+    [t_rk2, x_rk2] = rk4_fixedstep(fctrl, lapzo, x0, T);
+    x0 = x_rk2(1,:);     % last state for next step
+
+    % PI controller output
+    u = C*x0' + D*error;
+
+    % ======== Saturation =========
+    u = min(max(u, 0), 10);
+
+    volaje_antes_de_la_ZM(k+1) = u;
+
+    % ======== Zone Modulation (ZM) =========
+    if ZM == 1 && u <= uzm + 0.025 && u >= uzm - 0.02
+        u = uzm;
+    end
+
+    voltaje_despues_de_ZM(k+1) = u;
+
+    % update time
+    tc(k+1) = lapzo(2);
+    h = lapzo(2);
+end
+
+% ======== Reference vector =========
+Rvec = zeros(size(tc));
+half_idx = floor(length(tc)/2);
+Rvec(1:half_idx) = ref1;
+Rvec(half_idx+1:end) = ref2;
+
+% ======== FIGURES =========
+figure(21);
+plot(tc, yp, tc, Rvec);
+grid on;
+ylabel('Position [cm]','FontSize', 18)
+xlabel('Time [s]','FontSize',18)
+title('Position Tracking')
+
+figure(22);
+plot(tc, voltaje_despues_de_ZM, tc, volaje_antes_de_la_ZM);
+grid on;
+ylabel('Voltage [V]','FontSize', 18)
+xlabel('Time [s]','FontSize', 18)
+title('Zone Modulation')
+
+figure(23);
+plot(tc, error_save);
+grid on;
+ylabel('Error', 'FontSize', 18);
+xlabel('Time [s]', 'FontSize', 18);
+title('Tracking Error')

@@ -1,0 +1,15 @@
+{
+  "_schemaVersion": "1.0.0",
+  "integrator":
+  {
+     "inputs":
+     [
+        {"name":"xi", "kind":"required", "type":["numeric"], "purpose":"initial value independent variable"},
+        {"name":"yi", "kind":"required", "type":["numeric"], "purpose":"initial value dependent variable"},
+        {"name":"size_step", "kind":"required", "type":["numeric"], "purpose":"calculation step size"},
+        {"name":"xend", "kind":"required", "type":["numeric"],"purpose":"Option"},
+        {"name":"derivs", "kind":"required", "type":["char"],"purpose":"differential equation"},
+        {"name":"method", "kind":"namevalue", "type":["char", "choices={'euler','midpoint','heun','heun1Iterator','rk4'}"]}
+     ]
+  }
+}

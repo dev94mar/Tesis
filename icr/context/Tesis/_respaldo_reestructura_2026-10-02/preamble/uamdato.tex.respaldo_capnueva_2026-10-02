@@ -1,0 +1,276 @@
+%══════════════════════════════════════════════════════
+% Identidad v5 "UAM Dato" adaptada a la tesis (clase book)
+%
+% Origen: ~/uam-identidad-kit/UAMDato/plantilla_dato.tex (clase article).
+% Paleta, escala tipográfica (0.55 frente al deck), kicker, chips,
+% cabecera/pie y componentes se copian sin cambio. Lo único que se
+% adapta es el nivel de los títulos:
+%   plantilla \section     -> tesis \chapter  (kicker + chip + filete)
+%   plantilla \subsection  -> tesis \section
+%   plantilla \subsubsection -> tesis \subsection
+% Compila con lualatex (ver .latexmkrc); fontspec ya se carga en
+% packages/packages.tex con las caras de Helvetica Neue por nombre PostScript.
+%══════════════════════════════════════════════════════
+
+\usepackage{titlesec,titletoc}
+\usepackage{booktabs,array,multirow,colortbl,xltabular}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable,raster}
+
+% Interlineado 1.4x, el mismo del cuerpo del deck (28pt sobre 20pt).
+\linespread{1.13}
+
+%──────────────────────────────────────────────────────
+% Paleta --- idéntica al deck; verificada contra el Acuerdo 06/2012.
+%──────────────────────────────────────────────────────
+\definecolor{uamred}{RGB}{205,3,46}        % Pantone 186 C, Azcapotzalco, numeral 5.3 p.49
+\definecolor{uamblue}{RGB}{28,28,28}       % tinta de cuerpo; #000000 se reserva al emblema (numeral 2.3)
+\definecolor{uamgray}{RGB}{100,100,100}
+\definecolor{uamlightgray}{RGB}{244,244,244}
+\definecolor{hairline}{RGB}{222,222,222}
+\definecolor{darktext}{HTML}{EDEDED}
+\definecolor{darkmeta}{HTML}{9A9A9A}
+\definecolor{darkrule}{HTML}{3A3A3A}
+\arrayrulecolor{hairline}
+\AtBeginDocument{\color{uamblue}}
+
+% Emblemas copiados del kit a images/titlepage/ para que la tesis no
+% dependa de rutas fuera del proyecto.
+\newcommand{\assetPie}{titlepage/logo_footer.png}
+\newcommand{\assetPortada}{titlepage/logo_uam_reconstruido.pdf}
+
+%══════════════════════════════════════════════════════
+% Escala tipográfica (LetterSpace es porcentaje del em: 8 = 0.08 em)
+%══════════════════════════════════════════════════════
+\newcommand{\escKicker}{\bfseries\fontsize{8}{10}\selectfont
+  \addfontfeature{LetterSpace=8}}
+\newcommand{\escTitulo}{\bfseries\fontsize{28}{32}\selectfont}
+\newcommand{\escSeccion}{\bfseries\fontsize{24}{28}\selectfont}
+\newcommand{\escSubtitulo}{\fontsize{12}{16}\selectfont}
+\newcommand{\escMeta}{\ttfamily\fontsize{8}{11}\selectfont}
+
+\newcommand{\kicker}[1]{{\escKicker\color{uamred}\MakeUppercase{#1}}\par\vspace{4pt}}
+\newcommand{\kickergris}[1]{{\escKicker\color{uamgray}\MakeUppercase{#1}}\par\vspace{4pt}}
+
+%──────────────────────────────────────────────────────
+% Chips circulares (la fuente se fija antes del tikzpicture para que
+% `em` sea el de la letra del chip).
+%──────────────────────────────────────────────────────
+\newcommand{\chipgen}[3]{%
+  {\bfseries\fontsize{#1}{#1}\selectfont
+   \tikz[baseline=(chipnodo.base)]{%
+     \node[circle, fill=#2, inner sep=0pt, minimum size=2.3em,
+       text height=0.68em, text depth=0pt, align=center,
+       text=white, font=\bfseries] (chipnodo) {#3};}}%
+}
+\newcommand{\seccionchip}[1]{\chipgen{7}{uamred}{#1}}
+\newcommand{\chiplg}[1]{\chipgen{11}{uamred}{#1}}
+\newcommand{\chipgris}[1]{\chipgen{7}{uamgray}{#1}}
+\newcommand{\puntorojo}{\raisebox{0.22em}{\tikz\fill[uamred] (0,0) circle (2.1pt);}}
+\newcommand{\puntogris}{\raisebox{0.22em}{\tikz\fill[uamgray] (0,0) circle (2.1pt);}}
+\newcommand{\puntohueco}{\raisebox{0.22em}{\tikz\draw[uamgray,line width=0.5pt] (0,0) circle (2.1pt);}}
+
+%──────────────────────────────────────────────────────
+% Capítulos: kicker + chip + título en caja normal + filete, en un solo
+% bloque [display] para que un salto de página no los separe. El kicker
+% por omisión es "Capítulo" / "Anexo"; \bloque{...} antes de \chapter
+% lo sustituye por el nombre del bloque al que pertenece.
+%──────────────────────────────────────────────────────
+\newcommand{\kickervacio}{}
+\newcommand{\kickeractual}{}
+\newcommand{\bloque}[1]{\gdef\kickeractual{#1}}
+\titleformat{\chapter}[display]
+  {\color{uamblue}}
+  {{\escKicker\color{uamred}%
+     \ifx\kickeractual\kickervacio\MakeUppercase{\chaptertitlename}%
+     \else\MakeUppercase{\kickeractual}\fi}}
+  {5pt}
+  {\escSeccion\seccionchip{\thechapter}\hspace{0.5em}}
+  [\vspace{5pt}{\color{hairline}\hrule height 0.5pt}\vspace{6pt}%
+   \global\let\kickeractual\kickervacio]
+\titleformat{name=\chapter,numberless}[display]
+  {\color{uamblue}}
+  {}
+  {0pt}
+  {\escSeccion}
+  [\vspace{5pt}{\color{hairline}\hrule height 0.5pt}\vspace{6pt}]
+\titlespacing*{\chapter}{0pt}{4.5ex plus 1ex minus .5ex}{1.6ex}
+
+\titleformat{\section}
+  {\bfseries\fontsize{13}{17}\selectfont\color{uamblue}}
+  {\textcolor{uamred}{\thesection}}
+  {0.5em}{}
+\titlespacing*{\section}{0pt}{3ex plus .5ex}{0.7ex}
+
+\titleformat{\subsection}
+  {\escKicker\color{uamgray}}
+  {\thesubsection}{0.6em}{\MakeUppercase}
+\titlespacing*{\subsection}{0pt}{2.4ex plus .3ex}{0.5ex}
+
+%──────────────────────────────────────────────────────
+% Cabecera y pie: filete hairline arriba y abajo, emblema y folio en
+% Menlo 8 pt. \doctag es el identificador corto del documento.
+%──────────────────────────────────────────────────────
+\newcommand{\doctag}{ICR \textperiodcentered{} MCIE \textperiodcentered{} UAM-A}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{}
+\newcommand{\logopie}{\raisebox{-0.09cm}{\includegraphics[height=0.32cm]{\assetPie}}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\escMeta\color{uamgray}\doctag}
+\fancyhead[R]{\escMeta\color{uamgray}\nouppercase{\leftmark}}
+\fancyfoot[L]{\logopie}
+\fancyfoot[R]{\escMeta\color{uamgray}\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrule}{{\color{hairline}\hrule width\headwidth height 0.5pt}}
+\renewcommand{\footrule}{\vspace{-10pt}{\color{hairline}\hrule width\headwidth height 0.5pt}\vspace{10pt}}
+\setlength{\headheight}{16pt}
+% Las páginas de inicio de capítulo (estilo plain en book) llevan la misma caja.
+\fancypagestyle{plain}{}
+
+%──────────────────────────────────────────────────────
+% Índice
+%──────────────────────────────────────────────────────
+\titlecontents{chapter}[0pt]
+  {\addvspace{9pt}\bfseries\color{uamblue}}
+  {\seccionchip{\thecontentslabel}\hspace{0.6em}}
+  {}
+  {\normalfont\color{uamgray}\;\titlerule*[0.4pc]{.}\;\contentspage}
+\titlecontents{section}[1.7em]
+  {\normalfont\small\color{uamblue}}
+  {\textcolor{uamred}{\thecontentslabel}\hspace{0.5em}}
+  {}
+  {\normalfont\small\color{uamgray}\;\titlerule*[0.4pc]{.}\;\contentspage}
+\titlecontents{subsection}[4.2em]
+  {\normalfont\small\color{uamgray}}
+  {\thecontentslabel\hspace{0.5em}}
+  {}
+  {\;\titlerule*[0.4pc]{.}\;\contentspage}
+\titlecontents{figure}[0pt]
+  {\normalfont\small\color{uamblue}}
+  {\textcolor{uamred}{\thecontentslabel}\hspace{0.8em}}
+  {}
+  {\normalfont\small\color{uamgray}\;\titlerule*[0.4pc]{.}\;\contentspage}
+\titlecontents{table}[0pt]
+  {\normalfont\small\color{uamblue}}
+  {\textcolor{uamred}{\thecontentslabel}\hspace{0.8em}}
+  {}
+  {\normalfont\small\color{uamgray}\;\titlerule*[0.4pc]{.}\;\contentspage}
+
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+
+%══════════════════════════════════════════════════════
+% Componentes del sistema (disponibles para el texto)
+%   \dato / \datochico / \datohero dentro de datorow
+%   \tarjeta / \tarjetasdos / \tarjetastres
+%   lista filas con \filaitem{}{}
+%   tablaA / tablaB con \thA / \thB / \celdaacento / \celdameta
+% En la tesis la columna Y es centrada (preamble/macros.tex); en las
+% tablas de este sistema usa Z, la X alineada a la izquierda.
+%══════════════════════════════════════════════════════
+\newcommand{\datoetiqueta}[1]{%
+  {\color{uamgray}\bfseries\fontsize{8}{11}\selectfont
+   \addfontfeature{LetterSpace=7}\MakeUppercase{#1}}}
+\newcommand{\dato}[3][uamblue]{%
+  \begin{minipage}[t]{\linewidth}\centering
+    {\color{#1}\bfseries\fontsize{34}{34}\selectfont #2}\par\vspace{7pt}
+    \datoetiqueta{#3}\par
+  \end{minipage}%
+}
+\newcommand{\datochico}[3][uamblue]{%
+  \begin{minipage}[t]{\linewidth}\centering
+    {\color{#1}\bfseries\fontsize{23}{25}\selectfont #2}\par\vspace{6pt}
+    \datoetiqueta{#3}\par
+  \end{minipage}%
+}
+\newcommand{\datohero}[3][uamred]{%
+  \par\vspace{6pt}
+  \begin{minipage}[t]{\linewidth}\centering
+    {\color{#1}\bfseries\fontsize{80}{80}\selectfont #2}\par\vspace{10pt}
+    \datoetiqueta{#3}\par
+  \end{minipage}\par\vspace{6pt}%
+}
+\newcolumntype{H}{!{\color{hairline}\vrule width 0.5pt}}
+\newenvironment{datorow}{%
+  \par\medskip\noindent{\color{hairline}\hrule height 0.5pt}\par\vspace{11pt}
+}{%
+  \par\vspace{9pt}{\color{hairline}\hrule height 0.5pt}\par\medskip
+}
+
+\newcommand{\tarjetaopts}{breakable}
+\newtcolorbox{tarjetabase}[1][]{enhanced,
+  colback=uamlightgray, colframe=uamlightgray, boxrule=0pt,
+  sharp corners, left=12pt, right=12pt, top=11pt, bottom=11pt, #1}
+\newcommand{\tarjeta}[3][]{%
+  \begin{tarjetabase}[\tarjetaopts]
+    \setlength{\parskip}{0pt}%
+    \noindent\begin{minipage}[t]{\linewidth}
+      \ifx\relax#1\relax\puntogris\else\chiplg{#1}\fi\hspace{7pt}%
+      {\raggedright\bfseries\fontsize{10.5}{13}\selectfont\color{uamblue}#2\par}
+      \vspace{5pt}
+      {\raggedright\fontsize{8.5}{11.5}\selectfont\color{uamgray}#3\par}
+    \end{minipage}
+  \end{tarjetabase}%
+}
+\newcommand{\tarjetasdos}[6]{%
+  \par\renewcommand{\tarjetaopts}{}%
+  \begin{tcbraster}[raster columns=2, raster equal height,
+    raster column skip=5mm, raster left skip=0pt, raster right skip=0pt,
+    raster force size=false]
+    \tarjeta[#1]{#2}{#3}
+    \tarjeta[#4]{#5}{#6}
+  \end{tcbraster}%
+  \renewcommand{\tarjetaopts}{breakable}%
+}
+\newcommand{\tarjetastres}[9]{%
+  \par\renewcommand{\tarjetaopts}{}%
+  \begin{tcbraster}[raster columns=3, raster equal height,
+    raster column skip=5mm, raster left skip=0pt, raster right skip=0pt,
+    raster force size=false]
+    \tarjeta[#1]{#2}{#3}
+    \tarjeta[#4]{#5}{#6}
+    \tarjeta[#7]{#8}{#9}
+  \end{tcbraster}%
+  \renewcommand{\tarjetaopts}{breakable}%
+}
+
+% Viñetas del texto corrido: el punto del sistema en lugar del cuadro que
+% pone babel en español (gris, para no sumar acentos rojos).
+\setlist[itemize,1]{label=\puntogris}
+\setlist[itemize,2]{label=\puntohueco}
+
+\newlist{filas}{itemize}{1}
+\setlist[filas]{label=\puntohueco, leftmargin=1.5em, itemsep=9pt,
+  parsep=0pt, topsep=7pt}
+\newcommand{\filaitem}[2]{%
+  \item {\bfseries\fontsize{11}{14}\selectfont\color{uamblue}#1}\par
+        \vspace{2pt}{\fontsize{9}{12}\selectfont\color{uamgray}#2}}
+
+\newcommand{\thA}[1]{\cellcolor{uamlightgray}%
+  \raisebox{0.22\baselineskip}[0pt][0pt]{%
+  {\bfseries\fontsize{8}{10}\selectfont\addfontfeature{LetterSpace=4}%
+   \color{uamblue}\MakeUppercase{#1}}}}
+\newcommand{\thB}[1]{%
+  {\bfseries\fontsize{8}{10}\selectfont\addfontfeature{LetterSpace=4}%
+   \color{uamblue}\MakeUppercase{#1}}}
+\newcommand{\celdaacento}[1]{{\bfseries\color{uamred}#1}}
+\makeatletter
+\newcommand{\celdameta}[1]{{\ttfamily\fontsize{8}{\f@baselineskip}\selectfont
+  \color{uamgray}#1}}
+\makeatother
+\newenvironment{tablaA}{%
+  \par\medskip
+  \setlength{\arrayrulewidth}{0.5pt}\arrayrulecolor{hairline}%
+  \renewcommand{\arraystretch}{1.45}%
+  \fontsize{10}{13.2}\selectfont
+}{\par\medskip}
+\newenvironment{tablaB}{%
+  \par\medskip
+  \setlength{\arrayrulewidth}{0.5pt}\arrayrulecolor{hairline}%
+  \renewcommand{\arraystretch}{1.5}%
+  \fontsize{9}{11.5}\selectfont
+}{\par\medskip}
+\newcommand{\reglaB}{\noalign{{\color{uamblue}\hrule height 0.6pt}}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X}

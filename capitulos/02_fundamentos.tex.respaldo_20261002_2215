@@ -1,0 +1,47 @@
+\chapter{Fundamentos teóricos}\label{chap:fundamentos}
+
+Este capítulo reúne los conceptos en los que se apoyan el modelado, el diseño del controlador y el análisis de resultados: la linealización alrededor de un punto de equilibrio, las propiedades de los lazos de control clásicos que se emplean para evaluar el diseño, la fricción, la zona muerta y los ciclos límite.
+
+\section{Linealización y estabilidad de los puntos de equilibrio}
+
+Un sistema no lineal $\dot{x}=f(x,u)$ tiene un punto de equilibrio $(x^*,u^*)$ cuando $f(x^*,u^*)=0$. Para desviaciones pequeñas $\delta x = x-x^*$ y $\delta u = u-u^*$, su comportamiento se aproxima por el sistema lineal
+\begin{equation}
+\delta\dot{x} = A\,\delta x + B\,\delta u, \qquad
+A=\left.\frac{\partial f}{\partial x}\right|_{(x^*,u^*)}, \quad
+B=\left.\frac{\partial f}{\partial u}\right|_{(x^*,u^*)} .
+\label{eq:linealizacion}
+\end{equation}
+Si todos los valores propios de $A$ tienen parte real negativa, el equilibrio es localmente asintóticamente estable; si alguno tiene parte real positiva, es inestable~\cite{khalil2}. En un sistema de segundo orden con un valor propio positivo y otro negativo, el equilibrio es un \emph{punto silla}: existe una única dirección (la variedad estable) por la que las trayectorias se aproximan al equilibrio, y cualquier perturbación fuera de ella crece exponencialmente a lo largo de la variedad inestable. Esta es la situación de la configuración atractiva del levitador.
+
+El sistema linealizado es controlable si la matriz $\mathcal{C}=[B\;\; AB]$ tiene rango completo, y observable con la salida $y=C\,\delta x$ si la matriz $\mathcal{O}=[C^\top\;\; (CA)^\top]^\top$ tiene rango completo. La controlabilidad garantiza que una retroalimentación adecuada puede ubicar los polos del lazo cerrado donde se desee~\cite{ogata}.
+
+\section{Tipo del sistema y error en estado estacionario}
+
+En un lazo de retroalimentación unitaria con función de transferencia de lazo abierto $L(s)=C(s)G(s)$, el \emph{tipo} del sistema es el número de polos de $L(s)$ en el origen. El error en estado estacionario ante referencias polinomiales depende del tipo a través de las constantes de error de posición, de velocidad y de aceleración~\cite{ogata,gene},
+\begin{equation}
+K_p=\lim_{s\to0}L(s), \qquad K_v=\lim_{s\to0}s\,L(s), \qquad K_a=\lim_{s\to0}s^2L(s) .
+\label{eq:constantes_error}
+\end{equation}
+Ante un escalón de amplitud $R$, el error estacionario es $R/(1+K_p)$, que se anula en sistemas de tipo uno o mayor. Ante una rampa de pendiente $\dot r$, el error es $\dot r/K_v$: constante en sistemas de tipo uno y nulo en sistemas de tipo dos o mayor. Un controlador PI, con un integrador, convierte en tipo uno una planta sin polos en el origen; un PII, con dos integradores, la convierte en tipo dos. Esta es la ventaja teórica de la doble acción integral en el seguimiento de rampas.
+
+\section{Márgenes de estabilidad y criterio de Nyquist con plantas inestables}
+
+El criterio de Nyquist relaciona el número $Z$ de polos inestables del lazo cerrado con el número $P$ de polos inestables de $L(s)$ y el número $N$ de rodeos en sentido horario que el diagrama de Nyquist de $L(j\omega)$ da alrededor del punto $-1$: $Z=N+P$~\cite{gene}. Para que el lazo cerrado sea estable ($Z=0$) con una planta que tiene un polo inestable ($P=1$), el diagrama debe rodear una vez el punto $-1$ en sentido antihorario ($N=-1$).
+
+El margen de fase es la fase adicional que puede introducirse en el lazo, a la frecuencia en que $|L(j\omega)|=1$, antes de perder la estabilidad; el margen de ganancia es el factor por el que puede multiplicarse la ganancia, a la frecuencia en que la fase cruza $-180^\circ$, antes de perderla. Con plantas estables, el margen de ganancia indica cuánto puede \emph{aumentarse} la ganancia. Con plantas inestables, la estabilidad requiere una ganancia mínima, y el margen de ganancia relevante es \emph{inferior}: indica cuánto puede \emph{disminuirse} la ganancia antes de que el lazo se vuelva inestable, y se expresa como un factor menor que uno o un valor negativo en decibeles~\cite{gene}.
+
+\section{Fricción y atascamiento-deslizamiento}
+
+La fuerza de fricción entre dos superficies en contacto se describe habitualmente como la suma de varias componentes~\cite{olsson,armstrong}: la \emph{fricción estática}, que impide el movimiento mientras la fuerza aplicada no supera un valor máximo $F_s$; la \emph{fricción de Coulomb}, de magnitud constante y opuesta a la velocidad; la \emph{fricción viscosa}, proporcional a la velocidad; y el \emph{efecto Stribeck}, la disminución de la fricción al pasar de la velocidad nula a velocidades pequeñas. El atascamiento-deslizamiento es la alternancia entre intervalos en reposo, en los que la fricción estática retiene al cuerpo, y deslizamientos bruscos que ocurren cuando la fuerza aplicada vence esa fricción~\cite{berman,armstrong}.
+
+La simulación de estos modelos presenta una dificultad numérica en la velocidad nula, donde la fuerza de fricción es discontinua~\cite{haessig}. El método de Karnopp~\cite{karnopp} la resuelve definiendo una banda $|v|\le DV$ que se trata como velocidad cero: dentro de ella, si la fuerza neta no supera $F_s$, el cuerpo se mantiene en reposo; si la supera, el cuerpo se despega y la fricción toma el valor de deslizamiento.
+
+En sistemas de posicionamiento, la combinación de fricción estática y acción integral produce un ciclo límite conocido como \emph{hunting}~\cite{olsson,armstrong}: mientras el cuerpo está detenido con un error no nulo, el integrador sigue acumulando ese error y modificando la señal de control hasta forzar un deslizamiento; el cuerpo cruza la referencia, se detiene del otro lado y el proceso se repite. Sin acción integral el ciclo no aparece, pero el cuerpo puede quedar detenido con un error permanente.
+
+\section{Zona muerta}
+
+La zona muerta es una no linealidad no suave en la que la salida de un actuador permanece nula mientras su entrada no supera ciertos umbrales~\cite{gang}. Una zona muerta con umbrales $b_l<0<b_r$ y pendientes $m_l$, $m_r$ produce una salida nula para entradas en $(b_l,\,b_r)$ y una salida que crece linealmente fuera de ese intervalo. Su efecto sobre un lazo de control es parecido al de la fricción estática: pequeños cambios de la señal de control no se transmiten a la planta, lo que puede provocar errores en estado estacionario y oscilaciones en lazo cerrado.
+
+\section{Ciclos límite}
+
+Un ciclo límite es una órbita periódica aislada en el espacio de estados de un sistema no lineal: las trayectorias cercanas se aproximan a ella o se alejan de ella, pero no hay otras órbitas periódicas arbitrariamente próximas~\cite{khalil2,jean}. A diferencia de las oscilaciones de un sistema lineal, cuya amplitud depende de las condiciones iniciales, la amplitud y el periodo de un ciclo límite dependen solo de los parámetros del sistema. Los sistemas lineales no pueden presentar ciclos límite; su presencia en un lazo cerrado diseñado sobre un modelo lineal indica que alguna no linealidad, como la fricción estática o la zona muerta, domina el comportamiento en estado estacionario.

@@ -1,26 +1,42 @@
 % Packages
 
-\usepackage{sectsty}
 \let\oldunderbar\underbar
 \usepackage{blindtext}
 \usepackage{amsbsy}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
+% rsfs escalable: los títulos de sección v5 son de 13 pt
+\DeclareFontFamily{U}{rsfs}{\skewchar\font127 }
+\DeclareFontShape{U}{rsfs}{m}{n}{<-6> rsfs5 <6-8> rsfs7 <8-> rsfs10}{}
 \usepackage{amsmath} 
-\usepackage[T1]{fontenc} 
-\usepackage[utf8]{inputenc}
-\usepackage[hmargin=3cm,vmargin=2.5cm]{geometry}
-\usepackage[english,spanish]{babel}
-\usepackage[pdftex]{graphicx}
+% Identidad UAM (Acuerdo 06/2012, numeral 4.1): Helvetica Neue en todas sus
+% variantes como tipografía primaria del material impreso. Exige lualatex.
+\usepackage{fontspec}
+\setmainfont{HelveticaNeue}[
+  BoldFont       = {HelveticaNeue-Bold},
+  ItalicFont     = {HelveticaNeue-Italic},
+  BoldItalicFont = {HelveticaNeue-BoldItalic}
+]
+\setsansfont{HelveticaNeue}[
+  BoldFont       = {HelveticaNeue-Bold},
+  ItalicFont     = {HelveticaNeue-Italic},
+  BoldItalicFont = {HelveticaNeue-BoldItalic}
+]
+\setmonofont{Menlo}[Scale=MatchLowercase]
+\newfontfamily\uamcondensed{HelveticaNeue-CondensedBold}
+\usepackage[margin=2.6cm, headsep=14pt, footskip=30pt]{geometry} % v5 UAM Dato: medida de línea 16,39 cm
+\usepackage[english,spanish,es-lcroman]{babel}
+\spanishdecimal{.}
+\usepackage{graphicx}
 \usepackage{setspace}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
- \addtolength{\topmargin}{-11.87852pt}
-\usepackage{sectsty}
+
 \usepackage{import}
 \usepackage{makecell}
 \usepackage{ragged2e}
 \usepackage{csquotes}
+\usepackage{caption}
 \usepackage{subfig}
 \usepackage{color}
 \usepackage{siunitx}
@@ -49,3 +65,5 @@ sorting=ynt
 \usepackage{lipsum}
 \usepackage{ifthen}
 \usepackage{comment}
+\usepackage{microtype}
+\usepackage{placeins}

@@ -1,0 +1,15 @@
+{
+  "pico_cm": -3.2369788908229138,
+  "sobrepaso_pct": 23.697889082291379,
+  "t_pico_s": 0.1509999999999998,
+  "t_establecimiento_2pct_s": 0.47600000000000087,
+  "error_max_ult10s_cm": 1.7763568394002505E-15,
+  "u_final_V": 2.3933608017052403,
+  "u_eq_ref2_V": 2.3933608017052834,
+  "u_max_V": 3.2796921284332683,
+  "u_min_V": 0,
+  "frac_saturado": 0,
+  "conAD_sobrepaso_pct": 23.648189146447951,
+  "conAD_error_max_ult10s_cm": 0.018412377825546944,
+  "conAD_ciclo_limite_pp_cm": 0.033393345354467474
+}

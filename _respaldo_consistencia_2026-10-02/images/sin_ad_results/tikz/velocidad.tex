@@ -1,0 +1,10 @@
+\input{images/sin_ad_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[sinad, ylabel={velocidad [\si{cm/s}]},
+             legend style={at={(0.99,0.03)}, anchor=south east}, legend cell align=left]
+  \addplot[conAD] table[x=t, y=v_ad] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{con AD}
+  \addplot[sinAD] table[x=t, y=v] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{sin AD}
+\end{axis}
+\end{tikzpicture}

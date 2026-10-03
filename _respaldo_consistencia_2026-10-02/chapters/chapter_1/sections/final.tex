@@ -1,0 +1,309 @@
+\section{Modelo de levitador magnético}
+
+La ecuación mecánica para el sistema de levitación magnética ECP \cite{730} con el imán superior activado es:
+
+\begin{equation}
+m\ddot{x} = f_{\text{fld}}(i,x) - f_{\text{fr}} - mg
+\label{eq:mec}
+\end{equation}
+
+Donde \( m \,[\text{kg}] \) es la masa, \( \ddot{x} \,[\text{m}/\text{s}^2] \) la aceleración,
+ \( f_{\text{fld}} \,[\text{N}] \) la fuerza electromagnética, \( f_{\text{fr}} \,[\text{N}] \) la fuerza de fricción y \( mg \,[\text{N}] \) la fuerza gravitacional.
+
+\section{\texorpdfstring{Formas de $f_{\text{fld}}$}{Formas de fld}}
+
+Conciendo la forma de $L_{(x)}$ podemos determinar $f_{\text{fld}}$ por lo que la literatura científica se ha documentado la forma no lineal explicándola a través de una u otra . De acuerdo con Al-Muthair et al. \cite{al} cuando se levita un bola ferromagnética se puede aproximar como:
+
+\[
+f_{\text{fld}} = C\left(\dfrac{i}{x}\right)^2
+\]
+
+Donde $C$ es la constante de la fuerza magnética, $i$ la intensidad de la corriente eléctrica y $x$ la posición.
+
+Charara et al. \cite{charara} calcula la fuerza electromagnética dentro de un conjinete como:
+
+\[ 
+f_{\text{fld}} = K\,\frac{\operatorname{sign}(i)\,i^{2}}{e^{2}}, 
+\qquad \text{con } 
+K = 0.25 \cos\!\left(\frac{\pi}{8}\right)\!\mu\, n^{2} S 
+\]
+
+Donde $S$ es el área de la cara del polo, $\mu$ es la permeabilidad magnética en el vacío y $n$ numero de vueltas del embobinado.
+
+Según El Hajjaji et al. \cite{el} se determinó experimentalmente que la fuerza electromagnética sobre un esfera metálica tiene la forma:
+
+
+\[ 
+f_{\text{fld}} = \dfrac{i^{2}}{b_0 + b_1x + b_2x^3 + b_3x^4}
+\]
+
+con $b_0$= 0.0304, $b_1$ = 0.7159, $b_2$=-0.9165, $b_3$=1.1994 como parámetros del sistema
+
+
+Zhao et al. \cite{zhao} calculan la fuerza del electroimán parar hacer levitar una bola metálica como:
+\[ f_{\text{fld}} = \frac{L_0 x_0 i^2}{2x^2} \]
+
+Donde $i$ es la corriente del embobinado, $x$ la posición de la bola, $L_0$ la inductancia del sistema en el punto de equilibrio $x_0$.
+
+Feifie at al. \cite{feifei} de un sistema similar determina la fuerza electromagnética como:
+\[ f_{\text{fld}} = \frac{K i^2}{(H - x)^2} \]
+
+Donde $i$ es la intensidad de la corriente, $x$ la posición, $K$ y $H$ parámetros del sistema
+
+
+
+Se puede apreciar que no hay un modelo único condicionado por la configuración del sistema y la metodología analítica o experimental que se empleó para modelarla. Por lo tanto se eligió 
+el modelo del levitador ECP730 dado por el fabricante en su hoja de especificación técnica \cite{parks} y validada experimentalmente por Alcantara et al. \cite{alcantara} como:
+
+\[ f_{\text{fld}} = \frac{u}{b(a-x)^4} \]
+
+Donde $u$ es voltaje aplicado en las terminales del embobinado del electroimán, $x$ la posición del objeto levitante, $a$ y $b$ parámetros del sistema.
+
+\section{Zona muerta dinámica no centrada en el origen}
+Arturo \cite{arturo_tesis} sostiene que la zona muerta dura describe de manera más precisa el fenómeno observado en motores eléctricos, 
+donde dicha no linealidad se manifiesta a partir $u_e{(t)} = 0$, el cual constituye el único voltaje de equilibrio en sistemas de control de posición angular.
+
+En contraste, en los sistemas de levitación magnética existen múltiples voltajes de equilibrio, por lo que su representación matemática adopta la forma:
+
+\[
+v(t) = D\big(u(t)\big) =
+\begin{cases}
+m_r \big(u(t) - u_e - b_r\big) - h_r, & u(t) \ge b_r, \\[6pt]
+0, & b_l < u(t) < b_r, \\[6pt]
+m_l \big(u(t) - u_e - b_l\big) - h_l, & u(t) \le b_l.
+\end{cases}
+\]
+
+Donde $m_r$, $b_r$, $h_r$, $m_l$, $b_l$ y $h_l$ son parámetros desconocidos de la zona muerta, pero de signos conocidos:
+$m_r > 0$, $m_l > 0$, $b_r > 0$, $b_l < 0$, $h_r < 0$, $h_l > 0$
+
+\section{Efecto atascamiento-deslizamiento}
+El fenómeno de atascamiento-deslizamiento es característico de los sistemas con fricción, donde el movimiento no transcurre de forma continua y gradual sino más bien donde ocurre alternancia de atascamiento(ausencia de movimiento) y deslizamiento (movimiento repentino). 
+Los modelos de fricción que se han documentado tratan de modelar este comportamiento \cite{armstrong,olsson,berman}. Se considera un modelo de fricción compuesto que permite considerar para $v = 0$ el sistema se encuentra en régimen de fricción estática; si la fuerza externa aplicada al sistema entra en movimiento pasa a régimen de fricción dinámica debido al descenso repentino del valor de fricción, la intermitencia 
+entre estás etapas es lo que se conoce como efecto atascamiento-deslizamiento. 
+
+\[
+f_{\text{fric}} =
+\begin{cases}
+c\,v, 
+& v \neq 0, \\[6pt]
+
+\min\!\left(|F_e|,\,F_s\right)\,\operatorname{sign}(F_e),
+& v = 0
+\end{cases}
+\]
+
+
+donde $f_{\text{fric}}$ es la fuerza de fricción, $F_{e}(t)$ es la fuerza externa,
+$F_{s}$ es la fricción estática máxima,
+$c$ es el coeficiente de fricción viscosa y $v$ es la velocidad relativa.
+
+La forma en que se hacen estas transciones entre régimes se presenta de manera regular induciendo la formación de ciclos límite. 
+
+
+
+El modelo completo del sistema 
+\begin{figure}[h]
+    \centering
+       \includegraphics[width=0.6\textwidth]{images/chapter_1/lazo_de_control_con_zm.eps}
+    \caption{Lazo de control con zona muerta}
+    \label{lazo_de_control_con_zm}
+\end{figure}
+
+\section{Soluciones numéricas}
+El efecto atascamiento-deslizamiento por la fricción es difícil de simular en el diseño de controladores con retroalimentación para sistemas con componente mecánico dado 
+por el comportamiento no lineal alrededor de la velocidad cero, en este punto se convierte en un problema numérico más que físico, 
+de hecho existe una amplia variedad de estrategias que modelan e implementan este fenómeno, conocidos como modelos dinámicos de fricción \cite{haessig}.
+
+El método de Karnopp\cite{karnopp} introduce una banda de velocidad $\left| DV \right|$ donde se considera la velocidad cero y por tanto decidir cuando el sistema esta atascado o en deslizamiento; por su fácil implementación
+permite que se emplee en aplicaciones prácticas para el diseño de actuadores \cite{liu}\cite{ravanbod}\cite{ravanbod1}\cite{bicakci}\cite{romano}; por ello, se utiliza en las simulaciones.
+
+\section{Modelo linealizado sistema de levitación magnética}
+Los parámetros del modelo no lineal ($a$, $b$, $c_1$, $m$, $g$) fueron identificados experimentalmente por Alcántara et al.\ \cite{diana_tesis} para el dispositivo ECP-730 en configuración repulsiva (estable en lazo abierto), mediante ensayos de estado estacionario y respuesta dinámica en lazo abierto. En el presente trabajo se adoptan esos mismos parámetros y se aplican a la configuración atractiva (inestable en lazo abierto), en la que la bobina superior atrae al imán levitante. Si bien la estructura funcional del modelo es idéntica, en la configuración atractiva la fuerza magnética crece al disminuir la brecha entre el imán y la bobina, lo que hace que los puntos de equilibrio sean inestables. El modelo linealizado en representación en espacio de estados para la configuración inestable queda como:
+\[
+\begin{aligned}
+\dot{x}
+&=
+\begin{bmatrix}
+0 & 1 \\[6pt]
+\dfrac{4g}{(a-x_1^{\ast})} & -c_1
+\end{bmatrix}x
++
+\begin{bmatrix}
+0 \\[6pt]
+\dfrac{1}{mb\,(a-x_1^{\ast})^4}
+\end{bmatrix}u,
+\\[10pt]
+y &= \begin{bmatrix} 1 & 0 \end{bmatrix} x
+\end{aligned}
+\]
+
+
+Donde la posición $x_1$ y la velocidad $x_2$ forman el vector de estado $x$, $y$ el vector de salida, $c_1$ el coeficiente de fricción viscosa por unidad de masa y $x_1^{\ast}$ siendo el valor de posición donde se alcanza el punto de equilibrio.
+
+La ecuación característica queda como:
+
+\[
+\lambda^2 + c_1\lambda - \dfrac{4g}{(a-x_1^{\ast})} = 0
+\]
+
+Como $a - x_1^{\ast} > 0$ para toda posición alcanzable, el término independiente es negativo y la ecuación característica tiene siempre una raíz real positiva: todos los puntos de equilibrio de la configuración atractiva son inestables. En $x_1^{\ast}=-4$~cm las raíces son $\lambda_1 = -23{,}5057$ y $\lambda_2 = 14{,}9427$.
+
+Se verifica que el sistema es controlable y observable
+
+\[
+\mathcal{C}
+=
+\begin{bmatrix}
+0 & b_0\\[6pt]
+b_0 & -c_1 b_0
+\end{bmatrix}
+\qquad
+\mathcal{O}
+=
+\begin{bmatrix}
+1 & 0\\[6pt]
+0 & 1
+\end{bmatrix}
+\]
+
+Donde $b_0 = \dfrac{1}{m\,b\,(a-x_1^{\ast})^4}$. Ambas matrices son linealmente independientes, por tanto con la señal de entrada de la planta se modifica su espacio de estados y de su salida se
+deduce en que punto dentro del estado espacio de estados se encuentra la planta.
+Los valores paramétricos de $c_1$, $b$, $a$, $m$ y $g$ que se emplearon para realizar los cálculos fueron identificados experimentalmente por Alcántara et al.\ \cite{diana_tesis}; se reúnen en la tabla~\ref{tab:parametros} junto con los parámetros del modelo de fricción y el intervalo de la señal de control. Las fuerzas se expresan en $\text{kg}\cdot\text{cm}/\text{s}^2$, unidades en las que el peso del imán es $mg = 138{,}3$. En \cite{diana_tesis}, $c_1$ se reporta en $\text{kg}^{-1}$; dado que multiplica a la velocidad en la ecuación de aceleración, sus unidades consistentes son $\text{s}^{-1}$.
+
+\begin{table}[h]
+\centering
+\caption{Parámetros del modelo}
+\label{tab:parametros}
+\begin{tabular}{|c|c|l|}
+\hline
+$a$ & $7.17184\;[\text{cm}]$ & parámetro de la fuerza electromagnética \\ \hline
+$b$ & $1.6163 \times 10^{-6}\;[\text{V}/(\text{N}\cdot\text{cm}^4)]$ & parámetro de la fuerza electromagnética \\ \hline
+$c_1$ & $8.563\;[\text{s}^{-1}]$ & fricción viscosa por unidad de masa \\ \hline
+$m$ & $0.141\;[\text{kg}]$ & masa del imán levitante \\ \hline
+$g$ & $981\;[\text{cm}/\text{s}^2]$ & aceleración de la gravedad \\ \hline
+$F_s$ & $20\;[\text{kg}\cdot\text{cm}/\text{s}^2]$ ($0.2$~N) & fricción estática máxima (Karnopp) \\ \hline
+$DV$ & $0.02\;[\text{cm}/\text{s}]$ & banda de velocidad nula (Karnopp) \\ \hline
+$u$ & $[0,\ 3.5]\;[\text{V}]$ & intervalo de la señal de control \\ \hline
+\end{tabular}
+\end{table}
+
+
+\input{chapters/chapter_1/sections/lazo_abierto}
+
+\subsection{Control con doble efecto integral}
+Se diseñó un controlador con PII que permita reducir el tiempo de atascamiento del sistema en comparación con el PI, quedando como:
+
+\[
+C(s)=\frac{152.43\,(s+4.875)(s+1.861)(s+17.31)}
+{s^{2}(s+301.1)}
+\]
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/bode}
+    \caption[Diagrama de Bode]{Diagrama de Bode del lazo abierto $L(s)=C(s)G(s)$ en $x_1^*=-4$~cm. Se indican el margen de ganancia (inferior, por el polo inestable de la planta) y el margen de fase.}
+    \label{bode_fase}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/nyquist}
+    \caption[Diagrama de Nyquist]{Diagrama de Nyquist de $L(s)$. Con un polo de lazo abierto en el semiplano derecho ($P=1$), la estabilidad en lazo cerrado exige un rodeo antihorario al punto $-1$.}
+    \label{nyquist}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_design/tikz/escalon}
+    \caption[Respuesta al escalón]{Respuesta al escalón unitario del lazo cerrado linealizado.}
+    \label{step_response}
+\end{figure}    
+
+\FloatBarrier
+\newpage
+
+\input{chapters/chapter_1/sections/lineal_ad}
+
+\subsection{Simulación no lineal sin atascamiento-deslizamiento}
+
+Antes de incorporar el efecto atascamiento-deslizamiento, el controlador PII se evaluó sobre el modelo no lineal del levitador considerando únicamente la fuerza electromagnética no lineal y la fricción viscosa,
+\[
+m\ddot{x} = \frac{u}{b\,(a-x)^4} - m g - m c_1 \dot{x},
+\]
+es decir, sin fricción estática (modelo de Karnopp) ni zona muerta en el actuador. Se emplearon las mismas condiciones que en la prueba de regulación de la sección siguiente: escalón de referencia de $-2$ a $-3$~cm en $t=10$~s, señal de control acotada a $u\in[0;\,3{,}5]$~V y controlador inicializado en el estado estacionario correspondiente a $x_1=-2$~cm. Para facilitar la comparación, en cada figura se superpone el resultado con atascamiento-deslizamiento.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/posicion}
+    \caption[Sin AD: posición]{Posición del levitante con el modelo no lineal sin atascamiento-deslizamiento (sin AD) y con él (con AD). Abajo, detalle del transitorio entre 9,8 y 12~s.}
+    \label{fig:sinad_pos}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/velocidad}
+    \caption[Sin AD: velocidad]{Velocidad del levitante sin y con atascamiento-deslizamiento.}
+    \label{fig:sinad_vel}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/error}
+    \caption[Sin AD: error]{Error de posición sin y con atascamiento-deslizamiento. Abajo, detalle entre 15 y 40~s.}
+    \label{fig:sinad_error}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/sin_ad_results/tikz/control}
+    \caption[Sin AD: señal de control]{Señal de control sin y con atascamiento-deslizamiento.}
+    \label{fig:sinad_ctrl}
+\end{figure}
+
+La figura~\ref{fig:sinad_pos} muestra que, sin atascamiento-deslizamiento, el lazo cerrado no lineal alcanza la nueva referencia con un sobrepaso de $23{,}7$\,\% a los $0{,}15$~s del escalón y entra en la banda de $\pm 2$\,\% del cambio de referencia en $0{,}48$~s. Este sobrepaso se encuentra entre los que predice el modelo linealizado en $x_1^*=-3$~cm ($19{,}2$\,\%) y en $x_1^*=-2$~cm ($24{,}7$\,\%), lo que confirma la coherencia entre el modelo empleado para el diseño y la planta no lineal. La velocidad (figura~\ref{fig:sinad_vel}) se anula una vez concluido el transitorio, el error (figura~\ref{fig:sinad_error}) converge a cero y la señal de control (figura~\ref{fig:sinad_ctrl}) converge al voltaje de equilibrio $u_e=2{,}3934$~V correspondiente a $x_1=-3$~cm, sin alcanzar la saturación superior.
+
+La comparación con el caso con atascamiento-deslizamiento muestra que el transitorio es prácticamente idéntico (sobrepaso de $23{,}6$\,\%): la diferencia aparece en estado estacionario, donde la fricción estática y la zona muerta sustituyen la convergencia asintótica por un ciclo límite de $0{,}033$~cm pico a pico, que se analiza en la sección siguiente. Con ello se cumple el tercer objetivo específico.
+
+\FloatBarrier
+\newpage
+
+\subsection{Regulación}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/posicion}
+    \caption[Posición (regulación)]{Posición del levitante ante un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s (PII, $u\in[0;\,3{,}5]$~V). El recuadro amplía el transitorio y el ciclo límite de atascamiento-deslizamiento.}
+    \label{posicion}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/velocidad}
+    \caption[Velocidad (regulación)]{Velocidad del levitante. Los tramos en cero corresponden al régimen de atascamiento.}
+    \label{velocidad}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/error}
+    \caption[Error (regulación)]{Error de posición $e=r-x_1$.}
+    \label{error}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/regulation_results/tikz/control}
+    \caption[Señal de control (regulación)]{Señal de control antes y después de la zona muerta.}
+    \label{senal_control}
+\end{figure}
+
+\FloatBarrier
+\newpage
+
+\input{chapters/chapter_1/sections/seguimiento}
+\input{chapters/chapter_1/sections/analisis_ciclo}
+\input{chapters/chapter_1/sections/config_estable}
+\input{chapters/chapter_1/sections/conclusiones}
+\input{chapters/chapter_1/sections/trabajos_futuros}
+

@@ -1,0 +1,61 @@
+\chapter{Introducción}
+Las aplicaciones prácticas de los sistema de levitación magnética son varias y dado que su complejidad es significativa, 
+esto a generado que investigadores e ingenieros volteen su mirada para explorar potencialiadades aún no descubiertas. Al día de hoy se pueden mencionar
+ejemplos como los famosos trenes de levitación magnética de alta velocidad \cite{mingda} como el más relevante medio de 
+traslado terrestre por supuesto sin descontar otros medios transport muchos de ellos en fase de experimentación \cite{hyung},
+los sistemas de suspención activa destinados a reducir las vibraciones mecánicas de las máquinas herramientas y/o el ruido acústico \cite{charara}, 
+los cojinetes de suspención magnética que garantizan períodos de trabajo más extendidos con un menor desgaste\cite{debarghya}, 
+dispositvos médicos de alta precisión como los de asistencia ventricular para el bombeo de sangre \cite{gang1} así como en microrobótica
+donde la teleoperación en ambientes con complejas restricciones donde se uso se ha extendido \cite{mir}
+
+Aunque el costo inicial para implementar la tecnología de levitación magnética es mayor que la que involucra solamente elementos mecánicos 
+los beneficios a largo plazo se compensan al presentar un menor tiempo de servicio, mayor ahorro energético y mayor seguridad hacen ver que el futuro de esta tecnología sea cada vez 
+más prometedor y competitivo para muchas industrias como la aeroespacial \cite{bryton}, médica \cite{song} y biomédicas \cite{sajjad}. Adicionalmente a la complejidad tecnológica
+que implica implementarla, pues se requiere del uso de electroimánes de alta calidad y sensores más precisos, su diseño y mantenimiento requieren conocimiento
+más especializado. Afortundamente el avance alcanzado por la ciencia y la tecnología hacen que los precios caigan precipitadamente dado por la miniaturización de los sensores, los adelantos 
+en la electrónica de potencia, la mejora de la calidad de los materiales con que se elaboran los electroimánes e imanes, el perfecionammiento de los sistemas de calidad y la producción a gran escala permiten incorporar
+estos dispositivos con mayor accesibilidad.
+
+Por otra parte la demanda en expansión por un menor consumo de energía, el poco mantenimiento y la presión por reducir la huella ecológica, apoyado con planes internacionales como el Programa de las Naciones Unidas
+para el Medio Ambiente, ha impulsado la inversión y la investigación en este área, por lo que en pocos años se podrán ver implementaciones de esta tecnología en aplicaciones más cotidianas como en las
+bombas hidraulicas, los autos eléctricos, los equipos electrodomésticos, entre otros. Esto no solo generará una mejora en el rendimiento en cualquiera de los escenarios donde se llegue a instalar esta tecnología de este tipo, 
+sino que además mejorará su durabilidad y reducirá la generación de residuos, lo que a la larga se traduce en un futuro más sostenible. Este trabajo se orienta a continuar con ese esfuerzo.
+
+El principio básico del que se sustenta la levitación magnética es la generación de campo magnético por medio de imánes permanentes y/o electroimánes los que
+pueden presentar dinámica o no. La interacción entre los campos magnéticos puede producir fuerzas de tipo repulsivo/atractivo que no perminten contacto físico. Indiscutiblemente 
+las aplicaciones que involucran el uso de electroimánes necesitan técnicas avanzadas de control para mantener la separación entre los objetos. En el momento que se garantice un control 
+estable se hace más interesante controlar el movimiento con mayor precisión \cite{hyung}. 
+
+Determinados dispositivos para ganar estabilidad y control del objeto levitante introducen guías para evitar desplazamientos laterales. 
+Esto conlleva a regresar a lo que en un principio trata de solucionar la levitación, o sea, la falta de contacto físico, pero que sin duda introduce un nuevo escenario dentro del ecosistema de problemas a corregir.
+De pronto se hace interesante diseñar un controlador lineal con estrategias de control clásico que permita contralar la posición de un objeto levitante, dentro de un campo magnético atractivo generado por un electroimán, y que 
+se atasque por encontrarse en zona muerta al instante de cambiar la posición de referencia. Cuando el objeto a levitar requiere abandonar la zona muerta, el sistema transita temporalmente a un modo de operación en lazo abierto. 
+En esta etapa, el controlador debe suministrar a la planta el valor de señal de entrada adecuado para superar dicha zona y restablecer el régimen de control. Para este momento no solo se debe considerar el efecto de la fricción, sino 
+que la fuerza que ejerce el electroimán es no lineal, que los puntos de equilibrio son inestables y que incluir la zona muerta centrada en cada punto de equilibrio implica una análisis más profundo para el modelado y ajuste del controlador.
+
+
+\begin{comment}
+Por lo antes mencionado y en continuación del esfuerzo para lograr estos objetivos este estudio se plantea enriquecer el estado del arte con propuestas innovadoras 
+sobre un modelo simplificado de levitación magnética que incorpora contacto físico. Contrario a lo que se puede suponer a que todo sistema de levitación está diseñado 
+para evitar el contacto físico, en esta ocasión el dispositivo conformado por un electroimán, un imán permanente con un buje en su centro ajustado a una barra vertical 
+que la atravieza; sí cuenta con interacción superficial. 
+
+Dado esto, se propone controlar la posición de la altura del imán basándonos en técnicas de control clásico 
+ampliamente utilizadas en ingeniería para el diseño de controladores lineales. Esta estrategia ha ganado popularidad debido a las ventajas que brinda justo porque 
+entre sus principales fortalezas se encuentra que son relativamente más fáciles de modelar, analizar e implementar especialmente si son sistemas Single Input Single Output
+como es el caso. Sin embargo, el control clásico todavía enfrenta desafíos importantes, especialmente cuando se trata de lidiar con sistemas no lineales, como efectivamente 
+ocurre en nuestra situación donde el efecto atracción/repulsión magnéticas es intrísicamente no lineal, y que debido al roce entre las superficies de contacto aparecen fenómenos 
+no lineales como la fricción y el fenómeno de atascamiento-deslizamiento(stick-slip en inglés)
+
+El atascamiento se produce cuando el objeto suspendido queda atrapado en una posición determinada y no puede moverse libremente. 
+Por otro lado, el deslizamiento ocurre cuando el objeto no se mantiene estable y se desplaza de manera no deseada.
+
+En este caso particular, el atascamiento-deslizamiento se produce debido a la acción conjunta de dos factores principales: la fricción no lineal y la zona muerta. 
+La fricción no lineal puede provocar deslizamiento cuando la fuerzas de levitación magnética supera a la fuerza de fricción, lo que lleva a movimientos indeseados y una menor estabilidad del sistema.
+La llamada zona muerta es una de las no linealidades más comunes y desafiantes a las que se enfrenta el control clásico; se refiere a una región en la que no se aplican fuerzas de control al objeto suspendido.
+Cuando el objeto se encuentra en esta zona muerta, puede quedar atrapado y no responder adecuadamente a las señales de control, lo que resulta en un atascamiento.
+
+Esta zona se refiere a un rango de entrada en el que no se produce ninguna respuesta en la salida del sistema.
+La presencia de una zona muerta puede ser problemática, ya que afecta la capacidad del controlador para seguir el comportamiento deseado del sistema y puede introducir errores significativos en la respuesta del controlador.
+\end{comment}
+

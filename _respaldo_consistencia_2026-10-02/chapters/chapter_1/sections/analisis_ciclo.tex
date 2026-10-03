@@ -1,0 +1,108 @@
+% Análisis del ciclo límite. Datos: calculus/Final_Bien/R15_sintonizacion/
+% (analisis_ciclo.m, simular_R15.py, exportar_ciclo.py).
+\subsection{Análisis del ciclo límite}
+\label{sec:analisis_ciclo}
+
+Las pruebas anteriores muestran que, en presencia de atascamiento-deslizamiento, el levitante nunca queda en reposo sobre la referencia: oscila alrededor de ella con una amplitud de unas centésimas de centímetro. También muestran que la segunda acción integral del PII no reduce esa oscilación respecto a un PI. Esta sección explica ambos hechos paso a paso. Primero se traduce la fricción estática a términos de voltaje; después se describe un ciclo completo, se identifica la acción integral como su causa y se estiman la duración de cada atascamiento y la amplitud del ciclo. Al final se discute el único escenario en el que la segunda integración sí ofrece una ventaja. Todas las cifras corresponden al escalón de $-2$ a $-3$~cm con atascamiento-deslizamiento.
+
+%-----------------------------------------------------------------------------
+\subsubsection{La fricción estática vista desde el voltaje}
+
+Mientras el levitante está atascado, el modelo de Karnopp lo mantiene inmóvil siempre que la fuerza neta $F_e = u/[b(a-x)^4] - mg$ no supere la fricción estática máxima $F_s$. Despejando el voltaje, el imán permanece atascado en la posición $x$ mientras
+\begin{equation}
+u_e(x)\left(1-\frac{F_s}{mg}\right) \;\le\; u \;\le\; u_e(x)\left(1+\frac{F_s}{mg}\right),
+\label{eq:banda_voltaje}
+\end{equation}
+donde $u_e(x)=mgb(a-x)^4$ es el voltaje de equilibrio. La fricción estática se manifiesta así como una banda muerta de voltaje centrada en $u_e$, con una anchura relativa de $\pm F_s/(mg)=\pm14{,}5$\,\%. En $x_1=-3$~cm, donde $u_e=2{,}393$~V, la banda va de $2{,}047$ a $2{,}739$~V: mientras el voltaje se mantenga dentro de ese intervalo de $0{,}69$~V, el imán no se mueve. Para despegarlo, el controlador tiene que llevar el voltaje hasta uno de los bordes, es decir, cambiarlo al menos $u_e F_s/(mg)=0{,}346$~V respecto al equilibrio.
+
+%-----------------------------------------------------------------------------
+\subsubsection{Anatomía de un ciclo}
+
+La figura~\ref{fig:anatomia} muestra tres segundos del estado estacionario con el PII. Cada ciclo consta de cuatro fases que se repiten de forma casi idéntica:
+
+\begin{enumerate}
+  \item \textbf{Atascamiento.} El levitante queda detenido a un lado de la referencia, con un error de unos $0{,}016$~cm. La velocidad es nula y el error es constante, pero no nulo, de modo que la acción integral sigue modificando el voltaje: en la gráfica inferior se observa una rampa que se aleja de $u_e$.
+  \item \textbf{Ruptura.} Cuando el voltaje alcanza el borde de la banda~\eqref{eq:banda_voltaje}, la fuerza neta supera $F_s$ y el levitante se despega. En promedio, el voltaje cambia $0{,}34$~V durante cada atascamiento, prácticamente la mitad de la anchura de la banda.
+  \item \textbf{Deslizamiento.} Una vez en movimiento, la fricción pasa de estática a viscosa y desaparece de golpe la fuerza que equilibraba al imán. La fuerza en exceso lo acelera hacia la referencia, y el controlador no puede retirar instantáneamente el voltaje que acumuló durante el atascamiento: el levitante cruza la referencia y recorre unos $0{,}032$~cm.
+  \item \textbf{Nuevo atascamiento.} Cuando la velocidad vuelve a anularse, el imán queda detenido del otro lado de la referencia y el proceso se repite en sentido contrario.
+\end{enumerate}
+
+Cada ciclo completo tiene dos atascamientos y dura en promedio $0{,}98$~s con el PII y $0{,}74$~s con el PI. La amplitud pico a pico ($0{,}033$ y $0{,}031$~cm, respectivamente) coincide con la distancia recorrida en cada deslizamiento.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/ciclo_results/tikz/anatomia}
+    \caption[Anatomía del ciclo límite]{Tres segundos del ciclo límite con el PII en $x_1=-3$~cm. De arriba abajo: posición, velocidad y voltaje. Las líneas verdes discontinuas son los bordes de la banda~\eqref{eq:banda_voltaje}: el levitante solo se despega cuando el voltaje llega a uno de ellos.}
+    \label{fig:anatomia}
+\end{figure}
+
+%-----------------------------------------------------------------------------
+\subsubsection{La acción integral es la causa del ciclo}
+
+El mecanismo anterior depende de que el voltaje siga cambiando mientras el levitante está detenido. Un controlador sin acción integral no tiene esa propiedad: su salida depende solo del error actual y de su derivada, y ambos permanecen constantes durante el atascamiento. Para comprobarlo, se suprimieron del PII los dos integradores y los dos ceros de baja frecuencia que los acompañan, lo que deja el controlador PD
+\[
+C_{PD}(s) = \frac{152.43\,(s+17.31)}{s+301.1},
+\]
+que estabiliza el lazo en todo el intervalo de operación. Como un PD no puede generar por sí mismo el voltaje de equilibrio, se le sumó la prealimentación $u_e(r)$ correspondiente a la referencia.
+
+La figura~\ref{fig:pd_pi_pii} compara los tres controladores. Con el PD, el levitante llega a la nueva referencia, se atasca y permanece inmóvil: no hay ciclo límite. A cambio, el error final no tiene por qué ser nulo. La ganancia estática del PD, $8{,}76$~V/cm, equivale a una rigidez de $506{,}5$~kg\,cm/s$^2$ por centímetro de error, de modo que el levitante puede quedar detenido en cualquier punto donde el error sea menor que $F_s/506{,}5 = 0{,}039$~cm. En esta simulación se detuvo a $0{,}002$~cm de la referencia.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/ciclo_results/tikz/pd_pi_pii}
+    \caption[PD, PI y PII con atascamiento-deslizamiento]{Escalón de $-2$ a $-3$~cm con el PD con prealimentación, el PI y el PII. Abajo, detalle de 15 a 25~s: el PD queda en reposo y los controladores con acción integral oscilan alrededor de la referencia.}
+    \label{fig:pd_pi_pii}
+\end{figure}
+
+Este es el dilema clásico del control con fricción estática, conocido en la literatura como \emph{hunting} \cite{olsson}. Sin acción integral, el lazo se detiene con un error que depende de dónde quedó atascado y de qué tan exacto sea el voltaje de equilibrio que se suministra. Con acción integral, el error medio se anula aunque el modelo no sea exacto, pero el lazo nunca se detiene: el integrador sigue acumulando el error residual hasta forzar una nueva ruptura. El control conmutado de Alcántara et al.\ \cite{alcantara} aborda precisamente este dilema, desactivando la acción integral cuando el error es pequeño.
+
+%-----------------------------------------------------------------------------
+\subsubsection{Duración del atascamiento}
+
+Si el error con el que el levitante se atasca es $e_0$, la duración del atascamiento es el tiempo que tarda la acción integral en cambiar el voltaje los $0{,}346$~V necesarios para la ruptura. A bajas frecuencias, el PI se comporta como $K_i/s$ con $K_i=86{,}2$~V/(cm\,s), y el PII como $K_{ii}/s^2 + K_i/s$ con $K_{ii}=79{,}5$~V/(cm\,s$^2$) y $K_i=63{,}4$~V/(cm\,s). Con el error constante, el cambio de voltaje durante el atascamiento es
+\begin{equation}
+\Delta u_{PI}(t) = K_i e_0\, t, \qquad
+\Delta u_{PII}(t) = K_i e_0\, t + \frac{K_{ii} e_0}{2}\, t^2 .
+\label{eq:rampa_atasco}
+\end{equation}
+
+Para el PI, con $e_0=0{,}0151$~cm, el voltaje crece a $K_i e_0 = 1{,}30$~V/s y alcanza el borde de la banda, que en promedio exige un cambio de $0{,}328$~V, en $0{,}328/1{,}30=0{,}25$~s, en acuerdo con la duración media medida de $0{,}26$~s. Para el PII, la figura~\ref{fig:atasco} muestra que el voltaje sigue la parábola de la ecuación~\eqref{eq:rampa_atasco}: la curvatura medida coincide con $K_{ii}e_0$ dentro de un 10\,\%. Sin embargo, el término cuadrático solo domina sobre el lineal cuando $t > 2K_i/K_{ii} = 1{,}6$~s, y los atascamientos duran unos $0{,}35$~s. En ese intervalo, la segunda integración aporta aproximadamente una quinta parte del cambio de voltaje, y el término lineal del PII es más lento que el del PI porque su $K_i$ es menor (63 frente a 86~V/(cm\,s)). Además, la pendiente inicial medida es un 20 a 25\,\% menor que $K_i e_0$, lo que indica que el estado del controlador al inicio de cada atascamiento conserva parte de la dinámica del deslizamiento previo. El resultado neto es que el PII tarda más que el PI en despegar el imán.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/ciclo_results/tikz/atasco}
+    \caption[Voltaje durante el atascamiento]{Cambio de voltaje durante cada atascamiento, alineado al instante en que comienza y con el signo del error. Las curvas discontinuas son la predicción~\eqref{eq:rampa_atasco} con el error medio de atascamiento. La ruptura ocurre al alcanzar $u_eF_s/(mg)$.}
+    \label{fig:atasco}
+\end{figure}
+
+%-----------------------------------------------------------------------------
+\subsubsection{Amplitud del ciclo}
+
+La amplitud del ciclo la determina la fase de deslizamiento. En el instante de la ruptura, el voltaje está en el borde de la banda, de modo que la fuerza neta sobre el imán vale aproximadamente $F_s$ y deja de estar compensada por la fricción. El imán se desplaza hasta que el controlador, a través de su respuesta a la posición, retira esa fuerza en exceso. Cuanto más rígido es el lazo, es decir, cuanto mayor es la ganancia que traduce el error de posición en voltaje, menor es el desplazamiento necesario. Este razonamiento predice que la amplitud del ciclo es aproximadamente inversamente proporcional a la ganancia del controlador, e independiente del número de integradores.
+
+La figura~\ref{fig:ganancia} lo confirma con las familias de controladores de la figura~\ref{fig:r15_familias}, manteniendo fijos los ceros de baja frecuencia ($\alpha=1$) y variando solo el factor de ganancia $k_K$. La amplitud decrece aproximadamente como $k_K^{-1{,}2}$ en la familia PI y como $k_K^{-1{,}1}$ en la familia PII. Con la misma ganancia, ambas estructuras producen prácticamente el mismo ciclo límite: $0{,}072$ frente a $0{,}074$~cm con $k_K=0{,}5$, y $0{,}031$ frente a $0{,}034$~cm con $k_K=1$. La ganancia fija la amplitud del ciclo; la segunda integración no la modifica.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/ciclo_results/tikz/ganancia}
+    \caption[Ciclo límite contra la ganancia]{Amplitud del ciclo límite contra el factor de ganancia $k_K$, con los ceros de baja frecuencia fijos. Ganancias mayores saturan el actuador.}
+    \label{fig:ganancia}
+\end{figure}
+
+%-----------------------------------------------------------------------------
+\subsubsection{Dónde sí ayuda la segunda integración}
+
+La ventaja teórica del PII aparece al seguir una rampa. El lazo con el PI es de tipo uno: ante una rampa de pendiente $\dot r$ conserva un error estacionario $\dot r/K_v$, donde $K_v=\lim_{s\to0} sC(s)G(s)=91{,}6$~s$^{-1}$ en $x_1^*=-3$~cm. El lazo con el PII es de tipo dos y anula ese error. Con la pendiente de la referencia trapezoidal ($0{,}004$~cm/s), el error del PI sería de solo $4\times10^{-5}$~cm. Con una rampa doce veces más pronunciada ($0{,}05$~cm/s), la predicción es $5{,}5\times10^{-4}$~cm, y la simulación da $5{,}6\times10^{-4}$~cm con el PI frente a $1{,}3\times10^{-4}$~cm con el PII. La segunda integración cumple su función, pero el ciclo límite impone en ambos casos un error eficaz de unos $7{,}6\times10^{-3}$~cm, más de diez veces mayor. En este sistema, la ventaja del PII solo sería apreciable con referencias de pendiente mucho mayor o con una fricción estática mucho menor.
+
+%-----------------------------------------------------------------------------
+\subsubsection{Síntesis}
+
+\begin{itemize}
+  \item La fricción estática equivale a una banda muerta de voltaje de $\pm14{,}5$\,\% alrededor de $u_e$; el imán solo se despega cuando el voltaje alcanza uno de sus bordes.
+  \item La acción integral es la causa del ciclo límite: sin ella el levitante se detiene con un error acotado por $F_s$ y la rigidez del lazo; con ella el error medio se anula, pero el integrador provoca rupturas sucesivas.
+  \item La duración de cada atascamiento depende del término integral simple, $K_i e_0$. El término doble del PII solo dominaría en atascamientos de más de $1{,}6$~s, y los observados duran unos $0{,}35$~s.
+  \item La amplitud del ciclo es aproximadamente inversamente proporcional a la ganancia del controlador y no depende del número de integradores.
+  \item La segunda integración elimina el error en rampa, pero ese error es más de diez veces menor que el que impone el ciclo límite, incluso con pendientes doce veces mayores que las de las pruebas de seguimiento.
+\end{itemize}
+
+\FloatBarrier

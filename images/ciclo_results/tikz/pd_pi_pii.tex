@@ -1,0 +1,17 @@
+\input{images/ciclo_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[ciclo, name=p1, height=5cm, xmin=0, xmax=40, ymin=-3.3, ymax=-1.9, xlabel={},
+    ylabel={posición [\si{cm}]}, legend style={at={(0.99,0.97)}, anchor=north east}, legend cell align=left, legend columns=3]
+  \addplot[ver, line width=1.1pt] table[x=t, y=x_pd] {images/ciclo_results/tikz/pd_pi_pii.csv}; \addlegendentry{PD + $u_e(r)$}
+  \addplot[ctl2, line width=0.7pt] table[x=t, y=x_pi] {images/ciclo_results/tikz/pd_pi_pii.csv}; \addlegendentry{PI}
+  \addplot[tray, line width=0.7pt] table[x=t, y=x_pii] {images/ciclo_results/tikz/pd_pi_pii.csv}; \addlegendentry{PII}
+  \fill[ctl2, opacity=0.12] (axis cs:15,-3.3) rectangle (axis cs:25,-1.9);
+\end{axis}
+\begin{axis}[ciclo, at={(p1.south west)}, anchor=north west, yshift=-0.45cm, height=4.2cm, xmin=15, xmax=25,
+    ymin=-3.025, ymax=-2.975, xlabel={tiempo [\si{s}]}, ylabel={detalle [\si{cm}]}, y tick label style={/pgf/number format/precision=2}]
+  \addplot[refc, densely dashed] coordinates {(15,-3) (25,-3)};
+  \addplot[ctl2, line width=0.7pt] table[x=t, y=x_pi] {images/ciclo_results/tikz/pd_pi_pii.csv};
+  \addplot[tray, line width=0.7pt] table[x=t, y=x_pii] {images/ciclo_results/tikz/pd_pi_pii.csv};
+  \addplot[ver, line width=1.4pt] table[x=t, y=x_pd] {images/ciclo_results/tikz/pd_pi_pii.csv};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\input{images/p8_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[pocho, name=principal, xmin=0, xmax=40, ymin=-3.35, ymax=-1.85, xlabel={},
+    ylabel={posición [\si{cm}]}, legend style={at={(0.99,0.97)}, anchor=north east}, legend cell align=left]
+  \addplot[ctl2, line width=0.7pt] table[x=t, y=x_nl] {images/p8_results/tikz/lineal_ad.csv}; \addlegendentry{no lineal con AD}
+  \addplot[tray, line width=1pt] table[x=t, y=x_lin] {images/p8_results/tikz/lineal_ad.csv}; \addlegendentry{lineal con AD}
+\end{axis}
+\begin{axis}[pocho, at={(principal.south west)}, anchor=north west, yshift=-0.45cm, height=4.4cm,
+    xmin=0, xmax=40, ymin=-0.2, ymax=3.8, xlabel={tiempo [\si{s}]}, ylabel={$u$ [\si{V}]}]
+  \addplot[ctl2, line width=0.7pt] table[x=t, y=u_nl] {images/p8_results/tikz/lineal_ad.csv};
+  \addplot[tray, line width=0.7pt] table[x=t, y=u_lin] {images/p8_results/tikz/lineal_ad.csv};
+\end{axis}
+\end{tikzpicture}

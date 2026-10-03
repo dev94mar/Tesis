@@ -1,0 +1,71 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Contenido}{i}{chapter*.1}%
+\contentsline {chapter}{Índice de Tablas}{iii}{chapter*.2}%
+\contentsline {chapter}{Índice de Figuras}{iv}{chapter*.3}%
+\contentsline {chapter}{Resumen}{1}{chapter*.4}%
+\contentsline {chapter}{Abstract}{2}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexto del problema}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivación}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Revisión bibliográfica}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Control de sistemas de levitación magnética}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Fricción y atascamiento-deslizamiento}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Zona muerta en lazos de control}{6}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Lo que falta por resolver}{7}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Formulación del problema}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Objetivos y metodología}{8}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Contribuciones}{8}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Organización de la tesis}{9}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Fundamentos teóricos}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Linealización y punto silla}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Tipo del sistema y error en estado estacionario}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Márgenes de estabilidad y criterio de Nyquist con plantas inestables}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Fricción, método de Karnopp y atascamiento-deslizamiento}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Zona muerta}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Ciclos límite}{13}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Modelo del levitador ECP-730}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ecuación de movimiento}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Fuerza electromagnética $f_{\text {fld}}$}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fricción con atascamiento-deslizamiento}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Zona muerta centrada en el voltaje de equilibrio}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Parámetros del modelo}{19}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Modelo linealizado}{20}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Comportamiento en lazo abierto}{21}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Análisis estático del actuador}{22}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Diseño del controlador}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Planta linealizada y objetivos del diseño}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}El controlador con doble acción integral}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Estructura}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Márgenes de estabilidad}{24}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Respuesta al escalón}{24}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Robustez en el intervalo de operación}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}El controlador PI de comparación}{26}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Desempeño en simulación}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Intervalo de operación}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Simulación no lineal sin atascamiento-deslizamiento}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Regulación con atascamiento-deslizamiento}{30}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Causa del ciclo límite: modelo lineal con atascamiento-deslizamiento}{31}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Seguimiento}{32}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Seguimiento de referencia senoidal}{32}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Seguimiento de referencia trapezoidal}{35}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Configuración estable}{38}{section.5.6}%
+\contentsline {chapter}{\numberline {6}El papel de la doble acción integral}{40}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Comparación directa: PI frente a PII}{40}{section.6.1}%
+\contentsline {section}{\numberline {6.2}¿Es un efecto de la sintonización?}{41}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Análisis del ciclo límite}{42}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}La fricción estática vista desde el voltaje}{42}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Anatomía de un ciclo}{42}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}La acción integral es la causa del ciclo}{43}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Duración del atascamiento}{44}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Amplitud del ciclo}{45}{subsection.6.3.5}%
+\contentsline {section}{\numberline {6.4}Dónde sí ayuda la segunda integración}{46}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Síntesis}{46}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{48}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{48}{section.7.1}%
+\contentsline {paragraph}{La hipótesis.}{48}{section.7.1}%
+\contentsline {paragraph}{Hallazgos adicionales.}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Relación con los antecedentes}{49}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Trabajo futuro}{49}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Implementación de las simulaciones}{54}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Verificación del simulador}{56}{appendix.Alph2}%
+\contentsfinish 

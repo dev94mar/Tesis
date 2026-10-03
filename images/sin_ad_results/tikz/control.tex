@@ -1,0 +1,12 @@
+\input{images/sin_ad_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[sinad, ylabel={señal de control [\si{V}]}, ymin=-0.2, ymax=3.8,
+             legend style={at={(0.99,0.03)}, anchor=south east}, legend cell align=left, legend columns=3]
+  \addplot[conAD] table[x=t, y=u_ad] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{con AD}
+  \addplot[sinAD] table[x=t, y=u] {images/sin_ad_results/tikz/comparacion.csv};
+  \addlegendentry{sin AD}
+  \addplot[red!70!black, densely dotted, line width=0.8pt] coordinates {(0,3.5) (40,3.5)};
+  \addlegendentry{$u_{\max}$}
+\end{axis}
+\end{tikzpicture}

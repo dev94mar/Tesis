@@ -1,0 +1,18 @@
+% Estilo común de las figuras de seguimiento (pgfplots).
+\pgfplotsset{
+  seguimiento/.style={
+    width=0.92\textwidth, height=5.4cm,
+    xlabel={tiempo [\si{s}]},
+    grid=major, grid style={gray!25},
+    tick label style={font=\small}, label style={font=\small}, legend style={font=\small},
+    /pgf/number format/use comma,
+    scaled ticks=false,
+    y tick label style={/pgf/number format/fixed},
+    x tick label style={/pgf/number format/fixed, /pgf/number format/1000 sep={}},
+    table/col sep=comma,
+    every axis plot/.append style={line join=round},
+  },
+}
+\definecolor{tray}{RGB}{31,94,166}
+\definecolor{refc}{RGB}{40,40,40}
+\definecolor{ctl2}{RGB}{196,96,40}

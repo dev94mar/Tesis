@@ -37,8 +37,8 @@
 
 % Emblemas copiados del kit a images/titlepage/ para que la tesis no
 % dependa de rutas fuera del proyecto.
-\newcommand{\assetPie}{titlepage/logo_footer.eps}
-\newcommand{\assetPortada}{titlepage/logo_uam_reconstruido.eps}
+\newcommand{\assetPie}{titlepage/logo_footer.png}
+\newcommand{\assetPortada}{titlepage/logo_uam_reconstruido.pdf}
 
 %══════════════════════════════════════════════════════
 % Escala tipográfica (LetterSpace es porcentaje del em: 8 = 0.08 em)

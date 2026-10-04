@@ -240,6 +240,118 @@ La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal
 
 \FloatBarrier
 
+\subsection{Seguimiento de referencia diente de sierra}
+
+La referencia en diente de sierra rampa de forma continua de $-2$ a $-3$~cm, con la misma pendiente que las rampas de la prueba trapezoidal, $\dot r=-0{,}004$~cm/s, pero sin los segmentos planos que allí separaban una rampa de la siguiente: al llegar a $-3$~cm, la referencia reinicia de golpe a $-2$~cm,
+\begin{equation}
+r(t) = -2 - \frac{1}{250}\left(t - 250\left\lfloor \frac{t}{250}\right\rfloor\right) ,
+\label{eq:ref_diente}
+\end{equation}
+con periodo de $250$~s. A diferencia de la rampa trapezoidal, que siempre parte del reposo en un segmento plano, el reinicio de la referencia~\eqref{eq:ref_diente} es instantáneo: salta $1$~cm mientras el imán permanece, por inercia y por fricción, cerca de donde estaba. Se simularon diez periodos ($2500$~s).
+
+En cada reinicio, el error salta a prácticamente $1$~cm —el salto mismo de la referencia, no un error de seguimiento en el sentido habitual del resto de la prueba— y el controlador debe primero romper la fricción estática y después recorrer buena parte del intervalo de operación para alcanzar la nueva rampa. Este transitorio es más exigente que cualquiera de las pruebas anteriores: el voltaje alcanza brevemente la cota superior de $3{,}5$~V y la posición rebasa, también brevemente, los límites habituales del intervalo de operación.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/diente_posicion}
+    \caption[Seguimiento diente de sierra: posición]{Seguimiento de la referencia diente de sierra. Arriba, posición y referencia durante los $2500$~s simulados; abajo, detalle de 240 a 260~s, que incluye uno de los reinicios instantáneos de la referencia.}
+    \label{fig:diente_pos}
+\end{figure}
+
+La figura~\ref{fig:diente_pos} muestra que, fuera de los reinicios, el imán sigue la rampa con el mismo patrón de atascamiento-deslizamiento que en la prueba trapezoidal. El detalle muestra el reinicio: la posición tarda una fracción de segundo en alcanzar la nueva referencia y la rebasa brevemente, hasta $-1{,}70$~cm, antes de asentarse en el seguimiento de la rampa siguiente.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/diente_velocidad}
+    \caption[Seguimiento diente de sierra: velocidad]{Velocidad del imán durante el seguimiento diente de sierra. El detalle muestra el pulso de velocidad, varias veces mayor que los de deslizamiento ordinario, que produce cada reinicio instantáneo de la referencia.}
+    \label{fig:diente_vel}
+\end{figure}
+
+La figura~\ref{fig:diente_vel} muestra que, fuera de los reinicios, la velocidad alterna pulsos de deslizamiento con tramos de reposo igual que en las pruebas anteriores. El imán permaneció atascado el $77{,}9$\,\% del tiempo, con $4236$ rupturas en total ($101{,}7$ por minuto). En cada reinicio aparece, además, un pulso de velocidad considerablemente mayor, necesario para recorrer en poco tiempo la distancia hasta la nueva rampa.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/diente_error}
+    \caption[Seguimiento diente de sierra: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia diente de sierra. Los picos de aproximadamente $1$~cm, uno por periodo, corresponden al salto instantáneo de la referencia y no a un error de seguimiento en régimen.}
+    \label{fig:diente_error}
+\end{figure}
+
+La figura~\ref{fig:diente_error} muestra que el error eficaz, $0{,}0177$~cm, es comparable al de las pruebas senoidal y trapezoidal, pero el error máximo, $1{,}012$~cm, lo domina por completo el salto de la referencia en cada reinicio. Fuera de esos instantes, el error se mantiene dentro de la misma banda de ciclo límite que las demás pruebas.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/diente_control}
+    \caption[Seguimiento diente de sierra: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento diente de sierra. Abajo, detalle de 240 a 260~s.}
+    \label{fig:diente_ctrl}
+\end{figure}
+
+La figura~\ref{fig:diente_ctrl} muestra que el voltaje, entre $0{,}69$ y $3{,}5$~V, se mantiene dentro del rango admisible durante casi toda la prueba y solo alcanza la cota superior durante una fracción mínima del tiempo ($0{,}017$\,\%), en el instante de cada reinicio, cuando el controlador exige el máximo esfuerzo para perseguir el salto de la referencia.
+
+\FloatBarrier
+
+\subsection{Seguimiento de referencia pulso cuadrado}
+
+La referencia de pulso cuadrado alterna entre $-2$ y $-3$~cm con la misma duración de los segmentos planos de la prueba trapezoidal, $250$~s cada uno, pero sin las rampas que allí conectaban un plano con el siguiente: la transición es instantánea,
+\begin{equation}
+r(t) =
+\begin{cases}
+-2, & (t \bmod 500) < 250, \\
+-3, & (t \bmod 500) \ge 250,
+\end{cases}
+\label{eq:ref_pulso}
+\end{equation}
+con periodo de $500$~s. La referencia~\eqref{eq:ref_pulso} equivale a repetir periódicamente el escalón de $-2$ a $-3$~cm de la sección~\ref{sec:regulacion} y su inverso. Los $250$~s de cada plano son muy superiores al tiempo de entrada a la banda de $\pm5$\,\% que allí se midió (del orden de $0{,}3$~s), de modo que el imán alcanza el ciclo límite de régimen entre un escalón y el siguiente; la prueba no deja, por tanto, menos tiempo de asentamiento que la regulación, pero sí repite el escalón diez veces más seguido que cualquiera de las pruebas anteriores. Se simularon cinco periodos ($2500$~s).
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/pulso_posicion}
+    \caption[Seguimiento pulso cuadrado: posición]{Seguimiento de la referencia de pulso cuadrado. Arriba, posición y referencia durante los $2500$~s simulados; abajo, detalle de 240 a 270~s, que incluye una transición completa.}
+    \label{fig:pulso_pos}
+\end{figure}
+
+La figura~\ref{fig:pulso_pos} muestra que el imán alcanza cada nivel y permanece ahí, con el mismo ciclo límite de las pruebas anteriores, durante la mayor parte de cada plano. El detalle muestra que, al igual que con la referencia diente de sierra, la posición rebasa brevemente el nivel de destino antes de asentarse: hasta $-3{,}25$~cm al bajar y hasta $-1{,}71$~cm al subir, sobrepasos mayores que los de la prueba diente de sierra porque aquí el salto de referencia es, en ambos sentidos, el intervalo completo de $1$~cm.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/pulso_velocidad}
+    \caption[Seguimiento pulso cuadrado: velocidad]{Velocidad del imán durante el seguimiento de pulso cuadrado. El detalle muestra el pulso de velocidad de cada transición, seguido del régimen de atascamiento-deslizamiento habitual en el nuevo plano.}
+    \label{fig:pulso_vel}
+\end{figure}
+
+La figura~\ref{fig:pulso_vel} muestra pulsos de deslizamiento de mayor amplitud en cada transición, seguidos del mismo patrón de pulsos cortos y tramos de reposo que en las demás pruebas. El imán permaneció atascado el $77{,}3$\,\% del tiempo, con $4708$ rupturas en total ($113{,}0$ por minuto), la cifra más alta de las cuatro pruebas de seguimiento porque las diez transiciones instantáneas se suman a las rupturas propias del ciclo límite en cada plano.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/pulso_error}
+    \caption[Seguimiento pulso cuadrado: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia de pulso cuadrado. Los picos de aproximadamente $1$~cm corresponden a las diez transiciones instantáneas de la referencia.}
+    \label{fig:pulso_error}
+\end{figure}
+
+La figura~\ref{fig:pulso_error} muestra un error eficaz de $0{,}0174$~cm, del mismo orden que en las otras tres pruebas de seguimiento, con un error máximo de $1{,}014$~cm que, igual que en la prueba diente de sierra, corresponde al salto de la referencia y no a un error de seguimiento en régimen.
+
+\FloatBarrier
+
+\begin{figure}[ht]
+    \centering
+    \input{images/seguimiento_results/tikz/pulso_control}
+    \caption[Seguimiento pulso cuadrado: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento de pulso cuadrado. Abajo, detalle de 240 a 270~s.}
+    \label{fig:pulso_ctrl}
+\end{figure}
+
+La figura~\ref{fig:pulso_ctrl} muestra que el voltaje alcanza, en cada transición, las dos cotas del actuador: baja hasta $0$~V al bajar de nivel y sube hasta $3{,}5$~V al subir, aunque en ambos casos durante una fracción mínima del tiempo total ($0{,}0075$\,\%). Es la única de las cuatro pruebas de seguimiento en la que el voltaje llega a saturar por abajo, consistente con el escalón descendente de la sección~\ref{sec:regulacion}.
+
+\FloatBarrier
+
 % Generado a partir de calculus/Final_Bien/evidencia_P8.m (simulador corregido).
 \section{Configuración estable}
 

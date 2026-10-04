@@ -1,8 +1,12 @@
 % =========================================================
 % Seguimiento (P5): PII de la tesis + zona muerta + Karnopp
 % Simulador corregido (P1), u en [0, 3.5] V, rango de operación -3 a -2 cm.
-%   Senoidal:    r(t) = -2.5 + 0.5 sin(2*pi*0.001 t), 2000 s (2 periodos)
-%   Trapezoidal: planos en -2 y -3 cm, rampas de 250 s, periodo 1250 s, 2500 s
+%   Senoidal:      r(t) = -2.5 + 0.5 sin(2*pi*0.001 t), 2000 s (2 periodos)
+%   Trapezoidal:   planos en -2 y -3 cm, rampas de 250 s, periodo 1250 s, 2500 s
+%   Diente_sierra: rampa de -2 a -3 cm en 250 s (misma pendiente que la trapezoidal),
+%                  reinicio instantáneo a -2 cm; periodo 250 s, 2500 s (10 periodos)
+%   Pulso_cuadrado: escalón entre -2 y -3 cm, planos de 250 s, transición instantánea;
+%                  periodo 500 s, 2500 s (5 periodos)
 % Exporta CSV para las figuras TikZ/pgfplots de la tesis.
 % =========================================================
 clear; close all; clc
@@ -17,8 +21,10 @@ S = load(fullfile(aqui, 'PII_lic.mat'));
 [A, B, C, D] = zp2ss(S.C.Z{:}, S.C.P{:}, S.C.K);
 
 casos = { ...
-    struct('nombre', 'sen',  'Tfin', 2000, 'ref', @ref_senoidal,    'zoom', [244 256]), ...
-    struct('nombre', 'trap', 'Tfin', 2500, 'ref', @ref_trapezoidal, 'zoom', [246 266])};
+    struct('nombre', 'sen',   'Tfin', 2000, 'ref', @ref_senoidal,    'zoom', [244 256]), ...
+    struct('nombre', 'trap',  'Tfin', 2500, 'ref', @ref_trapezoidal, 'zoom', [246 266]), ...
+    struct('nombre', 'diente', 'Tfin', 2500, 'ref', @ref_diente,     'zoom', [240 260]), ...
+    struct('nombre', 'pulso',  'Tfin', 2500, 'ref', @ref_pulso,      'zoom', [240 270])};
 
 % La caché se versiona con una firma: controlador, duración de cada caso y huellas
 % SHA-256 del simulador de la planta y de este script. Un MAT sin firma o con otra firma
@@ -75,6 +81,20 @@ elseif tm < 750,  r = -3;
 elseif tm < 1000, r = -3 + (tm - 750)/250;
 else,             r = -2;
 end
+end
+
+function r = ref_diente(t)
+% Rampa de -2 a -3 cm en 250 s (misma pendiente que la rampa trapezoidal,
+% -0.004 cm/s) y reinicio instantáneo a -2 cm; periodo 250 s.
+tm = mod(t, 250);
+r = -2 - tm/250;
+end
+
+function r = ref_pulso(t)
+% Escalón entre -2 y -3 cm, planos de 250 s (misma duración que los planos
+% trapezoidales) y transición instantánea; periodo 500 s.
+tm = mod(t, 500);
+if tm < 250, r = -2; else, r = -3; end
 end
 
 % ---------------------------------------------------------

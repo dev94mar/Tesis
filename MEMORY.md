@@ -134,6 +134,14 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Nuevas pruebas de seguimiento: diente de sierra y pulso cuadrado (2026-10-04)
+
+A petición del usuario se agregaron dos referencias de seguimiento nuevas al capítulo 5 (sección 5.5), con el mismo simulador, controlador (`PII_lic.mat`) y metodología que las ya existentes (senoidal, trapezoidal): `seguimiento_P5.m` se extendió con `ref_diente` (rampa −2→−3 cm en 250 s con reinicio instantáneo, periodo 250 s) y `ref_pulso` (escalón −2/−3 cm con planos de 250 s y transición instantánea, periodo 500 s), ambas con la misma pendiente/duración que la prueba trapezoidal pero sin sus rampas de transición. Al editar el script su propia huella SHA-256 invalidó la caché completa, así que los 4 casos (incluidos senoidal y trapezoidal) se resimularon; los resultados de esos dos coinciden con los valores ya publicados en la tesis.
+
+Resultados: diente de sierra, error eficaz 0,0177 cm, error máximo 1,012 cm (el salto mismo de la referencia, no error de seguimiento), 77,9 % atascado, 4236 rupturas, saturación superior brevísima (0,017 % del tiempo), sobrepaso hasta −1,70 cm. Pulso cuadrado: error eficaz 0,0174 cm, error máximo 1,014 cm, 77,3 % atascado, 4708 rupturas (la cifra más alta de las cuatro pruebas), satura por arriba y por abajo brevemente (0,0075 %), sobrepaso hasta −3,25/−1,71 cm. Ambas pruebas son, con diferencia, las más exigentes para el actuador de las cuatro de seguimiento, por los reinicios/transiciones instantáneos.
+
+Se agregaron 8 figuras TikZ nuevas (`images/seguimiento_results/tikz/diente_*.tex`, `pulso_*.tex`) y dos subsecciones nuevas en `05_desempeno.tex` (5.5.3 y 5.5.4), con las ecuaciones de referencia numeradas y la prosa siguiendo las reglas de escritura matemática. Documento compila sin errores, 73 páginas (antes 66).
+
 ## Derivación de primeros principios y validación analítica (2026-10-04)
 
 Informe: [primeros_principios.md](validacion/primeros_principios.md). Scripts: `icr/calculus/Final_Bien/primeros_principios/` (Mathematica/`wolframscript`).

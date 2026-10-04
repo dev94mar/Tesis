@@ -1,0 +1,18 @@
+\input{images/seguimiento_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[seguimiento, name=principal, xmin=0, xmax=2500, ymin=-0.2, ymax=3.8, xlabel={},
+             ylabel={señal de control [\si{V}]},
+             legend style={at={(0.99,0.03)}, anchor=south east}, legend cell align=left, legend columns=3]
+  \addplot[ctl2!45, line width=1.2pt] table[x=t, y=u_antes] {images/seguimiento_results/tikz/diente_control.csv};
+  \addlegendentry{antes de la ZM}
+  \addplot[tray, line width=0.5pt] table[x=t, y=u_desp] {images/seguimiento_results/tikz/diente_control.csv};
+  \addlegendentry{después de la ZM}
+  \addplot[red!70!black, densely dotted, line width=0.8pt] coordinates {(0,3.5) (2500,3.5)};
+  \addlegendentry{$u_{\max}$}
+  \fill[ctl2, opacity=0.15] (axis cs:240,-0.2) rectangle (axis cs:260,3.8);
+\end{axis}
+\begin{axis}[seguimiento, at={(principal.south west)}, anchor=north west, yshift=-0.45cm,
+             height=4.2cm, xmin=240, xmax=260, ylabel={detalle [\si{V}]}, axis background/.style={fill=ctl2!4}]
+  \addplot[tray, line width=0.8pt] table[x=t, y=u] {images/seguimiento_results/tikz/diente_detalle.csv};
+\end{axis}
+\end{tikzpicture}

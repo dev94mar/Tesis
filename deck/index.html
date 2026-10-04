@@ -1,3 +1,6 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Control PII ECP-730</title>
 <style>
 /* ===================================================================
@@ -76,6 +79,9 @@ h1,h2,h3{font-family:var(--font-disp); text-wrap:balance; margin:0; letter-spaci
 @media (max-width:720px){
   .nav{right:auto; left:50%; top:auto; bottom:calc(14px + env(safe-area-inset-bottom,0px)); transform:translateX(-50%); flex-direction:row;
        background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:8px 10px;}
+  /* Deja espacio para que la barra de puntos fija no tape el final del
+     contenido en secciones mas altas que la pantalla (p.ej. simulacion). */
+  .slide{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px));}
 }
 
 /* --- topbar --- */

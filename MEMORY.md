@@ -134,6 +134,16 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Derivación de primeros principios y validación analítica (2026-10-04)
+
+Informe: [primeros_principios.md](validacion/primeros_principios.md). Scripts: `icr/calculus/Final_Bien/primeros_principios/` (Mathematica/`wolframscript`).
+
+Se derivó la fuerza electromagnética del ECP-730 desde primeros principios (modelo dipolo-dipolo de campo lejano: bobina e imán como dipolos, bobina resistiva con `i=u/R`), reproduciendo **exactamente** la forma `u/(a-x)⁴` del modelo del fabricante que la tesis adopta sin derivar. Se explicó además por qué los cinco modelos de la literatura citados en el capítulo 3 usan `i²/entrehierro²`: corresponden al régimen de reluctancia cercana (electroimán-armadura), un régimen físico distinto, no un desacuerdo experimental. Equilibrio, matriz linealizada y función de transferencia derivados de esta fuerza coinciden exactamente (dentro del redondeo) con los del capítulo 3/4.
+
+Con esa base, se validó analíticamente (sin simular) la hipótesis PII/PI: extrayendo `Ki`/`Kii` directamente del desarrollo de Laurent de las funciones de transferencia reales (coinciden con los valores del capítulo 6), se confirmó que el PII tarda analíticamente un 14 % más en romper la banda de fricción que el PI con el mismo error de atascamiento, y que una fórmula de rigidez generalizada (ganancia de alta frecuencia `C(∞)` de cualquier controlador propio, no solo del PD ya descartado) predice un ciclo límite 17 % mayor para el PII, consistente en sentido con el 6 % medido. **Conclusión: la derivación analítica confirma, por una vía independiente de toda simulación, que la ventaja/desventaja del PII depende de sus ganancias efectivas, no del número de integradores** — refuerza el hallazgo de la tercera auditoría (barrido conjunto del PI).
+
+Incorporado a la tesis: capítulo 3 (subsección "Justificación de primeros principios", ecs. 3.9–3.13) y capítulo 6 (verificación de Ki/Kii y ecuación de rigidez general 6.4). Compila sin errores, 66 páginas.
+
 ## Próximo paso recomendado
 
 1. Comprometer en git: el capítulo 6 actualizado, el PDF recompilado, el grafo v5, los scripts nuevos de `R15_sintonizacion/` (`barrido_conjunto_PI.m`/`.json`, los de verificación puntual) y los logs de `validacion/barrido_03/`. Incluir también la corrección de metadato de §REG/SIN/TRAP si no se comprometió ya.

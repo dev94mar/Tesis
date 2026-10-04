@@ -73,37 +73,6 @@ u_e(x) = mg\,b\,(a-x)^4 .
 \end{equation}
 El voltaje de equilibrio~\eqref{eq:ue} es el que hace que la fuerza electromagnética compense el peso. Crece con la cuarta potencia de la distancia a la bobina, y la zona muerta del actuador, que se describe en la sección~\ref{sec:zm_modelo}, se centra en él.
 
-\subsection{Justificación de primeros principios}\label{sec:fuerza_primeros_principios}
-
-Los modelos~\eqref{eq:fld_al}--\eqref{eq:fld_zhang} comparten la forma $i^2/\text{entrehierro}^2$, propia de un electroimán cuya armadura ferromagnética está cerca de la cara del polo. La energía almacenada en un circuito magnético con un entrehierro simple, de inductancia $L(x)=\mu_0 N^2 S/[2(a-x)]$, con $N$ vueltas y área de polo $S$, da la fuerza de reluctancia
-\begin{equation}
-f_{\text{rel}} = \frac{1}{2}\,i^2\,\frac{dL}{dx} = \frac{\mu_0 N^2 S\, i^2}{4\,(a-x)^2} ,
-\label{eq:fld_reluctancia}
-\end{equation}
-que reproduce la forma de los modelos de la literatura citados: cuadrática en la corriente $i$ y decreciente con el cuadrado del entrehierro.
-
-El ECP-730, en su configuración atractiva, no acerca una armadura a la cara del polo: el imán permanente se mantiene a una distancia $a$ del orden del tamaño de la propia bobina, no mucho menor que él. En ese régimen conviene aproximar tanto la bobina como el imán por dipolos magnéticos puntuales sobre el mismo eje. El campo axial, lejos de un dipolo de momento $m_{\text{bob}}$, es
-\begin{equation}
-B(z) = \frac{\mu_0}{4\pi}\,\frac{2\,m_{\text{bob}}}{z^3} ,
-\label{eq:campo_dipolo}
-\end{equation}
-con $z$ la distancia sobre el eje. La energía de interacción con un imán de momento $m_{\text{im}}$ alineado es $U=-m_{\text{im}}B(z)$, y la fuerza de atracción resulta
-\begin{equation}
-f_{\text{dip}}(z) = -\frac{dU}{dz} = \frac{3\,\mu_0\, m_{\text{im}}\, m_{\text{bob}}}{2\pi\, z^4} .
-\label{eq:fuerza_dipolo}
-\end{equation}
-A diferencia de la fuerza de reluctancia~\eqref{eq:fld_reluctancia}, la fuerza dipolo-dipolo~\eqref{eq:fuerza_dipolo} decrece con la cuarta potencia de la separación, como el modelo del fabricante. Falta relacionar el momento de la bobina con el voltaje aplicado. Como la bobina es resistiva y su constante de tiempo eléctrica es mucho menor que la mecánica, la corriente sigue al voltaje casi instantáneamente, $i=u/R$, con $R$ la resistencia del embobinado, y su momento es proporcional a la corriente, $m_{\text{bob}}=NSi$. Sustituyendo $i=u/R$ y el entrehierro $z=a-x$ en~\eqref{eq:fuerza_dipolo} se obtiene
-\begin{equation}
-f_{\text{dip}}(u,x) = \frac{3\,\mu_0\, N\, S\, m_{\text{im}}}{2\pi\, R}\;\frac{u}{(a-x)^4} .
-\label{eq:fuerza_dipolo_u}
-\end{equation}
-La fuerza dipolo-dipolo~\eqref{eq:fuerza_dipolo_u} tiene exactamente la forma del modelo del fabricante~\eqref{eq:fld}: ambas son proporcionales al voltaje y decrecen con la cuarta potencia de la distancia. Identificando los coeficientes, el parámetro $b$ de~\eqref{eq:fld} corresponde a
-\begin{equation}
-b = \frac{2\pi R}{3\,\mu_0\, N\, S\, m_{\text{im}}} ,
-\label{eq:b_primeros_principios}
-\end{equation}
-una combinación de la resistencia del embobinado, su geometría y el momento magnético del imán. Ninguno de estos datos lo publica el fabricante, de modo que $b$ se mantiene como el parámetro empírico que Hernández Alcántara et al.~\cite{alcantara} ajustaron experimentalmente; esta derivación no sustituye ese ajuste, pero explica por qué la forma del modelo del fabricante difiere de la de los demás citados en este capítulo: corresponden a regímenes geométricos distintos, reluctancia cercana frente a dipolos lejanos, y no a un desacuerdo experimental entre las fuentes. La aproximación dipolo-dipolo requiere que el entrehierro sea grande frente al tamaño de la bobina y del imán, condición razonable en el intervalo de operación de este trabajo, de $-4$ a $-2$~cm, frente a una separación de referencia $a=7{,}17$~cm. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado}, se verificó de forma independiente en Mathematica (\texttt{icr/calculus/Final\_Bien/primeros\_principios/}).
-
 \section{Fricción con atascamiento-deslizamiento}\label{sec:friccion_modelo}
 
 La sección~\ref{sec:fund_friccion} describió las componentes de la fricción y el método de Karnopp en general. Esta sección precisa cómo se aplican al imán.

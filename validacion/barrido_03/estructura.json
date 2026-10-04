@@ -1,7 +1,7 @@
 {
   "latex": {
     "archivos_activos": 65,
-    "etiquetas": 131,
+    "etiquetas": 136,
     "citas": 43,
     "inputs_faltantes": [],
     "etiquetas_duplicadas": {},
@@ -11,9 +11,9 @@
     "imagenes_faltantes": []
   },
   "grafo": {
-    "nodos": 187,
-    "aristas": 341,
-    "pares_no_dirigidos": 341,
+    "nodos": 188,
+    "aristas": 343,
+    "pares_no_dirigidos": 343,
     "ids_duplicados": [],
     "extremos_inexistentes": [],
     "fuentes_inexistentes": [],
@@ -603,7 +603,6 @@
     "icr/calculus/Final_Bien/planta_prueba/controller.mat": "2319734b8da62d19e6316aaedc4f7f8dfde3e6845d18d3cf50fbd83e077f55b7",
     "icr/calculus/Final_Bien/planta_prueba/planta_prueba.m": "7cf97929c44c688f138c4c05abe1d781c22bec1aa51e87e80280742d9384360c",
     "icr/calculus/Final_Bien/planta_prueba/planta_prueba_refactor.m": "9296ecc82a390f94ff6b557d046f56b3eaae1e3c16dcd46fc8e7bf46e733a1df",
-    "icr/calculus/Final_Bien/primeros_principios/diagrama_lazo.m": "4f9858f2961bec0821a591b01da0a7d8586fe7f8bd27575ccc73b1eb7fb21b03",
     "icr/calculus/Final_Bien/runge_kuta/euler.m": "601a1fec6b51a69d0e75fb00cfd76183d257484d930bb6ff47d1e0677d2bd1c9",
     "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/driver.m": "96173c1278d77018ca6190b00ecd1be22b7d99776a166bad91ac6f2f8a81a6ca",
     "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/euler.m": "a76a8056c519c52b588fac23a439bd47f2d04c206d63cabbd5fbca177c10c558",
@@ -629,7 +628,7 @@
     "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.mat": "1ba159f20ab51831d6cd47b6c2534e0a6aa29a7acfc15aea9e3b56423a918056",
     "icr/context/Tesis/capitulos/01_introduccion.tex": "531f9b40bad56e7808c8fbe8646c8ba64991c4423379c03a1f749eafb43fa2b0",
     "icr/context/Tesis/capitulos/02_fundamentos.tex": "88a9551c0e774a7d2c0fb46024b89201625d31322b244bd8745026f763948136",
-    "icr/context/Tesis/capitulos/03_modelo.tex": "6021765311f23e865f3e11a8ae8f4a10ee5eec2dc27aa927a35682fdf73ff4a6",
+    "icr/context/Tesis/capitulos/03_modelo.tex": "b82ad8fb05b186174ceac238d2af71fdf33cc8d76305c5b61a4d070b450cc03e",
     "icr/context/Tesis/capitulos/04_controlador.tex": "311936a13a9166bc291f321b281cba8e0eec5e97ddca4c6098aa781948bc4856",
     "icr/context/Tesis/capitulos/05_desempeno.tex": "c47d635bafede783ad1da51d502212dc8485b9fcba19dbcc20b456f055eff479",
     "icr/context/Tesis/capitulos/06_doble_integral.tex": "6d294dd3f6a45f3e822427982d3fcaa2a4d1cd023f5680cc2aee6f257d8b0371",
@@ -756,6 +755,6 @@
     "icr/context/Tesis/preamble/uamdato.tex": "4ec93dc844cca48adcf920020850741b277025e1b9c8afa4e347181796de7b2b",
     "icr/context/Tesis/sections/abstract.tex": "8a52e431c5c927fdc2699293b67dca9b7ac643e4d645406e035227b3a5f81662",
     "icr/context/Tesis/sections/resumen.tex": "33e3ee535e723c9db8ed3a914c1f3ff6998608ab090951472957814e4f183477",
-    "icr/grafo/grafo_tesis.json": "81ca4a447fd39af715c54129ea5f6fffa2cf26f0c8ef78a917b0793feb0470fe"
+    "icr/grafo/grafo_tesis.json": "a9cd907644a58409ff27e387e795e8cc32fd00e924e8bb8913978efd66f748f4"
   }
 }

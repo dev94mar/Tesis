@@ -104,36 +104,6 @@ b = \frac{2\pi R}{3\,\mu_0\, N\, S\, m_{\text{im}}} ,
 \end{equation}
 una combinación de la resistencia del embobinado, su geometría y el momento magnético del imán. Ninguno de estos datos lo publica el fabricante, de modo que $b$ se mantiene como el parámetro empírico que Hernández Alcántara et al.~\cite{alcantara} ajustaron experimentalmente; esta derivación no sustituye ese ajuste, pero explica por qué la forma del modelo del fabricante difiere de la de los demás citados en este capítulo: corresponden a regímenes geométricos distintos, reluctancia cercana frente a dipolos lejanos, y no a un desacuerdo experimental entre las fuentes. La aproximación dipolo-dipolo requiere que el entrehierro sea grande frente al tamaño de la bobina y del imán, condición razonable en el intervalo de operación de este trabajo, de $-4$ a $-2$~cm, frente a una separación de referencia $a=7{,}17$~cm. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado}, se verificó de forma independiente en Mathematica (\texttt{icr/calculus/Final\_Bien/primeros\_principios/}).
 
-\subsection{Modelo energético sin disipación}\label{sec:energia_primeros_principios}
-
-La fuerza del fabricante~\eqref{eq:fld} también se obtiene de un planteamiento energético, sin necesidad del modelo dipolo-dipolo de la subsección anterior: basta con proponer una coenergía magnética cuya derivada respecto a la posición sea esa fuerza, y comprobar que las ecuaciones de movimiento que de ahí se siguen, por Lagrange o por Hamilton, coinciden con la ecuación de movimiento~\eqref{eq:mec} sin fricción. Esta sección hace esa comprobación. La fricción no se deriva de una función de energía, de modo que queda fuera por construcción y se reincorpora aparte en la sección~\ref{sec:friccion_modelo}.
-
-El voltaje $u$ se trata como un parámetro externo, no como una variable dinámica propia: el circuito del embobinado es resistivo y su constante de tiempo eléctrica es mucho menor que la mecánica (subsección~\ref{sec:fuerza_primeros_principios}), de modo que $u$ fija de forma cuasiestática la corriente y, con ella, la coenergía magnética. Proponiendo
-\begin{equation}
-W'(x,u) = \frac{u}{3b(a-x)^3} ,
-\label{eq:coenergia}
-\end{equation}
-se cumple $\partial W'/\partial x = f_{\text{fld}}(u,x)$, la fuerza del fabricante~\eqref{eq:fld}. La cantidad $W'$ de~\eqref{eq:coenergia} es la coenergía magnética, la que entra en el lagrangiano de un sistema electromecánico cuando la variable independiente es la corriente, o aquí el voltaje que la fija, en vez de la carga.
-
-Con la coenergía~\eqref{eq:coenergia}, la energía cinética $\tfrac12 m\dot{x}^2$ y la energía potencial gravitacional $mgx$, el lagrangiano del sistema, sin ningún término de fricción, es
-\begin{equation}
-L(x,\dot{x}) = \frac{1}{2}m\dot{x}^2 - mgx + W'(x,u) .
-\label{eq:lagrangiano}
-\end{equation}
-La ecuación de Euler-Lagrange de~\eqref{eq:lagrangiano},
-\begin{equation}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} = 0 ,
-\label{eq:euler_lagrange}
-\end{equation}
-da $m\ddot{x} = f_{\text{fld}}(u,x) - mg$, idéntica a la ecuación de movimiento~\eqref{eq:mec} sin el término de fricción $f_{\text{fr}}$.
-
-Como verificación cruzada, se repitió el cálculo con el formalismo hamiltoniano. El momento canónico es $p = \partial L/\partial\dot{x} = m\dot{x}$, y la transformada de Legendre da
-\begin{equation}
-H(x,p) = \frac{p^2}{2m} - W'(x,u) + mgx .
-\label{eq:hamiltoniano}
-\end{equation}
-Las ecuaciones de Hamilton, $\dot{x}=\partial H/\partial p$ y $\dot{p}=-\partial H/\partial x$, dan $\dot{x}=p/m$ y $\dot{p}=f_{\text{fld}}(u,x)-mg$; combinándolas se recupera la misma ecuación que con Lagrange. Las dos verificaciones, simbólicas e independientes entre sí, se hicieron en Mathematica (\texttt{icr/calculus/\allowbreak Final\_Bien/\allowbreak primeros\_principios/\allowbreak derivar\_energia.wls}).
-
 \section{Fricción con atascamiento-deslizamiento}\label{sec:friccion_modelo}
 
 La sección~\ref{sec:fund_friccion} describió las componentes de la fricción y el método de Karnopp en general. Esta sección precisa cómo se aplican al imán.

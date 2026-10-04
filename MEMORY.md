@@ -134,6 +134,12 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Modelo energético sin disipación (Lagrange/Hamilton, 2026-10-04)
+
+A petición del usuario se construyó un modelo energético (sin fricción) cuyas ecuaciones de movimiento reproducen exactamente la fuerza del fabricante que usa la tesis, `f_fld(u,x)=u/[b(a-x)^4]`, como verificación independiente del modelo dipolo-dipolo ya incorporado. Se propuso la coenergía magnética `W'(x,u)=u/[3b(a-x)^3]` (cumple `∂W'/∂x=f_fld`), y con ella el lagrangiano `L=½mẋ²-mgx+W'(x,u)`. La ecuación de Euler-Lagrange da exactamente `mẍ=f_fld(u,x)-mg` (idéntica a la ecuación de movimiento sin fricción). Verificación cruzada independiente con el formalismo hamiltoniano (momento canónico, transformada de Legendre, ecuaciones de Hamilton): mismo resultado. Ambas verificaciones dieron `True` en Mathematica (`icr/calculus/Final_Bien/primeros_principios/derivar_energia.wls`).
+
+Incorporado al capítulo 3 como subsección 3.2.2 "Modelo energético sin disipación" (ecuaciones 3.14–3.17), justo después de la justificación dipolo-dipolo. Se agregó el nodo `ENERGIA` al grafo. Documento compila sin errores, 74 páginas. Validador estructural limpio (188 nodos, 343 aristas, sin duplicados ni referencias rotas).
+
 ## Actualización del grafo y validación de consistencia (2026-10-04)
 
 A petición del usuario se actualizó el grafo (versión 5, `icr/grafo/grafo_tesis.json`) y se validó la consistencia completa del proyecto. Hallazgos y correcciones:

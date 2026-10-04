@@ -130,28 +130,9 @@ Cada ciclo completo tiene dos atascamientos y dura en promedio $0{,}98$~s con el
 %-----------------------------------------------------------------------------
 \subsection{La acción integral es la causa del ciclo}
 
-El mecanismo anterior depende de que el voltaje siga cambiando mientras el imán está detenido. En un controlador sin acción integral, la salida depende solo del error actual y de su derivada, y ambos permanecen constantes durante el atascamiento. Para comprobarlo, se suprimieron del PII los dos integradores y los dos ceros de baja frecuencia que los acompañan, lo que deja el controlador proporcional-derivativo (PD)
-\begin{equation}
-C_{PD}(s) = \frac{152{,}43\,(s+17{,}31)}{s+301{,}1} ,
-\label{eq:pd}
-\end{equation}
-que estabiliza el lazo en todo el intervalo de operación. Como un PD no puede generar por sí mismo el voltaje de equilibrio, se le sumó la prealimentación $u_e(r)$ correspondiente a la referencia.
+El mecanismo anterior depende de que el voltaje siga cambiando mientras el imán está detenido. En un controlador sin acción integral, la salida depende solo del error actual y de su derivada, y ambos permanecen constantes durante el atascamiento, de modo que no hay nada que siga empujando al controlador hacia la ruptura una vez que el imán se detiene: el lazo puede quedarse ahí, con un error estacionario distinto de cero. Con acción integral, en cambio, el error residual durante el atascamiento sigue acumulándose en el integrador aunque la posición no cambie, y esa acumulación es la que termina forzando la siguiente ruptura, como muestra la figura~\ref{fig:anatomia}.
 
-La figura~\ref{fig:pd_pi_pii} compara los tres controladores. Con el PD, el imán llega a la nueva referencia, se atasca y permanece inmóvil, sin ciclo límite. A cambio, el error final puede ser distinto de cero. Con el imán detenido en $x=r-e$ y el voltaje $u=u_e(r)+k_{PD}\,e$, la fuerza neta $u/[b(a-r+e)^4]-mg$ crece con el error, para errores pequeños, a razón de
-\begin{equation}
-k_{ef} = \frac{k_{PD}}{b\,(a-r)^4} - \frac{4mg}{a-r} .
-\label{eq:rigidez_pd}
-\end{equation}
-La rigidez neta~\eqref{eq:rigidez_pd} tiene dos contribuciones. La primera la aporta el controlador a través de su ganancia estática $k_{PD}=8{,}76$~V/cm, y vale $506{,}5$~kg\,cm/s$^2$ por centímetro de error en $r=-3$~cm. La segunda es propia de la planta: al alejarse el imán de la bobina la fuerza magnética disminuye, y eso resta $54{,}4$~kg\,cm/s$^2$ por centímetro. La rigidez neta resulta de $452{,}1$, de modo que el imán puede quedar detenido en cualquier punto donde el error sea menor que $F_s/k_{ef}=0{,}044$~cm. Resolviendo la condición de reposo $|F_e|\le F_s$ sin linealizar, la banda va de $-0{,}043$ a $+0{,}045$~cm. En esta simulación el imán se detuvo a $0{,}002$~cm de la referencia, dentro de esa banda.
-
-\begin{figure}[ht]
-    \centering
-    \input{images/ciclo_results/tikz/pd_pi_pii}
-    \caption[PD, PI y PII con atascamiento-deslizamiento]{Escalón de $-2$ a $-3$~cm con el PD con prealimentación, el PI y el PII. Abajo, detalle de 15 a 25~s: el PD queda en reposo y los controladores con acción integral oscilan alrededor de la referencia.}
-    \label{fig:pd_pi_pii}
-\end{figure}
-
-El ECP-730 reproduce así el \emph{hunting} que la sección~\ref{sec:fund_friccion} describe en general. Sin acción integral, el lazo se detiene con un error que depende de dónde quedó atascado y de qué tan exacto sea el voltaje de equilibrio que se suministra. Con acción integral, el error medio se anula aunque el modelo no sea exacto, pero en las simulaciones el lazo no llega a detenerse, porque el integrador sigue acumulando el error residual hasta forzar una nueva ruptura. El control conmutado de Hernández Alcántara et al.~\cite{alcantara} aborda precisamente este dilema, al desactivar la acción integral cuando el error es pequeño.
+El ECP-730 reproduce así el \emph{hunting} que la sección~\ref{sec:fund_friccion} describe en general: con acción integral, el error medio se anula aunque el modelo no sea exacto, pero en las simulaciones el lazo no llega a detenerse, porque el integrador sigue acumulando el error residual hasta forzar una nueva ruptura. El control conmutado de Hernández Alcántara et al.~\cite{alcantara} aborda precisamente este dilema, al desactivar la acción integral cuando el error es pequeño.
 
 %-----------------------------------------------------------------------------
 \subsection{Duración del atascamiento}

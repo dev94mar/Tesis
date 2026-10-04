@@ -1,0 +1,19 @@
+\input{images/pii_v2_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[comp, width=0.9\textwidth, height=7.5cm, xmin=0, xmax=0.032, ymin=0.15, ymax=0.9,
+    xlabel={ciclo límite pico a pico [\si{cm}]}, ylabel={atascamiento medio [\si{s}]},
+    xtick={0,0.005,0.01,0.015,0.02,0.025,0.03},
+    x tick label style={/pgf/number format/fixed, /pgf/number format/precision=3},
+    legend style={at={(0.98,0.98)}, anchor=north east, font=\footnotesize}, legend cell align=left]
+  \addplot[only marks, mark=*, mark size=0.9pt, gray!55, opacity=0.6, forget plot]
+    table[x=ciclo, y=atasc] {images/pii_v2_results/tikz/barrido_conjunto_pi.csv};
+  \addplot[only marks, mark=square*, mark size=3.4pt, tray, draw=black] coordinates {(0.011018,0.2444)};
+  \addlegendentry{PII\_V2 (red de adelanto reescalada)}
+  \addplot[only marks, mark=square, mark size=3pt, tray!70!black, draw=black] coordinates {(0.01312,0.844)};
+  \addlegendentry{mejor PII, solo ganancia extendida}
+  \addplot[only marks, mark=*, mark size=3.4pt, ver, draw=black] coordinates {(0.00789,0.2412)};
+  \addlegendentry{mejor PI, barrido conjunto (sobrepaso 60\,\%)}
+  \addplot[only marks, mark=diamond*, mark size=3.2pt, ctl2, draw=black] coordinates {(0.00545,0.290) (0.02849,0.209)};
+  \addlegendentry{otros PI del barrido conjunto}
+\end{axis}
+\end{tikzpicture}

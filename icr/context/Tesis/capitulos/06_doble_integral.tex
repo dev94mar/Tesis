@@ -62,9 +62,30 @@ Esta comparación, sin embargo, no es simétrica: solo al PII se le permitió re
 
 Para comparar en condiciones justas, se extendió por separado la ganancia de cada controlador, partiendo en cada caso de su mejor punto en el barrido de la sección~\ref{sec:barrido_familias} y dejando fijos su cero de baja frecuencia y su red de adelanto. El PII pierde el margen de fase de $30^\circ$ en $k_K=3{,}5$; su último punto válido, en $k_K=3$, da un ciclo de $0{,}013$~cm y un atascamiento de $0{,}84$~s. El PI, en cambio, conserva ese margen hasta $k_K=4{,}5$, donde da un ciclo de $0{,}0075$~cm y un atascamiento de $0{,}40$~s. En cada nivel de ganancia que admiten ambos, el PI tiene un ciclo límite menor y un atascamiento más corto que el PII: por ejemplo, en $k_K=2{,}5$, $0{,}0134$~cm y $0{,}35$~s frente a $0{,}0157$~cm y $0{,}84$~s. El PI, además, admite casi el doble de ganancia antes de perder el margen mínimo exigido.
 
-La ventaja que parecía mostrar~\eqref{eq:pii_v2} depende, por tanto, de la forma concreta en que se reescaló su red de adelanto, no de contar con dos integradores. Al dar a ambos controladores el mismo tipo de libertad ---extender la ganancia sobre su propio óptimo ya conocido--- el PI es el que mejora más, en ambas métricas y en todo el intervalo de ganancia que los dos toleran.
+La ventaja que parecía mostrar~\eqref{eq:pii_v2} depende, por tanto, de la forma concreta en que se reescaló su red de adelanto, no de contar con dos integradores. Al dar a ambos controladores el mismo tipo de libertad ---extender la ganancia sobre su propio óptimo ya conocido--- el PI es el que mejora más, en ambas métricas y en todo el intervalo de ganancia que los dos toleran. Las figuras~\ref{fig:extension_ciclo} y~\ref{fig:extension_atasco} muestran esa extensión.
 
-Para cerrar la pregunta, se optimizó conjuntamente la ganancia, el cero bajo y la red de adelanto del PI: una rejilla de $k_K\in[1;\,5{,}5]$, $\alpha\in[0{,}3;\,3]$ y $\beta\in[1;\,1{,}2]$, filtrada por el mismo margen de fase de $30^\circ$ (394 de 450 combinaciones lo cumplen) y simulada en el mismo escalón. De las 235 que no divergen, tres superan a~\eqref{eq:pii_v2} en ciclo límite y en atascamiento a la vez; la mejor, con $k_K=3{,}5$, $\alpha=1{,}4$ y $\beta=1{,}15$, da un ciclo de $0{,}0079$~cm y un atascamiento de $0{,}241$~s, frente a $0{,}011$~cm y $0{,}24$~s de~\eqref{eq:pii_v2}, aunque con un sobrepaso de $60$\,\%, muy superior al $29$\,\% de~\eqref{eq:pii_v2} y al de la tabla~\ref{tab:pi_pii}. Otros puntos del mismo barrido dan, por separado, un ciclo de $0{,}0055$~cm (con mayor atascamiento) o un atascamiento de $0{,}21$~s (con mayor ciclo), ambos mejores que los de~\eqref{eq:pii_v2} en su métrica respectiva. No se encontró, en este barrido ni en los anteriores, ninguna variante del PII que alcance estos valores.
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_v2_results/tikz/extension}
+    \caption[Ciclo límite al extender la ganancia]{Ciclo límite pico a pico contra el factor de ganancia $k_K$, extendiendo el PI y el PII de la sección~\ref{sec:barrido_familias} sobre su propio óptimo, con el cero de baja frecuencia y la red de adelanto de cada uno fijos. El PII pierde el margen de fase de $30^\circ$ en $k_K=3$; el PI lo conserva hasta $k_K=4{,}5$.}
+    \label{fig:extension_ciclo}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_v2_results/tikz/atascamiento}
+    \caption[Atascamiento al extender la ganancia]{Atascamiento medio contra el factor de ganancia $k_K$, misma extensión que la figura~\ref{fig:extension_ciclo}. El PI tiene, en todo $k_K$ común a ambos, un atascamiento más corto.}
+    \label{fig:extension_atasco}
+\end{figure}
+
+Para cerrar la pregunta, se optimizó conjuntamente la ganancia, el cero bajo y la red de adelanto del PI: una rejilla de $k_K\in[1;\,5{,}5]$, $\alpha\in[0{,}3;\,3]$ y $\beta\in[1;\,1{,}2]$, filtrada por el mismo margen de fase de $30^\circ$ (394 de 450 combinaciones lo cumplen) y simulada en el mismo escalón. De las 235 que no divergen, tres superan a~\eqref{eq:pii_v2} en ciclo límite y en atascamiento a la vez; la mejor, con $k_K=3{,}5$, $\alpha=1{,}4$ y $\beta=1{,}15$, da un ciclo de $0{,}0079$~cm y un atascamiento de $0{,}241$~s, frente a $0{,}011$~cm y $0{,}24$~s de~\eqref{eq:pii_v2}, aunque con un sobrepaso de $60$\,\%, muy superior al $29$\,\% de~\eqref{eq:pii_v2} y al de la tabla~\ref{tab:pi_pii}. Otros puntos del mismo barrido dan, por separado, un ciclo de $0{,}0055$~cm (con mayor atascamiento) o un atascamiento de $0{,}21$~s (con mayor ciclo), ambos mejores que los de~\eqref{eq:pii_v2} en su métrica respectiva. No se encontró, en este barrido ni en los anteriores, ninguna variante del PII que alcance estos valores. La figura~\ref{fig:barrido_conjunto} sitúa estos puntos junto con los 193 candidatos válidos del barrido conjunto.
+
+\begin{figure}[ht]
+    \centering
+    \input{images/pii_v2_results/tikz/barrido_conjunto}
+    \caption[Barrido conjunto del PI contra PII\_V2]{Ciclo límite contra atascamiento medio de los 193 candidatos válidos del barrido conjunto de ganancia, cero bajo y red de adelanto del PI, junto con~\eqref{eq:pii_v2}, el mejor PII de la extensión de solo ganancia (figuras~\ref{fig:extension_ciclo} y~\ref{fig:extension_atasco}) y los PI sobresalientes de este barrido. Mejor es más cerca del origen en ambos ejes.}
+    \label{fig:barrido_conjunto}
+\end{figure}
 
 En ningún punto de este trabajo ---ni el PII de la tesis, ni sus familias, ni~\eqref{eq:pii_v2}, ni las extensiones de la sección~\ref{sec:barrido_familias}--- se encontró una ventaja de la segunda acción integral en ciclo límite o en atascamiento que sobreviva a darle al PI la misma libertad de sintonización. Esto no agota el espacio de búsqueda: no se optimizó conjuntamente la ganancia, el cero bajo y la red de adelanto del PII como sí se hizo para el PI, y el PI con mejor ciclo y atascamiento simultáneos paga ese resultado con un sobrepaso considerable, una condición que un criterio de diseño más estricto podría descartar. Con la evidencia reunida, sin embargo, no hay base para sostener que la segunda integración reduzca el ciclo límite o el atascamiento en este sistema; la evidencia disponible apunta en sentido contrario.
 

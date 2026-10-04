@@ -196,11 +196,24 @@ Con esa base, se validó analíticamente (sin simular) la hipótesis PII/PI: ext
 
 Incorporado a la tesis: capítulo 3 (subsección "Justificación de primeros principios", ecs. 3.9–3.13) y capítulo 6 (verificación de Ki/Kii y ecuación de rigidez general 6.4). Compila sin errores, 66 páginas.
 
+## El repositorio de GitHub cambió: ahora es público, con un deck web (2026-10-04)
+
+**Cambio importante de infraestructura, no solo de contenido.** El repositorio privado original `dev94mar/Tesis` se **eliminó por completo** de GitHub (a petición explícita del usuario) y se **recreó como repositorio público** con el mismo nombre y la misma URL remota (`https://github.com/dev94mar/Tesis.git`), con todo el historial de commits de esta sesión. La copia local en este disco nunca se tocó; solo cambió el remoto. Quien retome el proyecto debe saber que `git push`/`git pull` ya operan contra un repo **público**, no el privado original.
+
+Se construyó además un **deck interactivo de divulgación** en HTML puro (sin frameworks, con capacidades propias): física del ECP-730 animada, diagrama de bloques del lazo, un panel de simulación en vivo con **selector de las 5 pruebas** (escalón, senoidal, trapezoidal, diente de sierra, pulso cuadrado) que reutiliza el mismo motor de canvas/gráficas con datos reales decimados (~40-50 KB por señal), y la gráfica de fronteras de Pareto PI/PII. Usa la identidad gráfica oficial de la UAM (rojo Unidad Azcapotzalco Pantone 186C `#CD032E`, Acuerdo 06/2012 núm. 5.3; tipografía Verdana obligatoria para web, núm. 4.1) y no usa ningún logotipo.
+
+- Fuente: `deck/index.html` (idéntico a `docs/index.html`, que es la ruta que sirve GitHub Pages).
+- **En vivo:** https://dev94mar.github.io/Tesis/ (GitHub Pages activado desde `/docs` en la rama `master`).
+- Se corrigió un bug real de viewport: el archivo no tenía su propia `<meta name="viewport">` (dependía antes de que el Artifact tool la inyectara); sin ella, los celulares reales habrían cargado la página a ancho de escritorio. Verificado con Puppeteer a 390px.
+- Existió un repo público intermedio, `dev94mar/ecp730-deck` (creado cuando `Tesis` aún era privado) — **ya se eliminó**; todo vive ahora en el propio repo de la tesis.
+- Se generaron también 5 animaciones GIF con MATLAB (`icr/calculus/Final_Bien/animacion/`, ~20-30 MB cada una) análogas al panel web pero para verlas fuera del navegador. **El usuario pidió explícitamente no subirlas a GitHub** (son pesadas); quedan solo como archivos locales en este disco, no están en el repositorio.
+
 ## Próximo paso recomendado
 
-1. **Hecho** (ver sección "Cierre definitivo de la comparación PI/PII" más abajo): el barrido conjunto equivalente del PII, que cierra la comparación con las fronteras de Pareto cruzándose.
+1. **Hecho:** el barrido conjunto equivalente del PII (ver "Cierre definitivo de la comparación PI/PII"), la validación de las cuatro señales de seguimiento, la derivación de primeros principios con su convergencia demostrada, y el deck web público.
 2. El candidato con ciclo 0,00058 cm (PI, `kK=4, α=0,3, β=1,2`) sigue necesitando una ventana de medición más larga para confirmar que es un ciclo límite genuino y no un efecto de borde; no se usó en ninguna conclusión final.
 3. Actualizar el dictamen de publicabilidad ([PUBLICABILIDAD.md](validacion/barrido_02/PUBLICABILIDAD.md)) con la conclusión definitiva: la segunda integración sí ofrece una ventaja real pero acotada a un régimen de sintonización específico, no al habitual — un resultado más matizado y, posiblemente, más publicable que "el PII no sirve" o "el PII es mejor".
+4. El repositorio ahora es público (ver sección anterior): antes de añadir cualquier dato sensible o aún no listo para publicarse, confirmar con el usuario, ya que cualquier commit queda visible de inmediato.
 
 ## Mantenimiento
 

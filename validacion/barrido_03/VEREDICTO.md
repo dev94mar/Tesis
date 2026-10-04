@@ -104,6 +104,28 @@ En **cada** nivel de ganancia que ambos toleran, el PI tiene un ciclo límite me
 
 Esto se incorporó al capítulo 6 de la tesis (`icr/context/Tesis/capitulos/06_doble_integral.tex`, sección "¿Ayuda liberar la red de adelanto?", que reemplaza a la versión anterior de esta misma sección escrita en el primer addendum) y a la síntesis del capítulo. El documento compila sin errores ni referencias rotas (63 páginas). El nodo `PII_V2` y la revisión `R25` del grafo se actualizaron para reflejar este resultado; `PII_V2` se conserva como hallazgo verificado y reproducible, pero explícitamente anotado como no generalizable.
 
+## Tercer addendum (mismo día): barrido conjunto del PI, cierre de la comparación
+
+El segundo addendum dejó abierta una pregunta: la extensión simétrica solo había variado la ganancia (`kK`), dejando fijos el cero bajo (`α`) y la red de adelanto (`β`) de cada familia en su propio óptimo ya conocido. Faltaba optimizar los tres parámetros a la vez para el PI, como ya se había hecho para el PII en `familias_R15.m` (aunque esta sin variar `β`). Se escribió `icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PI.m`: una rejilla de $k_K\in\{1,\dots,5{,}5\}$ (10 valores), $\alpha\in\{0{,}3,\dots,3{,}0\}$ (9 valores) y $\beta\in\{1{,}0,\dots,1{,}2\}$ (5 valores) — 450 combinaciones —, filtrada por margen de fase ≥30° en los cuatro puntos del intervalo (394 pasan) y simulada en el escalón −2→−3 cm con `ode45`, en paralelo (Parallel Computing Toolbox, 10 núcleos) para que fuera viable en tiempo razonable.
+
+**Depuración de resultados degenerados.** De las 394 simulaciones, 235 no divergen según el criterio de posición acotada, pero una inspección posterior reveló candidatos con "ciclo límite" aparentemente nulo que en realidad correspondían al imán atascado lejos de la referencia (un caso verificado terminó en $x=-3{,}70$~cm, a 0,70~cm del objetivo). Se añadió un filtro adicional (ciclo > 0,0005 cm) y se verificaron individualmente, por resimulación directa con inspección del error final, los candidatos de interés antes de usarlos. Con ese filtro quedan 193 candidatos válidos.
+
+**Resultado.** Tres candidatos superan a `PII_V2` (ciclo 0,011018 cm, atascamiento 0,2444 s) en **ambas métricas a la vez**:
+
+| `kK` | `α` | `β` | Margen de fase mín. | Ciclo pp | Atascamiento medio |
+|---:|---:|---:|---:|---:|---:|
+| 2,50 | 1,40 | 1,10 | 41,5° | 0,01061 cm | 0,239 s |
+| 3,00 | 1,40 | 1,15 | 40,0° | 0,00991 cm | 0,239 s |
+| **3,50** | **1,40** | **1,15** | **37,4°** | **0,00789 cm** | **0,241 s** |
+
+El mejor de los tres (`kK=3,5`, `α=1,4`, `β=1,15`) se verificó por resimulación directa: converge a $x=-3{,}003$~cm (error final 0,003 cm), con 32 episodios de atascamiento en la ventana de medición (estadística confiable) y voltaje saturado solo el 0,48 % del tiempo. Tiene, sin embargo, un sobrepaso de **60,14 %**, muy superior al 29,16 % de `PII_V2` y al 23,6/25,9 % de la tabla~\ref{tab:pi_pii} del capítulo 6 — un costo no capturado por las dos métricas que se venían comparando.
+
+Otros puntos del mismo barrido mejoran una sola métrica más allá de lo anterior: `kK=5,5, α=1,4, β=1,15` da el menor ciclo encontrado en todo este trabajo (0,00545 cm, con atascamiento 0,290 s), y `kK=1,0, α=1,4, β=1,10` da el menor atascamiento (0,209 s, con ciclo 0,0285 cm). Un candidato con `kK=4, α=0,3, β=1,2` reportó un ciclo aún menor (0,00058 cm) con atascamiento de 9,65 s (casi toda la ventana de 10 s); se verificó que no está atascado en la posición equivocada (error final de solo 0,0002 cm), pero esa duración, cercana al ancho completo de la ventana de medición, no permite descartar que sea un efecto de borde de la ventana más que un ciclo límite estacionario genuino. No se usó como cifra central por esta razón, y queda señalado para una verificación futura con una ventana de medición más larga.
+
+**Conclusión final de esta línea de auditoría.** En ningún punto de este trabajo —ni el PII de la tesis, ni las familias del barrido original, ni `PII_V2`, ni la extensión simétrica de solo ganancia, ni este barrido conjunto— se encontró una configuración del PII que iguale el mejor desempeño encontrado para el PI en ciclo límite y atascamiento, cuando a ambos se les da una libertad de sintonización equivalente. La búsqueda del lado del PII no fue tan exhaustiva como la del PI (no se barrieron conjuntamente sus tres parámetros con red de adelanto variable), así que esto no demuestra una imposibilidad; pero con la evidencia reunida, **no hay base para sostener que la segunda acción integral reduzca el ciclo límite o el atascamiento en este sistema, y la evidencia disponible apunta en sentido contrario**.
+
+Esto se incorporó al capítulo 6 (mismo archivo y sección) con el sobrepaso del mejor PI combinado señalado explícitamente como costo, al grafo (nodo `PII_V2`, revisión `R25`) y a `MEMORY.md`. El documento compiló de nuevo sin errores, 63 páginas.
+
 ## 4. Pendientes y alcance no cubierto
 
 - No se reejecutaron las 7503 trayectorias del mapa de operación completo ni el seguimiento largo; se verificó por lectura y cotejo de cifras, como en el segundo barrido.

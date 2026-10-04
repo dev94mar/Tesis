@@ -1,7 +1,7 @@
 {
   "latex": {
-    "archivos_activos": 65,
-    "etiquetas": 138,
+    "archivos_activos": 67,
+    "etiquetas": 145,
     "citas": 43,
     "inputs_faltantes": [],
     "etiquetas_duplicadas": {},
@@ -630,7 +630,7 @@
     "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.mat": "1ba159f20ab51831d6cd47b6c2534e0a6aa29a7acfc15aea9e3b56423a918056",
     "icr/context/Tesis/capitulos/01_introduccion.tex": "531f9b40bad56e7808c8fbe8646c8ba64991c4423379c03a1f749eafb43fa2b0",
     "icr/context/Tesis/capitulos/02_fundamentos.tex": "88a9551c0e774a7d2c0fb46024b89201625d31322b244bd8745026f763948136",
-    "icr/context/Tesis/capitulos/03_modelo.tex": "b9415954caaf72a6363b354e2553e7523a3b699d313a1d7e579d5ad906d3213a",
+    "icr/context/Tesis/capitulos/03_modelo.tex": "4548a556a101b3defd3440549dda70ca11c0774b1ed763e736bd73f66e559743",
     "icr/context/Tesis/capitulos/04_controlador.tex": "311936a13a9166bc291f321b281cba8e0eec5e97ddca4c6098aa781948bc4856",
     "icr/context/Tesis/capitulos/05_desempeno.tex": "c47d635bafede783ad1da51d502212dc8485b9fcba19dbcc20b456f055eff479",
     "icr/context/Tesis/capitulos/06_doble_integral.tex": "6d294dd3f6a45f3e822427982d3fcaa2a4d1cd023f5680cc2aee6f257d8b0371",
@@ -652,6 +652,8 @@
     "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pi.csv": "76ddca825c50bd842b03a5845aab0fcd987ae8f2ddce802b17fa80e5d9c4e070",
     "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pii.csv": "b93edfad3d33620a5d3b036118f6c433a9dcbae72e8a3156d59e06293045fea8",
     "icr/context/Tesis/images/dispositivo/configuracion.tex": "9b1b2b99197a321ea753e132382992e6bd54f55cb48133ad338e4b52e8589508",
+    "icr/context/Tesis/images/energia/tikz/coenergia_posicion.tex": "e03cdfaf1d54120b0d6c066dd06e6a4568211fada97e64c2df6ca3197d818612",
+    "icr/context/Tesis/images/energia/tikz/energia_coenergia.tex": "f547b235c9e69fd19f0837695dc553248ecacbeaf7acdf1f8364486b2e469b2f",
     "icr/context/Tesis/images/p8_results/tikz/campo.csv": "7d4d31293d07ff70587202464e85236781ba57de84e82ad05d330e09fb032e7a",
     "icr/context/Tesis/images/p8_results/tikz/estable.csv": "4281d782f2359e64f0f887404777af1e8e24a73d60673f6b6792b2bd2274ebb8",
     "icr/context/Tesis/images/p8_results/tikz/estable.tex": "d8f005de343973e9b1ebfd587225a45f5017652167bf67049541cc58fcf306fe",
@@ -757,6 +759,6 @@
     "icr/context/Tesis/preamble/uamdato.tex": "4ec93dc844cca48adcf920020850741b277025e1b9c8afa4e347181796de7b2b",
     "icr/context/Tesis/sections/abstract.tex": "8a52e431c5c927fdc2699293b67dca9b7ac643e4d645406e035227b3a5f81662",
     "icr/context/Tesis/sections/resumen.tex": "33e3ee535e723c9db8ed3a914c1f3ff6998608ab090951472957814e4f183477",
-    "icr/grafo/grafo_tesis.json": "5e03c63dd848101964dfc87f8522f5bd90f22fd693d6aa3bb03250b83e4011c5"
+    "icr/grafo/grafo_tesis.json": "f7bc8ab108e0a9aacfc87495842f1ef65a23eb081e965a41e3807a7f105bc15b"
   }
 }

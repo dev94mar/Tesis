@@ -134,6 +134,14 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Reescritura pedagógica del modelo energético (2026-10-04)
+
+A petición del usuario, la subsección 3.2.2 ("Modelo energético sin disipación") se reescribió para un lector de mitad de carrera con nociones elementales de Euler-Lagrange/Hamilton. Construye la energía cinética y la potencial gravitacional paso a paso, y dedica el núcleo de la explicación al **acoplamiento electromecánico**: por qué la fuerza magnética exige un término que dependa de `x` y `u` a la vez (no solo de `x`, a diferencia de un sistema puramente mecánico), y por qué ese término es la **coenergía** `W'`, no la energía `W`, cuando la variable independiente es la corriente/voltaje — con el diagrama clásico de áreas en el plano `i`-`λ` como justificación gráfica del signo `F=+∂W'/∂x` (en vez de `F=-∂V/∂x`).
+
+Se agregaron dos figuras TikZ nuevas en `images/energia/tikz/`: `energia_coenergia.tex` (el diagrama de áreas i-λ) y `coenergia_posicion.tex` (la coenergía `W'(x,u)` graficada contra la posición para tres voltajes, mostrando visualmente por qué crece de forma abrupta cerca de la bobina — la raíz de la inestabilidad). Se muestra además, explícitamente, que para un circuito lineal la coenergía `W'=½L(x)i²` reproduce exactamente la fuerza de reluctancia ya derivada por otro camino en la subsección anterior, conectando ambas partes del capítulo.
+
+Documento: 78 páginas (antes 75), compila sin errores. Grafo (nodo `ENERGIA`) actualizado. Validador estructural limpio (188 nodos, 343 aristas, 0 hallazgos).
+
 ## Convergencia del modelo dipolo-dipolo a la ecuación del fabricante (2026-10-04)
 
 A petición del usuario ("la solución obtenida por primeros principios debe converger a la ecuación dada por el fabricante"), se reforzó la justificación dipolo-dipolo del capítulo 3: en vez de solo mostrar que la forma coincide, se derivó el campo **exacto** de Biot-Savart de una espira circular finita (sin aproximar a dipolo puntual) y se demostró en Mathematica, con `Limit` y desarrollo en serie, que la fuerza dipolo-dipolo es el **límite de campo lejano** genuino de esa espira real: el error relativo es `-1+(1+(Rbob/z)²)^(-5/2)`, de orden `(Rbob/z)²`, y se anula exactamente cuando `Rbob/z→0` (0,025% de error con entrehierro=100×radio de la bobina, 2,5% con 10×). No es una forma impuesta por construcción: es una convergencia asintótica demostrada.

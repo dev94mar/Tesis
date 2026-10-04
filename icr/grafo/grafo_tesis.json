@@ -114,6 +114,11 @@
         "version": 5,
         "fecha": "2026-10-04",
         "cambio": "Verificación de convergencia del modelo dipolo-dipolo (DIPOLO): se deriva el campo exacto de Biot-Savart de una espira circular finita y se demuestra, con Limit y desarrollo en serie en Mathematica, que la fuerza dipolo-dipolo es el límite de campo lejano exacto (no una forma impuesta), con error O((Rbob/z)^2) que se anula cuando Rbob/z->0. Incorporado al capítulo 3 (ecs. 3.14-3.15)."
+      },
+      {
+        "version": 5,
+        "fecha": "2026-10-04",
+        "cambio": "Subsección 3.2.2 (ENERGIA) reescrita de forma pedagógica, con dos figuras TikZ nuevas: el diagrama energía/coenergía en el plano i-λ y la coenergía W'(x,u) graficada contra la posición. Énfasis en el acoplamiento electromecánico (por qué coenergía, no energía) y su conexión con la fuerza de reluctancia ya derivada."
       }
     ]
   },
@@ -4956,7 +4961,7 @@
       "id": "ENERGIA",
       "tipo": "calc",
       "etiqueta": "Modelo energético sin disipación (Lagrange/Hamilton)",
-      "texto": "Verificación independiente de la fuerza del fabricante (FFLD) por un camino puramente energético, sin el modelo dipolo-dipolo (DIPOLO): se propone la coenergía magnética W'(x,u)=u/[3b(a-x)^3], que cumple dW'/dx=f_fld(u,x). Con el lagrangiano L=½mẋ²-mgx+W'(x,u) (sin fricción), la ecuación de Euler-Lagrange da exactamente mẍ=f_fld(u,x)-mg, idéntica a eq:mec sin el término de fricción. Verificación cruzada con el formalismo hamiltoniano (momento canónico p=mẋ, H=p²/(2m)-W'(x,u)+mgx): las ecuaciones de Hamilton dan el mismo resultado. Ambas verificaciones, simbólicas e independientes entre sí, dieron True en Mathematica.",
+      "texto": "Verificación independiente de la fuerza del fabricante (FFLD) por un camino puramente energético, sin el modelo dipolo-dipolo (DIPOLO): se propone la coenergía magnética W'(x,u)=u/[3b(a-x)^3], que cumple dW'/dx=f_fld(u,x). Con el lagrangiano L=½mẋ²-mgx+W'(x,u) (sin fricción), la ecuación de Euler-Lagrange da exactamente mẍ=f_fld(u,x)-mg, idéntica a eq:mec sin el término de fricción. Verificación cruzada con el formalismo hamiltoniano (momento canónico p=mẋ, H=p²/(2m)-W'(x,u)+mgx): las ecuaciones de Hamilton dan el mismo resultado. Ambas verificaciones, simbólicas e independientes entre sí, dieron True en Mathematica. REESCRITO PEDAGÓGICAMENTE (2026-10-04): a petición del usuario, la subsección se amplió para un lector de mitad de carrera con nociones elementales de Euler-Lagrange/Hamilton. Construye T y V_grav paso a paso, y dedica el núcleo de la explicación al ACOPLAMIENTO electromecánico: por qué la fuerza magnética exige un término que dependa de x y u a la vez, por qué ese término es la COENERGÍA W' (no la energía W) cuando la corriente/voltaje es la variable independiente, con el diagrama clásico de áreas en el plano i-λ (figura nueva: energia_coenergia.tex) como justificación gráfica del signo +∂W'/∂x. Muestra además que, para un circuito lineal, W'=½L(x)i² reproduce exactamente la fuerza de reluctancia ya derivada por otro camino en la subsección anterior (conexión explícita entre ambas derivaciones). Nueva figura coenergia_posicion.tex grafica W'(x,u) para tres voltajes, mostrando visualmente el origen de la inestabilidad (crecimiento abrupto cerca de la bobina).",
       "latex": [
         "W'(x,u) = u/[3b(a-x)^3]",
         "L = \\tfrac12 m\\dot x^2 - mgx + W'(x,u)"

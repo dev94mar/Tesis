@@ -118,92 +118,33 @@ que se anula exactamente cuando $R_{\text{bob}}/z\to0$ y es de orden $(R_{\text{
 
 \subsection{Modelo energético sin disipación}\label{sec:energia_primeros_principios}
 
-La fuerza del fabricante~\eqref{eq:fld} también se obtiene de un planteamiento energético, por un camino independiente del modelo dipolo-dipolo de la subsección anterior. La idea es construir, término a término, la energía cinética y la energía potencial del sistema mecánico, identificar el término que acopla la parte eléctrica con la mecánica, y comprobar que las ecuaciones de movimiento que de ahí se siguen —por Lagrange o por Hamilton— coinciden con la ecuación de movimiento~\eqref{eq:mec} sin fricción. Esta sección hace esa construcción despacio, con el acoplamiento electromecánico como punto central, porque es la parte que no aparece en los ejemplos habituales de un curso de mecánica (masas, resortes, péndulos), donde las energías dependen solo de la posición y la velocidad. La fricción no se deriva de una función de energía, de modo que queda fuera por construcción y se reincorpora aparte en la sección~\ref{sec:friccion_modelo}.
+La fuerza del fabricante~\eqref{eq:fld} también se obtiene de un planteamiento energético, sin necesidad del modelo dipolo-dipolo de la subsección anterior: basta con proponer una coenergía magnética cuya derivada respecto a la posición sea esa fuerza, y comprobar que las ecuaciones de movimiento que de ahí se siguen, por Lagrange o por Hamilton, coinciden con la ecuación de movimiento~\eqref{eq:mec} sin fricción. Esta sección hace esa comprobación. La fricción no se deriva de una función de energía, de modo que queda fuera por construcción y se reincorpora aparte en la sección~\ref{sec:friccion_modelo}.
 
-\paragraph{El sistema tiene una sola coordenada mecánica.}
-El imán se desliza sobre su varilla guía sin girar, de modo que su estado mecánico queda descrito por una sola coordenada generalizada, la posición $x$ de la figura~\ref{fig:dispositivo}, y su derivada temporal $\dot{x}$. Para un sistema con una coordenada $x$, el lagrangiano es $L(x,\dot{x})=T-V$, la diferencia entre la energía cinética $T$ y la energía potencial $V$, y la ecuación de Euler-Lagrange que extrema la acción es
-\begin{equation}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} = 0 .
-\label{eq:euler_lagrange}
-\end{equation}
-Esta es la forma general, la misma que relaciona la energía cinética y potencial de un péndulo o de una masa sobre un resorte con su ecuación de movimiento. Lo que distingue a este sistema es que $V$ no puede ser, por sí sola, una función solo de $x$: la fuerza magnética depende también del voltaje $u$, de modo que hace falta un término adicional que dependa de las dos variables a la vez. Encontrar ese término, y entender por qué entra con signo distinto al de una energía potencial ordinaria, es el objetivo de esta sección.
-
-\paragraph{Energía cinética.}
-El imán tiene masa $m$ y se mueve en una sola dirección con velocidad $\dot{x}$, sin otra forma de almacenar energía mecánica que su movimiento de traslación. Su energía cinética es, por tanto, la expresión elemental
-\begin{equation}
-T(\dot{x}) = \frac{1}{2}m\dot{x}^2 .
-\label{eq:cinetica_cap3}
-\end{equation}
-No hay términos adicionales: la varilla guía no gira ni se deforma, y la masa del propio campo electromagnético se desprecia frente a la del imán, como es habitual en estos sistemas.
-
-\paragraph{Energía potencial gravitacional.}
-La posición $x$ crece hacia arriba, hacia la bobina (figura~\ref{fig:dispositivo}), de modo que $x$ es directamente una coordenada de altura. La energía potencial gravitacional de una masa $m$ a una altura $x$ es la expresión usual,
-\begin{equation}
-V_{\text{grav}}(x) = mgx ,
-\label{eq:potencial_grav}
-\end{equation}
-con $g$ la aceleración de la gravedad. El signo es positivo porque $x$ se definió creciendo hacia arriba; si se hubiera definido creciendo hacia abajo, como en algunos textos, el signo de~\eqref{eq:potencial_grav} se invertiría. Conviene fijar este signo con cuidado, porque un error aquí se propaga directamente al signo de la fuerza de gravedad en la ecuación de movimiento final.
-
-\paragraph{El acoplamiento electromecánico: por qué hace falta algo más que $V(x)$.}
-Con solo~\eqref{eq:cinetica_cap3} y~\eqref{eq:potencial_grav}, el lagrangiano $L=T-V_{\text{grav}}$ describiría un imán en caída libre, sin ninguna fuerza que lo sostenga. Falta el término que representa la interacción con el campo de la bobina, y ese término no puede depender solo de $x$: dos posiciones iguales con dos voltajes distintos producen fuerzas magnéticas distintas, de modo que la energía asociada al campo tiene que depender de $x$ y de la variable eléctrica a la vez. Ese es, precisamente, el \emph{acoplamiento} entre el dominio mecánico (posición, velocidad) y el dominio eléctrico (voltaje, corriente): un término que solo tiene sentido como función conjunta de ambos, y que es el único lugar del lagrangiano por donde el voltaje $u$ puede influir sobre el movimiento del imán.
-
-Para sistemas puramente mecánicos basta con la energía potencial $V(x)$, y la fuerza se obtiene como $F=-\partial V/\partial x$: a mayor energía potencial en una dirección, mayor fuerza que empuja en sentido contrario. Para un sistema electromagnético como este, la cantidad análoga no es la energía magnética almacenada $W$, sino su \emph{coenergía} $W'$, y la fuerza se obtiene con el signo opuesto, $F=+\partial W'/\partial x$. La razón se entiende con el diagrama de la figura~\ref{fig:energia_coenergia}, estándar en la conversión electromecánica de energía: para una posición $x$ fija, el enlace de flujo $\lambda$ de la bobina y su corriente $i$ están relacionados por una curva $\lambda(i,x)$, en general no lineal. Esa curva separa el rectángulo $i_0\lambda_0$ del punto de operación en dos áreas complementarias: la energía $W$, el área entre la curva y el eje $\lambda$, y la coenergía $W'$, el área entre la curva y el eje $i$. Cuando el sistema se mueve a corriente constante —como ocurre aquí, porque $u$, y con él $i$, se fija externamente—, es la coenergía, no la energía, la que mide el trabajo mecánico disponible, y de ahí que sea $W'$, con signo positivo, la que entra en el lagrangiano.
-
-\begin{figure}[ht]
-    \centering
-    \input{images/energia/tikz/energia_coenergia}
-    \caption[Energía y coenergía magnética]{Energía $W$ y coenergía $W'$ como las dos áreas en que la curva $\lambda(i,x)$, a posición $x$ fija, divide el rectángulo del punto de operación $(i_0,\lambda_0)$. Cuando la corriente es la variable que se fija externamente, como ocurre en este trabajo, la fuerza mecánica se obtiene derivando la coenergía, $F=+\partial W'/\partial x$, no la energía.}
-    \label{fig:energia_coenergia}
-\end{figure}
-
-Para un circuito magnético lineal, con inductancia $L(x)$ independiente de la corriente, la coenergía tiene la forma particularmente simple $W'(x,i)=\tfrac12 L(x)\,i^2$, y su derivada reproduce exactamente la fuerza de reluctancia~\eqref{eq:fld_reluctancia} de la subsección anterior, $f_{\text{rel}}=\tfrac12 i^2\,dL/dx$: ese resultado, obtenido ahí por un argumento distinto, es un caso particular de lo que aquí se presenta en general. El régimen dipolo-dipolo de este trabajo no corresponde a un circuito lineal en $i$ —la fuerza~\eqref{eq:fld} crece con $u$ de forma lineal, no cuadrática—, de modo que su coenergía no tiene la forma $\tfrac12 L(x)i^2$. Lo que sí se conserva es el método: proponer una función $W'(x,u)$ cuya derivada respecto a $x$ sea la fuerza conocida,
+El voltaje $u$ se trata como un parámetro externo, no como una variable dinámica propia: el circuito del embobinado es resistivo y su constante de tiempo eléctrica es mucho menor que la mecánica (subsección~\ref{sec:fuerza_primeros_principios}), de modo que $u$ fija de forma cuasiestática la corriente y, con ella, la coenergía magnética. Proponiendo
 \begin{equation}
 W'(x,u) = \frac{u}{3b(a-x)^3} ,
 \label{eq:coenergia}
 \end{equation}
-que cumple, por construcción, $\partial W'/\partial x = f_{\text{fld}}(u,x)$, la fuerza del fabricante~\eqref{eq:fld}. El voltaje $u$ se trata en~\eqref{eq:coenergia} como un parámetro externo y no como una variable dinámica propia: el circuito del embobinado es resistivo y su constante de tiempo eléctrica es mucho menor que la mecánica (subsección~\ref{sec:fuerza_primeros_principios}), de modo que $u$ fija de forma cuasiestática la corriente, y con ella la coenergía, sin que haga falta escribir una ecuación de movimiento aparte para el circuito eléctrico.
+se cumple $\partial W'/\partial x = f_{\text{fld}}(u,x)$, la fuerza del fabricante~\eqref{eq:fld}. La cantidad $W'$ de~\eqref{eq:coenergia} es la coenergía magnética, la que entra en el lagrangiano de un sistema electromecánico cuando la variable independiente es la corriente, o aquí el voltaje que la fija, en vez de la carga.
 
-La figura~\ref{fig:coenergia_posicion} muestra la coenergía~\eqref{eq:coenergia} para tres voltajes representativos del intervalo de operación de este trabajo. Crece con el voltaje, como corresponde a una cantidad asociada al campo magnético, y crece con mucha más fuerza al acercarse a la bobina ($x\to a$) que al alejarse: esa asimetría es la que, al derivar respecto a $x$, produce una fuerza que aumenta como la cuarta potencia del inverso del entrehierro, y es la raíz última de la inestabilidad en lazo abierto que la sección~\ref{sec:linealizado} analiza.
-
-\begin{figure}[ht]
-    \centering
-    \input{images/energia/tikz/coenergia_posicion}
-    \caption[Coenergía magnética contra la posición]{Coenergía $W'(x,u)$ de~\eqref{eq:coenergia} contra la posición del imán, para tres voltajes del intervalo de operación. Crece con el voltaje y, para cualquier voltaje fijo, mucho más al acercarse a la bobina que al alejarse de ella.}
-    \label{fig:coenergia_posicion}
-\end{figure}
-
-\paragraph{El lagrangiano y la ecuación de Euler-Lagrange.}
-Con la energía cinética~\eqref{eq:cinetica_cap3}, la energía potencial gravitacional~\eqref{eq:potencial_grav} y la coenergía de acoplamiento~\eqref{eq:coenergia}, el lagrangiano del sistema, sin ningún término de fricción, es
+Con la coenergía~\eqref{eq:coenergia}, la energía cinética $\tfrac12 m\dot{x}^2$ y la energía potencial gravitacional $mgx$, el lagrangiano del sistema, sin ningún término de fricción, es
 \begin{equation}
-L(x,\dot{x}) = \underbrace{\frac{1}{2}m\dot{x}^2}_{T} \;-\; \underbrace{mgx}_{V_{\text{grav}}} \;+\; \underbrace{W'(x,u)}_{\text{acoplamiento}} .
+L(x,\dot{x}) = \frac{1}{2}m\dot{x}^2 - mgx + W'(x,u) .
 \label{eq:lagrangiano}
 \end{equation}
-Conviene detenerse en los signos de~\eqref{eq:lagrangiano}: la energía cinética entra con signo positivo y la potencial con signo negativo, como en cualquier lagrangiano $L=T-V$; la coenergía de acoplamiento entra también con signo positivo, no porque sea cinética, sino por la razón opuesta de signo entre energía y coenergía que explica la figura~\ref{fig:energia_coenergia}. Omitir ese signo, por analogía con una energía potencial ordinaria, invertiría el sentido de la fuerza magnética en la ecuación de movimiento. Sustituyendo~\eqref{eq:lagrangiano} en la ecuación de Euler-Lagrange~\eqref{eq:euler_lagrange} se obtiene
+La ecuación de Euler-Lagrange de~\eqref{eq:lagrangiano},
 \begin{equation}
-\frac{\partial L}{\partial \dot x} = m\dot x, \qquad
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot x}\right) = m\ddot x, \qquad
-\frac{\partial L}{\partial x} = -mg + \frac{\partial W'}{\partial x} = f_{\text{fld}}(u,x) - mg ,
-\label{eq:el_pasos}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{x}}\right) - \frac{\partial L}{\partial x} = 0 ,
+\label{eq:euler_lagrange}
 \end{equation}
-de modo que~\eqref{eq:euler_lagrange} da $m\ddot{x} = f_{\text{fld}}(u,x) - mg$, idéntica a la ecuación de movimiento~\eqref{eq:mec} sin el término de fricción $f_{\text{fr}}$.
+da $m\ddot{x} = f_{\text{fld}}(u,x) - mg$, idéntica a la ecuación de movimiento~\eqref{eq:mec} sin el término de fricción $f_{\text{fr}}$.
 
-\paragraph{Verificación cruzada: las ecuaciones de Hamilton.}
-Como verificación independiente de~\eqref{eq:el_pasos}, se repitió el cálculo con el formalismo hamiltoniano, que parte del mismo lagrangiano pero reorganiza la dinámica en términos de la posición $x$ y el momento canónico $p$, en vez de la posición y la velocidad. El momento canónico es
-\begin{equation}
-p = \frac{\partial L}{\partial \dot{x}} = m\dot{x} ,
-\label{eq:momento_canonico}
-\end{equation}
-y la transformada de Legendre del lagrangiano~\eqref{eq:lagrangiano}, $H=p\dot x - L$, expresada en términos de $p$ en vez de $\dot x$, da el hamiltoniano
+Como verificación cruzada, se repitió el cálculo con el formalismo hamiltoniano. El momento canónico es $p = \partial L/\partial\dot{x} = m\dot{x}$, y la transformada de Legendre da
 \begin{equation}
 H(x,p) = \frac{p^2}{2m} - W'(x,u) + mgx .
 \label{eq:hamiltoniano}
 \end{equation}
-Las ecuaciones de Hamilton, $\dot{x}=\partial H/\partial p$ y $\dot{p}=-\partial H/\partial x$, dan
-\begin{equation}
-\dot{x} = \frac{p}{m} , \qquad \dot{p} = f_{\text{fld}}(u,x) - mg .
-\label{eq:hamilton_ec}
-\end{equation}
-Derivando la primera ecuación de~\eqref{eq:hamilton_ec} respecto al tiempo y sustituyendo la segunda se recupera $m\ddot x = f_{\text{fld}}(u,x)-mg$, la misma ecuación que con Lagrange, obtenida esta vez a partir del momento canónico en lugar de la velocidad. Las dos verificaciones, simbólicas e independientes entre sí, se hicieron en Mathematica (\texttt{icr/calculus/\allowbreak Final\_Bien/\allowbreak primeros\_principios/\allowbreak derivar\_energia.wls}).
+Las ecuaciones de Hamilton, $\dot{x}=\partial H/\partial p$ y $\dot{p}=-\partial H/\partial x$, dan $\dot{x}=p/m$ y $\dot{p}=f_{\text{fld}}(u,x)-mg$; combinándolas se recupera la misma ecuación que con Lagrange. Las dos verificaciones, simbólicas e independientes entre sí, se hicieron en Mathematica (\texttt{icr/calculus/\allowbreak Final\_Bien/\allowbreak primeros\_principios/\allowbreak derivar\_energia.wls}).
 
 \section{Fricción con atascamiento-deslizamiento}\label{sec:friccion_modelo}
 

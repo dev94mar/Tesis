@@ -15,7 +15,7 @@ El controlador debe cumplir cuatro objetivos. Debe estabilizar el lazo, para lo 
 
 \section{El controlador con doble acción integral}\label{sec:pii}
 
-El controlador se ajustó sobre la planta~\eqref{eq:planta}, de forma interactiva en los editores de Bode y del lugar de las raíces. El resultado es
+El controlador se ajustó sobre la planta~\eqref{eq:planta}, de forma interactiva en los editores de Bode y del lugar de las raíces del \emph{Control System Designer} de MATLAB. El resultado es
 \begin{equation}
 C(s)=\frac{152{,}43\,(s+4{,}875)(s+1{,}861)(s+17{,}31)}
 {s^{2}(s+301{,}1)} .

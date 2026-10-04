@@ -114,7 +114,7 @@ sin aproximar. Desarrollando en serie la fuerza que~\eqref{eq:biot_savart} produ
 \frac{\Delta f}{f} = -1 + \left(1+\frac{R_{\text{bob}}^2}{z^2}\right)^{-5/2} ,
 \label{eq:error_convergencia}
 \end{equation}
-que se anula exactamente cuando $R_{\text{bob}}/z\to0$ y es de orden $(R_{\text{bob}}/z)^2$: con un entrehierro diez veces mayor que el radio de la bobina, el error de~\eqref{eq:error_convergencia} es del $2{,}5$\,\%; con cien veces, del $0{,}025$\,\%. La solución de primeros principios converge, por tanto, a la del fabricante, y no solo coincide con ella en forma. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado} y esta verificación de convergencia, se verificó de forma independiente mediante cálculo simbólico.
+que se anula exactamente cuando $R_{\text{bob}}/z\to0$ y es de orden $(R_{\text{bob}}/z)^2$: con un entrehierro diez veces mayor que el radio de la bobina, el error de~\eqref{eq:error_convergencia} es del $2{,}5$\,\%; con cien veces, del $0{,}025$\,\%. La solución de primeros principios converge, por tanto, a la del fabricante, y no solo coincide con ella en forma. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado} y esta verificación de convergencia, se verificó de forma independiente en Mathematica (\texttt{icr/calculus/Final\_Bien/primeros\_principios/}).
 
 \subsection{Modelo energético sin disipación}\label{sec:energia_primeros_principios}
 
@@ -203,7 +203,7 @@ Las ecuaciones de Hamilton, $\dot{x}=\partial H/\partial p$ y $\dot{p}=-\partial
 \dot{x} = \frac{p}{m} , \qquad \dot{p} = f_{\text{fld}}(u,x) - mg .
 \label{eq:hamilton_ec}
 \end{equation}
-Derivando la primera ecuación de~\eqref{eq:hamilton_ec} respecto al tiempo y sustituyendo la segunda se recupera $m\ddot x = f_{\text{fld}}(u,x)-mg$, la misma ecuación que con Lagrange, obtenida esta vez a partir del momento canónico en lugar de la velocidad. Las dos verificaciones, simbólicas e independientes entre sí, se hicieron mediante cálculo simbólico.
+Derivando la primera ecuación de~\eqref{eq:hamilton_ec} respecto al tiempo y sustituyendo la segunda se recupera $m\ddot x = f_{\text{fld}}(u,x)-mg$, la misma ecuación que con Lagrange, obtenida esta vez a partir del momento canónico en lugar de la velocidad. Las dos verificaciones, simbólicas e independientes entre sí, se hicieron en Mathematica (\texttt{icr/calculus/\allowbreak Final\_Bien/\allowbreak primeros\_principios/\allowbreak derivar\_energia.wls}).
 
 \section{Fricción con atascamiento-deslizamiento}\label{sec:friccion_modelo}
 

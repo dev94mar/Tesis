@@ -126,6 +126,31 @@ Otros puntos del mismo barrido mejoran una sola métrica más allá de lo anteri
 
 Esto se incorporó al capítulo 6 (mismo archivo y sección) con el sobrepaso del mejor PI combinado señalado explícitamente como costo, al grafo (nodo `PII_V2`, revisión `R25`) y a `MEMORY.md`. El documento compiló de nuevo sin errores, 63 páginas.
 
+## Cuarto addendum (mismo día): barrido conjunto simétrico del PII — las fronteras se cruzan
+
+El tercer addendum dejó una asimetría explícita: el PI había recibido un barrido conjunto completo (ganancia, cero bajo y red de adelanto a la vez, 450 combinaciones), mientras que el PII solo se había explorado con un punto diseñado a mano (`PII_V2`) y una extensión de solo ganancia (`extender_ambos.m`). El usuario señaló correctamente que esta comparación no era simétrica y pidió completarla.
+
+Se escribió `icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.m`, idéntico en método a `barrido_conjunto_PI.m` (misma rejilla de `kK∈[1;5,5]`, `α∈[0,3;3]`, `β∈[1;1,2]`, mismo filtro de margen de fase ≥30° en los cuatro puntos del intervalo, misma simulación no lineal en paralelo), con el filtro de candidatos degenerados (atascados lejos de la referencia) incorporado desde el inicio, aprendido del barrido del PI.
+
+**Resultado: 244 de 450 combinaciones cumplen el margen de fase** (frente a 394 del PI — el PII tolera menos ganancia antes de perder margen, consistente con lo ya visto en `extender_ambos.m`), **182 son válidas** tras filtrar divergencias y degenerados.
+
+**Comparación contra el único punto de referencia usado hasta ahora** (el mejor PI combinado, `kK=3,5/α=1,4/β=1,15`: ciclo 0,0079 cm, atascamiento 0,241 s): **ningún** candidato del PII lo supera en ambas métricas a la vez. Hasta aquí, parecía confirmar el cierre del tercer addendum.
+
+**Pero la comparación de un solo punto no es toda la comparación.** Se calculó la frontera de Pareto de cada barrido (el mejor atascamiento alcanzable para cada nivel de ciclo límite) y se encontró que **las dos fronteras se cruzan**, cerca de ciclo = 0,008 cm:
+
+| Región | Controlador mejor | Ejemplo |
+|---|---|---|
+| Ciclo < 0,008 cm (ganancia alta, sintonización habitual) | PI | `kK=3,5/1,4/1,15`: 0,0079 cm / 0,241 s |
+| Ciclo > 0,008 cm (ganancia baja, cero bajo desplazado) | PII | `kK=1/2,2/1,05`: 0,0261 cm / 0,182 s |
+
+En el extremo de menor atascamiento de **todo** el trabajo (de las cuatro familias, `PII_V2`, las extensiones y ambos barridos conjuntos), el PII con `kK=1`, `α=2,2`, `β=1,05` da un ciclo de 0,0261 cm y un atascamiento de 0,182 s, y **supera al mejor PI de esa misma región** (`kK=1/1,4/1,10`: 0,0285 cm, 0,209 s) **en las dos métricas simultáneamente**. Se verificó por resimulación directa, fuera del barrido: converge a −2,989 cm (error final 0,011 cm), con 38 episodios de atascamiento en la ventana de medición (estadística confiable) — un resultado genuino, no un artefacto.
+
+**Veredicto final, definitivo, de toda esta línea de auditoría:** la segunda acción integral no carece de toda ventaja, pero tampoco la tiene de forma general. Existe, acotada a un régimen específico (ganancia baja, ciclo límite relativamente grande, cero bajo desplazado lejos de su valor de diseño). En el régimen de ciclo pequeño —el que produce la sintonización habitual de ambos controladores en esta tesis, incluidos los de la tabla 6.1— el PI iguala o supera al PII. La hipótesis de la tesis ni se confirma en general ni se refuta en general: se sostiene, de forma acotada, en una región del espacio de sintonización que no es la habitual.
+
+Se agregó la figura `images/pii_v2_results/tikz/fronteras.tex` (frontera de Pareto de ambos controladores, con las nubes de candidatos de fondo) al capítulo 6, y se reescribió la conclusión de la sección "¿Ayuda liberar la red de adelanto?" y la síntesis del capítulo para reflejar este hallazgo completo. El documento compiló sin errores, 74 páginas. El grafo (`PII_V2`, `R25`) se actualizó con el resultado definitivo.
+
+Esto no agota el espacio de búsqueda: 450 combinaciones por controlador, en una rejilla discreta, no cubren el continuo de `(kK, α, β)`; podría existir una frontera verdadera distinta de la muestreada aquí. Pero con la evidencia reunida —cuatro familias de controladores, un rediseño manual, dos extensiones de ganancia y dos barridos conjuntos completos, todos con el mismo simulador y el mismo criterio— esta es la comparación más completa que se hizo en esta auditoría, y su resultado es el que se reporta arriba.
+
 ## 4. Pendientes y alcance no cubierto
 
 - No se reejecutaron las 7503 trayectorias del mapa de operación completo ni el seguimiento largo; se verificó por lectura y cotejo de cifras, como en el segundo barrido.

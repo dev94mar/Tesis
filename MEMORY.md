@@ -134,6 +134,16 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Cierre definitivo de la comparación PI/PII: las fronteras se cruzan (2026-10-04)
+
+El usuario señaló correctamente que la comparación anterior (barrido conjunto solo del PI contra `PII_V2`) no era simétrica: al PII nunca se le dio la misma libertad conjunta (kK+α+β) que al PI. Se hizo `icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.m`, idéntico en método al del PI (misma rejilla de 450 combinaciones, mismo filtro de margen ≥30°, misma simulación). Resultado: 244/450 pasan el margen (menos que las 394 del PI), 182 válidos.
+
+Comparado solo contra el único punto de referencia anterior (mejor PI combinado: ciclo 0,0079 cm, atasco 0,241 s), ningún PII lo supera en ambas métricas — pero esa comparación de un solo punto era incompleta. Al calcular la **frontera de Pareto completa de cada controlador**, se encontró que **las fronteras se cruzan en ciclo≈0,008 cm**: por debajo (ganancia alta, sintonización habitual de ambos controladores en esta tesis), el PI es mejor; por encima (ganancia baja, cero bajo desplazado), **el PII es mejor**, y en el extremo de menor atascamiento de todo el trabajo (PII con `kK=1,α=2,2,β=1,05`: ciclo 0,0261 cm, atasco 0,182 s) el PII **domina al PI en ambas métricas a la vez** (mejor PI de esa región: 0,0285 cm/0,209 s), verificado por resimulación directa (38 episodios, converge bien).
+
+**Conclusión final y definitiva de toda la línea de auditoría PI/PII:** la segunda acción integral sí tiene una ventaja real, pero acotada a un régimen específico de sintonización (ganancia baja, ciclo relativamente grande), no al régimen habitual (ciclo pequeño, el que usan los controladores de la tabla 6.1 de la tesis), donde el PI iguala o supera al PII. La hipótesis de la tesis ni se confirma ni se refuta en general: se sostiene de forma acotada.
+
+Se agregó la figura de fronteras de Pareto (`images/pii_v2_results/tikz/fronteras.tex`) y se reescribió la conclusión del capítulo 6 (sección "¿Ayuda liberar la red de adelanto?" y síntesis) para reflejar este resultado completo. Grafo (`PII_V2`/`R25`) actualizado. Compila sin errores, 74 páginas. Detalle completo en el cuarto addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
+
 ## Nuevas pruebas de seguimiento: diente de sierra y pulso cuadrado (2026-10-04)
 
 A petición del usuario se agregaron dos referencias de seguimiento nuevas al capítulo 5 (sección 5.5), con el mismo simulador, controlador (`PII_lic.mat`) y metodología que las ya existentes (senoidal, trapezoidal): `seguimiento_P5.m` se extendió con `ref_diente` (rampa −2→−3 cm en 250 s con reinicio instantáneo, periodo 250 s) y `ref_pulso` (escalón −2/−3 cm con planos de 250 s y transición instantánea, periodo 500 s), ambas con la misma pendiente/duración que la prueba trapezoidal pero sin sus rampas de transición. Al editar el script su propia huella SHA-256 invalidó la caché completa, así que los 4 casos (incluidos senoidal y trapezoidal) se resimularon; los resultados de esos dos coinciden con los valores ya publicados en la tesis.
@@ -154,10 +164,9 @@ Incorporado a la tesis: capítulo 3 (subsección "Justificación de primeros pri
 
 ## Próximo paso recomendado
 
-1. Comprometer en git: el capítulo 6 actualizado, el PDF recompilado, el grafo v5, los scripts nuevos de `R15_sintonizacion/` (`barrido_conjunto_PI.m`/`.json`, los de verificación puntual) y los logs de `validacion/barrido_03/`. Incluir también la corrección de metadato de §REG/SIN/TRAP si no se comprometió ya.
-2. Si se quiere cerrar del todo la comparación, falta un barrido conjunto equivalente para el PII (ganancia, cero bajo y red de adelanto a la vez, no solo ganancia); no se hizo en esta sesión porque el usuario pidió específicamente el barrido del PI.
-3. El candidato con ciclo 0,00058 cm (kK=4, α=0,3, β=1,2) necesita una ventana de medición más larga para confirmar que es un ciclo límite genuino y no un efecto de borde.
-4. Actualizar el dictamen de publicabilidad ([PUBLICABILIDAD.md](validacion/barrido_02/PUBLICABILIDAD.md)) con esta conclusión: refuerza, con evidencia considerable, que la segunda integración no es la causa de una mejor regulación bajo fricción estática en este sistema.
+1. **Hecho** (ver sección "Cierre definitivo de la comparación PI/PII" más abajo): el barrido conjunto equivalente del PII, que cierra la comparación con las fronteras de Pareto cruzándose.
+2. El candidato con ciclo 0,00058 cm (PI, `kK=4, α=0,3, β=1,2`) sigue necesitando una ventana de medición más larga para confirmar que es un ciclo límite genuino y no un efecto de borde; no se usó en ninguna conclusión final.
+3. Actualizar el dictamen de publicabilidad ([PUBLICABILIDAD.md](validacion/barrido_02/PUBLICABILIDAD.md)) con la conclusión definitiva: la segunda integración sí ofrece una ventaja real pero acotada a un régimen de sintonización específico, no al habitual — un resultado más matizado y, posiblemente, más publicable que "el PII no sirve" o "el PII es mejor".
 
 ## Mantenimiento
 

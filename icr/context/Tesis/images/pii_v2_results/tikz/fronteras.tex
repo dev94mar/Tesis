@@ -1,0 +1,19 @@
+\input{images/pii_v2_results/tikz/estilo}
+\begin{tikzpicture}
+\begin{axis}[comp, width=0.92\textwidth, height=8cm, xmin=0, xmax=0.032, ymin=0.15, ymax=0.75,
+    xlabel={ciclo límite pico a pico [\si{cm}]}, ylabel={atascamiento medio [\si{s}]},
+    xtick={0,0.005,0.01,0.015,0.02,0.025,0.03},
+    x tick label style={/pgf/number format/fixed, /pgf/number format/precision=3},
+    legend style={at={(0.98,0.98)}, anchor=north east, font=\footnotesize}, legend cell align=left]
+  \addplot[only marks, mark=*, mark size=0.8pt, ctl2!50, opacity=0.5, forget plot]
+    table[x=ciclo, y=atasc] {images/pii_v2_results/tikz/nube_pi.csv};
+  \addplot[only marks, mark=*, mark size=0.8pt, tray!50, opacity=0.5, forget plot]
+    table[x=ciclo, y=atasc] {images/pii_v2_results/tikz/nube_pii.csv};
+  \addplot[ctl2, line width=1.3pt, mark=o, mark size=1.8pt] table[x=ciclo, y=atasc] {images/pii_v2_results/tikz/frontera_pi.csv};
+  \addlegendentry{frontera de Pareto, PI}
+  \addplot[tray, line width=1.3pt, mark=square, mark size=1.6pt] table[x=ciclo, y=atasc] {images/pii_v2_results/tikz/frontera_pii.csv};
+  \addlegendentry{frontera de Pareto, PII}
+  \addplot[only marks, mark=*, mark size=3pt, ver, draw=black] coordinates {(0.011018,0.2444)};
+  \addlegendentry{PII\_V2}
+\end{axis}
+\end{tikzpicture}

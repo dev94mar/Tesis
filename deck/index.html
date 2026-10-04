@@ -1,41 +1,40 @@
 <title>Control PII ECP-730</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ===================================================================
    Deck: control de posición del levitador magnético ECP-730 (PII)
-   Layout: secciones de altura de pantalla, scroll vertical con snap,
-   navegación por puntos. Consola de instrumentación: trazos de datos
-   en monoespaciada, acentos cian (campo/posición) y ámbar (voltaje).
+   Identidad gráfica UAM (Acuerdo 06/2012): rojo Unidad Azcapotzalco
+   Pantone 186C / #CD032E (num. 5.3), negro institucional #000000 como
+   base (num. 2.3), tipografía web obligatoria Verdana (num. 4.1, Anexo
+   II). Sin logotipos. Layout: secciones a pantalla completa, scroll
+   vertical con snap, navegación por puntos.
    =================================================================== */
 :root{
-  --bg:#f4f6f8; --bg2:#eaedf1; --surface:#ffffff; --surface2:#f0f2f5;
-  --fg:#10151c; --muted:#5b6672; --line:rgba(16,21,28,.12);
-  --accent:#0077a6; --accent-soft:#d6eef7;
-  --warn:#b4560a; --warn-soft:#fbe6d4;
-  --good:#1a7a4c;
-  --font-disp:'IBM Plex Sans Condensed',system-ui,sans-serif;
-  --font-body:'IBM Plex Sans',system-ui,sans-serif;
-  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --bg:#f7f5f4; --bg2:#efe9e8; --surface:#ffffff; --surface2:#f3efee;
+  --fg:#1a1415; --muted:#6c6260; --line:rgba(26,20,21,.14);
+  --accent:#cd032e; --accent-soft:rgba(205,3,46,.09);
+  --warn:#3a3233; --warn-soft:rgba(58,50,51,.08);
+  --good:#8c1030;
+  --font-disp:Verdana,Arial,Tahoma,sans-serif;
+  --font-body:Verdana,Arial,Tahoma,sans-serif;
+  --font-mono:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0a0e14; --bg2:#0d1219; --surface:#121823; --surface2:#161e2b;
-    --fg:#e8edf4; --muted:#8a97a8; --line:rgba(232,237,244,.12);
-    --accent:#4fd8ff; --accent-soft:rgba(79,216,255,.14);
-    --warn:#ff9d52; --warn-soft:rgba(255,157,82,.14);
-    --good:#5fe3a8;
+    --bg:#140f10; --bg2:#1a1313; --surface:#201818; --surface2:#271e1e;
+    --fg:#f5efed; --muted:#aa9f9d; --line:rgba(245,239,237,.14);
+    --accent:#ff3b54; --accent-soft:rgba(255,59,84,.14);
+    --warn:#cdc0bd; --warn-soft:rgba(205,192,189,.1);
+    --good:#ff7f93;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0a0e14; --bg2:#0d1219; --surface:#121823; --surface2:#161e2b;
-  --fg:#e8edf4; --muted:#8a97a8; --line:rgba(232,237,244,.12);
-  --accent:#4fd8ff; --accent-soft:rgba(79,216,255,.14);
-  --warn:#ff9d52; --warn-soft:rgba(255,157,82,.14);
-  --good:#5fe3a8;
+  --bg:#140f10; --bg2:#1a1313; --surface:#201818; --surface2:#271e1e;
+  --fg:#f5efed; --muted:#aa9f9d; --line:rgba(245,239,237,.14);
+  --accent:#ff3b54; --accent-soft:rgba(255,59,84,.14);
+  --warn:#cdc0bd; --warn-soft:rgba(205,192,189,.1);
+  --good:#ff7f93;
   color-scheme: dark;
 }
 *{box-sizing:border-box}
@@ -438,7 +437,7 @@ input[type=range]{flex:1; accent-color:var(--accent)}
     ctx.beginPath(); ctx.moveTo(cx, fy0); ctx.lineTo(cx, fy1); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(cx-5,fy1-6); ctx.lineTo(cx,fy1); ctx.lineTo(cx+5,fy1-6); ctx.fill();
   }
-  function getMonoFont(){ return "'IBM Plex Mono',monospace"; }
+  function getMonoFont(){ return "ui-monospace,monospace"; }
   function roundRect(ctx,x,y,w,h,rad){
     ctx.beginPath();
     ctx.moveTo(x+rad,y); ctx.arcTo(x+w,y,x+w,y+h,rad); ctx.arcTo(x+w,y+h,x,y+h,rad);

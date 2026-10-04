@@ -84,6 +84,11 @@
         "version": 5,
         "fecha": "2026-10-04",
         "cambio": "Corrección de metadato: los nodos REG, SIN y TRAP tenían valores.controlador=\"PII.mat\" (el controlador preliminar); sus cifras siempre correspondieron a PII_lic.mat (el de la tesis), así que se corrige la etiqueta para que coincida. Hallado en la tercera auditoría (validacion/barrido_03)."
+      },
+      {
+        "version": 5,
+        "fecha": "2026-10-04",
+        "cambio": "Comparación simétrica PI/PII con la misma libertad de sintonización (validacion/barrido_03): al extender la ganancia de cada familia sobre su propio óptimo, el PI domina al PII en ciclo límite y en atascamiento, y tolera más ganancia antes de perder el margen de 30°. La ventaja de PII_V2 no generaliza; dependía de la forma particular de su red de adelanto. Incorporado al capítulo 6 de la tesis."
       }
     ]
   },
@@ -4620,13 +4625,13 @@
     {
       "id": "PII_V2",
       "tipo": "calc",
-      "etiqueta": "PII rediseñado (sí cumple la hipótesis)",
+      "etiqueta": "PII rediseñado (no generaliza: ver R25)",
       "texto": "\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]\nReescala el PII de la tesis (kK=2.5 en la ganancia, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase: 47.3°/41.0°/37.8°/34.5° en -4/-3/-2.5/-2 cm (todos ≥30°, el umbral de la tesis). En el escalón -2→-3 cm con fricción de Karnopp, zona muerta y u≤3.5 V: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm y 0.26 s del mejor PI del barrido R15 (-17 % y -9 %) y frente a 0.033 cm y 0.335 s del PII de la tesis (-67 % y -29 %). Sobrepaso 29.1 %, sin saturación sostenida. En la rampa de -0.05 cm/s del barrido, error eficaz 0.0024 cm, unas tres veces menor que PI y PII originales (~0.0076 cm).",
       "latex": [
         "C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}"
       ],
       "fuente": "Sesión 2026-10-04: diseño en Python (búsqueda numérica, validación RK45), verificación de estabilidad en Mathematica (Routh/raíces). Validación cruzada independiente en validacion/barrido_03/ (2026-10-04), con MATLAB/ode45 y el mismo simulador y criterio de aceptación que el barrido R15 de la tesis (icr/calculus/Final_Bien/R15_sintonizacion/validar_PII_v2.m): CONFIRMADA. No forma parte del texto de la tesis; es exploración posterior.",
-      "verificacion": "Python (scipy, RK45) y Mathematica (Routh/raíces); MATLAB (ode45) CONFIRMADO en validacion/barrido_03/ (icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json): margen de fase 47.25°/41.00°/37.73°/34.42° en -4/-3/-2.5/-2 cm (afirmado: 47.3/41.0/37.8/34.5, diferencia <1%); escalón -2→-3 cm: sobrepaso 29.16% (afirmado 29.1%), ciclo límite 0.01102 cm (afirmado 0.0108 cm, +2%), atascamiento medio 0.2444 s (afirmado 0.237 s, +3%); rampa: error eficaz 0.002412 cm (afirmado 0.0024 cm). Frente al mejor PI del barrido R15 (0.013403 cm / 0.2624 s): -17.8% en ciclo límite y -6.9% en atascamiento, consistente con el -17%/-9% afirmado.",
+      "verificacion": "Python (scipy, RK45) y Mathematica (Routh/raíces); MATLAB (ode45) CONFIRMADO en validacion/barrido_03/ (icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json): margen de fase 47.25°/41.00°/37.73°/34.42° en -4/-3/-2.5/-2 cm (afirmado: 47.3/41.0/37.8/34.5, diferencia <1%); escalón -2→-3 cm: sobrepaso 29.16% (afirmado 29.1%), ciclo límite 0.01102 cm (afirmado 0.0108 cm, +2%), atascamiento medio 0.2444 s (afirmado 0.237 s, +3%); rampa: error eficaz 0.002412 cm (afirmado 0.0024 cm). Frente al mejor PI del barrido R15 (0.013403 cm / 0.2624 s): -17.8% en ciclo límite y -6.9% en atascamiento, consistente con el -17%/-9% afirmado. ADVERTENCIA (2026-10-04, misma auditoría): la ventaja sobre el mejor PI del barrido restringido no es simétrica. Al aplicar la MISMA receta (kK=2,5, alpha=1,8, beta=1,1) al PI de comparación, el margen de fase lineal es incluso mejor (40-53°), pero la simulación no lineal DIVERGE (voltaje saturado 86% del tiempo). Y al extender la ganancia de cada familia por separado sobre su propio óptimo (alpha y red de adelanto fijos), el PI domina al PII en ambas métricas en todo kK comparable y tolera casi el doble de ganancia antes de perder el margen de 30°: PI en kK=4,5 da ciclo=0,0075cm/atasco=0,40s; PII pierde el margen en kK=3,5, con su último punto válido (kK=3) en ciclo=0,0131cm/atasco=0,84s. Ver validacion/barrido_03/VEREDICTO.md y los scripts validar_PI_v2.m, buscar_PI_v2.m, probar_PI_dirigido.m, extender_ambos.m.",
       "valores": {
         "ganancia": 381.075,
         "ceros": [
@@ -4668,6 +4673,22 @@
           "error_rms_rampa_cm": 0.002412,
           "script": "icr/calculus/Final_Bien/R15_sintonizacion/validar_PII_v2.m",
           "datos": "icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json"
+        },
+        "comparacion_simetrica": {
+          "PI_misma_receta_diverge": true,
+          "extension_gain_PI_mejor_punto": {
+            "kK": 4.5,
+            "ciclo_pp_cm": 0.00748,
+            "atasc_medio_s": 0.398,
+            "pm_min_deg": 30.2
+          },
+          "extension_gain_PII_mejor_punto": {
+            "kK": 3.0,
+            "ciclo_pp_cm": 0.01312,
+            "atasc_medio_s": 0.844,
+            "pm_min_deg": 30.1
+          },
+          "conclusion": "La ventaja de PII_V2 depende de la forma particular en que se reescaló su red de adelanto, no de la segunda integración. En una comparación simétrica (extender solo la ganancia sobre el óptimo de cada familia), el PI domina al PII en ciclo límite y en atascamiento, y tolera más ganancia."
         }
       },
       "contenido_html": "<div class=\"math\">\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]</div><p>Reescala el PII de la tesis (k<sub>K</sub>=2.5, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase ≥30° en -4, -3, -2.5 y -2 cm. En el escalón -2→-3 cm: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm / 0.26 s del mejor PI del barrido (-17 % y -9 %) y a 0.033 cm / 0.335 s del PII original (-67 % y -29 %). Sobrepaso 29.1 %. En la rampa de -0.05 cm/s, error eficaz tres veces menor que ambos controladores originales.</p>",
@@ -4690,7 +4711,7 @@
       "texto": "El barrido de familias limitó kK a [0.5,3] y no varió la red de adelanto; ningún PII superó al mejor PI dentro de ese barrido. Con más libertad (kK y red de adelanto) y el mismo margen de fase ≥30°, se encontró un PII que sí lo supera en ambas métricas.\nResolución: diseñado en Python, verificado en Mathematica; validación cruzada con MATLAB en curso. Pendiente decidir su incorporación al capítulo 6.",
       "prioridad": "media",
       "estado": "resuelta",
-      "resolucion": "PII_v2 bate al mejor PI del barrido R15 en ciclo límite (-17 %) y atascamiento medio (-9 %), con margen de fase ≥30° en todo el intervalo; no cambia la conclusión general sobre las familias ya publicadas, pero muestra que la restricción kK≤3 del barrido, no el número de integradores, era lo que impedía al PII ganar. Verificado de forma independiente con MATLAB/ode45 en validacion/barrido_03/ (2026-10-04): las cifras del diseño original se reproducen dentro de ±3%, y la ventaja sobre el mejor PI del barrido R15 se confirma (-17.8% en ciclo límite, -6.9% en atascamiento medio). Sigue sin estar incorporado al capítulo 6; la decisión de incluirlo queda pendiente del usuario.",
+      "resolucion": "PII_v2 bate al mejor PI del barrido R15 en ciclo límite (-17 %) y atascamiento medio (-9 %), con margen de fase ≥30° en todo el intervalo; no cambia la conclusión general sobre las familias ya publicadas, pero muestra que la restricción kK≤3 del barrido, no el número de integradores, era lo que impedía al PII ganar. Verificado de forma independiente con MATLAB/ode45 en validacion/barrido_03/ (2026-10-04): las cifras del diseño original se reproducen dentro de ±3%, y la ventaja sobre el mejor PI del barrido R15 se confirma (-17.8% en ciclo límite, -6.9% en atascamiento medio). Sigue sin estar incorporado al capítulo 6; la decisión de incluirlo queda pendiente del usuario. ACTUALIZACIÓN (2026-10-04): una comparación simétrica posterior (misma sesión) muestra que la ventaja de PII_V2 no generaliza. Al darle al PI la misma libertad (misma receta, o extensión de ganancia sobre su propio óptimo), el PI iguala o supera al PII en ciclo límite y en atascamiento, y tolera más ganancia antes de perder el margen de fase de 30°. La hipótesis de que la segunda integración por sí sola reduce el ciclo límite o el atascamiento NO se sostiene; si acaso, la evidencia adicional la contradice. Incorporado al capítulo 6 (sección '¿Ayuda liberar la red de adelanto?') con esta conclusión.",
       "metricas": {
         "grado": 5,
         "grado_entrada": 0,

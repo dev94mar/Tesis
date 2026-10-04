@@ -74,7 +74,35 @@ Comparado contra el mejor PI del barrido R15 (0,013403 cm de ciclo límite, 0,26
 
 **Veredicto del addendum: `PII_V2` queda CONFIRMADO por una validación independiente**, construida desde cero con un método de integración y una herramienta distintos a los que produjeron la cifra original, usando el mismo simulador y los mismos criterios de aceptación que el resto del barrido R15. Las diferencias (0,1–3 %) son del mismo orden que las diferencias de precisión ya documentadas entre métodos de integración en `validacion/barrido_02/comparacion_R15.json` (medianas 0,7–0,9 %, máximo 16 % en un caso atípico), y no cambian ninguna conclusión cualitativa.
 
-El nodo del grafo (`icr/grafo/grafo_tesis.json`, nodo `PII_V2` y revisión `R25`) y `MEMORY.md` se actualizaron con esta verificación. **Sigue sin estar incorporado al capítulo 6 de la tesis**; la decisión de si debe entrar al documento —y con qué alcance— es del usuario, no de esta auditoría.
+El nodo del grafo (`icr/grafo/grafo_tesis.json`, nodo `PII_V2` y revisión `R25`) y `MEMORY.md` se actualizaron con esta verificación.
+
+## Segundo addendum (mismo día): comparación simétrica — la ventaja de `PII_V2` no generaliza
+
+El usuario pidió que `PII_V2` respaldara la hipótesis de la tesis (que la segunda acción integral reduce el ciclo límite y el atascamiento). Antes de escribirlo así, se verificó si la ventaja de `PII_V2` sobrevive a una comparación simétrica, dándole al PI de comparación la misma libertad de sintonización. **No sobrevive.**
+
+**Intento 1 — misma receta exacta (`icr/calculus/Final_Bien/R15_sintonizacion/validar_PI_v2.m`).** Se aplicó al PI de la tesis la receta idéntica de `PII_V2` (`kK=2,5`, escalar su cero de baja frecuencia por `α=1,8`, escalar su propio cero-polo de adelanto por `β=1,1`). El margen de fase lineal resultante es, de hecho, *mejor* que el de `PII_V2` (40,8°–53,4° en el intervalo, frente a 34,4°–47,3°). Pero la simulación no lineal **diverge**: el voltaje queda saturado en 3,5 V el 86 % del tiempo y el imán se aleja sin control (`validar_PI_v2.log`, `validacion_PI_v2.json`). Esto muestra que el margen de fase lineal, por sí solo, no garantiza un comportamiento aceptable frente a la saturación del actuador — una advertencia metodológica aparte, válida para cualquier controlador que se diseñe solo con criterios lineales en esta planta.
+
+**Intento 2 — barrido amplio con selección por tiempo de asentamiento lineal (`buscar_PI_v2.m`).** Se filtraron 405 combinaciones de `(kK, α, β)` por margen de fase (368 pasaron) y se seleccionaron candidatos por el menor tiempo de asentamiento lineal, primero en general y luego uno por nivel de `kK`. En ambos casos el criterio escogió sistemáticamente `α=3,2` (el extremo superior del rango explorado), y todos esos candidatos **divergieron** de forma idéntica (ciclo "pp" de 1145,5 cm, un valor de saturación numérica sin significado físico). Conclusión metodológica: el tiempo de asentamiento lineal es un mal predictor de viabilidad no lineal cuando se permite `α` extremo; no es evidencia de que el PI no pueda liberarse, sino de que ese criterio de selección estaba sesgado hacia puntos inviables.
+
+**Intento 3 — extensión dirigida desde el óptimo conocido (`probar_PI_dirigido.m`).** Partiendo del mejor PI ya validado del barrido restringido (`kK=2,5079`, `α=0,7579`), se probaron 8 puntos razonables extendiendo `kK` y `β` moderadamente. Ninguno divergió. El punto `kK=3,5`, `α=0,7579`, `β=1` dio un ciclo de **0,00981 cm, menor que el de `PII_V2`** (0,011018 cm), aunque con un atascamiento mayor (0,370 s frente a 0,2444 s). El punto `kK=4,0` dio un ciclo aún menor (0,00952 cm).
+
+**Intento 4 — comparación simétrica definitiva (`extender_ambos.m`).** Se extendió, por separado, la ganancia de cada familia sobre su propio óptimo ya conocido del barrido (PI: `kK=2,5079`, `α=0,7579`; PII: `kK=1,465`, `α=0,4353`), dejando fijos en cada caso el cero bajo y la red de adelanto (`β=1`). Resultado, en el mismo escalón −2→−3 cm:
+
+| `kK` | PI: ciclo / atascamiento | PII: ciclo / atascamiento |
+|---:|---:|---:|
+| 1,465 | 0,02337 cm / 0,326 s | 0,02718 cm / 0,739 s |
+| 2,0 | 0,01695 cm / 0,350 s | 0,01875 cm / 0,751 s |
+| 2,5 | 0,01336 cm / 0,347 s | 0,01570 cm / 0,843 s |
+| 3,0 | 0,01151 cm / 0,346 s | 0,01312 cm / 0,844 s (**pierde el margen de 30° en kK=3,5**) |
+| 3,5 | 0,00963 cm / 0,366 s | — |
+| 4,0 | 0,00879 cm / 0,396 s | — |
+| 4,5 | **0,00748 cm / 0,398 s (pierde el margen de 30° en kK=5)** | — |
+
+En **cada** nivel de ganancia que ambos toleran, el PI tiene un ciclo límite menor y un atascamiento más corto que el PII, y además el PI tolera casi el doble de ganancia (`kK=4,5` frente a `kK=3`) antes de perder el margen de fase mínimo de 30° que exige la tesis.
+
+**Veredicto final: la ventaja de `PII_V2` no generaliza.** Dependía específicamente de la forma en que se reescaló su red de adelanto (`β=1,1` combinado con `α=1,8` en los ceros bajos), no de la segunda acción integral. Al dar a ambos controladores el mismo tipo de libertad —extender la ganancia sobre su propio óptimo conocido—, **el PI domina al PII en ambas métricas y en todo el intervalo de ganancia común**. Esto no es una búsqueda exhaustiva (no se optimizaron conjuntamente ganancia, cero bajo y red de adelanto de ambos controladores con un método formal), por lo que no se descarta que exista una combinación para el PII que cierre la brecha. Pero con la evidencia reunida, **no hay base para afirmar que la segunda integración por sí sola mejora el ciclo límite o el atascamiento; la evidencia adicional apunta en sentido contrario**.
+
+Esto se incorporó al capítulo 6 de la tesis (`icr/context/Tesis/capitulos/06_doble_integral.tex`, sección "¿Ayuda liberar la red de adelanto?", que reemplaza a la versión anterior de esta misma sección escrita en el primer addendum) y a la síntesis del capítulo. El documento compila sin errores ni referencias rotas (63 páginas). El nodo `PII_V2` y la revisión `R25` del grafo se actualizaron para reflejar este resultado; `PII_V2` se conserva como hallazgo verificado y reproducible, pero explícitamente anotado como no generalizable.
 
 ## 4. Pendientes y alcance no cubierto
 

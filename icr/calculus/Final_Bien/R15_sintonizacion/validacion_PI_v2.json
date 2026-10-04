@@ -1,0 +1,36 @@
+{
+  "reconstruccion": {
+    "k": 445.3405932664225,
+    "z": [
+      -16.5,
+      -23.231232408031875
+    ],
+    "p": [
+      0,
+      -440.00000000000006
+    ]
+  },
+  "margen_fase_deg": {
+    "x_menos4": 53.376446487412252,
+    "x_menos3": 47.63402341772985,
+    "x_menos2_5": 44.315219690537624,
+    "x_menos2": 40.809382386951526
+  },
+  "pm_min": 40.809382386951526,
+  "cumple_30deg": true,
+  "escalon": {
+    "sobrepaso_pct": 338817.388351336,
+    "ciclo_pp_cm": 1145.5119697741984,
+    "atasc_medio_s": 0,
+    "u_max": 3.5,
+    "frac_saturado": 0.85594285714285712,
+    "diverge": true
+  },
+  "rampa": {
+    "error_medio_cm": 0.00010803707780093481,
+    "error_rms_cm": 0.0022101660544118816,
+    "frac_saturado": 0
+  },
+  "metodo": "ode45, lazo discreto ZOH T=1ms, mismo criterio que validar_PII_v2.m; comparacion simetrica (misma kK, alpha, beta)",
+  "fecha": "2026-10-04"
+}

@@ -3,7 +3,7 @@ out=fileparts(mfilename('fullpath'));root=fileparts(out);
 B=fullfile(root,'icr','calculus','Final_Bien','inestable','PII_inestable');
 I=fullfile(root,'icr','context','Tesis','images');
 map=struct('x','yp','r','R','v','yv','e','err','u_antes','u_antes','u_desp','u_despues','u','u_despues');
-cases={'regulacion_P4','regulation_results','';'seguimiento_P5_sen','seguimiento_results','sen_';'seguimiento_P5_trap','seguimiento_results','trap_';'seguimiento_P5_diente','seguimiento_results','diente_';'seguimiento_P5_pulso','seguimiento_results','pulso_'};
+cases={'regulacion_P4','regulation_results','';'seguimiento_P5_sen','seguimiento_results','sen_';'seguimiento_P5_trap','seguimiento_results','trap_'};
 R=struct();
 for j=1:size(cases,1)
  S=load(fullfile(B,[cases{j,1} '.mat'])); files=dir(fullfile(I,cases{j,2},'tikz',[cases{j,3} '*.csv']));

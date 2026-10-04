@@ -32,7 +32,7 @@ R.banda_PD_linealizada=20/R.rigidez_PD_completa;
 R.banda_PD_exacta=[fzero(@(e) (m*g*b*(a+3)^4+pd*e)/(b*(a+3+e)^4)-m*g-20,.05),...
  fzero(@(e) (m*g*b*(a+3)^4+pd*e)/(b*(a+3+e)^4)-m*g+20,-.05)];
 % Volver a medir series completas, sin sesgo por decimación de gráficas.
-for nm=["regulacion_P4","regulacion_sinAD_P3","seguimiento_P5_sen","seguimiento_P5_trap","seguimiento_P5_diente","seguimiento_P5_pulso"]
+for nm=["regulacion_P4","regulacion_sinAD_P3","seguimiento_P5_sen","seguimiento_P5_trap"]
  S=load(fullfile(base,'inestable','PII_inestable',nm+'.mat'));
  R.archivos.(nm)=fieldnames(S);
  if isfield(S,'yp') && isfield(S,'err')

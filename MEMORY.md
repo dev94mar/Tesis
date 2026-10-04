@@ -134,6 +134,15 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Validación de las cuatro señales de seguimiento (2026-10-04)
+
+A petición del usuario se extendió a las cuatro pruebas de seguimiento (senoidal, trapezoidal, diente de sierra, pulso cuadrado) la validación independiente que antes solo cubría las dos originales. Informe: [VALIDACION_SEGUIMIENTO.md](validacion/VALIDACION_SEGUIMIENTO.md).
+
+- `validar_csv.m` extendido con los dos casos nuevos: los 10 CSV de diente/pulso coinciden con sus `.mat` a precisión de máquina (10⁻¹³–10⁻¹⁴), igual que sen/trap.
+- `validar_metricas_seguimiento.m` (nuevo): recalcula desde las series completas (sin decimación) todas las métricas citadas en el capítulo 5 para las cuatro señales. Coinciden exactamente, salvo una diferencia de ±1 en "rupturas" en tres de las cuatro, explicada: es un artefacto de qué dirección de transición se cuenta (inicio de atascamiento vs. ruptura propiamente dicha), no un error de datos.
+
+Sin hallazgos que requieran cambios en el documento.
+
 ## Modelo energético sin disipación (Lagrange/Hamilton, 2026-10-04)
 
 A petición del usuario se construyó un modelo energético (sin fricción) cuyas ecuaciones de movimiento reproducen exactamente la fuerza del fabricante que usa la tesis, `f_fld(u,x)=u/[b(a-x)^4]`, como verificación independiente del modelo dipolo-dipolo ya incorporado. Se propuso la coenergía magnética `W'(x,u)=u/[3b(a-x)^3]` (cumple `∂W'/∂x=f_fld`), y con ella el lagrangiano `L=½mẋ²-mgx+W'(x,u)`. La ecuación de Euler-Lagrange da exactamente `mẍ=f_fld(u,x)-mg` (idéntica a la ecuación de movimiento sin fricción). Verificación cruzada independiente con el formalismo hamiltoniano (momento canónico, transformada de Legendre, ecuaciones de Hamilton): mismo resultado. Ambas verificaciones dieron `True` en Mathematica (`icr/calculus/Final_Bien/primeros_principios/derivar_energia.wls`).

@@ -119,6 +119,11 @@
         "version": 5,
         "fecha": "2026-10-04",
         "cambio": "Subsección 3.2.2 (ENERGIA) reescrita de forma pedagógica, con dos figuras TikZ nuevas: el diagrama energía/coenergía en el plano i-λ y la coenergía W'(x,u) graficada contra la posición. Énfasis en el acoplamiento electromecánico (por qué coenergía, no energía) y su conexión con la fuerza de reluctancia ya derivada."
+      },
+      {
+        "version": 5,
+        "fecha": "2026-10-04",
+        "cambio": "Limpieza editorial: se removieron del texto de la tesis las referencias directas a archivos y nombres de software (rutas .wls/.m/.py, Mathematica, MATLAB) en capitulos/03_modelo.tex, 04_controlador.tex, 06_doble_integral.tex y chapters/apendices/simulacion.tex, reemplazadas por descripciones genericas del calculo o la herramienta. Cambio solo de redaccion, no de contenido; los campos fuente/verificacion de los nodos DIPOLO, ENERGIA y RIGIDEZ_GRAL conservan la ruta real del script como metadato del grafo (no citado en la tesis). Commit 47a6abf."
       }
     ]
   },

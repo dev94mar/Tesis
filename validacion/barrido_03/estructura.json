@@ -630,12 +630,12 @@
     "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.mat": "1ba159f20ab51831d6cd47b6c2534e0a6aa29a7acfc15aea9e3b56423a918056",
     "icr/context/Tesis/capitulos/01_introduccion.tex": "531f9b40bad56e7808c8fbe8646c8ba64991c4423379c03a1f749eafb43fa2b0",
     "icr/context/Tesis/capitulos/02_fundamentos.tex": "88a9551c0e774a7d2c0fb46024b89201625d31322b244bd8745026f763948136",
-    "icr/context/Tesis/capitulos/03_modelo.tex": "4548a556a101b3defd3440549dda70ca11c0774b1ed763e736bd73f66e559743",
-    "icr/context/Tesis/capitulos/04_controlador.tex": "311936a13a9166bc291f321b281cba8e0eec5e97ddca4c6098aa781948bc4856",
+    "icr/context/Tesis/capitulos/03_modelo.tex": "43940c3b7b6b0fbd4b9c123c9e718ad9f1044c2d73e1c19aaee6fc1ad7493abe",
+    "icr/context/Tesis/capitulos/04_controlador.tex": "51686241df8e261ad997d49b139dd0a2a24e87e0a85d56ec3cc43a886571f531",
     "icr/context/Tesis/capitulos/05_desempeno.tex": "c47d635bafede783ad1da51d502212dc8485b9fcba19dbcc20b456f055eff479",
-    "icr/context/Tesis/capitulos/06_doble_integral.tex": "6d294dd3f6a45f3e822427982d3fcaa2a4d1cd023f5680cc2aee6f257d8b0371",
+    "icr/context/Tesis/capitulos/06_doble_integral.tex": "44bf4e31a17d5727162c938dc559a1ee0fed4d504ecd61f8c3fafd6ff2e15457",
     "icr/context/Tesis/capitulos/07_conclusiones.tex": "1c122922f6473a9768539b9accdedb42eaa80ad905479137586a09df7e4e93a7",
-    "icr/context/Tesis/chapters/apendices/simulacion.tex": "8a1def08a4feca6038d35299138aacefb7bf24f4cf34cabb382a622c5aae1289",
+    "icr/context/Tesis/chapters/apendices/simulacion.tex": "e2d9685c3b70cf85199b25add4462fabb9bbcf48440d773987e02a0172fba32d",
     "icr/context/Tesis/chapters/apendices/verificacion.tex": "4fffc2f818c3b47004195767c314555937557d27589f7cc241710723844eafc3",
     "icr/context/Tesis/images/ciclo_results/tikz/ajuste_ganancia.json": "13d07fb1c9fb8e6872f2b2c985ea81e3368e24f3a7f905c3e50b78a51617b223",
     "icr/context/Tesis/images/ciclo_results/tikz/analisis_ciclo.json": "bd8fe7eb7d0bc31aa72884b2560023e25e5b6470e69d6d33a0348f2a4048bc56",
@@ -759,6 +759,6 @@
     "icr/context/Tesis/preamble/uamdato.tex": "4ec93dc844cca48adcf920020850741b277025e1b9c8afa4e347181796de7b2b",
     "icr/context/Tesis/sections/abstract.tex": "8a52e431c5c927fdc2699293b67dca9b7ac643e4d645406e035227b3a5f81662",
     "icr/context/Tesis/sections/resumen.tex": "33e3ee535e723c9db8ed3a914c1f3ff6998608ab090951472957814e4f183477",
-    "icr/grafo/grafo_tesis.json": "f7bc8ab108e0a9aacfc87495842f1ef65a23eb081e965a41e3807a7f105bc15b"
+    "icr/grafo/grafo_tesis.json": "1ad536f0d9faed1ac24999564f36f409653b223added9851d1c4e0235c702edd"
   }
 }

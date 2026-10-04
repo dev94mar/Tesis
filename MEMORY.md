@@ -1,6 +1,6 @@
 # Memoria del proyecto
 
-Actualizada: **2026-10-04**. Estado observado en el commit **`8f2a1a9`** más cambios sin comprometer en el árbol de trabajo (grafo v5, ver más abajo).
+Actualizada: **2026-10-04**. Estado observado en el commit **`47a6abf`**.
 
 Esta memoria permite retomar el trabajo. Resume decisiones y evidencia; no sustituye las fuentes, los datos ni una validación de cambios posteriores. Las peticiones actuales del usuario prevalecen sobre este resumen.
 
@@ -222,6 +222,12 @@ Se construyó además un **deck interactivo de divulgación** en HTML puro (sin 
 2. El candidato con ciclo 0,00058 cm (PI, `kK=4, α=0,3, β=1,2`) sigue necesitando una ventana de medición más larga para confirmar que es un ciclo límite genuino y no un efecto de borde; no se usó en ninguna conclusión final.
 3. Actualizar el dictamen de publicabilidad ([PUBLICABILIDAD.md](validacion/barrido_02/PUBLICABILIDAD.md)) con la conclusión definitiva: la segunda integración sí ofrece una ventaja real pero acotada a un régimen de sintonización específico, no al habitual — un resultado más matizado y, posiblemente, más publicable que "el PII no sirve" o "el PII es mejor".
 4. El repositorio ahora es público (ver sección anterior): antes de añadir cualquier dato sensible o aún no listo para publicarse, confirmar con el usuario, ya que cualquier commit queda visible de inmediato.
+
+## Limpieza editorial: sin referencias directas a archivos mathematica/matlab/python en la tesis (2026-10-04)
+
+A petición del usuario se removieron del texto de la tesis las citas literales de rutas/archivos y nombres de software: `capitulos/03_modelo.tex` (dos menciones a Mathematica con la ruta de `primeros_principios/`), `capitulos/04_controlador.tex` (`Control System Designer de MATLAB`), `capitulos/06_doble_integral.tex` (un comentario LaTeX con nombres de script y dos menciones a Mathematica con ruta) y `chapters/apendices/simulacion.tex` (`ode45 de MATLAB`, dos veces, y la tabla~\ref{tab:scripts} que listaba nombres de archivo `.m`/`.py`). En todos los casos se sustituyó por una descripción genérica del cálculo o la herramienta ("cálculo simbólico", "integrador numérico de paso variable", "editores interactivos de Bode y del lugar de las raíces"); la tabla del apéndice ahora describe procedimientos, no nombres de archivo del repositorio.
+
+Es un cambio de redacción, no de contenido: ninguna cifra ni conclusión cambió. Los campos `fuente`/`verificacion` del grafo (nodos `DIPOLO`, `ENERGIA`, `RIGIDEZ_GRAL`) conservan la ruta real del script de Mathematica como metadato del grafo, porque ese archivo es metadato de ingeniería del proyecto, no texto de la tesis. Commit `47a6abf`. Documento recompilado sin avisos (78 páginas, sin overfull/underfull ni referencias indefinidas). Validador estructural limpio (0 filas de CSV inválidas).
 
 ## Mantenimiento
 

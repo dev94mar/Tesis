@@ -134,6 +134,19 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Actualización del grafo y validación de consistencia (2026-10-04)
+
+A petición del usuario se actualizó el grafo (versión 5, `icr/grafo/grafo_tesis.json`) y se validó la consistencia completa del proyecto. Hallazgos y correcciones:
+
+**En el grafo (estaba desactualizado desde varios commits atrás):**
+- Nodo `PDFF`/`F_PD` (comparación con el PD) marcado como histórico: ese contenido se retiró del capítulo 6 (commits `ddc8284`/`a6e9901`) pero el grafo seguía citándolo como vigente, con una arista de soporte (`sustenta` a K11) y una referencia a un archivo de figura ya borrado. Se corrigió el texto, se redirigió el soporte de K11 a `CICLO`/`F_ANAT` (la figura de anatomía del ciclo, que sostiene el mismo argumento sin el PD).
+- Se agregaron `DIENTE` y `PULSO` (pruebas de seguimiento nuevas del capítulo 5) y `DIPOLO`/`RIGIDEZ_GRAL` (derivación de primeros principios y validación analítica del capítulo 3/6), que no se habían incorporado al grafo pese a estar en la tesis desde los commits `85138bf` y `1504384`.
+- Se corrigieron dos nodos de conclusión con datos obsoletos: `K1` decía "los dos seguimientos" (ahora son cuatro) y `K3` afirmaba que el control "nunca supera 3,3 V" (falso desde que diente/pulso saturan brevemente a 3,5 V y 0 V).
+
+**En el documento (inconsistencia real, no solo del grafo):** el capítulo 7 (conclusiones), el resumen y el abstract seguían afirmando sin matiz que "la segunda acción integral no reduce" el ciclo límite ni el atascamiento, una conclusión que el capítulo 6 ya había superado con el hallazgo final del barrido conjunto (fronteras de Pareto cruzadas, ventaja acotada del PII en régimen de ganancia baja — ver "Cierre definitivo de la comparación PI/PII" más abajo). Se reescribió el párrafo "La hipótesis" del capítulo 7, la relación con los antecedentes, el resumen y el abstract para reflejar el hallazgo completo y acotado, y se mencionaron las cuatro pruebas de seguimiento (antes solo se nombraban dos). También se actualizó la frase de apertura del capítulo 6.
+
+**Limpieza del grafo:** se encontraron y corrigieron una arista duplicada (`CICLO`→`K11` repetida) y un archivo CSV sin usar con filas inválidas (`destacados.csv`, no referenciado por ninguna figura, borrado). El validador estructural (`validar_estructura.py`) corre ahora sin ningún hallazgo: 0 aristas duplicadas, 0 fuentes inexistentes, 0 referencias LaTeX rotas, 0 CSV con filas inválidas, 187 nodos y 341 aristas. El documento compila sin errores, 74 páginas.
+
 ## Cierre definitivo de la comparación PI/PII: las fronteras se cruzan (2026-10-04)
 
 El usuario señaló correctamente que la comparación anterior (barrido conjunto solo del PI contra `PII_V2`) no era simétrica: al PII nunca se le dio la misma libertad conjunta (kK+α+β) que al PI. Se hizo `icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.m`, idéntico en método al del PI (misma rejilla de 450 combinaciones, mismo filtro de margen ≥30°, misma simulación). Resultado: 244/450 pasan el margen (menos que las 394 del PI), 182 válidos.

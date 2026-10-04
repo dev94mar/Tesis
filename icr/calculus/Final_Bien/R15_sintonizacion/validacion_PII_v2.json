@@ -1,0 +1,50 @@
+{
+  "reconstruccion": {
+    "k": 381.0703549572292,
+    "z": [
+      -8.7751995504758682,
+      -19.044289650915893,
+      -3.3490228734457332
+    ],
+    "p": [
+      0,
+      -331.18820069842081,
+      0
+    ],
+    "err_relativo_k": 1.2189313837931083E-5,
+    "err_relativo_z": 0.0002319919261648073
+  },
+  "margen_fase_deg": {
+    "x_menos4": 47.249808179362745,
+    "x_menos3": 41.00422208072726,
+    "x_menos2_5": 37.726445959916042,
+    "x_menos2": 34.422859574406573
+  },
+  "escalon": {
+    "sobrepaso_pct": 29.155785911412213,
+    "ciclo_pp_cm": 0.011018139831625362,
+    "atasc_medio_s": 0.24438709677419357,
+    "u_max": 3.5,
+    "frac_saturado": 0.0016857142857142856,
+    "diverge": false
+  },
+  "rampa": {
+    "error_medio_cm": -5.2759877359822127E-6,
+    "error_rms_cm": 0.0024116247973881189,
+    "frac_saturado": 0
+  },
+  "comparacion_contra_nodo_grafo": {
+    "margen_fase": {
+      "m4": 47.3,
+      "m3": 41,
+      "m2_5": 37.8,
+      "m2": 34.5
+    },
+    "ciclo_limite_cm": 0.0108,
+    "atasc_medio_s": 0.237,
+    "sobrepaso_pct": 29.1,
+    "error_rms_rampa_cm": 0.0024
+  },
+  "metodo": "ode45, lazo discreto ZOH T=1ms igual que validar_R15.m; mismo simulador maglev_karnopp.m",
+  "fecha": "2026-10-04"
+}

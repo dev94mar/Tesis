@@ -1,0 +1,82 @@
+{
+  "regulacion_P4_control_csv": {
+    "filas": 1669,
+    "error_t": 7.1054273576010019E-15,
+    "error_datos": 4.8849813083506888E-15
+  },
+  "regulacion_P4_error_csv": {
+    "filas": 1019,
+    "error_t": 7.1054273576010019E-15,
+    "error_datos": 4.9960036108132044E-16
+  },
+  "regulacion_P4_posicion_csv": {
+    "filas": 1019,
+    "error_t": 7.1054273576010019E-15,
+    "error_datos": 4.8849813083506888E-15
+  },
+  "regulacion_P4_velocidad_csv": {
+    "filas": 1019,
+    "error_t": 7.1054273576010019E-15,
+    "error_datos": 2.4868995751603507E-14
+  },
+  "seguimiento_P5_sen_sen_control_csv": {
+    "filas": 1566,
+    "error_t": 2.2737367544323206E-13,
+    "error_datos": 5.10702591327572E-15
+  },
+  "seguimiento_P5_sen_sen_detalle_csv": {
+    "filas": 2189,
+    "error_t": 2.8421709430404007E-14,
+    "error_datos": 4.8849813083506888E-15
+  },
+  "seguimiento_P5_sen_sen_error_csv": {
+    "filas": 2002,
+    "error_t": 2.2737367544323206E-13,
+    "error_datos": 5.0306980803327406E-17
+  },
+  "seguimiento_P5_sen_sen_posicion_csv": {
+    "filas": 2002,
+    "error_t": 2.2737367544323206E-13,
+    "error_datos": 4.8849813083506888E-15
+  },
+  "seguimiento_P5_sen_sen_velocidad_csv": {
+    "filas": 2002,
+    "error_t": 2.2737367544323206E-13,
+    "error_datos": 5.5511151231257827E-16
+  },
+  "seguimiento_P5_trap_trap_control_csv": {
+    "filas": 1758,
+    "error_t": 4.5474735088646412E-13,
+    "error_datos": 5.10702591327572E-15
+  },
+  "seguimiento_P5_trap_trap_detalle_csv": {
+    "filas": 3171,
+    "error_t": 5.6843418860808015E-14,
+    "error_datos": 5.10702591327572E-15
+  },
+  "seguimiento_P5_trap_trap_error_csv": {
+    "filas": 2376,
+    "error_t": 4.5474735088646412E-13,
+    "error_datos": 5.0306980803327406E-17
+  },
+  "seguimiento_P5_trap_trap_posicion_csv": {
+    "filas": 2374,
+    "error_t": 4.5474735088646412E-13,
+    "error_datos": 4.8849813083506888E-15
+  },
+  "seguimiento_P5_trap_trap_velocidad_csv": {
+    "filas": 2374,
+    "error_t": 4.5474735088646412E-13,
+    "error_datos": 5.5511151231257827E-16
+  },
+  "comparacion": {
+    "filas": 1375,
+    "error_t": 7.1054273576010019E-15,
+    "error_datos": 4.2632564145606011E-14
+  },
+  "detalle": {
+    "filas": 1052,
+    "error_t": 1.7763568394002505E-15,
+    "error_datos": 4.9737991503207013E-14
+  }
+}

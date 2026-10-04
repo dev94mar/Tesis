@@ -5,8 +5,8 @@
     "programa": "Maestría en Ciencias en Ingeniería Electromagnética, UAM-Azcapotzalco",
     "director": "Dr. Jesús Ulises Liceaga Castro",
     "codirector": "Dr. César Simón López Monsalvo",
-    "generado": "2026-10-04",
-    "version": 5,
+    "generado": "2026-10-03",
+    "version": 4,
     "fuentes": [
       "icr/context/Tesis (LaTeX)",
       "icr/calculus/Final_Bien (MATLAB)"
@@ -69,21 +69,6 @@
         "version": 4,
         "fecha": "2026-10-03",
         "cambio": "Correcciones del segundo barrido de validación (H02-H13, N01-N03): datos de ZM, KARN y PAR, selección R15 de 57 PI y 51 PII, conclusiones acotadas y revisión R24. El estado «resuelta» indica que la corrección se aplicó, no que la tesis esté validada experimentalmente."
-      },
-      {
-        "version": 5,
-        "fecha": "2026-10-04",
-        "cambio": "Nodo PII_V2 y revisión R25: diseño exploratorio de un PII que supera al mejor PI del barrido R15 en ciclo límite y atascamiento medio, con margen de fase ≥30° en todo el intervalo de operación. No está en el texto de la tesis; queda abierta la decisión de incorporarlo."
-      },
-      {
-        "version": 5,
-        "fecha": "2026-10-04",
-        "cambio": "Tercera auditoría (validacion/barrido_03): verificación independiente de PII_V2 con MATLAB/ode45 (validar_PII_v2.m), usando el mismo simulador y criterio de aceptación que el barrido R15. Resultado: CONFIRMADO dentro de ±3%. R25 pasa de abierta a resuelta."
-      },
-      {
-        "version": 5,
-        "fecha": "2026-10-04",
-        "cambio": "Corrección de metadato: los nodos REG, SIN y TRAP tenían valores.controlador=\"PII.mat\" (el controlador preliminar); sus cifras siempre correspondieron a PII_lic.mat (el de la tesis), así que se corrige la etiqueta para que coincida. Hallado en la tercera auditoría (validacion/barrido_03)."
       }
     ]
   },
@@ -371,9 +356,9 @@
         "grado": 14,
         "grado_entrada": 6,
         "grado_salida": 8,
-        "intermediacion": 0.18688,
-        "cercania": 0.360396,
-        "pagerank": 0.010176,
+        "intermediacion": 0.18963,
+        "cercania": 0.360721,
+        "pagerank": 0.010345,
         "agrupamiento": 0.098901,
         "excentricidad": 6
       }
@@ -389,9 +374,9 @@
         "grado": 6,
         "grado_entrada": 2,
         "grado_salida": 4,
-        "intermediacion": 0.028519,
-        "cercania": 0.327338,
-        "pagerank": 0.003918,
+        "intermediacion": 0.029214,
+        "cercania": 0.327273,
+        "pagerank": 0.003983,
         "agrupamiento": 0.066667,
         "excentricidad": 5
       }
@@ -407,9 +392,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.025215,
-        "cercania": 0.299835,
-        "pagerank": 0.003397,
+        "intermediacion": 0.025804,
+        "cercania": 0.300501,
+        "pagerank": 0.003454,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -425,9 +410,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.007265,
-        "cercania": 0.333945,
-        "pagerank": 0.003397,
+        "intermediacion": 0.007029,
+        "cercania": 0.332717,
+        "pagerank": 0.003454,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -443,9 +428,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.00562,
-        "cercania": 0.268437,
-        "pagerank": 0.004487,
+        "intermediacion": 0.005805,
+        "cercania": 0.267857,
+        "pagerank": 0.004562,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -461,9 +446,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.006485,
-        "cercania": 0.297386,
-        "pagerank": 0.003397,
+        "intermediacion": 0.006633,
+        "cercania": 0.29703,
+        "pagerank": 0.003454,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -479,9 +464,9 @@
         "grado": 11,
         "grado_entrada": 5,
         "grado_salida": 6,
-        "intermediacion": 0.033777,
-        "cercania": 0.330309,
-        "pagerank": 0.005029,
+        "intermediacion": 0.034584,
+        "cercania": 0.330275,
+        "pagerank": 0.005112,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -497,9 +482,9 @@
         "grado": 9,
         "grado_entrada": 9,
         "grado_salida": 0,
-        "intermediacion": 0.086212,
-        "cercania": 0.271642,
-        "pagerank": 0.021084,
+        "intermediacion": 0.087151,
+        "cercania": 0.271903,
+        "pagerank": 0.021435,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -515,9 +500,9 @@
         "grado": 14,
         "grado_entrada": 13,
         "grado_salida": 1,
-        "intermediacion": 0.113604,
-        "cercania": 0.310051,
-        "pagerank": 0.026806,
+        "intermediacion": 0.114893,
+        "cercania": 0.310345,
+        "pagerank": 0.027252,
         "agrupamiento": 0.010989,
         "excentricidad": 6
       }
@@ -536,9 +521,9 @@
         "grado": 9,
         "grado_entrada": 3,
         "grado_salida": 6,
-        "intermediacion": 0.0432,
-        "cercania": 0.301325,
-        "pagerank": 0.005778,
+        "intermediacion": 0.043886,
+        "cercania": 0.302013,
+        "pagerank": 0.005874,
         "agrupamiento": 0.111111,
         "excentricidad": 6
       }
@@ -561,9 +546,9 @@
         "grado": 8,
         "grado_entrada": 5,
         "grado_salida": 3,
-        "intermediacion": 0.074041,
-        "cercania": 0.314335,
-        "pagerank": 0.006907,
+        "intermediacion": 0.074328,
+        "cercania": 0.314136,
+        "pagerank": 0.007022,
         "agrupamiento": 0.142857,
         "excentricidad": 5
       }
@@ -586,9 +571,9 @@
         "grado": 9,
         "grado_entrada": 8,
         "grado_salida": 1,
-        "intermediacion": 0.086151,
-        "cercania": 0.266082,
-        "pagerank": 0.019765,
+        "intermediacion": 0.087089,
+        "cercania": 0.266272,
+        "pagerank": 0.020093,
         "agrupamiento": 0.027778,
         "excentricidad": 6
       }
@@ -628,9 +613,9 @@
         "grado": 12,
         "grado_entrada": 7,
         "grado_salida": 5,
-        "intermediacion": 0.120555,
-        "cercania": 0.357564,
-        "pagerank": 0.02823,
+        "intermediacion": 0.122662,
+        "cercania": 0.357853,
+        "pagerank": 0.028699,
         "agrupamiento": 0.015152,
         "excentricidad": 5
       }
@@ -650,9 +635,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.042253,
-        "cercania": 0.30384,
-        "pagerank": 0.008781,
+        "intermediacion": 0.042954,
+        "cercania": 0.304569,
+        "pagerank": 0.008927,
         "agrupamiento": 0.035714,
         "excentricidad": 6
       }
@@ -682,9 +667,9 @@
         "grado": 19,
         "grado_entrada": 12,
         "grado_salida": 7,
-        "intermediacion": 0.137899,
-        "cercania": 0.352713,
-        "pagerank": 0.026398,
+        "intermediacion": 0.139408,
+        "cercania": 0.352941,
+        "pagerank": 0.026837,
         "agrupamiento": 0.023392,
         "excentricidad": 5
       }
@@ -724,9 +709,9 @@
         "grado": 9,
         "grado_entrada": 7,
         "grado_salida": 2,
-        "intermediacion": 0.047112,
-        "cercania": 0.337037,
-        "pagerank": 0.010088,
+        "intermediacion": 0.04816,
+        "cercania": 0.337711,
+        "pagerank": 0.010256,
         "agrupamiento": 0.055556,
         "excentricidad": 6
       }
@@ -773,9 +758,9 @@
         "grado": 15,
         "grado_entrada": 6,
         "grado_salida": 9,
-        "intermediacion": 0.095357,
-        "cercania": 0.343396,
-        "pagerank": 0.015104,
+        "intermediacion": 0.096597,
+        "cercania": 0.343511,
+        "pagerank": 0.015356,
         "agrupamiento": 0.047619,
         "excentricidad": 5
       }
@@ -791,9 +776,9 @@
         "grado": 7,
         "grado_entrada": 2,
         "grado_salida": 5,
-        "intermediacion": 0.059538,
-        "cercania": 0.334559,
-        "pagerank": 0.010569,
+        "intermediacion": 0.060737,
+        "cercania": 0.334572,
+        "pagerank": 0.010745,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -822,9 +807,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.016005,
-        "cercania": 0.309524,
-        "pagerank": 0.003991,
+        "intermediacion": 0.016364,
+        "cercania": 0.310345,
+        "pagerank": 0.004057,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -853,9 +838,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.024694,
-        "cercania": 0.294023,
-        "pagerank": 0.003991,
+        "intermediacion": 0.025005,
+        "cercania": 0.294118,
+        "pagerank": 0.004057,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -886,9 +871,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.017066,
-        "cercania": 0.308475,
-        "pagerank": 0.003991,
+        "intermediacion": 0.017051,
+        "cercania": 0.306644,
+        "pagerank": 0.004057,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -913,8 +898,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.271642,
-        "pagerank": 0.004302,
+        "cercania": 0.271903,
+        "pagerank": 0.004374,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -994,9 +979,9 @@
         "grado": 3,
         "grado_entrada": 1,
         "grado_salida": 2,
-        "intermediacion": 0.002976,
-        "cercania": 0.280431,
-        "pagerank": 0.003991,
+        "intermediacion": 0.002999,
+        "cercania": 0.279938,
+        "pagerank": 0.004057,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -1027,13 +1012,13 @@
       },
       "contenido_html": "<div class=\"math\">\\[C(s)=\\frac{152.43\\,(s+4.875)(s+1.861)(s+17.31)}{s^2\\,(s+301.1)}\\]</div><p>Doble integrador: error nulo ante escalón y rampa, y acción acumulada para salir de la zona muerta. Coincide con <code>PII_lic.mat</code>.</p><p><b>Diseño:</b> ajuste interactivo en los editores de Bode y lugar de las raíces del Control System Designer (la sesión no guarda requisitos). Doble integrador (tipo 2); ceros en −1.861 y −4.875 rad/s que compensan el atraso de los integradores; par −17.31/−301.1 como red de adelanto (máximo aporte cerca de 72 rad/s).</p>",
       "metricas": {
-        "grado": 20,
-        "grado_entrada": 6,
+        "grado": 18,
+        "grado_entrada": 4,
         "grado_salida": 14,
-        "intermediacion": 0.222081,
-        "cercania": 0.377593,
-        "pagerank": 0.007531,
-        "agrupamiento": 0.036842,
+        "intermediacion": 0.209856,
+        "cercania": 0.37422,
+        "pagerank": 0.005917,
+        "agrupamiento": 0.039216,
         "excentricidad": 5
       }
     },
@@ -1086,9 +1071,9 @@
         "grado": 4,
         "grado_entrada": 1,
         "grado_salida": 3,
-        "intermediacion": 0.043531,
-        "cercania": 0.277863,
-        "pagerank": 0.003022,
+        "intermediacion": 0.04401,
+        "cercania": 0.276074,
+        "pagerank": 0.002966,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1122,9 +1107,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.010989,
-        "cercania": 0.27534,
-        "pagerank": 0.003022,
+        "intermediacion": 0.011111,
+        "cercania": 0.273556,
+        "pagerank": 0.002966,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1177,9 +1162,9 @@
         "grado": 6,
         "grado_entrada": 1,
         "grado_salida": 5,
-        "intermediacion": 0.007558,
-        "cercania": 0.294023,
-        "pagerank": 0.003695,
+        "intermediacion": 0.007918,
+        "cercania": 0.293638,
+        "pagerank": 0.003757,
         "agrupamiento": 0.133333,
         "excentricidad": 6
       }
@@ -1234,9 +1219,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.000475,
-        "cercania": 0.255618,
-        "pagerank": 0.003291,
+        "intermediacion": 0.000487,
+        "cercania": 0.254958,
+        "pagerank": 0.003346,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -1266,8 +1251,8 @@
         "grado_entrada": 1,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.282609,
-        "pagerank": 0.003022,
+        "cercania": 0.28125,
+        "pagerank": 0.002966,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -1297,7 +1282,7 @@
           -4,
           -5
         ],
-        "controlador": "PII_lic.mat",
+        "controlador": "PII.mat",
         "integrador": "ode45 por intervalo de 1 ms (ZOH)"
       },
       "contenido_html": "<p>PII de la tesis + zona muerta + Karnopp, escalón −2 → −3 cm en t = 10 s, u ∈ [0, 3.5] V, 40 s.</p><div class=\"tbl\"><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Sobrepaso</td><td>23.6 %</td></tr><tr><td>Banda ±0.05 cm</td><td>0.40 s</td></tr><tr><td>Ciclo límite</td><td>0.033 cm pico a pico</td></tr><tr><td>Tiempo atascado</td><td>74 %</td></tr><tr><td>u máximo</td><td>3.28 V, sin alcanzar 3.5 V (toca 0 V en el escalón)</td></tr></table></div>",
@@ -1305,9 +1290,9 @@
         "grado": 15,
         "grado_entrada": 8,
         "grado_salida": 7,
-        "intermediacion": 0.095093,
-        "cercania": 0.360396,
-        "pagerank": 0.010234,
+        "intermediacion": 0.095983,
+        "cercania": 0.359281,
+        "pagerank": 0.010299,
         "agrupamiento": 0.047619,
         "excentricidad": 5
       }
@@ -1332,16 +1317,16 @@
         },
         "offset_texto_cm": -4,
         "offset_script_cm": -4.25,
-        "controlador": "PII_lic.mat"
+        "controlador": "PII.mat"
       },
       "contenido_html": "<p>\\(r(t)=-2.5+0.5\\sin(2\\pi\\cdot0.001\\,t)\\), 2000 s.</p><div class=\"tbl\"><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Error máx / eficaz</td><td>0.0198 / 0.0124 cm</td></tr><tr><td>Tiempo atascado</td><td>75 %</td></tr><tr><td>Rupturas</td><td>4072 (~2/s)</td></tr><tr><td>u</td><td>1.33–2.78 V</td></tr></table></div><p style='margin-top:10px'>Ciclo límite continuo, no solo en las inversiones de la referencia.</p>",
       "metricas": {
         "grado": 12,
         "grado_entrada": 6,
         "grado_salida": 6,
-        "intermediacion": 0.074128,
-        "cercania": 0.323843,
-        "pagerank": 0.011619,
+        "intermediacion": 0.074858,
+        "cercania": 0.322581,
+        "pagerank": 0.011617,
         "agrupamiento": 0.015152,
         "excentricidad": 6
       }
@@ -1362,16 +1347,16 @@
           "unidad": "s"
         },
         "pendiente_cm_s": 0.004,
-        "controlador": "PII_lic.mat"
+        "controlador": "PII.mat"
       },
       "contenido_html": "<p>Planos en −2 y −3 cm, rampas de 250 s (0.004 cm/s), periodo 1250 s, 2500 s.</p><div class=\"tbl\"><table><tr><th>Medida</th><th>Valor</th></tr><tr><td>Error máx / eficaz</td><td>0.0223 / 0.0114 cm</td></tr><tr><td>Tiempo atascado</td><td>78 %</td></tr><tr><td>Rupturas</td><td>4400</td></tr><tr><td>u</td><td>1.32–2.78 V</td></tr></table></div><p style='margin-top:10px'>Al inicio de la primera rampa el imán queda atascado ~1 s; después, escalones de atascamiento-deslizamiento.</p>",
       "metricas": {
         "grado": 10,
         "grado_entrada": 4,
         "grado_salida": 6,
-        "intermediacion": 0.056115,
-        "cercania": 0.321555,
-        "pagerank": 0.006871,
+        "intermediacion": 0.056622,
+        "cercania": 0.320285,
+        "pagerank": 0.00688,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1409,9 +1394,9 @@
         "grado": 9,
         "grado_entrada": 3,
         "grado_salida": 6,
-        "intermediacion": 0.010034,
-        "cercania": 0.299342,
-        "pagerank": 0.004559,
+        "intermediacion": 0.011081,
+        "cercania": 0.298013,
+        "pagerank": 0.004159,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -1432,8 +1417,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.251034,
-        "pagerank": 0.004361,
+        "cercania": 0.251046,
+        "pagerank": 0.004434,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1454,8 +1439,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.217703,
-        "pagerank": 0.003421,
+        "cercania": 0.216606,
+        "pagerank": 0.003448,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1475,9 +1460,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.010989,
-        "cercania": 0.218225,
-        "pagerank": 0.0056,
+        "intermediacion": 0.011111,
+        "cercania": 0.217129,
+        "pagerank": 0.005664,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1498,8 +1483,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.216152,
-        "pagerank": 0.005133,
+        "cercania": 0.215054,
+        "pagerank": 0.005129,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1520,8 +1505,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.265693,
-        "pagerank": 0.004897,
+        "cercania": 0.265096,
+        "pagerank": 0.004966,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -1542,8 +1527,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.003807,
+        "cercania": 0.264706,
+        "pagerank": 0.003858,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1564,8 +1549,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.003807,
+        "cercania": 0.264706,
+        "pagerank": 0.003858,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1585,9 +1570,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.004399,
-        "cercania": 0.277439,
-        "pagerank": 0.004534,
+        "intermediacion": 0.004453,
+        "cercania": 0.276923,
+        "pagerank": 0.004596,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1609,8 +1594,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.2275,
-        "pagerank": 0.003695,
+        "cercania": 0.22756,
+        "pagerank": 0.003757,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1632,8 +1617,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.236057,
-        "pagerank": 0.003695,
+        "cercania": 0.234987,
+        "pagerank": 0.003757,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1655,8 +1640,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.255977,
-        "pagerank": 0.003991,
+        "cercania": 0.256046,
+        "pagerank": 0.004057,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1678,8 +1663,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.2275,
-        "pagerank": 0.003695,
+        "cercania": 0.22756,
+        "pagerank": 0.003757,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1701,8 +1686,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.233333,
-        "pagerank": 0.006296,
+        "cercania": 0.233766,
+        "pagerank": 0.006401,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1724,8 +1709,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.263768,
-        "pagerank": 0.007364,
+        "cercania": 0.26393,
+        "pagerank": 0.007486,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1747,8 +1732,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.231847,
-        "pagerank": 0.003383,
+        "cercania": 0.232258,
+        "pagerank": 0.003439,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1763,9 +1748,9 @@
         "grado": 9,
         "grado_entrada": 6,
         "grado_salida": 3,
-        "intermediacion": 0.070483,
-        "cercania": 0.333333,
-        "pagerank": 0.010818,
+        "intermediacion": 0.071614,
+        "cercania": 0.332717,
+        "pagerank": 0.010943,
         "agrupamiento": 0.0,
         "excentricidad": 6
       },
@@ -1781,9 +1766,9 @@
         "grado": 3,
         "grado_entrada": 3,
         "grado_salida": 0,
-        "intermediacion": 0.006877,
-        "cercania": 0.285266,
-        "pagerank": 0.006181,
+        "intermediacion": 0.007083,
+        "cercania": 0.28481,
+        "pagerank": 0.006241,
         "agrupamiento": 0.0,
         "excentricidad": 5
       },
@@ -1799,9 +1784,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.000673,
-        "cercania": 0.251729,
-        "pagerank": 0.008064,
+        "intermediacion": 0.000688,
+        "cercania": 0.251046,
+        "pagerank": 0.00816,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -1817,9 +1802,9 @@
         "grado": 7,
         "grado_entrada": 6,
         "grado_salida": 1,
-        "intermediacion": 0.006248,
-        "cercania": 0.286164,
-        "pagerank": 0.006611,
+        "intermediacion": 0.006524,
+        "cercania": 0.28481,
+        "pagerank": 0.006192,
         "agrupamiento": 0.190476,
         "excentricidad": 6
       },
@@ -1835,9 +1820,9 @@
         "grado": 3,
         "grado_entrada": 3,
         "grado_salida": 0,
-        "intermediacion": 0.001432,
-        "cercania": 0.283489,
-        "pagerank": 0.006654,
+        "intermediacion": 0.001464,
+        "cercania": 0.283465,
+        "pagerank": 0.006748,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       },
@@ -1853,9 +1838,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.002694,
-        "cercania": 0.28752,
-        "pagerank": 0.009917,
+        "intermediacion": 0.002755,
+        "cercania": 0.28754,
+        "pagerank": 0.010067,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1871,8 +1856,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.019364,
+        "cercania": 0.210526,
+        "pagerank": 0.019687,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1888,8 +1873,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.00577,
+        "cercania": 0.261248,
+        "pagerank": 0.005866,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1905,8 +1890,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.263768,
-        "pagerank": 0.007364,
+        "cercania": 0.26393,
+        "pagerank": 0.007486,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1922,8 +1907,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.217703,
-        "pagerank": 0.003421,
+        "cercania": 0.216606,
+        "pagerank": 0.003448,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -1938,9 +1923,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001017,
-        "cercania": 0.261871,
-        "pagerank": 0.00645,
+        "intermediacion": 0.001042,
+        "cercania": 0.262009,
+        "pagerank": 0.006557,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1955,9 +1940,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.000969,
-        "cercania": 0.272864,
-        "pagerank": 0.004302,
+        "intermediacion": 0.000991,
+        "cercania": 0.273141,
+        "pagerank": 0.004374,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -1972,9 +1957,9 @@
         "grado": 4,
         "grado_entrada": 4,
         "grado_salida": 0,
-        "intermediacion": 0.001834,
-        "cercania": 0.286164,
-        "pagerank": 0.00467,
+        "intermediacion": 0.001886,
+        "cercania": 0.285714,
+        "pagerank": 0.00468,
         "agrupamiento": 0.333333,
         "excentricidad": 5
       }
@@ -1990,9 +1975,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.004272,
-        "cercania": 0.2912,
-        "pagerank": 0.002564,
+        "intermediacion": 0.004299,
+        "cercania": 0.289855,
+        "pagerank": 0.002607,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       },
@@ -2012,8 +1997,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.265693,
-        "pagerank": 0.002564,
+        "cercania": 0.265096,
+        "pagerank": 0.002607,
         "agrupamiento": 1.0,
         "excentricidad": 6
       },
@@ -2040,9 +2025,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.005505,
-        "cercania": 0.270833,
-        "pagerank": 0.002564,
+        "intermediacion": 0.005628,
+        "cercania": 0.271084,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       },
@@ -2062,8 +2047,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.252427,
-        "pagerank": 0.002564,
+        "cercania": 0.252809,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2083,8 +2068,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.244953,
-        "pagerank": 0.002564,
+        "cercania": 0.244233,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2103,9 +2088,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.000461,
-        "cercania": 0.248974,
-        "pagerank": 0.002564,
+        "intermediacion": 0.000472,
+        "cercania": 0.248276,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2125,8 +2110,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.002564,
+        "cercania": 0.210526,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2146,8 +2131,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.233333,
-        "pagerank": 0.002564,
+        "cercania": 0.233766,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -2173,8 +2158,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.231847,
-        "pagerank": 0.002564,
+        "cercania": 0.232258,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2197,8 +2182,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.239474,
-        "pagerank": 0.002564,
+        "cercania": 0.239362,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2220,9 +2205,9 @@
         "grado": 7,
         "grado_entrada": 0,
         "grado_salida": 7,
-        "intermediacion": 0.027029,
-        "cercania": 0.320423,
-        "pagerank": 0.002564,
+        "intermediacion": 0.027627,
+        "cercania": 0.320285,
+        "pagerank": 0.002607,
         "agrupamiento": 0.095238,
         "excentricidad": 5
       }
@@ -2244,9 +2229,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.000413,
-        "cercania": 0.266862,
-        "pagerank": 0.002564,
+        "intermediacion": 0.00043,
+        "cercania": 0.266667,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2268,9 +2253,9 @@
         "grado": 5,
         "grado_entrada": 0,
         "grado_salida": 5,
-        "intermediacion": 0.002209,
-        "cercania": 0.288889,
-        "pagerank": 0.002564,
+        "intermediacion": 0.002275,
+        "cercania": 0.288462,
+        "pagerank": 0.002607,
         "agrupamiento": 0.4,
         "excentricidad": 6
       }
@@ -2293,8 +2278,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.002564,
+        "cercania": 0.210526,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2316,9 +2301,9 @@
         "grado": 2,
         "grado_entrada": 1,
         "grado_salida": 1,
-        "intermediacion": 0.010989,
-        "cercania": 0.210892,
-        "pagerank": 0.004744,
+        "intermediacion": 0.011111,
+        "cercania": 0.21102,
+        "pagerank": 0.004823,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2341,8 +2326,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.002564,
+        "cercania": 0.210526,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2365,8 +2350,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.002564,
+        "cercania": 0.210526,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2389,8 +2374,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.288431,
-        "pagerank": 0.002564,
+        "cercania": 0.288925,
+        "pagerank": 0.002607,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -2413,8 +2398,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.288431,
-        "pagerank": 0.002564,
+        "cercania": 0.288925,
+        "pagerank": 0.002607,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -2437,8 +2422,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.002564,
+        "cercania": 0.261248,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2461,8 +2446,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.002564,
+        "cercania": 0.261248,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2485,8 +2470,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.002564,
+        "cercania": 0.261248,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2509,8 +2494,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.002564,
+        "cercania": 0.261248,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2533,8 +2518,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.002564,
+        "cercania": 0.261248,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2557,8 +2542,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2581,8 +2566,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2605,8 +2590,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2629,8 +2614,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2653,8 +2638,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2677,8 +2662,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2701,8 +2686,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2725,8 +2710,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2748,9 +2733,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.004339,
-        "cercania": 0.277863,
-        "pagerank": 0.002564,
+        "intermediacion": 0.004436,
+        "cercania": 0.278207,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -2773,8 +2758,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2797,8 +2782,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.236979,
-        "pagerank": 0.002564,
+        "cercania": 0.237154,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -2821,8 +2806,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2845,8 +2830,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2869,8 +2854,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2893,8 +2878,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2917,8 +2902,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2941,8 +2926,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2965,8 +2950,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -2989,8 +2974,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.213866,
-        "pagerank": 0.002564,
+        "cercania": 0.214031,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3012,9 +2997,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.007852,
-        "cercania": 0.28,
-        "pagerank": 0.004473,
+        "intermediacion": 0.007958,
+        "cercania": 0.279503,
+        "pagerank": 0.004547,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -3035,9 +3020,9 @@
         "grado": 8,
         "grado_entrada": 5,
         "grado_salida": 3,
-        "intermediacion": 0.041669,
-        "cercania": 0.334559,
-        "pagerank": 0.007726,
+        "intermediacion": 0.042202,
+        "cercania": 0.334572,
+        "pagerank": 0.007855,
         "agrupamiento": 0.107143,
         "excentricidad": 6
       }
@@ -3054,9 +3039,9 @@
         "grado": 5,
         "grado_entrada": 1,
         "grado_salida": 4,
-        "intermediacion": 0.022443,
-        "cercania": 0.261119,
-        "pagerank": 0.003291,
+        "intermediacion": 0.022697,
+        "cercania": 0.261248,
+        "pagerank": 0.003346,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3072,9 +3057,9 @@
         "grado": 4,
         "grado_entrada": 3,
         "grado_salida": 1,
-        "intermediacion": 0.010502,
-        "cercania": 0.309524,
-        "pagerank": 0.006144,
+        "intermediacion": 0.010292,
+        "cercania": 0.308219,
+        "pagerank": 0.006141,
         "agrupamiento": 0.166667,
         "excentricidad": 5
       }
@@ -3095,9 +3080,9 @@
         "grado": 4,
         "grado_entrada": 2,
         "grado_salida": 2,
-        "intermediacion": 0.017302,
-        "cercania": 0.277863,
-        "pagerank": 0.006618,
+        "intermediacion": 0.017535,
+        "cercania": 0.278207,
+        "pagerank": 0.006728,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3113,9 +3098,9 @@
         "grado": 5,
         "grado_entrada": 2,
         "grado_salida": 3,
-        "intermediacion": 0.018375,
-        "cercania": 0.245283,
-        "pagerank": 0.004376,
+        "intermediacion": 0.01857,
+        "cercania": 0.245232,
+        "pagerank": 0.004449,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3131,9 +3116,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.065239,
-        "cercania": 0.355469,
-        "pagerank": 0.014505,
+        "intermediacion": 0.064276,
+        "cercania": 0.354331,
+        "pagerank": 0.014641,
         "agrupamiento": 0.071429,
         "excentricidad": 5
       }
@@ -3152,9 +3137,9 @@
         "grado": 10,
         "grado_entrada": 4,
         "grado_salida": 6,
-        "intermediacion": 0.079692,
-        "cercania": 0.307953,
-        "pagerank": 0.009883,
+        "intermediacion": 0.07899,
+        "cercania": 0.306122,
+        "pagerank": 0.009941,
         "agrupamiento": 0.022222,
         "excentricidad": 5
       }
@@ -3170,9 +3155,9 @@
         "grado": 8,
         "grado_entrada": 6,
         "grado_salida": 2,
-        "intermediacion": 0.059508,
-        "cercania": 0.327928,
-        "pagerank": 0.01242,
+        "intermediacion": 0.059638,
+        "cercania": 0.326679,
+        "pagerank": 0.012521,
         "agrupamiento": 0.035714,
         "excentricidad": 6
       }
@@ -3193,8 +3178,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.235751,
-        "pagerank": 0.003965,
+        "cercania": 0.234681,
+        "pagerank": 0.004016,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3215,8 +3200,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.235751,
-        "pagerank": 0.003965,
+        "cercania": 0.234681,
+        "pagerank": 0.004016,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3237,8 +3222,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.235751,
-        "pagerank": 0.003965,
+        "cercania": 0.234681,
+        "pagerank": 0.004016,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3259,8 +3244,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.235751,
-        "pagerank": 0.003965,
+        "cercania": 0.234681,
+        "pagerank": 0.004016,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3281,8 +3266,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244953,
-        "pagerank": 0.004211,
+        "cercania": 0.244233,
+        "pagerank": 0.004253,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3303,8 +3288,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244953,
-        "pagerank": 0.004211,
+        "cercania": 0.244233,
+        "pagerank": 0.004253,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3325,8 +3310,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244953,
-        "pagerank": 0.004211,
+        "cercania": 0.244233,
+        "pagerank": 0.004253,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3347,8 +3332,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.244953,
-        "pagerank": 0.004211,
+        "cercania": 0.244233,
+        "pagerank": 0.004253,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3369,8 +3354,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.243641,
-        "pagerank": 0.003538,
+        "cercania": 0.242915,
+        "pagerank": 0.003582,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3391,8 +3376,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.243641,
-        "pagerank": 0.003538,
+        "cercania": 0.242915,
+        "pagerank": 0.003582,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3413,8 +3398,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.243641,
-        "pagerank": 0.003538,
+        "cercania": 0.242915,
+        "pagerank": 0.003582,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3435,8 +3420,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.243641,
-        "pagerank": 0.003538,
+        "cercania": 0.242915,
+        "pagerank": 0.003582,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3457,8 +3442,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.197183,
-        "pagerank": 0.003804,
+        "cercania": 0.197152,
+        "pagerank": 0.003868,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3478,9 +3463,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.00104,
-        "cercania": 0.229508,
-        "pagerank": 0.006617,
+        "intermediacion": 0.001063,
+        "cercania": 0.229885,
+        "pagerank": 0.006727,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3501,8 +3486,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.262626,
-        "pagerank": 0.008729,
+        "cercania": 0.262009,
+        "pagerank": 0.008829,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3523,8 +3508,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.247283,
-        "pagerank": 0.007843,
+        "cercania": 0.246575,
+        "pagerank": 0.007929,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3546,8 +3531,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.207289,
-        "pagerank": 0.003264,
+        "cercania": 0.207373,
+        "pagerank": 0.003318,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3569,8 +3554,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.207289,
-        "pagerank": 0.003264,
+        "cercania": 0.207373,
+        "pagerank": 0.003318,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3587,8 +3572,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.26963,
-        "pagerank": 0.00489,
+        "cercania": 0.269461,
+        "pagerank": 0.004971,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -3604,9 +3589,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.003658,
-        "cercania": 0.274924,
-        "pagerank": 0.010129,
+        "intermediacion": 0.003739,
+        "cercania": 0.27439,
+        "pagerank": 0.010238,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3623,8 +3608,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.247283,
-        "pagerank": 0.007843,
+        "cercania": 0.246575,
+        "pagerank": 0.007929,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3637,13 +3622,13 @@
       "contenido_html": "<p>En las familias y condiciones ensayadas, ningún PII aceptado alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm, o 0.019 cm con el criterio de recorte estricto); no es una demostración general ni una validación experimental; el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.</p>",
       "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
-        "grado": 10,
-        "grado_entrada": 8,
+        "grado": 9,
+        "grado_entrada": 7,
         "grado_salida": 2,
-        "intermediacion": 0.010847,
-        "cercania": 0.308998,
-        "pagerank": 0.011231,
-        "agrupamiento": 0.266667,
+        "intermediacion": 0.009787,
+        "cercania": 0.307167,
+        "pagerank": 0.010414,
+        "agrupamiento": 0.277778,
         "excentricidad": 6
       }
     },
@@ -3658,9 +3643,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.00104,
-        "cercania": 0.229508,
-        "pagerank": 0.006617,
+        "intermediacion": 0.001063,
+        "cercania": 0.229885,
+        "pagerank": 0.006727,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3675,9 +3660,9 @@
         "grado": 6,
         "grado_entrada": 6,
         "grado_salida": 0,
-        "intermediacion": 0.002626,
-        "cercania": 0.273273,
-        "pagerank": 0.02589,
+        "intermediacion": 0.002714,
+        "cercania": 0.272315,
+        "pagerank": 0.02552,
         "agrupamiento": 0.2,
         "excentricidad": 6
       }
@@ -3697,8 +3682,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.250344,
-        "pagerank": 0.002564,
+        "cercania": 0.25,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3718,8 +3703,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.245283,
-        "pagerank": 0.002564,
+        "cercania": 0.244565,
+        "pagerank": 0.002607,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -3738,9 +3723,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.007171,
-        "cercania": 0.267254,
-        "pagerank": 0.002564,
+        "intermediacion": 0.006969,
+        "cercania": 0.266667,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3760,8 +3745,8 @@
         "grado_entrada": 0,
         "grado_salida": 2,
         "intermediacion": 0.0,
-        "cercania": 0.258156,
-        "pagerank": 0.002564,
+        "cercania": 0.257511,
+        "pagerank": 0.002607,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -3781,8 +3766,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.17931,
-        "pagerank": 0.002564,
+        "cercania": 0.178571,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -3801,9 +3786,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.003697,
-        "cercania": 0.294023,
-        "pagerank": 0.002564,
+        "intermediacion": 0.00378,
+        "cercania": 0.294599,
+        "pagerank": 0.002607,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -3817,13 +3802,13 @@
       "prioridad": "alta",
       "estado": "resuelta",
       "metricas": {
-        "grado": 6,
-        "grado_entrada": 2,
+        "grado": 4,
+        "grado_entrada": 0,
         "grado_salida": 4,
-        "intermediacion": 0.000796,
-        "cercania": 0.25779,
-        "pagerank": 0.004276,
-        "agrupamiento": 0.466667,
+        "intermediacion": 3.1e-05,
+        "cercania": 0.255682,
+        "pagerank": 0.002607,
+        "agrupamiento": 0.833333,
         "excentricidad": 7
       },
       "resuelta_en": "R15",
@@ -3842,8 +3827,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -3863,8 +3848,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
@@ -3884,8 +3869,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.17433,
-        "pagerank": 0.002564,
+        "cercania": 0.174419,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 8
       },
@@ -3910,8 +3895,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.210405,
-        "pagerank": 0.002564,
+        "cercania": 0.210526,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -3933,9 +3918,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.001084,
-        "cercania": 0.277017,
-        "pagerank": 0.002564,
+        "intermediacion": 0.001109,
+        "cercania": 0.27735,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3957,9 +3942,9 @@
         "grado": 3,
         "grado_entrada": 0,
         "grado_salida": 3,
-        "intermediacion": 0.003584,
-        "cercania": 0.282609,
-        "pagerank": 0.002564,
+        "intermediacion": 0.003664,
+        "cercania": 0.283019,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -3981,9 +3966,9 @@
         "grado": 2,
         "grado_entrada": 0,
         "grado_salida": 2,
-        "intermediacion": 0.001084,
-        "cercania": 0.277017,
-        "pagerank": 0.002564,
+        "intermediacion": 0.001109,
+        "cercania": 0.27735,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4000,9 +3985,9 @@
         "grado": 10,
         "grado_entrada": 5,
         "grado_salida": 5,
-        "intermediacion": 0.027504,
-        "cercania": 0.316522,
-        "pagerank": 0.005341,
+        "intermediacion": 0.028758,
+        "cercania": 0.315236,
+        "pagerank": 0.004887,
         "agrupamiento": 0.244444,
         "excentricidad": 6
       }
@@ -4023,8 +4008,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.27957,
-        "pagerank": 0.003609,
+        "cercania": 0.27907,
+        "pagerank": 0.003576,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -4045,9 +4030,9 @@
         "grado": 4,
         "grado_entrada": 2,
         "grado_salida": 2,
-        "intermediacion": 0.004012,
-        "cercania": 0.298361,
-        "pagerank": 0.006618,
+        "intermediacion": 0.004086,
+        "cercania": 0.298013,
+        "pagerank": 0.006728,
         "agrupamiento": 0.166667,
         "excentricidad": 6
       }
@@ -4064,9 +4049,9 @@
         "grado": 12,
         "grado_entrada": 7,
         "grado_salida": 5,
-        "intermediacion": 0.062542,
-        "cercania": 0.352713,
-        "pagerank": 0.013921,
+        "intermediacion": 0.062647,
+        "cercania": 0.351562,
+        "pagerank": 0.013967,
         "agrupamiento": 0.121212,
         "excentricidad": 6
       }
@@ -4088,9 +4073,9 @@
         "grado": 4,
         "grado_entrada": 2,
         "grado_salida": 2,
-        "intermediacion": 0.014374,
-        "cercania": 0.31058,
-        "pagerank": 0.003158,
+        "intermediacion": 0.014526,
+        "cercania": 0.309278,
+        "pagerank": 0.003105,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4107,9 +4092,9 @@
         "grado": 3,
         "grado_entrada": 1,
         "grado_salida": 2,
-        "intermediacion": 0.011027,
-        "cercania": 0.245946,
-        "pagerank": 0.003472,
+        "intermediacion": 0.01115,
+        "cercania": 0.245232,
+        "pagerank": 0.003438,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4130,9 +4115,9 @@
         "grado": 3,
         "grado_entrada": 2,
         "grado_salida": 1,
-        "intermediacion": 0.000701,
-        "cercania": 0.276176,
-        "pagerank": 0.003329,
+        "intermediacion": 0.000726,
+        "cercania": 0.275229,
+        "pagerank": 0.003384,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -4153,8 +4138,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.267647,
-        "pagerank": 0.007744,
+        "cercania": 0.267062,
+        "pagerank": 0.007841,
         "agrupamiento": 1.0,
         "excentricidad": 7
       }
@@ -4175,8 +4160,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.261119,
-        "pagerank": 0.004931,
+        "cercania": 0.260492,
+        "pagerank": 0.004981,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4197,8 +4182,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.237288,
-        "pagerank": 0.003907,
+        "cercania": 0.236531,
+        "pagerank": 0.003927,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4219,8 +4204,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.197611,
-        "pagerank": 0.00404,
+        "cercania": 0.197152,
+        "pagerank": 0.004068,
         "agrupamiento": 0.0,
         "excentricidad": 8
       }
@@ -4236,9 +4221,9 @@
         "grado": 5,
         "grado_entrada": 4,
         "grado_salida": 1,
-        "intermediacion": 0.006403,
-        "cercania": 0.284375,
-        "pagerank": 0.007311,
+        "intermediacion": 0.00647,
+        "cercania": 0.283912,
+        "pagerank": 0.007356,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -4254,9 +4239,9 @@
         "grado": 4,
         "grado_entrada": 3,
         "grado_salida": 1,
-        "intermediacion": 0.007871,
-        "cercania": 0.292605,
-        "pagerank": 0.006543,
+        "intermediacion": 0.008048,
+        "cercania": 0.292208,
+        "pagerank": 0.006581,
         "agrupamiento": 0.166667,
         "excentricidad": 6
       }
@@ -4275,9 +4260,9 @@
         "grado": 5,
         "grado_entrada": 0,
         "grado_salida": 5,
-        "intermediacion": 0.027435,
-        "cercania": 0.341463,
-        "pagerank": 0.002564,
+        "intermediacion": 0.0272,
+        "cercania": 0.340265,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 5
       }
@@ -4293,9 +4278,9 @@
         "grado": 7,
         "grado_entrada": 6,
         "grado_salida": 1,
-        "intermediacion": 0.00649,
-        "cercania": 0.295935,
-        "pagerank": 0.00652,
+        "intermediacion": 0.006187,
+        "cercania": 0.295082,
+        "pagerank": 0.006628,
         "agrupamiento": 0.333333,
         "excentricidad": 6
       }
@@ -4308,13 +4293,13 @@
       "texto": "Parte 1 confirmada: el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. Parte 2 sin respaldo en las simulaciones de las familias ensayadas: la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.",
       "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
-        "grado": 7,
-        "grado_entrada": 7,
+        "grado": 6,
+        "grado_entrada": 6,
         "grado_salida": 0,
-        "intermediacion": 0.011965,
-        "cercania": 0.322124,
-        "pagerank": 0.022409,
-        "agrupamiento": 0.142857,
+        "intermediacion": 0.008418,
+        "cercania": 0.311958,
+        "pagerank": 0.021446,
+        "agrupamiento": 0.133333,
         "excentricidad": 6
       }
     },
@@ -4329,9 +4314,9 @@
         "grado": 16,
         "grado_entrada": 13,
         "grado_salida": 3,
-        "intermediacion": 0.126133,
-        "cercania": 0.360396,
-        "pagerank": 0.019177,
+        "intermediacion": 0.127955,
+        "cercania": 0.360721,
+        "pagerank": 0.019496,
         "agrupamiento": 0.033333,
         "excentricidad": 5
       }
@@ -4347,9 +4332,9 @@
         "grado": 4,
         "grado_entrada": 4,
         "grado_salida": 0,
-        "intermediacion": 0.011975,
-        "cercania": 0.299342,
-        "pagerank": 0.00556,
+        "intermediacion": 0.012186,
+        "cercania": 0.299501,
+        "pagerank": 0.005653,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4366,8 +4351,8 @@
         "grado_entrada": 2,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.286614,
-        "pagerank": 0.005906,
+        "cercania": 0.286624,
+        "pagerank": 0.006004,
         "agrupamiento": 1.0,
         "excentricidad": 6
       }
@@ -4387,9 +4372,9 @@
         "grado": 2,
         "grado_entrada": 2,
         "grado_salida": 0,
-        "intermediacion": 0.001833,
-        "cercania": 0.267254,
-        "pagerank": 0.003746,
+        "intermediacion": 0.001875,
+        "cercania": 0.267857,
+        "pagerank": 0.003809,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4410,8 +4395,8 @@
         "grado_entrada": 1,
         "grado_salida": 0,
         "intermediacion": 0.0,
-        "cercania": 0.263768,
-        "pagerank": 0.007364,
+        "cercania": 0.26393,
+        "pagerank": 0.007486,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4434,8 +4419,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4458,8 +4443,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4482,8 +4467,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4506,8 +4491,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 6
       }
@@ -4526,9 +4511,9 @@
         "grado": 6,
         "grado_entrada": 0,
         "grado_salida": 6,
-        "intermediacion": 0.014493,
-        "cercania": 0.314335,
-        "pagerank": 0.002564,
+        "intermediacion": 0.014731,
+        "cercania": 0.314685,
+        "pagerank": 0.002607,
         "agrupamiento": 0.266667,
         "excentricidad": 6
       }
@@ -4548,8 +4533,8 @@
         "grado_entrada": 0,
         "grado_salida": 1,
         "intermediacion": 0.0,
-        "cercania": 0.265306,
-        "pagerank": 0.002564,
+        "cercania": 0.265487,
+        "pagerank": 0.002607,
         "agrupamiento": 0.0,
         "excentricidad": 7
       }
@@ -4568,9 +4553,9 @@
         "grado": 7,
         "grado_entrada": 0,
         "grado_salida": 7,
-        "intermediacion": 0.070753,
-        "cercania": 0.322695,
-        "pagerank": 0.002564,
+        "intermediacion": 0.072383,
+        "cercania": 0.323741,
+        "pagerank": 0.002607,
         "agrupamiento": 0.238095,
         "excentricidad": 6
       }
@@ -4589,9 +4574,9 @@
         "grado": 8,
         "grado_entrada": 0,
         "grado_salida": 8,
-        "intermediacion": 0.031793,
-        "cercania": 0.333945,
-        "pagerank": 0.002564,
+        "intermediacion": 0.031312,
+        "cercania": 0.333333,
+        "pagerank": 0.002607,
         "agrupamiento": 0.25,
         "excentricidad": 6
       }
@@ -4610,96 +4595,11 @@
         "grado": 16,
         "grado_entrada": 0,
         "grado_salida": 16,
-        "intermediacion": 0.092769,
-        "cercania": 0.352031,
-        "pagerank": 0.002564,
+        "intermediacion": 0.093919,
+        "cercania": 0.351562,
+        "pagerank": 0.002607,
         "agrupamiento": 0.091667,
         "excentricidad": 5
-      }
-    },
-    {
-      "id": "PII_V2",
-      "tipo": "calc",
-      "etiqueta": "PII rediseñado (sí cumple la hipótesis)",
-      "texto": "\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]\nReescala el PII de la tesis (kK=2.5 en la ganancia, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase: 47.3°/41.0°/37.8°/34.5° en -4/-3/-2.5/-2 cm (todos ≥30°, el umbral de la tesis). En el escalón -2→-3 cm con fricción de Karnopp, zona muerta y u≤3.5 V: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm y 0.26 s del mejor PI del barrido R15 (-17 % y -9 %) y frente a 0.033 cm y 0.335 s del PII de la tesis (-67 % y -29 %). Sobrepaso 29.1 %, sin saturación sostenida. En la rampa de -0.05 cm/s del barrido, error eficaz 0.0024 cm, unas tres veces menor que PI y PII originales (~0.0076 cm).",
-      "latex": [
-        "C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}"
-      ],
-      "fuente": "Sesión 2026-10-04: diseño en Python (búsqueda numérica, validación RK45), verificación de estabilidad en Mathematica (Routh/raíces). Validación cruzada independiente en validacion/barrido_03/ (2026-10-04), con MATLAB/ode45 y el mismo simulador y criterio de aceptación que el barrido R15 de la tesis (icr/calculus/Final_Bien/R15_sintonizacion/validar_PII_v2.m): CONFIRMADA. No forma parte del texto de la tesis; es exploración posterior.",
-      "verificacion": "Python (scipy, RK45) y Mathematica (Routh/raíces); MATLAB (ode45) CONFIRMADO en validacion/barrido_03/ (icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json): margen de fase 47.25°/41.00°/37.73°/34.42° en -4/-3/-2.5/-2 cm (afirmado: 47.3/41.0/37.8/34.5, diferencia <1%); escalón -2→-3 cm: sobrepaso 29.16% (afirmado 29.1%), ciclo límite 0.01102 cm (afirmado 0.0108 cm, +2%), atascamiento medio 0.2444 s (afirmado 0.237 s, +3%); rampa: error eficaz 0.002412 cm (afirmado 0.0024 cm). Frente al mejor PI del barrido R15 (0.013403 cm / 0.2624 s): -17.8% en ciclo límite y -6.9% en atascamiento, consistente con el -17%/-9% afirmado.",
-      "valores": {
-        "ganancia": 381.075,
-        "ceros": [
-          -8.775,
-          -3.3498,
-          -19.041
-        ],
-        "polos": [
-          0,
-          0,
-          -331.21
-        ],
-        "kK": 2.5,
-        "alpha_ceros_bajos": 1.8,
-        "beta_red_adelanto": 1.1,
-        "margen_fase_grados": {
-          "-4": 47.3,
-          "-3": 41.0,
-          "-2.5": 37.8,
-          "-2": 34.5
-        },
-        "ciclo_limite_cm": 0.0108,
-        "atasco_medio_s": 0.237,
-        "sobrepaso_pct": 29.1,
-        "ciclo_limite_cm_mejor_pi": 0.013,
-        "atasco_medio_s_mejor_pi": 0.26,
-        "verificado_matlab_ode45": {
-          "margen_fase_grados": {
-            "-4": 47.25,
-            "-3": 41.0,
-            "-2.5": 37.73,
-            "-2": 34.42
-          },
-          "ciclo_limite_cm": 0.011018,
-          "atasc_medio_s": 0.2444,
-          "sobrepaso_pct": 29.16,
-          "u_max_V": 3.5,
-          "frac_saturado": 0.0017,
-          "error_rms_rampa_cm": 0.002412,
-          "script": "icr/calculus/Final_Bien/R15_sintonizacion/validar_PII_v2.m",
-          "datos": "icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json"
-        }
-      },
-      "contenido_html": "<div class=\"math\">\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]</div><p>Reescala el PII de la tesis (k<sub>K</sub>=2.5, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase ≥30° en -4, -3, -2.5 y -2 cm. En el escalón -2→-3 cm: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm / 0.26 s del mejor PI del barrido (-17 % y -9 %) y a 0.033 cm / 0.335 s del PII original (-67 % y -29 %). Sobrepaso 29.1 %. En la rampa de -0.05 cm/s, error eficaz tres veces menor que ambos controladores originales.</p>",
-      "metricas": {
-        "grado": 3,
-        "grado_entrada": 1,
-        "grado_salida": 2,
-        "intermediacion": 0.000854,
-        "cercania": 0.27957,
-        "pagerank": 0.003,
-        "agrupamiento": 0.666667,
-        "excentricidad": 6
-      }
-    },
-    {
-      "id": "R25",
-      "tipo": "rev",
-      "etiqueta": "Diseño de un PII que sí cumple la hipótesis",
-      "contenido_html": "<p>El barrido de familias de la sección 6.2 limitó k<sub>K</sub> a [0.5, 3] y no varió la red de adelanto; dentro de ese barrido ningún PII superó al mejor PI. Ampliando esa libertad (k<sub>K</sub> y la red de adelanto, no solo los ceros bajos) y exigiendo el mismo margen de fase ≥30° en -4, -3, -2.5 y -2 cm, se encontró un PII que bate al mejor PI en ciclo límite y en atascamiento a la vez.</p><p><b>Resolución:</b> diseñado en Python, verificado con Mathematica (estabilidad) y en validación cruzada con el simulador MATLAB de la tesis. Pendiente decidir si se incorpora al capítulo 6 como contraejemplo acotado, o se deja como trabajo futuro.</p>",
-      "texto": "El barrido de familias limitó kK a [0.5,3] y no varió la red de adelanto; ningún PII superó al mejor PI dentro de ese barrido. Con más libertad (kK y red de adelanto) y el mismo margen de fase ≥30°, se encontró un PII que sí lo supera en ambas métricas.\nResolución: diseñado en Python, verificado en Mathematica; validación cruzada con MATLAB en curso. Pendiente decidir su incorporación al capítulo 6.",
-      "prioridad": "media",
-      "estado": "resuelta",
-      "resolucion": "PII_v2 bate al mejor PI del barrido R15 en ciclo límite (-17 %) y atascamiento medio (-9 %), con margen de fase ≥30° en todo el intervalo; no cambia la conclusión general sobre las familias ya publicadas, pero muestra que la restricción kK≤3 del barrido, no el número de integradores, era lo que impedía al PII ganar. Verificado de forma independiente con MATLAB/ode45 en validacion/barrido_03/ (2026-10-04): las cifras del diseño original se reproducen dentro de ±3%, y la ventaja sobre el mejor PI del barrido R15 se confirma (-17.8% en ciclo límite, -6.9% en atascamiento medio). Sigue sin estar incorporado al capítulo 6; la decisión de incluirlo queda pendiente del usuario.",
-      "metricas": {
-        "grado": 5,
-        "grado_entrada": 0,
-        "grado_salida": 5,
-        "intermediacion": 0.00383,
-        "cercania": 0.294498,
-        "pagerank": 0.002564,
-        "agrupamiento": 0.4,
-        "excentricidad": 6
       }
     }
   ],
@@ -6635,55 +6535,13 @@
       "origen": "R24",
       "destino": "REG",
       "relacion": "afecta_a"
-    },
-    {
-      "id": "e323",
-      "origen": "R25",
-      "destino": "PII",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e324",
-      "origen": "R25",
-      "destino": "R15",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e325",
-      "origen": "R25",
-      "destino": "K9",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e326",
-      "origen": "R25",
-      "destino": "K13",
-      "relacion": "afecta_a"
-    },
-    {
-      "id": "e327",
-      "origen": "R25",
-      "destino": "PII_V2",
-      "relacion": "produce"
-    },
-    {
-      "id": "e328",
-      "origen": "PII_V2",
-      "destino": "PII",
-      "relacion": "variante_de"
-    },
-    {
-      "id": "e329",
-      "origen": "PII_V2",
-      "destino": "R15",
-      "relacion": "supera_a"
     }
   ],
   "metricas_globales": {
-    "nodos": 183,
-    "aristas": 329,
-    "densidad": 0.019756,
-    "grado_medio": 3.5956,
+    "nodos": 181,
+    "aristas": 322,
+    "densidad": 0.019767,
+    "grado_medio": 3.558,
     "componentes_conexas": 1,
     "diametro": 8,
     "radio": 5,
@@ -6711,18 +6569,18 @@
       "ZM",
       "ref:alcantara"
     ],
-    "longitud_media_camino": 3.8062,
-    "agrupamiento_medio": 0.11883,
+    "longitud_media_camino": 3.8141,
+    "agrupamiento_medio": 0.116297,
     "nodos_por_tipo": {
       "tesis": 1,
       "obj": 6,
       "mod": 16,
-      "calc": 19,
+      "calc": 18,
       "sim": 11,
       "fig": 40,
       "conc": 13,
       "fut": 9,
-      "rev": 25,
+      "rev": 24,
       "ref": 43
     },
     "aristas_por_relacion": {
@@ -6732,7 +6590,7 @@
       "se_aborda_con": 4,
       "deriva_en": 32,
       "se_ilustra_en": 7,
-      "produce": 11,
+      "produce": 10,
       "parametriza": 1,
       "se_visualiza_en": 11,
       "se_cumple_con": 1,
@@ -6743,13 +6601,11 @@
       "implica": 4,
       "concluye": 1,
       "motiva": 17,
-      "afecta_a": 79,
+      "afecta_a": 75,
       "citada_en": 61,
       "incluye": 1,
       "se_analiza_en": 2,
-      "se_evalua_en": 1,
-      "variante_de": 1,
-      "supera_a": 1
+      "se_evalua_en": 1
     },
     "aristas_por_par_de_tipos": {
       "tesis->obj": 2,
@@ -6762,7 +6618,7 @@
       "calc->mod": 2,
       "calc->fig": 11,
       "obj->calc": 1,
-      "calc->calc": 13,
+      "calc->calc": 12,
       "calc->sim": 18,
       "obj->sim": 6,
       "mod->sim": 9,
@@ -6777,7 +6633,7 @@
       "mod->fut": 6,
       "calc->fut": 4,
       "sim->fut": 3,
-      "rev->calc": 10,
+      "rev->calc": 8,
       "rev->sim": 15,
       "rev->fig": 5,
       "rev->mod": 26,
@@ -6786,7 +6642,7 @@
       "ref->fut": 3,
       "ref->sim": 1,
       "tesis->sim": 1,
-      "rev->conc": 12,
+      "rev->conc": 10,
       "rev->obj": 4,
       "rev->tesis": 6,
       "rev->ref": 1,
@@ -6794,20 +6650,18 @@
       "sim->calc": 1,
       "obj->conc": 1,
       "mod->obj": 1,
-      "ref->obj": 2,
-      "rev->rev": 1,
-      "calc->rev": 1
+      "ref->obj": 2
     },
     "top_grado": [
-      {
-        "id": "PII",
-        "etiqueta": "Controlador PII",
-        "grado": 20
-      },
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
         "grado": 19
+      },
+      {
+        "id": "PII",
+        "etiqueta": "Controlador PII",
+        "grado": 18
       },
       {
         "id": "MARCO",
@@ -6854,104 +6708,104 @@
       {
         "id": "PII",
         "etiqueta": "Controlador PII",
-        "intermediacion": 0.222081
+        "intermediacion": 0.209856
       },
       {
         "id": "T",
         "etiqueta": "Control PII del SLM inestable",
-        "intermediacion": 0.18688
+        "intermediacion": 0.18963
       },
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
-        "intermediacion": 0.137899
+        "intermediacion": 0.139408
       },
       {
         "id": "MARCO",
         "etiqueta": "Fundamentos teóricos",
-        "intermediacion": 0.126133
+        "intermediacion": 0.127955
       },
       {
         "id": "ZM",
         "etiqueta": "Zona muerta dinámica no centrada",
-        "intermediacion": 0.120555
+        "intermediacion": 0.122662
       },
       {
         "id": "SOA",
         "etiqueta": "Estado del arte: control y zona muerta",
-        "intermediacion": 0.113604
+        "intermediacion": 0.114893
       },
       {
         "id": "LIN",
         "etiqueta": "Modelo linealizado (x* = −4 cm)",
-        "intermediacion": 0.095357
+        "intermediacion": 0.096597
       },
       {
         "id": "REG",
         "etiqueta": "Regulación con AD (OE4)",
-        "intermediacion": 0.095093
+        "intermediacion": 0.095983
       },
       {
         "id": "R24",
         "etiqueta": "Segundo barrido de validación",
-        "intermediacion": 0.092769
+        "intermediacion": 0.093919
       },
       {
         "id": "APP",
         "etiqueta": "Aplicaciones de la levitación",
-        "intermediacion": 0.086212
+        "intermediacion": 0.087151
       }
     ],
     "top_pagerank": [
       {
         "id": "ZM",
         "etiqueta": "Zona muerta dinámica no centrada",
-        "pagerank": 0.02823
+        "pagerank": 0.028699
       },
       {
         "id": "SOA",
         "etiqueta": "Estado del arte: control y zona muerta",
-        "pagerank": 0.026806
+        "pagerank": 0.027252
       },
       {
         "id": "KARN",
         "etiqueta": "Método de Karnopp",
-        "pagerank": 0.026398
+        "pagerank": 0.026837
       },
       {
         "id": "W9",
         "etiqueta": "Estructuras de control frente al ciclo límite",
-        "pagerank": 0.02589
+        "pagerank": 0.02552
       },
       {
         "id": "K13",
         "etiqueta": "Evaluación de la hipótesis",
-        "pagerank": 0.022409
+        "pagerank": 0.021446
       },
       {
         "id": "APP",
         "etiqueta": "Aplicaciones de la levitación",
-        "pagerank": 0.021084
+        "pagerank": 0.021435
       },
       {
         "id": "FALT",
         "etiqueta": "Modelos alternativos de f_fld",
-        "pagerank": 0.019765
+        "pagerank": 0.020093
       },
       {
         "id": "W2",
         "etiqueta": "Comparar modelos de f_fld",
-        "pagerank": 0.019364
+        "pagerank": 0.019687
       },
       {
         "id": "MARCO",
         "etiqueta": "Fundamentos teóricos",
-        "pagerank": 0.019177
+        "pagerank": 0.019496
       },
       {
         "id": "LIN",
         "etiqueta": "Modelo linealizado (x* = −4 cm)",
-        "pagerank": 0.015104
+        "pagerank": 0.015356
       }
     ],
     "cobertura_objetivos": {

@@ -1,0 +1,299 @@
+VALIDACIÓN DEL TRABAJO DE CLAUDE — TESIS ECP-730
+Fecha: 3 de octubre de 2026
+Raíz: /Users/marino/DEVELOPMENT/TESIS/claude
+
+DICTAMEN
+
+Validación parcial favorable de los resultados numéricos; el documento y el
+grafo requieren correcciones antes de considerarlos una base de conocimiento
+validada. Las simulaciones principales son reproducibles. Las conclusiones
+generales exceden lo que prueban los experimentos numéricos y hay errores
+dimensionales, de selección de datos y de interpretación matemática.
+
+La evidencia permite afirmar que, para los controladores, condiciones iniciales
+y modelo implementado, el PII mantiene la posición cerca de la referencia con
+oscilaciones persistentes, y que las variantes PI ensayadas incluyen soluciones
+con menor oscilación. No constituye una demostración universal de inferioridad
+del PII, de estabilidad no lineal global ni una validación experimental.
+
+No se modificaron los capítulos, controladores, simulaciones o grafo originales.
+Los programas y evidencias de esta auditoría están en validacion/.
+
+ALCANCE Y MÉTODO
+
+Se identificó main.tex como documento vigente: siete capítulos, resumen,
+abstract y dos anexos. Los respaldos y capítulos antiguos no se trataron como
+resultados vigentes. Se revisaron las ecuaciones, scripts activos, métricas,
+fuentes de figuras y grafo v3.
+
+Comprobaciones ejecutadas:
+* 53 archivos LaTeX alcanzables desde main.tex; 110 etiquetas y 43 claves de
+  citas. No se encontraron etiquetas duplicadas, referencias internas sin
+  destino, citas sin entrada bibliográfica, inputs ausentes ni CSV ausentes.
+  Es una comprobación estática, no certifica la maquetación.
+* 180 nodos y 306 aristas del grafo. Identificadores, extremos de aristas y rutas
+  de fuentes válidos. Las métricas recalculadas coinciden con las guardadas.
+  Esto NO valida el contenido semántico de cada nodo; véase H03.
+* Inspección de los 38 CSV. Los NaN de lazo abierto y las filas separadoras de
+  trayectorias son deliberados; no se clasificaron como datos corruptos.
+* Recalculadas métricas de cuatro MAT, incluidos los 2 000 000 de puntos del
+  seguimiento senoidal y los 2 500 000 del trapezoidal.
+* Comparados todos los puntos de 16 CSV de regulación, seguimiento y sin AD
+  contra las series MAT: discrepancia máxima 4,97e-14 en sus unidades.
+* Reproducción independiente del lazo PI/PII con MATLAB R2025a Update 1 y
+  Control System Toolbox: seis pruebas de base/sensibilidad y cuatro casos R15.
+* Ejecutados evidencia_P8.m, regulacion_sinAD_P3.m y diseno_PII_tikz.m en una
+  copia temporal. Sus 12 CSV, dos JSON de métricas y valores.tex son idénticos
+  byte por byte a los originales. La prueba sin AD/P8 utiliza como comparación
+  el MAT de regulación, que se validó por separado.
+* Recalculados los filtros sobre las 512 trayectorias R15 y examinados los
+  7503 registros del barrido del intervalo de operación.
+* Inspección visual representativa de las imágenes del grafo: regulación,
+  familias PI/PII, Nyquist y voltaje durante el atascamiento. Estas imágenes no
+  sustituyen una inspección del PDF final, que actualmente no se compila.
+* Contrastados los parámetros con Diana_tesis.pdf, pp. 32–33; se inspeccionó
+  visualmente la tabla 2 de la página 33. El error de unidades de b también
+  figura en ese antecedente: heredarlo no lo hace dimensionalmente correcto.
+
+RESULTADOS CONFIRMADOS
+
+Magnitud                                    Recalculado
+u_e(-4 cm)                                  3,4826427109 V
+u_e(-3 cm)                                  2,3933608017 V
+u_e(-2 cm)                                  1,5821074402 V
+Polos abiertos en -4 cm                     -23,5057426; +14,9427426 s^-1
+Margen de fase del PII en -4 cm              59,8604479 grados
+Margen inferior de ganancia                 -17,0713009 dB
+Sobrepaso lineal PII en -4 cm                16,8834997 %
+Establecimiento lineal PII                  0,2840565 s
+Margen de fase PII en -2 cm                  47,4316391 grados
+Sobrepaso no lineal PII con AD               23,6481891 %
+Ciclo pico a pico PII                       0,0333933454 cm
+Ciclo pico a pico PI                        0,0309104627 cm
+Error medio PII, últimos 10 s               6,22752e-5 cm
+Fracción atascada PII, últimos 10 s          0,7443
+Error RMS senoidal, serie completa          0,01240188494 cm
+Error RMS trapezoidal, serie completa       0,01141992357 cm
+Mejor PI R15, nueva integración ode45       0,0135287722 cm pico a pico
+Mejor PII R15, nueva integración ode45      0,0265467959 cm pico a pico
+
+Los últimos dos valores difieren aproximadamente 0,94 % y 1,61 % de los
+resultados GPU, respectivamente. El orden PI < PII se conserva en esos casos.
+Los exponentes de los ajustes de amplitud frente a kK se reproducen:
+-1,20286437 para PI y -1,12247902 para PII. Cada ajuste utiliza seis puntos;
+es un ajuste empírico sobre esas familias, no una ley universal.
+
+Sensibilidad del PII, con ventana final de 10 s:
+Caso                            Ciclo [cm]       Cambio respecto a base
+Base                            0,0333933454     —
+RelTol=1e-8, AbsTol=1e-10        0,0331579277     -0,70 %
+T=0,5 ms y tolerancia estricta   0,0321024895     -3,87 %
+DV=0,01 y tolerancia estricta    0,0331104879     -0,85 %
+Sin zona muerta, estricto       0,0305677088     -8,46 %
+
+La oscilación persiste bajo esas variaciones. Reducir T cambia el muestreo del
+controlador y no solo el paso de integración: esa fila mide sensibilidad de la
+implementación digital, no una prueba pura de convergencia del integrador.
+El caso sin zona muerta demuestra que esta no es necesaria para producir la
+oscilación en el modelo ensayado; fricción y acción integral bastan aquí.
+
+HALLAZGOS Y CORRECCIONES NECESARIAS
+
+H01 — BLOQUEANTE DOCUMENTAL: la tesis no compila.
+Fuente: icr/context/Tesis/preamble/uamdato.tex:41 y preamble/titlepage.tex:16.
+La portada pide images/titlepage/logo_uam_reconstruido.pdf, que no existe.
+La ejecución independiente de LuaLaTeX con -draftmode y -halt-on-error falla
+exactamente ahí. Evidencia: compilacion.log. Existe logo_uam.pdf, pero no se
+sustituyó automáticamente porque la validación no debe alterar la identidad
+de la portada. Debe restaurarse el recurso correcto o corregirse la referencia,
+y después compilar con bibliografía e inspeccionar el documento completo.
+No se pudieron confirmar los porcentajes actuales de páginas de introducción
+y conclusiones ni la ausencia de otros avisos posteriores al primer error.
+
+H02 — ALTA: unidad incompatible del parámetro b.
+Fuente: icr/context/Tesis/capitulos/03_modelo.tex:146; nodo PAR del grafo.
+Se declara b=1,6163e-6 V/(N·cm^4), pero el código usa fuerzas en kg·cm/s².
+Para conservar el valor numérico, la unidad debe ser
+V/[(kg·cm/s²)·cm^4]. Si se expresa la fuerza en N y se conserva la distancia
+en cm, el coeficiente equivalente es 1,6163e-4 V/(N·cm^4).
+Es un factor 100 de conversión. No debe cambiarse solo el valor en los scripts:
+el conjunto numérico actual reproduce los equilibrios; lo incorrecto es mezclar
+su valor con la unidad N. El antecedente de Diana contiene la misma etiqueta.
+
+H03 — ALTA: el grafo tiene datos estructurados obsoletos aunque marca resueltas
+todas las revisiones.
+Fuente: icr/grafo/grafo_tesis.json, nodos ZM, KARN y PAR.
+ZM.valores.saturacion.max = 5, frente a 3,5 V en la implementación vigente.
+KARN.valores.Fs = 20 N, frente a 20 kg·cm/s² = 0,2 N en los scripts.
+PAR conserva una nota de uso c2=c1/m incompatible con el simulador corregido.
+Algunos textos/HTML ya dicen los valores correctos: dentro del mismo grafo
+coexisten representaciones contradictorias. R4 y R14 figuran como resueltas.
+Corregir valores, texto y HTML conjuntamente; recalcular centralidades no
+resuelve este problema. No debe usarse el estado «resuelta» como certificación.
+
+H04 — ALTA: tres controladores PI omitidos con un criterio no documentado.
+Fuentes: capitulos/06_doble_integral.tex:33;
+images/r15_results/tikz/familia_pi.csv y resumen_R15.json;
+calculus/Final_Bien/R15_sintonizacion/resultados_R15.json.
+Hay 256 controladores: 132 PI y 124 PII. Aplicando a escalón Y rampa las
+condiciones guardadas diverge=false y frac_saturado=0, resultan 57 PI y
+51 PII, no 54 PI y 51 PII. La gráfica omite estos PI:
+  kK=0,500000; alpha=1,31950791
+  kK=0,59811560; alpha=1,31950791
+  kK=0,71548454; alpha=1,31950791
+Sus ciclos son 0,0663443, 0,0518196 y 0,0401599 cm. El mínimo PI no cambia,
+pero sí cambian la población y el mínimo de duración de atascamiento: aparece
+0,1697949 s, inferior al 0,21565625 s del resumen.
+No se encontró en los scripts activos el exportador de familia_pi.csv,
+familia_pii.csv, base.csv y resumen_R15.json. Debe añadirse un exportador con
+criterios explícitos y actualizar la selección o justificar las exclusiones.
+
+H05 — ALTA: conclusiones demasiado generales para el diseño experimental.
+Fuentes: capitulos/06_doble_integral.tex:33,42,127,145;
+capitulos/07_conclusiones.tex:12–17; secciones resumen y abstract.
+Un barrido finito de dos familias restringidas no descarta otras sintonizaciones
+ni estructuras. PI y PII cambian también ceros, polo de adelanto y ganancia;
+el mismo kK no equivale a la misma función de ganancia en ambas familias.
+De las 256 variantes linealmente estables, solo el subconjunto filtrado participa
+en la comparación sin saturación superior; no son 256 variantes PII.
+Reformular: «En las familias, intervalo, referencias y restricciones ensayadas,
+ningún PII seleccionado logró un ciclo menor que el mejor PI seleccionado».
+La estabilidad lineal fue comprobada por el generador R15 en tres posiciones;
+eso, por sí solo, no demuestra la propiedad en todo el continuo de posiciones.
+Las oscilaciones observadas y las simulaciones finitas tampoco prueban una
+órbita periódica aislada ni estabilidad no lineal global. Describirlas como
+oscilaciones persistentes compatibles con hunting o aportar esa demostración.
+
+H06 — ALTA PARA EL ALCANCE FÍSICO: se ensaya otra ley de zona muerta.
+Fuente: capitulos/03_modelo.tex, sec:zm_modelo;
+inestable/PII_inestable/regulacion_P4.m, bloque «zona muerta».
+El texto sí advierte la simplificación, pero la ley D(u) centrada en u_e y la
+retención de voltaje implementada no son equivalentes. La segunda tiene
+memoria del voltaje anterior y se desactiva cuando el imán está atascado.
+Por tanto, los resultados validan esa implementación concreta y no una zona
+muerta estática identificada del ECP-730. La extrapolación a hipótesis sobre
+otras zonas muertas debe limitarse. El ensayo adicional sin zona muerta
+confirma que el hunting observado no necesita esa retención de voltaje.
+
+H07 — MEDIA: fórmula de atascamiento PII sin estado inicial del integrador.
+Fuente: capitulos/06_doble_integral.tex, eq:rampa_atasco y párrafo siguiente;
+R15_sintonizacion/exportar_ciclo.py.
+Para C≈Ki/s+Kii/s², con q(t0) el estado de la primera integración,
+Delta u(t)=[Ki·e0+Kii·q(t0)]t+(Kii·e0/2)t²,
+además de los transitorios del filtro del controlador completo.
+La fórmula publicada supone implícitamente q(t0)=0. En un ciclo persistente
+esa condición no está garantizada. El texto reconoce diferencias de pendiente,
+pero usa 2Ki/Kii=1,6 s como umbral general. El umbral real depende del estado.
+Corregir la fórmula o identificarla como aproximación de estado inicial nulo;
+no deducir universalmente el aporte de cada integración de ella.
+
+H08 — MEDIA: pérdida del signo de las constantes de error.
+Fuente: R15_sintonizacion/analisis_ciclo.m:32–33;
+capitulos/06_doble_integral.tex:139; eq:constantes_error de fundamentos.
+abs(dcgain(...)) entrega la magnitud, no la constante definida por el límite.
+El recálculo da Kv=-91,604043 s^-1 y Ka=-84,472732 s^-2 en -3 cm.
+Con rampa descendente de -0,05 cm/s, e_ss=r_dot/Kv es positivo:
+aproximadamente +5,46e-4 cm. La magnitud publicada es correcta; la definición
+y la interpretación del signo deben corregirse. Si se reportan magnitudes,
+usar explícitamente |Kv| y |e_ss|.
+
+H09 — MEDIA: estimación de la banda del PD omite la rigidez de la planta.
+Fuente: R15_sintonizacion/analisis_ciclo.m:56–57;
+capitulos/06_doble_integral.tex, párrafo posterior a eq:pd.
+El valor 506,5315 corresponde a Kpd/[b(a-r)^4], no a la rigidez neta del lazo.
+Con x=r-e y u=u_e(r)+Kpd·e, la linealización de la fuerza neta da
+k_ef=Kpd/[b(a-r)^4]-4mg/(a-r)=452,1378 en r=-3 cm.
+Así, Fs/k_ef=0,0442343 cm, frente a 0,0394842 cm publicado.
+Resolviendo la desigualdad estática no lineal completa, los extremos son
+e=-0,04344993 y +0,04505945 cm. El error simulado de -0,0019399 cm sigue
+siendo compatible con el reposo; se corrige su justificación, no ese resultado.
+
+H10 — MEDIA: la prueba del jacobiano corresponde a deslizamiento.
+Fuentes: chapters/apendices/verificacion.tex:9;
+verificacion_P1/verificar_P1.m, evaluación y0=[-4;0.5].
+La matriz [[0,1],[351,240261,-8,563]] se reproduce fuera de la banda de Karnopp.
+En [-4;0] y u=u_e, el jacobiano numérico local del simulador con atascamiento
+es la matriz cero. Especificar que el modelo de diseño y la verificación de
+esa matriz corresponden al campo suave de deslizamiento/sin fricción estática,
+no al equilibrio del simulador completo dentro de la zona de reposo.
+
+H11 — MEDIA: «sin saturar» cuenta solo la cota superior.
+Fuentes: capitulos/06_doble_integral.tex:29,33,38;
+regulacion_P4.m:95; simular_R15.py:117.
+frac_saturado registra únicamente u>=umax-1e-4. La nueva simulación encuentra
+27 muestras a 0 V en el PII y 30 en el PI, en 40 s: 0,0675 % y 0,075 %.
+El controlador sí alcanza el límite inferior al aplicar el escalón. El resumen
+ya dice correctamente «sin alcanzar el límite superior»; usar esa precisión
+también en comparación, filtros y leyendas. Para medir saturación completa,
+registrar ambas cotas y, preferiblemente, la señal antes del recorte.
+
+H12 — MEDIA: «no puede desplazarse desde -4 cm» es demasiado fuerte.
+Fuente: capitulos/03_modelo.tex:237; capitulos/07_conclusiones.tex:17.
+No puede vencer la fricción hacia la bobina con 3,5 V, porque requiere unos
+3,986 V. Pero reduciendo u por debajo de aproximadamente 2,979 V sí puede
+despegar hacia abajo; ese movimiento puede llevar a una caída no recuperable.
+Distinguir imposibilidad de movimiento ascendente y pérdida de regulación
+controlada de una imposibilidad física de cualquier movimiento.
+En el barrido, -3,95 cm aparece «estable» desde -4 por la tolerancia de error,
+sin demostrar que se haya alcanzado exactamente esa referencia. La etiqueta
+«alcanzable» debe informar la tolerancia y la ventana temporal del criterio.
+
+H13 — MEDIA: caché de seguimiento puede mezclar resultados viejos y nuevos.
+Fuente: inestable/PII_inestable/seguimiento_P5.m:10,25–36.
+REUSAR=true carga MAT sin validar controlador, parámetros ni versión del código.
+Si se fuerza REUSAR=false con MAT existentes, el script simula y exporta datos
+nuevos, pero no reemplaza los MAT por la condición «if ~isfile(...)». La próxima
+ejecución con REUSAR=true vuelve a exportar los resultados antiguos.
+Guardar siempre el resultado de una simulación nueva y versionar la caché con
+parámetros y huellas de código. Los archivos actuales sí coinciden entre sí;
+el hallazgo es un defecto verificable de futuras regeneraciones.
+
+OTRAS PRECISIONES
+
+El mínimo de posición PII almacenado es -3,236481891 cm; redondeado a tres
+decimales resulta -3,236 cm, no -3,237 cm como se lee en regulación.
+El periodo de analisis_ciclo.m se estima a partir del número de intervalos,
+después de descartar extremos, usando toda la ventana temporal; puede sesgarse
+por esa eliminación. Conviene medir diferencias entre eventos de igual fase.
+El README de cálculos todavía asigna secciones del antiguo capítulo 8.
+Las fórmulas de error estacionario requieren estabilidad del lazo cerrado.
+La explicación del margen inferior debe circunscribirse al lazo estudiado:
+tener una planta inestable no excluye en general un límite superior de ganancia.
+El Nyquist con dos polos en el origen necesita explicitar la indentación del
+contorno; el gráfico de L(jw) truncado no es por sí solo la prueba completa.
+Los polos cerrados recalculados sí confirman la estabilidad lineal nominal.
+
+LÍMITES DE ESTA VALIDACIÓN
+
+No se reejecutaron las 7503 trayectorias GPU ni los 4500 segundos completos de
+seguimiento desde condiciones iniciales. Para seguimiento se recalcularon las
+métricas desde todos los puntos MAT y se cotejaron sus exportaciones. Se
+reejecutaron los cuatro casos representativos R15, no las 512 trayectorias.
+No se repitió íntegramente la prueba trapezoidal PI/PII de P6; su tabla se
+contrastó con el JSON y el procedimiento de cálculo.
+No se verificó experimentalmente el levitador, ni la transferencia de parámetros
+de la configuración repulsiva a la atractiva, ni se auditó el contenido completo
+de las 43 referencias bibliográficas. Se verificó su resolución estática y el
+antecedente local de parámetros señalado anteriormente.
+La inspección visual de figuras fue representativa; la maquetación completa y
+la extensión relativa de capítulos quedan pendientes por H01.
+
+EVIDENCIA Y REPRODUCCIÓN
+
+python3 validacion/validar_estructura.py
+/Applications/MATLAB_R2025a.app/bin/matlab -batch "run('validacion/validar_numerica.m')"
+/Applications/MATLAB_R2025a.app/bin/matlab -batch "run('validacion/validar_csv.m')"
+
+estructura.json: inventario, filtros, grafo y huellas SHA-256 de las fuentes.
+numerica.json: nuevos cálculos, reproducciones y sensibilidad.
+csv_contra_mat.json: diferencias por archivo de gráfica.
+reproduccion_comparacion.json: comparación exacta de los exportadores originales.
+p8_results_recalculado.json y sin_ad_results_recalculado.json: métricas nuevas.
+matlab.log, csv_mat.log, reproduccion_originales.log: registros de ejecución.
+compilacion.log: error reproducido de LuaLaTeX.
+
+Orden de corrección propuesto: restaurar la compilación; corregir unidades y
+grafo; hacer reproducible la selección R15; acotar las conclusiones al modelo
+ensayado; corregir las derivaciones y la caché; recompilar y revisar las figuras
+y la extensión de capítulos. Las correcciones de texto no requieren descartar
+los resultados numéricos que sí se reprodujeron.

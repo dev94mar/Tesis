@@ -1,0 +1,114 @@
+{
+  "latex": {
+    "archivos_activos": 53,
+    "etiquetas": 110,
+    "citas": 43,
+    "inputs_faltantes": [],
+    "etiquetas_duplicadas": {},
+    "referencias_sin_etiqueta": [],
+    "citas_sin_bib": [],
+    "csv_faltantes": [],
+    "imagenes_faltantes": []
+  },
+  "grafo": {
+    "nodos": 180,
+    "aristas": 306,
+    "pares_no_dirigidos": 306,
+    "ids_duplicados": [],
+    "extremos_inexistentes": [],
+    "fuentes_inexistentes": [],
+    "metricas_guardadas_coinciden": true,
+    "todas_revisiones_resueltas": true
+  },
+  "familias": {
+    "controladores": 256,
+    "trayectorias": 512,
+    "por_familia": {
+      "PII": 124,
+      "PI": 132
+    },
+    "validos_ambas_pruebas": {
+      "PII": 51,
+      "PI": 57
+    },
+    "mejores": {
+      "PI": {
+        "familia": "PI",
+        "kK": 2.507876406233811,
+        "alpha": 0.757858283255199,
+        "base": false,
+        "prueba": "escalon",
+        "pm_min": 39.21751901007718,
+        "os_lineal": 27.93547643422918,
+        "u_max": 3.477691650390625,
+        "frac_saturado": 0.0,
+        "diverge": false,
+        "sobrepaso_pct": 19.332551956176758,
+        "ciclo_pp_cm": 0.013403177261352539,
+        "error_max_cm": 0.0069427490234375,
+        "frac_atascado": 0.7667,
+        "atasc_medio_s": 0.3485
+      },
+      "PII": {
+        "familia": "PII",
+        "kK": 1.4650780257917604,
+        "alpha": 0.435275281648062,
+        "base": false,
+        "prueba": "escalon",
+        "pm_min": 41.47831648913101,
+        "os_lineal": 25.825738735785176,
+        "u_max": 3.4512176513671875,
+        "frac_saturado": 0.0,
+        "diverge": false,
+        "sobrepaso_pct": 15.147829055786133,
+        "ciclo_pp_cm": 0.026126861572265625,
+        "error_max_cm": 0.013526439666748047,
+        "frac_atascado": 0.8239,
+        "atasc_medio_s": 0.7490000000000001
+      }
+    }
+  },
+  "barrido": {
+    "trayectorias": 7503,
+    "controladores": {
+      "PII_lic": 2501,
+      "PII_sim": 2501,
+      "PI": 2501
+    },
+    "intervalos": {
+      "-4": [
+        -4.0,
+        -3.95
+      ],
+      "-3.5": [
+        -3.6,
+        -2.0
+      ],
+      "-3": [
+        -3.5,
+        -1.5
+      ],
+      "-2": [
+        -3.3,
+        -0.5
+      ],
+      "-1": [
+        -2.5,
+        0.5
+      ]
+    }
+  },
+  "ajuste_ganancia": {
+    "PI": {
+      "n": 6,
+      "exponente": -1.2028643713247256,
+      "coef": 0.03078510568590007
+    },
+    "PII": {
+      "n": 6,
+      "exponente": -1.1224790174475283,
+      "coef": 0.03355700137505158
+    }
+  }
+}
+CSV examinados: 38 con filas inválidas: 0

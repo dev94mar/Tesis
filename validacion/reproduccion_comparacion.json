@@ -1,0 +1,49 @@
+{
+  "p8_results/lineal_ad.csv": {
+    "identico": true
+  },
+  "p8_results/lazo_abierto.csv": {
+    "identico": true
+  },
+  "p8_results/variedad_inestable.csv": {
+    "identico": true
+  },
+  "p8_results/campo.csv": {
+    "identico": true
+  },
+  "p8_results/estable.csv": {
+    "identico": true
+  },
+  "p8_results/trayectorias.csv": {
+    "identico": true
+  },
+  "p8_results/evidencia_P8_metricas.json": {
+    "identico": true,
+    "json_igual": true
+  },
+  "sin_ad_results/comparacion.csv": {
+    "identico": true
+  },
+  "sin_ad_results/detalle.csv": {
+    "identico": true
+  },
+  "sin_ad_results/sinAD_metricas.json": {
+    "identico": true,
+    "json_igual": true
+  },
+  "pii_design/escalon.csv": {
+    "identico": true
+  },
+  "pii_design/bode.csv": {
+    "identico": true
+  },
+  "pii_design/nyquist_neg.csv": {
+    "identico": true
+  },
+  "pii_design/valores.tex": {
+    "identico": true
+  },
+  "pii_design/nyquist_pos.csv": {
+    "identico": true
+  }
+}

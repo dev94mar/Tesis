@@ -109,6 +109,11 @@
         "version": 5,
         "fecha": "2026-10-04",
         "cambio": "Nodo ENERGIA: modelo lagrangiano/hamiltoniano sin disipación, verificado en Mathematica, que reproduce exactamente la fuerza del fabricante (FFLD) por un camino energético independiente del modelo dipolo-dipolo (DIPOLO). Incorporado al capítulo 3, subsección 3.2.2 \"Modelo energético sin disipación\"."
+      },
+      {
+        "version": 5,
+        "fecha": "2026-10-04",
+        "cambio": "Verificación de convergencia del modelo dipolo-dipolo (DIPOLO): se deriva el campo exacto de Biot-Savart de una espira circular finita y se demuestra, con Limit y desarrollo en serie en Mathematica, que la fuerza dipolo-dipolo es el límite de campo lejano exacto (no una forma impuesta), con error O((Rbob/z)^2) que se anula cuando Rbob/z->0. Incorporado al capítulo 3 (ecs. 3.14-3.15)."
       }
     ]
   },
@@ -4889,13 +4894,22 @@
       "id": "DIPOLO",
       "tipo": "calc",
       "etiqueta": "Fuerza electromagnética desde primeros principios",
-      "texto": "Modelo dipolo-dipolo de campo lejano (bobina e imán como dipolos puntuales, bobina resistiva con i=u/R): reproduce exactamente la forma u/(a-x)^4 del modelo del fabricante (FFLD), verificado simbólicamente en Mathematica (el cociente entre ambas fuerzas es una constante pura, sin x ni u). Explica además por qué los cinco modelos de la literatura citados en el capítulo 3 usan i^2/entrehierro^2: corresponden al régimen de reluctancia cercana (electroimán-armadura), un régimen físico distinto, no un desacuerdo experimental. b se identifica con una combinación de resistencia, geometría de la bobina y momento magnético del imán; sigue siendo un parámetro empírico, no se deriva su valor numérico. Equilibrio, matriz linealizada y G(s) derivados de esta fuerza coinciden exactamente (redondeo) con los del capítulo 3/4.",
+      "texto": "Modelo dipolo-dipolo de campo lejano (bobina e imán como dipolos puntuales, bobina resistiva con i=u/R): reproduce exactamente la forma u/(a-x)^4 del modelo del fabricante (FFLD), verificado simbólicamente en Mathematica (el cociente entre ambas fuerzas es una constante pura, sin x ni u). Explica además por qué los cinco modelos de la literatura citados en el capítulo 3 usan i^2/entrehierro^2: corresponden al régimen de reluctancia cercana (electroimán-armadura), un régimen físico distinto, no un desacuerdo experimental. b se identifica con una combinación de resistencia, geometría de la bobina y momento magnético del imán; sigue siendo un parámetro empírico, no se deriva su valor numérico. Equilibrio, matriz linealizada y G(s) derivados de esta fuerza coinciden exactamente (redondeo) con los del capítulo 3/4. CONVERGENCIA VERIFICADA (2026-10-04): se sustituyó la bobina puntual por una espira circular real (campo exacto de Biot-Savart, sin aproximar). El desarrollo en serie para Rbob/z pequeño reproduce exactamente la fuerza dipolo-dipolo como término líder; el error relativo frente a la fuerza exacta es -1+(1+(Rbob/z)^2)^(-5/2), de orden (Rbob/z)^2, y se anula exactamente cuando Rbob/z->0 (verificado con Limit en Mathematica). Numéricamente: 2,5% de error con entrehierro=10×radio de la bobina, 0,025% con 100×. La aproximación de dipolo puntual no es una forma impuesta: es el límite de campo lejano demostrado de la espira real.",
       "latex": [
         "f_{\\text{dip}}(u,x) = \\frac{3\\mu_0 N S m_{\\text{im}}}{2\\pi R}\\frac{u}{(a-x)^4}"
       ],
-      "fuente": "icr/calculus/Final_Bien/primeros_principios/derivar_fuerza.wls",
+      "fuente": "icr/calculus/Final_Bien/primeros_principios/derivar_convergencia.wls",
       "verificacion": "Mathematica (wolframscript), simbólico",
-      "valores": {},
+      "valores": {
+        "convergencia": {
+          "error_relativo_formula": "-1+(1+(Rbob/z)^2)^(-5/2)",
+          "orden": "(Rbob/z)^2",
+          "limite_Rbob_a_z_0": 0,
+          "error_pct_en_Rbob_z_01": 2.457,
+          "error_pct_en_Rbob_z_001": 0.025,
+          "script": "icr/calculus/Final_Bien/primeros_principios/derivar_convergencia.wls"
+        }
+      },
       "contenido_html": "<p>Derivación dipolo-dipolo que reproduce exactamente u/(a-x)^4, justificando el modelo del fabricante desde primeros principios.</p>",
       "metricas": {
         "grado": 3,

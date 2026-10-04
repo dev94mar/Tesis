@@ -134,6 +134,12 @@ El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes 
 
 **Conclusión de todo el trabajo de esta sesión sobre PI/PII:** no hay evidencia, en ningún punto explorado, de que la segunda acción integral reduzca el ciclo límite o el atascamiento frente a un PI con libertad de sintonización equivalente; la evidencia apunta en sentido contrario. Incorporado al capítulo 6, al grafo (`PII_V2`/`R25`) y documentado en el tercer addendum de [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
+## Convergencia del modelo dipolo-dipolo a la ecuación del fabricante (2026-10-04)
+
+A petición del usuario ("la solución obtenida por primeros principios debe converger a la ecuación dada por el fabricante"), se reforzó la justificación dipolo-dipolo del capítulo 3: en vez de solo mostrar que la forma coincide, se derivó el campo **exacto** de Biot-Savart de una espira circular finita (sin aproximar a dipolo puntual) y se demostró en Mathematica, con `Limit` y desarrollo en serie, que la fuerza dipolo-dipolo es el **límite de campo lejano** genuino de esa espira real: el error relativo es `-1+(1+(Rbob/z)²)^(-5/2)`, de orden `(Rbob/z)²`, y se anula exactamente cuando `Rbob/z→0` (0,025% de error con entrehierro=100×radio de la bobina, 2,5% con 10×). No es una forma impuesta por construcción: es una convergencia asintótica demostrada.
+
+Incorporado al capítulo 3 (ecuaciones 3.14-3.15, justo después de la derivación original). Nodo `DIPOLO` del grafo actualizado. Compila sin errores, 75 páginas. Validador estructural limpio (188 nodos, 343 aristas).
+
 ## Validación de las cuatro señales de seguimiento (2026-10-04)
 
 A petición del usuario se extendió a las cuatro pruebas de seguimiento (senoidal, trapezoidal, diente de sierra, pulso cuadrado) la validación independiente que antes solo cubría las dos originales. Informe: [VALIDACION_SEGUIMIENTO.md](validacion/VALIDACION_SEGUIMIENTO.md).

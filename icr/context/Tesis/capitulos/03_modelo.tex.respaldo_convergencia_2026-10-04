@@ -102,19 +102,7 @@ La fuerza dipolo-dipolo~\eqref{eq:fuerza_dipolo_u} tiene exactamente la forma de
 b = \frac{2\pi R}{3\,\mu_0\, N\, S\, m_{\text{im}}} ,
 \label{eq:b_primeros_principios}
 \end{equation}
-una combinación de la resistencia del embobinado, su geometría y el momento magnético del imán. Ninguno de estos datos lo publica el fabricante, de modo que $b$ se mantiene como el parámetro empírico que Hernández Alcántara et al.~\cite{alcantara} ajustaron experimentalmente; esta derivación no sustituye ese ajuste, pero explica por qué la forma del modelo del fabricante difiere de la de los demás citados en este capítulo: corresponden a regímenes geométricos distintos, reluctancia cercana frente a dipolos lejanos, y no a un desacuerdo experimental entre las fuentes. La aproximación dipolo-dipolo requiere que el entrehierro sea grande frente al tamaño de la bobina y del imán, condición razonable en el intervalo de operación de este trabajo, de $-4$ a $-2$~cm, frente a una separación de referencia $a=7{,}17$~cm.
-
-Que esa condición basta se comprueba sustituyendo la bobina puntual por una espira circular real de radio $R_{\text{bob}}$, con el campo axial exacto de Biot-Savart,
-\begin{equation}
-B_{\text{exacto}}(z) = \frac{\mu_0}{2}\,\frac{i\,R_{\text{bob}}^2}{\left(z^2+R_{\text{bob}}^2\right)^{3/2}} ,
-\label{eq:biot_savart}
-\end{equation}
-sin aproximar. Desarrollando en serie la fuerza que~\eqref{eq:biot_savart} produce, para $R_{\text{bob}}$ pequeño frente al entrehierro $z$, el término de orden más bajo reproduce exactamente~\eqref{eq:fuerza_dipolo}: la aproximación de dipolo puntual no se impuso por conveniencia, sino que es el límite de campo lejano de la espira real, y su error relativo frente a la fuerza exacta~\eqref{eq:biot_savart} es
-\begin{equation}
-\frac{\Delta f}{f} = -1 + \left(1+\frac{R_{\text{bob}}^2}{z^2}\right)^{-5/2} ,
-\label{eq:error_convergencia}
-\end{equation}
-que se anula exactamente cuando $R_{\text{bob}}/z\to0$ y es de orden $(R_{\text{bob}}/z)^2$: con un entrehierro diez veces mayor que el radio de la bobina, el error de~\eqref{eq:error_convergencia} es del $2{,}5$\,\%; con cien veces, del $0{,}025$\,\%. La solución de primeros principios converge, por tanto, a la del fabricante, y no solo coincide con ella en forma. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado} y esta verificación de convergencia, se verificó de forma independiente en Mathematica (\texttt{icr/calculus/Final\_Bien/primeros\_principios/}).
+una combinación de la resistencia del embobinado, su geometría y el momento magnético del imán. Ninguno de estos datos lo publica el fabricante, de modo que $b$ se mantiene como el parámetro empírico que Hernández Alcántara et al.~\cite{alcantara} ajustaron experimentalmente; esta derivación no sustituye ese ajuste, pero explica por qué la forma del modelo del fabricante difiere de la de los demás citados en este capítulo: corresponden a regímenes geométricos distintos, reluctancia cercana frente a dipolos lejanos, y no a un desacuerdo experimental entre las fuentes. La aproximación dipolo-dipolo requiere que el entrehierro sea grande frente al tamaño de la bobina y del imán, condición razonable en el intervalo de operación de este trabajo, de $-4$ a $-2$~cm, frente a una separación de referencia $a=7{,}17$~cm. El cálculo simbólico de esta sección, junto con la linealización de la sección~\ref{sec:linealizado}, se verificó de forma independiente en Mathematica (\texttt{icr/calculus/Final\_Bien/primeros\_principios/}).
 
 \subsection{Modelo energético sin disipación}\label{sec:energia_primeros_principios}
 

@@ -8,13 +8,13 @@ Criterio de aceptación (el mismo en las dos familias, sin exclusiones manuales)
 El criterio no examina la cota inferior (0 V), que todos los escalones alcanzan,
 ni la orden del controlador antes del recorte; véase la sección sec:barrido_familias.
 
-Uso: python exportar_R15.py  ->  ../../../context/Tesis/images/r15_results/tikz/{familia_pi,familia_pii}.csv y resumen_R15.json
+Uso: python exportar_R15.py  ->  ../../../context/tesis/images/r15_results/tikz/{familia_pi,familia_pii}.csv y resumen_R15.json
 """
 import json
 import os
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-SALIDA = os.path.join(AQUI, "..", "..", "..", "context", "Tesis", "images", "r15_results", "tikz")
+SALIDA = os.path.join(AQUI, "..", "..", "..", "context", "tesis", "images", "r15_results", "tikz")
 
 res = json.load(open(os.path.join(AQUI, "resultados_R15.json")))["resultados"]
 casos = {}

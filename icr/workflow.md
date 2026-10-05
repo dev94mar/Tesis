@@ -32,7 +32,7 @@ El generador/exportador original actualizado está en `icr/calculus/Final_Bien/R
 
 ## Compilación
 
-Desde `icr/context/Tesis/`:
+Desde `icr/context/tesis/`:
 
 ```sh
 latexmk main.tex

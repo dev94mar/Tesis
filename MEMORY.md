@@ -16,11 +16,11 @@ Idioma de trabajo: español. Entregar conclusiones claras, evidencia reproducibl
 
 El mapa completo está en [icr/project.md](icr/project.md) y los comandos en [icr/workflow.md](icr/workflow.md).
 
-- Documento vigente: `icr/context/Tesis/main.tex`, siete capítulos en `capitulos/`, resumen, abstract y dos anexos.
+- Documento vigente: `icr/context/tesis/main.tex`, siete capítulos en `capitulos/`, resumen, abstract y dos anexos.
 - Simulaciones vigentes: `icr/calculus/Final_Bien/`.
 - Controlador de la tesis: `inestable/PII_inestable/PII_lic.mat` dentro de esa carpeta.
 - Planta corregida: `inestable/PII_inestable/maglev_karnopp.m`.
-- Figuras: TikZ/pgfplots y CSV en `icr/context/Tesis/images/*/tikz/`.
+- Figuras: TikZ/pgfplots y CSV en `icr/context/tesis/images/*/tikz/`.
 - Grafo vigente: `icr/grafo/grafo_tesis.json`, **versión 4** observada en esta actualización.
 - Auditorías independientes: `validacion/` y `validacion/barrido_02/`.
 - Los directorios `_archivo_*`, `_respaldo_*` y capítulos antiguos no son la versión vigente del trabajo.
@@ -95,7 +95,7 @@ Al crear esta memoria se compararon las huellas del segundo barrido: **18 archiv
 - Nuevo exportador `R15_sintonizacion/exportar_R15.py`; el resumen y las tablas exportadas presentan 57 PI y 51 PII con criterio explícito.
 - Capítulo 6: se acota el resultado a las familias ensayadas, se explica la saturación antes/después de la retención, se incorpora el estado integral inicial y se conserva el signo negativo de `Kv`.
 - `seguimiento_P5.m`: se añadió firma de caché con parámetros/controlador y huellas SHA-256, y guardado de resultados de simulación nueva.
-- Existe `icr/context/Tesis/main.pdf`. Su presencia **no equivale a una revisión visual de esta versión**.
+- Existe `icr/context/tesis/main.pdf`. Su presencia **no equivale a una revisión visual de esta versión**.
 
 Estas son **correcciones observadas**, no una tercera validación numérica completada. Falta verificar su ejecución y coherencia de extremo a extremo. Los informes anteriores deben conservarse como evidencia histórica, sin reescribirlos para hacer parecer que probaron código posterior.
 
@@ -128,7 +128,7 @@ Se verificaron los 18 archivos cambiados tras el segundo barrido (exportador `ex
 
 El usuario pidió entonces que esto respaldara la hipótesis en el texto. Antes de escribirlo, se probó si la ventaja sobrevive a una comparación **simétrica** (dar al PI la misma libertad). **No sobrevive:** aplicarle al PI la receta idéntica de `PII_V2` da márgenes de fase lineales aún mejores (40–53°) pero **diverge** en la simulación no lineal (saturación 86 % del tiempo) — el margen lineal no garantiza viabilidad frente a la saturación. Extendiendo luego la ganancia de cada familia por separado sobre su propio óptimo ya conocido (cero bajo y red de adelanto fijos): el **PI domina al PII en ciclo límite y en atascamiento en todo nivel de ganancia común**, y tolera casi el doble de ganancia (`kK=4,5` con margen 30,2°, ciclo 0,00748 cm, atascamiento 0,398 s) antes de perder el margen de 30° que pierde el PII ya en `kK=3,5` (su último punto válido, `kK=3`, da ciclo 0,01312 cm, atascamiento 0,844 s).
 
-**Conclusión real: la ventaja de `PII_V2` dependía de la forma particular de su red de adelanto, no de la segunda integración.** Dada la misma libertad, el PI mejora más. Esto se incorporó honestamente al capítulo 6 (sección "¿Ayuda liberar la red de adelanto?", `icr/context/Tesis/capitulos/06_doble_integral.tex`) y a su síntesis, reforzando —no respaldando— la conclusión ya existente del capítulo de que la segunda integración no reduce el ciclo límite ni el atascamiento. El grafo (`PII_V2`, `R25`) se actualizó con esta conclusión; el documento compila sin errores (63 páginas). Scripts y datos completos en `icr/calculus/Final_Bien/R15_sintonizacion/` (`validar_PII_v2.m`, `validar_PI_v2.m`, `buscar_PI_v2.m`, `probar_PI_dirigido.m`, `extender_ambos.m`) y detalle narrativo en [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
+**Conclusión real: la ventaja de `PII_V2` dependía de la forma particular de su red de adelanto, no de la segunda integración.** Dada la misma libertad, el PI mejora más. Esto se incorporó honestamente al capítulo 6 (sección "¿Ayuda liberar la red de adelanto?", `icr/context/tesis/capitulos/06_doble_integral.tex`) y a su síntesis, reforzando —no respaldando— la conclusión ya existente del capítulo de que la segunda integración no reduce el ciclo límite ni el atascamiento. El grafo (`PII_V2`, `R25`) se actualizó con esta conclusión; el documento compila sin errores (63 páginas). Scripts y datos completos en `icr/calculus/Final_Bien/R15_sintonizacion/` (`validar_PII_v2.m`, `validar_PI_v2.m`, `buscar_PI_v2.m`, `probar_PI_dirigido.m`, `extender_ambos.m`) y detalle narrativo en [barrido_03/VEREDICTO.md](validacion/barrido_03/VEREDICTO.md).
 
 **Cierre con barrido conjunto del PI (mismo día).** Se hizo el barrido conjunto pendiente: `icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PI.m`, 450 combinaciones de `(kK, α, β)` del PI, 394 con margen de fase ≥30°, simuladas en paralelo (235 no divergen). Tras depurar candidatos degenerados (atascado lejos de la referencia, detectado y filtrado), **3 configuraciones superan a `PII_V2` en ciclo límite Y atascamiento a la vez** — la mejor (`kK=3,5`, `α=1,4`, `β=1,15`): ciclo 0,00789 cm, atascamiento 0,2412 s, pero con sobrepaso de 60,14 % (frente a 29,16 % de `PII_V2`), un costo no capturado por las dos métricas que se venían comparando. Otros puntos dan, por separado, el menor ciclo (0,00545 cm) o el menor atascamiento (0,209 s) de todo este trabajo. **Ninguna variante de PII encontrada en esta sesión iguala estos valores.** Verificado por resimulación directa (32 episodios de atascamiento, error final 0,003 cm, no es un artefacto de ventana). Un candidato más extremo (ciclo 0,00058 cm) quedó señalado como no concluyente por posible efecto de borde de ventana (atascamiento de 9,65 s, casi toda la ventana de medición).
 
@@ -245,7 +245,7 @@ Actualizar fecha y commit cuando cambie el estado del proyecto. Para cada hallaz
 
 ### Correcciones de la cuarta auditoría aplicadas a la tesis, 2026-10-05
 
-A petición del usuario se aplicaron a la tesis los ocho hallazgos de [barrido_04/VEREDICTO.md](validacion/barrido_04/VEREDICTO.md) (cambios locales, sin commit). Respaldo previo en `icr/context/Tesis/_respaldo_barrido04_2026-10-05/` y `icr/grafo/grafo_tesis.json.respaldo_barrido04_2026-10-05`.
+A petición del usuario se aplicaron a la tesis los ocho hallazgos de [barrido_04/VEREDICTO.md](validacion/barrido_04/VEREDICTO.md) (cambios locales, sin commit). Respaldo previo en `icr/context/tesis/_respaldo_barrido04_2026-10-05/` y `icr/grafo/grafo_tesis.json.respaldo_barrido04_2026-10-05`.
 
 1. **Signo de la fuerza dipolo-dipolo** (`03_modelo.tex`, ecs. 3.11-3.12): se corrigió la derivación para mostrar honestamente que `f_z=-dU/dz` es negativa (atrae hacia z decreciente) y que la fuerza positiva en x se obtiene con la regla de la cadena explícita `z=a-x`, antes implícita.
 2. **Convergencia dipolar** (misma sección, ec. 3.15): se precisó que el error de convergencia está referido a la aproximación dipolar, no a la fuerza exacta (ambas convenciones dan -2,46 %/+2,52 % en Rbob/z=0,1), y se atenuó la conclusión a "convergencia matemática demostrada, aplicabilidad física al ECP-730 real no establecida" (faltan dimensiones reales de bobina e imán).

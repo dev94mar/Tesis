@@ -15,7 +15,7 @@ import sys
 sys.dont_write_bytecode = True
 
 ROOT = Path(__file__).resolve().parents[1]
-T = ROOT / 'icr/context/Tesis'
+T = ROOT / 'icr/context/tesis'
 B = ROOT / 'icr/calculus/Final_Bien'
 OUT = Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parent
 OUT.mkdir(parents=True, exist_ok=True)

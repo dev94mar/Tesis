@@ -8,7 +8,7 @@
     "generado": "2026-10-05",
     "version": 5,
     "fuentes": [
-      "icr/context/Tesis (LaTeX)",
+      "icr/context/tesis (LaTeX)",
       "icr/calculus/Final_Bien (MATLAB)"
     ],
     "descripcion": "Grafo dirigido de conocimiento. Las aristas van del concepto que aporta al que lo usa; las referencias apuntan a los nodos donde se citan y las revisiones a los nodos que afectan. Las métricas por nodo se calculan sobre el grafo no dirigido salvo grado_entrada, grado_salida y pagerank. Las revisiones tienen estado (resuelta/abierta) y, si están resueltas, la prioridad (P1-P9) que las resolvió.",
@@ -428,7 +428,7 @@
       "tipo": "obj",
       "etiqueta": "Objetivo general",
       "texto": "Diseñar un esquema de control de posición del SLM en configuración inestable considerando el fenómeno de atascamiento-deslizamiento.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:objetivos",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:objetivos",
       "contenido_html": "<p>Diseñar un esquema de control de posición del SLM en configuración inestable considerando el fenómeno de atascamiento-deslizamiento.</p>",
       "metricas": {
         "grado": 6,
@@ -446,7 +446,7 @@
       "tipo": "obj",
       "etiqueta": "OE1 · Analizar dinámica sin AD",
       "texto": "Analizar las ecuaciones que representan las dinámicas del SLM sin considerar el efecto atascamiento-deslizamiento.\nMetodología, fase 1: revisión bibliográfica del modelo no lineal y simulación en los puntos de equilibrio.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:objetivos",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:objetivos",
       "contenido_html": "<p>Analizar las ecuaciones que representan las dinámicas del SLM sin considerar el efecto atascamiento-deslizamiento.</p><p>Metodología, fase 1: revisión bibliográfica del modelo no lineal y simulación en los puntos de equilibrio.</p>",
       "metricas": {
         "grado": 5,
@@ -464,7 +464,7 @@
       "tipo": "obj",
       "etiqueta": "OE2 · Diseñar control lineal",
       "texto": "Diseñar un esquema de control, sin efecto atascamiento-deslizamiento, sobre el modelo linealizado.\nMetodología, fase 2: linealización y diseño del controlador con doble efecto integral.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:objetivos",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:objetivos",
       "contenido_html": "<p>Diseñar un esquema de control, sin efecto atascamiento-deslizamiento, sobre el modelo linealizado.</p><p>Metodología, fase 2: linealización y diseño del controlador con doble efecto integral.</p>",
       "metricas": {
         "grado": 4,
@@ -482,7 +482,7 @@
       "tipo": "obj",
       "etiqueta": "OE3 · Simular no lineal sin AD",
       "texto": "Simular el desempeño del controlador en el modelo no lineal sin efecto atascamiento-deslizamiento.\nMetodología, fase 3a.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:objetivos",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:objetivos",
       "contenido_html": "<p>Simular el desempeño del controlador en el modelo no lineal sin efecto atascamiento-deslizamiento.</p><p>Metodología, fase 3a.</p>",
       "metricas": {
         "grado": 3,
@@ -500,7 +500,7 @@
       "tipo": "obj",
       "etiqueta": "OE4 · Simular no lineal con AD",
       "texto": "Simular el controlador en el modelo no lineal considerando el fenómeno de atascamiento-deslizamiento.\nMetodología, fase 3b.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:objetivos",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:objetivos",
       "contenido_html": "<p>Simular el controlador en el modelo no lineal considerando el fenómeno de atascamiento-deslizamiento.</p><p>Metodología, fase 3b.</p>",
       "metricas": {
         "grado": 4,
@@ -518,7 +518,7 @@
       "tipo": "mod",
       "etiqueta": "Antecedentes directos",
       "texto": "Hernández Alcántara (ITESM-CEM, 2010): ECP-730 repulsivo; modelo no lineal identificado (a, b, c₁), linealización por retroalimentación, observadores y control conmutado; concluye que hace falta alta ganancia en estado estacionario.\nAlcántara et al. (RIAI, 2014): un lazo externo con acción integral mejora la respuesta, pero su interacción con la fricción produce oscilaciones de tipo ciclo límite, eliminadas con control conmutado.\nPérez-Gómez (UAM-A, 2021): motor de CD con zona muerta «dura»; compara PI con zona muerta inversa (chattering), conmutado PI–PD (bueno pero complejo) y PII (implementado en tiempo real, bajo error y sobrepaso).",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · sec:motivacion",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · sec:motivacion",
       "contenido_html": "<p><b>Hernández Alcántara (ITESM-CEM, 2010):</b> ECP-730 repulsivo; modelo no lineal identificado (a, b, c₁), linealización por retroalimentación, observadores y control conmutado; concluye que hace falta alta ganancia en estado estacionario.</p><p><b>Alcántara et al. (RIAI, 2014):</b> un lazo externo con acción integral mejora la respuesta, pero su interacción con la fricción produce oscilaciones de tipo ciclo límite, eliminadas con control conmutado.</p><p><b>Pérez-Gómez (UAM-A, 2021):</b> motor de CD con zona muerta «dura»; compara PI con zona muerta inversa (chattering), conmutado PI–PD (bueno pero complejo) y PII (implementado en tiempo real, bajo error y sobrepaso).</p>",
       "metricas": {
         "grado": 11,
@@ -536,7 +536,7 @@
       "tipo": "mod",
       "etiqueta": "Aplicaciones de la levitación",
       "texto": "Contexto de la introducción: trenes maglev, suspensión activa, cojinetes magnéticos, bombas de asistencia ventricular, microrrobótica, aeroespacial, médica y biomédica.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · Contexto del problema",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · Contexto del problema",
       "contenido_html": "<p>Contexto de la introducción: trenes maglev, suspensión activa, cojinetes magnéticos, bombas de asistencia ventricular, microrrobótica, aeroespacial, médica y biomédica.</p>",
       "metricas": {
         "grado": 9,
@@ -554,7 +554,7 @@
       "tipo": "mod",
       "etiqueta": "Estado del arte: control y zona muerta",
       "texto": "Justificación: varios trabajos omiten la zona muerta o la tratan como dinámica no modelada. Las estrategias van de controladores adaptativos difusos y QFT a PID. Los modelos de zona muerta incluyen lineales, no lineales, difusos, asimétricos, simétricos y generalizados.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · Revisión bibliográfica",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · Revisión bibliográfica",
       "contenido_html": "<p>Justificación: varios trabajos omiten la zona muerta o la tratan como dinámica no modelada. Las estrategias van de controladores adaptativos difusos y QFT a PID. Los modelos de zona muerta incluyen lineales, no lineales, difusos, asimétricos, simétricos y generalizados.</p>",
       "metricas": {
         "grado": 14,
@@ -575,7 +575,7 @@
       "latex": [
         "m\\ddot{x}=f_{\\text{fld}}(i,x)-f_{\\text{fr}}-mg"
       ],
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · sec:ec_movimiento",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · sec:ec_movimiento",
       "contenido_html": "<div class=\"math\">\\[m\\ddot{x}=f_{\\text{fld}}(i,x)-f_{\\text{fr}}-mg\\]</div><p>Balance de fuerzas del ECP-730 con el imán superior activado: fuerza electromagnética, fricción y gravedad.</p>",
       "metricas": {
         "grado": 9,
@@ -600,7 +600,7 @@
         "a",
         "b"
       ],
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · sec:fuerza",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · sec:fuerza",
       "contenido_html": "<div class=\"math\">\\[f_{\\text{fld}}=\\frac{u}{b\\,(a-x)^4}\\]</div><p>Modelo del fabricante, validado experimentalmente por Alcántara et al. \\(u\\) es el voltaje en la bobina, \\(x\\) la posición; \\(a\\) y \\(b\\) son parámetros identificados.</p>",
       "metricas": {
         "grado": 10,
@@ -625,7 +625,7 @@
         "L_0x_0i^2/(2x^2)",
         "Ki^2/(H-x)^2"
       ],
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · sec:fuerza",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · sec:fuerza",
       "contenido_html": "<table><tr><th>Fuente</th><th>Forma</th></tr>\n <tr><td>Al-Muthair</td><td>\\(C(i/x)^2\\)</td></tr>\n <tr><td>Charara</td><td>\\(K\\,\\mathrm{sign}(i)\\,i^2/e^2\\)</td></tr>\n <tr><td>El Hajjaji</td><td>\\(i^2/(b_0+b_1x+b_2x^3+b_3x^4)\\)</td></tr>\n <tr><td>Zhao</td><td>\\(L_0x_0i^2/(2x^2)\\)</td></tr>\n <tr><td>Zhang (Feifei)</td><td>\\(Ki^2/(H-x)^2\\)</td></tr></table><p style=\"margin-top:10px\">No hay un modelo único. Depende de la configuración y de si se obtuvo analítica o experimentalmente.</p>",
       "metricas": {
         "grado": 9,
@@ -652,7 +652,7 @@
         "-0.02",
         "+0.025"
       ],
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · sec:zm_modelo",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · sec:zm_modelo",
       "valores": {
         "banda_inferior": {
           "valor": -0.02,
@@ -689,7 +689,7 @@
         "f_{\\text{fric}}=\\begin{cases}c\\,v,& v\\ne0\\\\ \\min(|F_e|,F_s)\\,\\mathrm{sign}(F_e),& v=0\\end{cases}",
         "v=0"
       ],
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · sec:friccion_modelo",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · sec:friccion_modelo",
       "contenido_html": "<div class=\"math\">\\[f_{\\text{fric}}=\\begin{cases}c\\,v,& v\\ne0\\\\ \\min(|F_e|,F_s)\\,\\mathrm{sign}(F_e),& v=0\\end{cases}\\]</div><p>Con \\(v=0\\) el sistema está en fricción estática. Cuando la fuerza externa lo pone en movimiento, cae a fricción dinámica. La alternancia entre ambos regímenes es el efecto atascamiento-deslizamiento y produce ciclos límite.</p>",
       "metricas": {
         "grado": 8,
@@ -739,7 +739,7 @@
       "tipo": "mod",
       "etiqueta": "Parámetros del ECP-730",
       "texto": "| | Valor\n | a | 7.17184 cm\n | b | 1.6163×10⁻⁶ V·s²/(kg·cm⁵), es decir, 1.6163×10⁻⁴ V/(N·cm⁴)\n | c₁ | 8.563 s⁻¹ (por unidad de masa)\n | m | 0.141 kg\n | g | 981 cm/s²\n | Fs | 20 kg·cm/s² (0.2 N)\n | DV | 0.02 cm/s\n | u | [0, 3.5] V\nIdentificados por Alcántara para la configuración repulsiva. Tabla 3.1 de la tesis, corregida en P7: b y g tenían valores erróneos, c₁ las unidades de su tesis (kg⁻¹) y Fs estaba en N.",
-      "fuente": "icr/context/Tesis/capitulos/03_modelo.tex · tab:parametros",
+      "fuente": "icr/context/tesis/capitulos/03_modelo.tex · tab:parametros",
       "valores": {
         "a": {
           "valor": 7.17184,
@@ -1466,10 +1466,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Lazo con zona muerta",
       "texto": "Diagrama de bloques del lazo de control con zona muerta.",
-      "fuente": "icr/context/Tesis/images/chapter_1/lazo_de_control_con_zm.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/lazo_de_control_con_zm.eps",
       "figura": {
         "png": "img/lazo_zm.png",
-        "original": "icr/context/Tesis/images/chapter_1/lazo_de_control_con_zm.eps"
+        "original": "icr/context/tesis/images/chapter_1/lazo_de_control_con_zm.eps"
       },
       "contenido_html": "<p>Diagrama de bloques del lazo de control con zona muerta.</p>",
       "metricas": {
@@ -1488,10 +1488,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Bode (TikZ)",
       "texto": "Magnitud y fase de L(s) = C(s)G(s) en −4 cm, con MG = −17.1 dB y MF = 59.9°.",
-      "fuente": "icr/context/Tesis/images/pii_design/tikz/bode.tex",
+      "fuente": "icr/context/tesis/images/pii_design/tikz/bode.tex",
       "figura": {
         "png": "img/diseno_bode.png",
-        "original": "icr/context/Tesis/images/pii_design/tikz/bode.tex"
+        "original": "icr/context/tesis/images/pii_design/tikz/bode.tex"
       },
       "contenido_html": "<p>Magnitud y fase de L(s) = C(s)G(s) en −4 cm, con MG = −17.1 dB y MF = 59.9°.</p>",
       "metricas": {
@@ -1510,10 +1510,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Nyquist (TikZ)",
       "texto": "Nyquist real de L(s): rodeo antihorario a −1 (P = 1). La figura original era un lugar de las raíces.",
-      "fuente": "icr/context/Tesis/images/pii_design/tikz/nyquist.tex",
+      "fuente": "icr/context/tesis/images/pii_design/tikz/nyquist.tex",
       "figura": {
         "png": "img/diseno_nyquist.png",
-        "original": "icr/context/Tesis/images/pii_design/tikz/nyquist.tex"
+        "original": "icr/context/tesis/images/pii_design/tikz/nyquist.tex"
       },
       "contenido_html": "<p>Nyquist real de L(s): rodeo antihorario a −1 (P = 1). La figura original era un lugar de las raíces.</p>",
       "metricas": {
@@ -1532,10 +1532,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Respuesta escalón (TikZ)",
       "texto": "Lazo cerrado lineal: 16.9 % de sobrepaso y ts = 0.284 s.",
-      "fuente": "icr/context/Tesis/images/pii_design/tikz/escalon.tex",
+      "fuente": "icr/context/tesis/images/pii_design/tikz/escalon.tex",
       "figura": {
         "png": "img/diseno_escalon.png",
-        "original": "icr/context/Tesis/images/pii_design/tikz/escalon.tex"
+        "original": "icr/context/tesis/images/pii_design/tikz/escalon.tex"
       },
       "contenido_html": "<p>Lazo cerrado lineal: 16.9 % de sobrepaso y t<sub>s</sub> = 0.284 s.</p>",
       "metricas": {
@@ -1554,10 +1554,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Posición (regulación)",
       "texto": "Escalón −2 → −3 cm con detalle del transitorio y del ciclo límite.",
-      "fuente": "icr/context/Tesis/images/regulation_results/tikz/posicion.tex",
+      "fuente": "icr/context/tesis/images/regulation_results/tikz/posicion.tex",
       "figura": {
         "png": "img/reg_posicion.png",
-        "original": "icr/context/Tesis/images/regulation_results/tikz/posicion.tex"
+        "original": "icr/context/tesis/images/regulation_results/tikz/posicion.tex"
       },
       "contenido_html": "<p>Escalón −2 → −3 cm con detalle del transitorio y del ciclo límite.</p>",
       "metricas": {
@@ -1576,10 +1576,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Velocidad (regulación)",
       "texto": "Tramos en cero: atascamiento.",
-      "fuente": "icr/context/Tesis/images/regulation_results/tikz/velocidad.tex",
+      "fuente": "icr/context/tesis/images/regulation_results/tikz/velocidad.tex",
       "figura": {
         "png": "img/reg_velocidad.png",
-        "original": "icr/context/Tesis/images/regulation_results/tikz/velocidad.tex"
+        "original": "icr/context/tesis/images/regulation_results/tikz/velocidad.tex"
       },
       "contenido_html": "<p>Tramos en cero: atascamiento.</p>",
       "metricas": {
@@ -1598,10 +1598,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Error (regulación)",
       "texto": "Error e = r − x₁.",
-      "fuente": "icr/context/Tesis/images/regulation_results/tikz/error.tex",
+      "fuente": "icr/context/tesis/images/regulation_results/tikz/error.tex",
       "figura": {
         "png": "img/reg_error.png",
-        "original": "icr/context/Tesis/images/regulation_results/tikz/error.tex"
+        "original": "icr/context/tesis/images/regulation_results/tikz/error.tex"
       },
       "contenido_html": "<p>Error e = r − x₁.</p>",
       "metricas": {
@@ -1620,10 +1620,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Señal de control (regulación)",
       "texto": "Antes y después de la zona muerta; nunca alcanza 3.5 V.",
-      "fuente": "icr/context/Tesis/images/regulation_results/tikz/control.tex",
+      "fuente": "icr/context/tesis/images/regulation_results/tikz/control.tex",
       "figura": {
         "png": "img/reg_control.png",
-        "original": "icr/context/Tesis/images/regulation_results/tikz/control.tex"
+        "original": "icr/context/tesis/images/regulation_results/tikz/control.tex"
       },
       "contenido_html": "<p>Antes y después de la zona muerta; nunca alcanza 3.5 V.</p>",
       "metricas": {
@@ -1642,10 +1642,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Mapa de polos y ceros",
       "texto": "Polos de G(s): uno a cada lado del eje imaginario.",
-      "fuente": "icr/context/Tesis/images/chapter_1/pole_zero_map.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/pole_zero_map.eps",
       "figura": {
         "png": "img/pzmap.png",
-        "original": "icr/context/Tesis/images/chapter_1/pole_zero_map.eps"
+        "original": "icr/context/tesis/images/chapter_1/pole_zero_map.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Polos de G(s): uno a cada lado del eje imaginario.</p>",
@@ -1665,10 +1665,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Lugar de las raíces",
       "texto": "Lugar de las raíces de G(s) sin compensar.",
-      "fuente": "icr/context/Tesis/images/chapter_1/root_locus.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/root_locus.eps",
       "figura": {
         "png": "img/rlocus.png",
-        "original": "icr/context/Tesis/images/chapter_1/root_locus.eps"
+        "original": "icr/context/tesis/images/chapter_1/root_locus.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Lugar de las raíces de G(s) sin compensar.</p>",
@@ -1688,10 +1688,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Retrato de fase",
       "texto": "Retrato de fase del sistema.",
-      "fuente": "icr/context/Tesis/images/chapter_1/phase_portrait.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/phase_portrait.eps",
       "figura": {
         "png": "img/phase.png",
-        "original": "icr/context/Tesis/images/chapter_1/phase_portrait.eps"
+        "original": "icr/context/tesis/images/chapter_1/phase_portrait.eps"
       },
       "estado": "No incluida (reemplazada por el retrato de fase de P8)",
       "contenido_html": "<p>Retrato de fase del sistema.</p>",
@@ -1711,10 +1711,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Retrato de fase linealizado",
       "texto": "Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.",
-      "fuente": "icr/context/Tesis/images/chapter_1/phase_portrait_li.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/phase_portrait_li.eps",
       "figura": {
         "png": "img/phase_li.png",
-        "original": "icr/context/Tesis/images/chapter_1/phase_portrait_li.eps"
+        "original": "icr/context/tesis/images/chapter_1/phase_portrait_li.eps"
       },
       "estado": "No incluida (reemplazada por el retrato de fase de P8)",
       "contenido_html": "<p>Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.</p>",
@@ -1734,10 +1734,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Fricción",
       "texto": "Curva de fricción estática y dinámica.",
-      "fuente": "icr/context/Tesis/images/zm_fricc/friccion.eps",
+      "fuente": "icr/context/tesis/images/zm_fricc/friccion.eps",
       "figura": {
         "png": "img/friccion.png",
-        "original": "icr/context/Tesis/images/zm_fricc/friccion.eps"
+        "original": "icr/context/tesis/images/zm_fricc/friccion.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Curva de fricción estática y dinámica.</p>",
@@ -1757,10 +1757,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Zona muerta dinámica",
       "texto": "Zona muerta desplazada al voltaje de equilibrio: de (ucl, ueq, ucr) a (u′cl, u′eq, u′cr) al cambiar la posición.",
-      "fuente": "icr/context/Tesis/images/zm_fricc/zm_dinamica.eps",
+      "fuente": "icr/context/tesis/images/zm_fricc/zm_dinamica.eps",
       "figura": {
         "png": "img/zm_dinamica.png",
-        "original": "icr/context/Tesis/images/zm_fricc/zm_dinamica.eps"
+        "original": "icr/context/tesis/images/zm_fricc/zm_dinamica.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Zona muerta desplazada al voltaje de equilibrio: de (u<sub>cl</sub>, u<sub>eq</sub>, u<sub>cr</sub>) a (u′<sub>cl</sub>, u′<sub>eq</sub>, u′<sub>cr</sub>) al cambiar la posición.</p>",
@@ -1780,10 +1780,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Configuración inestable",
       "texto": "Esquema del ECP-730 en configuración atractiva.",
-      "fuente": "icr/context/Tesis/images/configurations/configuracion_inestable.eps",
+      "fuente": "icr/context/tesis/images/configurations/configuracion_inestable.eps",
       "figura": {
         "png": "img/config.png",
-        "original": "icr/context/Tesis/images/configurations/configuracion_inestable.eps"
+        "original": "icr/context/tesis/images/configurations/configuracion_inestable.eps"
       },
       "estado": "No incluida (reemplazada por el esquema TikZ)",
       "contenido_html": "<p>Esquema del ECP-730 en configuración atractiva.</p>",
@@ -1814,7 +1814,7 @@
         "agrupamiento": 0.0,
         "excentricidad": 6
       },
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
     },
     {
       "id": "K2",
@@ -1832,7 +1832,7 @@
         "agrupamiento": 0.0,
         "excentricidad": 5
       },
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
     },
     {
       "id": "K3",
@@ -1850,7 +1850,7 @@
         "agrupamiento": 0.0,
         "excentricidad": 7
       },
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
     },
     {
       "id": "K4",
@@ -1868,7 +1868,7 @@
         "agrupamiento": 0.190476,
         "excentricidad": 6
       },
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
     },
     {
       "id": "K5",
@@ -1886,7 +1886,7 @@
         "agrupamiento": 0.333333,
         "excentricidad": 6
       },
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones"
     },
     {
       "id": "W1",
@@ -2205,7 +2205,7 @@
       "tipo": "ref",
       "etiqueta": "Educational Control Products (1999)",
       "texto": "Manual for Model 730, Magnetic Levitation System\nEducational Control Products, 1999.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · 730",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · 730",
       "referencia": {
         "clave": "730",
         "autores": "Educational Control Products",
@@ -2229,7 +2229,7 @@
       "tipo": "ref",
       "etiqueta": "Parks (1999)",
       "texto": "Manual for Model 730: Magnetic Levitation System\nT. Parks, 1999.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · parks",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · parks",
       "referencia": {
         "clave": "parks",
         "autores": "T. Parks",
@@ -2253,7 +2253,7 @@
       "tipo": "ref",
       "etiqueta": "Hernández Alcántara (2014)",
       "texto": "Control conmutado para un sistema de levitación magnética con atascamiento-deslizamiento\nD. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro, 2014.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · alcantara",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · alcantara",
       "referencia": {
         "clave": "alcantara",
         "autores": "D. Hernández Alcántara, L. Amézquita Brooks, J. Liceaga Castro, E. Liceaga Castro",
@@ -2277,7 +2277,7 @@
       "tipo": "ref",
       "etiqueta": "Hernández Alcántara (2010)",
       "texto": "Identificación y control de un sistema de levitación magnética (tesis)\nD. Hernández Alcántara, 2010.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · diana_tesis",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · diana_tesis",
       "referencia": {
         "clave": "diana_tesis",
         "autores": "D. Hernández Alcántara",
@@ -2301,7 +2301,7 @@
       "tipo": "ref",
       "etiqueta": "Pérez Gómez (2021)",
       "texto": "Estrategia de Control para el Problema de Zona Muerta en Procesos Electromecánicos\nC. A. Pérez Gómez. Tesis de maestría, UAM Azcapotzalco, 2021.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · perez",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · perez",
       "referencia": {
         "clave": "perez",
         "autores": "C. A. Pérez Gómez",
@@ -2325,7 +2325,7 @@
       "tipo": "ref",
       "etiqueta": "Al-Muthair (2004)",
       "texto": "Sliding mode control of magnetic levitation system\nN. F. Al-Muthair, M. Zribi, 2004.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · al",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · al",
       "referencia": {
         "clave": "al",
         "autores": "N. F. Al-Muthair, M. Zribi",
@@ -2349,7 +2349,7 @@
       "tipo": "ref",
       "etiqueta": "Charara (1996)",
       "texto": "Nonlinear control of a magnetic levitation system without premagnetization\nA. Charara, J. De Miras, B. Caron, 1996.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · charara",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · charara",
       "referencia": {
         "clave": "charara",
         "autores": "A. Charara, J. De Miras, B. Caron",
@@ -2373,7 +2373,7 @@
       "tipo": "ref",
       "etiqueta": "Zhao (1999)",
       "texto": "Phase-space nonlinear control toolbox: the maglev experience\nF. Zhao, S. C. Loh, J. A. May, 1999.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · zhao",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · zhao",
       "referencia": {
         "clave": "zhao",
         "autores": "F. Zhao, S. C. Loh, J. A. May",
@@ -2397,7 +2397,7 @@
       "tipo": "ref",
       "etiqueta": "Zhang (1999)",
       "texto": "Nonlinear feedback control of magnetic levitating system by exact linearization approach\nF. Zhang, K. Suyama, 1999.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · feifei",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · feifei",
       "referencia": {
         "clave": "feifei",
         "autores": "F. Zhang, K. Suyama",
@@ -2421,7 +2421,7 @@
       "tipo": "ref",
       "etiqueta": "Karnopp (1985)",
       "texto": "Computer simulation of stick-slip friction in mechanical dynamic systems\nD. Karnopp, 1985.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · karnopp",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · karnopp",
       "referencia": {
         "clave": "karnopp",
         "autores": "D. Karnopp",
@@ -2445,7 +2445,7 @@
       "tipo": "ref",
       "etiqueta": "Haessig (1991)",
       "texto": "On the modeling and simulation of friction\nD. A. Haessig, B. Friedland, 1991.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · haessig",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · haessig",
       "referencia": {
         "clave": "haessig",
         "autores": "D. A. Haessig, B. Friedland",
@@ -2469,7 +2469,7 @@
       "tipo": "ref",
       "etiqueta": "Liu (2009)",
       "texto": "A new method for the determination of the zero velocity region of the Karnopp model based on the statistics theory\nL. Liu, H. Liu, Z. Wu, D. Yuan, 2009.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · liu",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · liu",
       "referencia": {
         "clave": "liu",
         "autores": "L. Liu, H. Liu, Z. Wu, D. Yuan",
@@ -2493,7 +2493,7 @@
       "tipo": "ref",
       "etiqueta": "Ravanbod-Shirazi (2003)",
       "texto": "Friction identification using the Karnopp model, applied to an electropneumatic actuator\nL. Ravanbod-Shirazi, A. Besançon-Voda, 2003.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ravanbod",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · ravanbod",
       "referencia": {
         "clave": "ravanbod",
         "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
@@ -2517,7 +2517,7 @@
       "tipo": "ref",
       "etiqueta": "Ravanbod-Shirazi (2001)",
       "texto": "Stiction friction identification of Karnopp model using describing function\nL. Ravanbod-Shirazi, A. Besançon-Voda, 2001.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ravanbod1",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · ravanbod1",
       "referencia": {
         "clave": "ravanbod1",
         "autores": "L. Ravanbod-Shirazi, A. Besançon-Voda",
@@ -2541,7 +2541,7 @@
       "tipo": "ref",
       "etiqueta": "Bicakci (2014)",
       "texto": "Optimizing Karnopp friction model parameters of a pendulum using RSM\nS. Bicakci, D. Akdas, A. D. Karaoglan, 2014.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · bicakci",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · bicakci",
       "referencia": {
         "clave": "bicakci",
         "autores": "S. Bicakci, D. Akdas, A. D. Karaoglan",
@@ -2565,7 +2565,7 @@
       "tipo": "ref",
       "etiqueta": "Romano (2007)",
       "texto": "Comparison between two friction model parameter estimation methods applied to control valves\nR. A. Romano, C. Garcia, 2007.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · romano",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · romano",
       "referencia": {
         "clave": "romano",
         "autores": "R. A. Romano, C. Garcia",
@@ -2589,7 +2589,7 @@
       "tipo": "ref",
       "etiqueta": "Khimani (2018)",
       "texto": "Implementation of high performance nonlinear feedback control on magnetic levitation system\nD. Khimani, S. Karnik, M. Patil, 2018.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · khimani",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · khimani",
       "referencia": {
         "clave": "khimani",
         "autores": "D. Khimani, S. Karnik, M. Patil",
@@ -2613,7 +2613,7 @@
       "tipo": "ref",
       "etiqueta": "Patil (2015)",
       "texto": "Real time implementation of robust QFT controller and prefilter for magnetic levitation system\nM. D. Patil, P. S. V. Nataraj, V. A. Vyawahare, 2015.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mukesh",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · mukesh",
       "referencia": {
         "clave": "mukesh",
         "autores": "M. D. Patil, P. S. V. Nataraj, V. A. Vyawahare",
@@ -2637,7 +2637,7 @@
       "tipo": "ref",
       "etiqueta": "Naz (2013)",
       "texto": "Sampled data sliding mode control of magnetic levitation system using extended Kalman filter estimator\nN. Naz, M. B. Malik, A. Zaheer, M. Salman, 2013.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · neelma",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · neelma",
       "referencia": {
         "clave": "neelma",
         "autores": "N. Naz, M. B. Malik, A. Zaheer, M. Salman",
@@ -2661,7 +2661,7 @@
       "tipo": "ref",
       "etiqueta": "Su (2016)",
       "texto": "Supervisory fuzzy model control for magnetic levitation system\nK.-H. Su, C.-Y. Li, 2016.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · kuo1",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · kuo1",
       "referencia": {
         "clave": "kuo1",
         "autores": "K.-H. Su, C.-Y. Li",
@@ -2685,7 +2685,7 @@
       "tipo": "ref",
       "etiqueta": "Malik (2023)",
       "texto": "Sampled-data nonlinear control of ECP-730 magnetic levitation system\nM. T. Malik, H. M. Obaid, 2023.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · maaz",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · maaz",
       "referencia": {
         "clave": "maaz",
         "autores": "M. T. Malik, H. M. Obaid",
@@ -2709,7 +2709,7 @@
       "tipo": "ref",
       "etiqueta": "Ibrir (2007)",
       "texto": "Adaptive tracking of nonlinear systems with non-symmetric dead-zone input\nS. Ibrir, W. F. Xie, C.-Y. Su, 2007.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · salim",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · salim",
       "referencia": {
         "clave": "salim",
         "autores": "S. Ibrir, W. F. Xie, C.-Y. Su",
@@ -2733,7 +2733,7 @@
       "tipo": "ref",
       "etiqueta": "Wang (2017)",
       "texto": "Adaptive neural control of nonlinear systems with unknown control directions and input dead-zone\nH. Wang, H. R. Karimi, P. X. Liu, H. Yang, 2017.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · huanqing",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · huanqing",
       "referencia": {
         "clave": "huanqing",
         "autores": "H. Wang, H. R. Karimi, P. X. Liu, H. Yang",
@@ -2757,7 +2757,7 @@
       "tipo": "ref",
       "etiqueta": "Liu (2015)",
       "texto": "Adaptive tracking control for a class of nonlinear systems with a fuzzy dead-zone input\nZ. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen, 2015.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · zhi",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · zhi",
       "referencia": {
         "clave": "zhi",
         "autores": "Z. Liu, F. Wang, Y. Zhang, X. Chen, C. L. P. Chen",
@@ -2781,7 +2781,7 @@
       "tipo": "ref",
       "etiqueta": "Tao (1994)",
       "texto": "Adaptive control of plants with unknown dead-zones\nG. Tao, P. V. Kokotović, 1994.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gang",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · gang",
       "referencia": {
         "clave": "gang",
         "autores": "G. Tao, P. V. Kokotović",
@@ -2805,7 +2805,7 @@
       "tipo": "ref",
       "etiqueta": "Ahmad (2011)",
       "texto": "Adaptive control of a DC motor with uncertain deadzone nonlinearity at the input\nN. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath, 2011.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · nizar",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · nizar",
       "referencia": {
         "clave": "nizar",
         "autores": "N. J. Ahmad, H. K. Ebraheem, M. J. Alnaser, J. M. Alostath",
@@ -2829,7 +2829,7 @@
       "tipo": "ref",
       "etiqueta": "Lai (2017)",
       "texto": "Fuzzy adaptive inverse compensation method to tracking control of uncertain nonlinear systems\nG. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu, 2017.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · guanyu",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · guanyu",
       "referencia": {
         "clave": "guanyu",
         "autores": "G. Lai, Z. Liu, Y. Zhang, C. L. P. Chen, S. Xie, Y. Liu",
@@ -2853,7 +2853,7 @@
       "tipo": "ref",
       "etiqueta": "Zhai (2019)",
       "texto": "Fault-tolerant control of magnetic levitation system based on state observer in high speed maglev train\nM. Zhai, Z. Long, X. Li, 2019.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mingda",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · mingda",
       "referencia": {
         "clave": "mingda",
         "autores": "M. Zhai, Z. Long, X. Li",
@@ -2877,7 +2877,7 @@
       "tipo": "ref",
       "etiqueta": "Han (2016)",
       "texto": "Magnetic Levitation: Maglev Technology and Applications\nH.-S. Han, D.-S. Kim, 2016.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · hyung",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · hyung",
       "referencia": {
         "clave": "hyung",
         "autores": "H.-S. Han, D.-S. Kim",
@@ -2901,7 +2901,7 @@
       "tipo": "ref",
       "etiqueta": "Dutta (2025)",
       "texto": "Advancements and challenges in active magnetic bearings: a comprehensive review\nD. Dutta, P. K. Biswas, S. Debnath, F. Ahmad, 2025.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · debarghya",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · debarghya",
       "referencia": {
         "clave": "debarghya",
         "autores": "D. Dutta, P. K. Biswas, S. Debnath, F. Ahmad",
@@ -2925,7 +2925,7 @@
       "tipo": "ref",
       "etiqueta": "Chen (2019)",
       "texto": "Design and implementation of a novel passive magnetically levitated nutation blood pump for the ventricular-assist device\nG. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding, 2019.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gang1",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · gang1",
       "referencia": {
         "clave": "gang1",
         "autores": "G. Chen, L. Yao, R. Zheng, L. Zhang, J. Ding",
@@ -2949,7 +2949,7 @@
       "tipo": "ref",
       "etiqueta": "Khamesee (2002)",
       "texto": "Design and control of a microrobotic system using magnetic levitation\nM. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura, 2002.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · mir",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · mir",
       "referencia": {
         "clave": "mir",
         "autores": "M. B. Khamesee, N. Kato, Y. Nomura, T. Nakamura",
@@ -2973,7 +2973,7 @@
       "tipo": "ref",
       "etiqueta": "Praslicka et al. (2023)",
       "texto": "Design and analysis of a novel, low-cost, high-speed cycloidal magnetic gear for aerospace servo actuator applications\nB. Praslicka et al., 2023.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · bryton",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · bryton",
       "referencia": {
         "clave": "bryton",
         "autores": "B. Praslicka et al.",
@@ -2997,7 +2997,7 @@
       "tipo": "ref",
       "etiqueta": "Song et al. (2022)",
       "texto": "Motion control of capsule robot based on adaptive magnetic levitation using electromagnetic coil\nL. Song et al., 2022.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · song",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · song",
       "referencia": {
         "clave": "song",
         "autores": "L. Song et al.",
@@ -3021,7 +3021,7 @@
       "tipo": "ref",
       "etiqueta": "Rahmani Dabbagh et al. (2022)",
       "texto": "Biomedical applications of magnetic levitation\nS. Rahmani Dabbagh et al., 2022.",
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · sajjad",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · sajjad",
       "referencia": {
         "clave": "sajjad",
         "autores": "S. Rahmani Dabbagh et al.",
@@ -3074,7 +3074,7 @@
         "u\\ge (mg+F_s)\\,b\\,(a-x)^4 = 1.145\\,u_e",
         "u_e=3.48"
       ],
-      "fuente": "icr/context/Tesis/capitulos/05_desempeno.tex · sec:intervalo (tab:intervalo); análisis estático en 03_modelo.tex · sec:actuador_estatico",
+      "fuente": "icr/context/tesis/capitulos/05_desempeno.tex · sec:intervalo (tab:intervalo); análisis estático en 03_modelo.tex · sec:actuador_estatico",
       "verificacion": "GPU (MLX) + MATLAB",
       "metricas": {
         "grado": 8,
@@ -3230,9 +3230,9 @@
       "contenido_html": "<p>Transitorios prácticamente idénticos.</p>",
       "figura": {
         "png": "img/sinad_posicion.png",
-        "original": "icr/context/Tesis/images/sin_ad_results/tikz/posicion.tex"
+        "original": "icr/context/tesis/images/sin_ad_results/tikz/posicion.tex"
       },
-      "fuente": "icr/context/Tesis/images/sin_ad_results/tikz/posicion.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3252,9 +3252,9 @@
       "contenido_html": "<p>Velocidad sin y con atascamiento-deslizamiento.</p>",
       "figura": {
         "png": "img/sinad_velocidad.png",
-        "original": "icr/context/Tesis/images/sin_ad_results/tikz/velocidad.tex"
+        "original": "icr/context/tesis/images/sin_ad_results/tikz/velocidad.tex"
       },
-      "fuente": "icr/context/Tesis/images/sin_ad_results/tikz/velocidad.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3274,9 +3274,9 @@
       "contenido_html": "<p>Sin AD el error converge a cero; con AD queda el ciclo límite.</p>",
       "figura": {
         "png": "img/sinad_error.png",
-        "original": "icr/context/Tesis/images/sin_ad_results/tikz/error.tex"
+        "original": "icr/context/tesis/images/sin_ad_results/tikz/error.tex"
       },
-      "fuente": "icr/context/Tesis/images/sin_ad_results/tikz/error.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3296,9 +3296,9 @@
       "contenido_html": "<p>Sin AD converge a u<sub>e</sub> = 2.3934 V.</p>",
       "figura": {
         "png": "img/sinad_control.png",
-        "original": "icr/context/Tesis/images/sin_ad_results/tikz/control.tex"
+        "original": "icr/context/tesis/images/sin_ad_results/tikz/control.tex"
       },
-      "fuente": "icr/context/Tesis/images/sin_ad_results/tikz/control.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3318,9 +3318,9 @@
       "contenido_html": "<p>Vista completa y detalle de 244 a 256 s.</p>",
       "figura": {
         "png": "img/seg_sen_posicion.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/sen_posicion.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_posicion.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/sen_posicion.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3340,9 +3340,9 @@
       "contenido_html": "<p>Pulsos de deslizamiento continuos.</p>",
       "figura": {
         "png": "img/seg_sen_velocidad.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/sen_velocidad.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_velocidad.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/sen_velocidad.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3362,9 +3362,9 @@
       "contenido_html": "<p>Banda de ±0.02 cm sin picos aislados.</p>",
       "figura": {
         "png": "img/seg_sen_error.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/sen_error.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_error.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/sen_error.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3384,9 +3384,9 @@
       "contenido_html": "<p>Diente de sierra de la acción integral.</p>",
       "figura": {
         "png": "img/seg_sen_control.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/sen_control.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_control.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/sen_control.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3406,9 +3406,9 @@
       "contenido_html": "<p>Detalle del inicio de la primera rampa.</p>",
       "figura": {
         "png": "img/seg_trap_posicion.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/trap_posicion.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_posicion.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/trap_posicion.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3428,9 +3428,9 @@
       "contenido_html": "<p>Reposo en el primer plano; ciclo límite después.</p>",
       "figura": {
         "png": "img/seg_trap_velocidad.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/trap_velocidad.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_velocidad.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/trap_velocidad.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3450,9 +3450,9 @@
       "contenido_html": "<p>Banda de ±0.022 cm en rampas y planos.</p>",
       "figura": {
         "png": "img/seg_trap_error.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/trap_error.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_error.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/trap_error.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3472,9 +3472,9 @@
       "contenido_html": "<p>Sigue el perfil trapezoidal sin alcanzar ninguna de las dos cotas del actuador.</p>",
       "figura": {
         "png": "img/seg_trap_control.png",
-        "original": "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.tex"
+        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_control.tex"
       },
-      "fuente": "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3494,9 +3494,9 @@
       "contenido_html": "<p>|x₁ − x*| en escala logarítmica: no lineal frente a lineal.</p>",
       "figura": {
         "png": "img/p8_lazo_abierto.png",
-        "original": "icr/context/Tesis/images/p8_results/tikz/lazo_abierto.tex"
+        "original": "icr/context/tesis/images/p8_results/tikz/lazo_abierto.tex"
       },
-      "fuente": "icr/context/Tesis/images/p8_results/tikz/lazo_abierto.tex",
+      "fuente": "icr/context/tesis/images/p8_results/tikz/lazo_abierto.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3516,9 +3516,9 @@
       "contenido_html": "<p>Punto silla en −4 cm, variedad inestable y banda de atascamiento.</p>",
       "figura": {
         "png": "img/p8_retrato_fase.png",
-        "original": "icr/context/Tesis/images/p8_results/tikz/retrato_fase.tex"
+        "original": "icr/context/tesis/images/p8_results/tikz/retrato_fase.tex"
       },
-      "fuente": "icr/context/Tesis/images/p8_results/tikz/retrato_fase.tex",
+      "fuente": "icr/context/tesis/images/p8_results/tikz/retrato_fase.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -3538,9 +3538,9 @@
       "contenido_html": "<p>Respuestas casi idénticas.</p>",
       "figura": {
         "png": "img/p8_lineal_ad.png",
-        "original": "icr/context/Tesis/images/p8_results/tikz/lineal_ad.tex"
+        "original": "icr/context/tesis/images/p8_results/tikz/lineal_ad.tex"
       },
-      "fuente": "icr/context/Tesis/images/p8_results/tikz/lineal_ad.tex",
+      "fuente": "icr/context/tesis/images/p8_results/tikz/lineal_ad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3560,9 +3560,9 @@
       "contenido_html": "<p>Escalón 1 → 2 cm con el PI y el PII de la tesis.</p>",
       "figura": {
         "png": "img/p8_estable.png",
-        "original": "icr/context/Tesis/images/p8_results/tikz/estable.tex"
+        "original": "icr/context/tesis/images/p8_results/tikz/estable.tex"
       },
-      "fuente": "icr/context/Tesis/images/p8_results/tikz/estable.tex",
+      "fuente": "icr/context/tesis/images/p8_results/tikz/estable.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3626,7 +3626,7 @@
       "etiqueta": "El actuador limita el rango de operación",
       "texto": "Con 3.5 V, en −4 cm el imán se sostiene pero no sube, y si baja cae; los cambios de referencia son viables desde ≈ −3.6 cm.",
       "contenido_html": "<p>Con 3.5 V, en −4 cm el imán se sostiene pero no sube, y si baja cae; los cambios de referencia son viables desde ≈ −3.6 cm.</p>",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -3644,7 +3644,7 @@
       "etiqueta": "El ciclo límite viene de la ZM y la fricción",
       "texto": "El modelo lineal con AD reproduce el mismo ciclo límite: no lo causa la no linealidad de la fuerza magnética.",
       "contenido_html": "<p>El modelo lineal con AD reproduce el mismo ciclo límite: no lo causa la no linealidad de la fuerza magnética.</p>",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -3662,7 +3662,7 @@
       "etiqueta": "El mismo PII estabiliza la configuración estable",
       "texto": "Margen de fase de 43.3° y 9.8 % de sobrepaso con AD en el escalón de 1 a 2 cm.",
       "contenido_html": "<p>Margen de fase de 43.3° y 9.8 % de sobrepaso con AD en el escalón de 1 a 2 cm.</p>",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3680,7 +3680,7 @@
       "etiqueta": "La doble acción integral no mejora al PI",
       "texto": "En las familias y condiciones ensayadas, ningún PII aceptado alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm, o 0.019 cm con el criterio de recorte estricto); no es una demostración general ni una validación experimental; el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.",
       "contenido_html": "<p>En las familias y condiciones ensayadas, ningún PII aceptado alcanza un ciclo límite menor que el mejor PI (0.026 frente a 0.013 cm, o 0.019 cm con el criterio de recorte estricto); no es una demostración general ni una validación experimental; el ciclo límite depende sobre todo de la ganancia proporcional. La ventaja del PII en rampa existe, pero es más de diez veces menor que el error que impone el ciclo límite.</p>",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 10,
         "grado_entrada": 8,
@@ -3698,7 +3698,7 @@
       "etiqueta": "La fricción estática enmascara la inestabilidad",
       "texto": "En reposo con u = ue, el imán queda retenido en una banda de ~0.8 cm alrededor de cada equilibrio.",
       "contenido_html": "<p>En reposo con u = u<sub>e</sub>, el imán queda retenido en una banda de ~0.8 cm alrededor de cada equilibrio.</p>",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -3949,7 +3949,7 @@
         "anio": 2001,
         "titulo": "Modeling and nonlinear control of magnetic levitation systems"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · el",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · el",
       "metricas": {
         "grado": 1,
         "grado_entrada": 0,
@@ -3973,7 +3973,7 @@
         "anio": 1993,
         "titulo": "Stick slip and control in low-speed motion"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · armstrong",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · armstrong",
       "metricas": {
         "grado": 2,
         "grado_entrada": 0,
@@ -3997,7 +3997,7 @@
         "anio": 1998,
         "titulo": "Friction models and friction compensation"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · olsson",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · olsson",
       "metricas": {
         "grado": 3,
         "grado_entrada": 0,
@@ -4021,7 +4021,7 @@
         "anio": 1996,
         "titulo": "Origin and characterization of different stick-slip friction mechanisms"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · berman",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · berman",
       "metricas": {
         "grado": 2,
         "grado_entrada": 0,
@@ -4060,9 +4060,9 @@
       "texto": "Ciclo límite frente a duración media del atascamiento para los 57 PI y 51 PII cuyo voltaje aplicado no alcanza 3.5 V en el escalón ni en la rampa.",
       "figura": {
         "png": "img/r15_familias.png",
-        "original": "icr/context/Tesis/images/r15_results/tikz/familias.tex"
+        "original": "icr/context/tesis/images/r15_results/tikz/familias.tex"
       },
-      "fuente": "icr/context/Tesis/images/r15_results/tikz/familias.tex",
+      "fuente": "icr/context/tesis/images/r15_results/tikz/familias.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4084,7 +4084,7 @@
         "u_e(x)\\left(1-\\frac{F_s}{mg}\\right)\\le u\\le u_e(x)\\left(1+\\frac{F_s}{mg}\\right)",
         "u_e"
       ],
-      "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
+      "fuente": "icr/context/tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
       "verificacion": "MATLAB",
       "metricas": {
         "grado": 4,
@@ -4169,7 +4169,7 @@
         "e_{ss}=\\dot r/K_v",
         "K_v=91.6"
       ],
-      "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:ventaja_rampa",
+      "fuente": "icr/context/tesis/capitulos/06_doble_integral.tex · sec:ventaja_rampa",
       "verificacion": "MATLAB + GPU",
       "metricas": {
         "grado": 3,
@@ -4190,9 +4190,9 @@
       "texto": "Posición, velocidad y voltaje durante tres segundos con el PII; las rupturas ocurren en los bordes de la banda.",
       "figura": {
         "png": "img/ciclo_anatomia.png",
-        "original": "icr/context/Tesis/images/ciclo_results/tikz/anatomia.tex"
+        "original": "icr/context/tesis/images/ciclo_results/tikz/anatomia.tex"
       },
-      "fuente": "icr/context/Tesis/images/ciclo_results/tikz/anatomia.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results/tikz/anatomia.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4212,9 +4212,9 @@
       "texto": "Rampa del PI y parábola del PII, con la predicción teórica.",
       "figura": {
         "png": "img/ciclo_atasco.png",
-        "original": "icr/context/Tesis/images/ciclo_results/tikz/atasco.tex"
+        "original": "icr/context/tesis/images/ciclo_results/tikz/atasco.tex"
       },
-      "fuente": "icr/context/Tesis/images/ciclo_results/tikz/atasco.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results/tikz/atasco.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4234,9 +4234,9 @@
       "texto": "HISTÓRICA: figura eliminada del documento el 2026-10-04 junto con PDFF. El PD con prealimentación queda en reposo; el PI y el PII oscilan.",
       "figura": {
         "png": "img/ciclo_pd_pi_pii.png",
-        "original": "icr/context/Tesis/images/ciclo_results/tikz/pd_pi_pii.tex (archivo borrado del repositorio)"
+        "original": "icr/context/tesis/images/ciclo_results/tikz/pd_pi_pii.tex (archivo borrado del repositorio)"
       },
-      "fuente": "HISTÓRICA (archivo eliminado 2026-10-04): icr/context/Tesis/images/ciclo_results/tikz/pd_pi_pii.tex",
+      "fuente": "HISTÓRICA (archivo eliminado 2026-10-04): icr/context/tesis/images/ciclo_results/tikz/pd_pi_pii.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4256,9 +4256,9 @@
       "texto": "Escala log-log: amplitud ≈ 1/kK en ambas familias.",
       "figura": {
         "png": "img/ciclo_ganancia.png",
-        "original": "icr/context/Tesis/images/ciclo_results/tikz/ganancia.tex"
+        "original": "icr/context/tesis/images/ciclo_results/tikz/ganancia.tex"
       },
-      "fuente": "icr/context/Tesis/images/ciclo_results/tikz/ganancia.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results/tikz/ganancia.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4276,7 +4276,7 @@
       "etiqueta": "La acción integral causa el ciclo límite",
       "contenido_html": "<p>Sin acción integral, el imán se detiene con un error acotado por F<sub>s</sub> y la rigidez del lazo; con ella, el error medio se anula pero el integrador fuerza rupturas sucesivas (<i>hunting</i>). Es el dilema que resuelve el control conmutado de Alcántara.</p>",
       "texto": "Sin acción integral, el imán se detiene con un error acotado por Fs y la rigidez del lazo; con ella, el error medio se anula pero el integrador fuerza rupturas sucesivas (hunting). Es el dilema que resuelve el control conmutado de Alcántara.",
-      "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
+      "fuente": "icr/context/tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
       "metricas": {
         "grado": 5,
         "grado_entrada": 4,
@@ -4294,7 +4294,7 @@
       "etiqueta": "La ganancia fija la amplitud del ciclo",
       "contenido_html": "<p>La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; en atascamientos de unos 0.35 s el término integral simple aporta la mayor parte del cambio de voltaje.</p>",
       "texto": "La amplitud del ciclo límite es aproximadamente inversamente proporcional a la ganancia y no depende del número de integradores; en atascamientos de unos 0.35 s el término integral simple aporta la mayor parte del cambio de voltaje.",
-      "fuente": "icr/context/Tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
+      "fuente": "icr/context/tesis/capitulos/06_doble_integral.tex · sec:analisis_ciclo",
       "metricas": {
         "grado": 4,
         "grado_entrada": 3,
@@ -4333,7 +4333,7 @@
       "etiqueta": "Hipótesis",
       "contenido_html": "<p>Un PII diseñado sobre el modelo linealizado (1) estabiliza la posición en presencia de fricción estática y zona muerta sin compensarlas, y (2) por su alta ganancia a baja frecuencia reduce el tiempo de atascamiento y la amplitud de las oscilaciones respecto a un controlador con una sola acción integral.</p>",
       "texto": "Un PII diseñado sobre el modelo linealizado (1) estabiliza la posición en presencia de fricción estática y zona muerta sin compensarlas, y (2) por su alta ganancia a baja frecuencia reduce el tiempo de atascamiento y la amplitud de las oscilaciones respecto a un controlador con una sola acción integral.",
-      "fuente": "icr/context/Tesis/capitulos/01_introduccion.tex · Formulación del problema",
+      "fuente": "icr/context/tesis/capitulos/01_introduccion.tex · Formulación del problema",
       "metricas": {
         "grado": 7,
         "grado_entrada": 6,
@@ -4351,7 +4351,7 @@
       "etiqueta": "Evaluación de la hipótesis",
       "contenido_html": "<p><b>Parte 1 confirmada:</b> el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. <b>Parte 2 sin respaldo en las simulaciones de las familias ensayadas:</b> la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.</p>",
       "texto": "Parte 1 confirmada: el PII estabiliza el sistema en todas las pruebas dentro del intervalo de operación. Parte 2 sin respaldo en las simulaciones de las familias ensayadas: la segunda integración no reduce el atascamiento ni el ciclo límite; con la misma ganancia, PI y PII dan el mismo ciclo.",
-      "fuente": "icr/context/Tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
+      "fuente": "icr/context/tesis/capitulos/07_conclusiones.tex · sec:conclusiones",
       "metricas": {
         "grado": 7,
         "grado_entrada": 7,
@@ -4369,7 +4369,7 @@
       "etiqueta": "Fundamentos teóricos",
       "contenido_html": "<p>Capítulo 2 (antes «Marco teórico»): linealización y puntos silla; tipo del sistema y error estacionario (K<sub>p</sub>, K<sub>v</sub>, K<sub>a</sub>); criterio de Nyquist Z = N + P y margen de ganancia inferior con plantas inestables; componentes de la fricción, Karnopp y <i>hunting</i>; zona muerta; ciclos límite.</p>",
       "texto": "Capítulo 2 (antes «Marco teórico»): linealización y puntos silla; tipo del sistema y error estacionario (Kp, Kv, Ka); criterio de Nyquist Z = N + P y margen de ganancia inferior con plantas inestables; componentes de la fricción, Karnopp y hunting; zona muerta; ciclos límite.",
-      "fuente": "icr/context/Tesis/capitulos/02_fundamentos.tex · chap:fundamentos",
+      "fuente": "icr/context/tesis/capitulos/02_fundamentos.tex · chap:fundamentos",
       "metricas": {
         "grado": 16,
         "grado_entrada": 13,
@@ -4387,7 +4387,7 @@
       "etiqueta": "Anexo A: implementación de las simulaciones",
       "contenido_html": "<p>Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4, precisión simple); repetidos en doble precisión con diferencia mediana &lt; 1 % y un caso del 16 %. Tabla de programas por sección.</p>",
       "texto": "Esquema discreto común (T = 1 ms, ZOH): planta con ode45 y Karnopp, sujeción de atascamiento, controlador en espacio de estados, saturación [0, 3.5] V, zona muerta −0.02/+0.025 V, arranque sin salto. Barridos en GPU (RK4, precisión simple); repetidos en doble precisión con diferencia mediana < 1 % y un caso del 16 %. Tabla de programas por sección.",
-      "fuente": "icr/context/Tesis/chapters/apendices/simulacion.tex",
+      "fuente": "icr/context/tesis/chapters/apendices/simulacion.tex",
       "metricas": {
         "grado": 4,
         "grado_entrada": 4,
@@ -4405,7 +4405,7 @@
       "etiqueta": "Anexo B: verificación del simulador",
       "contenido_html": "<p>Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: u<sub>e</sub>(−4) = 3.4826 V, jacobiano igual a la matriz A en la región de deslizamiento (v = 0.5 cm/s; en reposo dentro de la banda de Karnopp es la matriz nula), fricción con signo opuesto a la velocidad.</p>",
       "texto": "Documenta los dos errores de la versión previa de la planta (fuerza dividida dos veces entre m; fricción c₁|v|) y las tres comprobaciones tras la corrección: ue(−4) = 3.4826 V, jacobiano igual a la matriz A en la región de deslizamiento (v = 0.5 cm/s; en reposo dentro de la banda de Karnopp es la matriz nula), fricción con signo opuesto a la velocidad.",
-      "fuente": "icr/context/Tesis/chapters/apendices/verificacion.tex",
+      "fuente": "icr/context/tesis/chapters/apendices/verificacion.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4425,9 +4425,9 @@
       "texto": "Configuración atractiva: bobina superior, varilla guía, imán, distancia a − x y fuerzas ffld, mg y ffr.",
       "figura": {
         "png": "img/dispositivo.png",
-        "original": "icr/context/Tesis/images/dispositivo/configuracion.tex"
+        "original": "icr/context/tesis/images/dispositivo/configuracion.tex"
       },
-      "fuente": "icr/context/Tesis/images/dispositivo/configuracion.tex",
+      "fuente": "icr/context/tesis/images/dispositivo/configuracion.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4447,9 +4447,9 @@
       "texto": "Zona muerta centrada en ue con pendientes ml, mr, umbrales bl, br y saltos hl, hr.",
       "figura": {
         "png": "img/zm_levitador.png",
-        "original": "icr/context/Tesis/images/chapter_1/zm_levitador.eps"
+        "original": "icr/context/tesis/images/chapter_1/zm_levitador.eps"
       },
-      "fuente": "icr/context/Tesis/images/chapter_1/zm_levitador.eps",
+      "fuente": "icr/context/tesis/images/chapter_1/zm_levitador.eps",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4473,7 +4473,7 @@
         "anio": 2010,
         "titulo": "Modern Control Engineering"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · ogata",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · ogata",
       "metricas": {
         "grado": 1,
         "grado_entrada": 0,
@@ -4497,7 +4497,7 @@
         "anio": 2020,
         "titulo": "Feedback Control of Dynamic Systems"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · gene",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · gene",
       "metricas": {
         "grado": 1,
         "grado_entrada": 0,
@@ -4521,7 +4521,7 @@
         "anio": 2001,
         "titulo": "Nonlinear Systems"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · khalil2",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · khalil2",
       "metricas": {
         "grado": 1,
         "grado_entrada": 0,
@@ -4545,7 +4545,7 @@
         "anio": 1991,
         "titulo": "Applied Nonlinear Control"
       },
-      "fuente": "icr/context/Tesis/bibliography/referencias.bib · jean",
+      "fuente": "icr/context/tesis/bibliography/referencias.bib · jean",
       "metricas": {
         "grado": 1,
         "grado_entrada": 0,

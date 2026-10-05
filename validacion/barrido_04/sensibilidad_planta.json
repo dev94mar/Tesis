@@ -1,0 +1,122 @@
+[
+  {
+    "controller": "PI_nominal",
+    "param": "b",
+    "factor": 1.05,
+    "b": 1.6971150000000002E-6,
+    "c1": 8.563,
+    "ciclo": 0.032668859516128634,
+    "atasc": 0.2708888888888889,
+    "diverge": false
+  },
+  {
+    "controller": "PI_nominal",
+    "param": "b",
+    "factor": 0.95,
+    "b": 1.535485E-6,
+    "c1": 8.563,
+    "ciclo": 0.030036153553320677,
+    "atasc": 0.26321428571428573,
+    "diverge": false
+  },
+  {
+    "controller": "PI_nominal",
+    "param": "c1",
+    "factor": 1.05,
+    "b": 1.6163E-6,
+    "c1": 8.9911500000000011,
+    "ciclo": 0.031153060216043027,
+    "atasc": 0.27185185185185184,
+    "diverge": false
+  },
+  {
+    "controller": "PI_nominal",
+    "param": "c1",
+    "factor": 0.95,
+    "b": 1.6163E-6,
+    "c1": 8.13485,
+    "ciclo": 0.030991474746476566,
+    "atasc": 0.27166666666666667,
+    "diverge": false
+  },
+  {
+    "controller": "PII_nominal",
+    "param": "b",
+    "factor": 1.05,
+    "b": 1.6971150000000002E-6,
+    "c1": 8.563,
+    "ciclo": 0.034649338161089283,
+    "atasc": 0.35628571428571432,
+    "diverge": false
+  },
+  {
+    "controller": "PII_nominal",
+    "param": "b",
+    "factor": 0.95,
+    "b": 1.535485E-6,
+    "c1": 8.563,
+    "ciclo": 0.031962793602983375,
+    "atasc": 0.35300000000000004,
+    "diverge": false
+  },
+  {
+    "controller": "PII_nominal",
+    "param": "c1",
+    "factor": 1.05,
+    "b": 1.6163E-6,
+    "c1": 8.9911500000000011,
+    "ciclo": 0.033140280838258374,
+    "atasc": 0.35314285714285715,
+    "diverge": false
+  },
+  {
+    "controller": "PII_nominal",
+    "param": "c1",
+    "factor": 0.95,
+    "b": 1.6163E-6,
+    "c1": 8.13485,
+    "ciclo": 0.033326416923143309,
+    "atasc": 0.35876190476190473,
+    "diverge": false
+  },
+  {
+    "controller": "PII_candidato_corto",
+    "param": "b",
+    "factor": 1.05,
+    "b": 1.6971150000000002E-6,
+    "c1": 8.563,
+    "ciclo": 1145.511969785784,
+    "atasc": 0,
+    "diverge": true
+  },
+  {
+    "controller": "PII_candidato_corto",
+    "param": "b",
+    "factor": 0.95,
+    "b": 1.535485E-6,
+    "c1": 8.563,
+    "ciclo": 0.024677599650515081,
+    "atasc": 0.1791794871794872,
+    "diverge": false
+  },
+  {
+    "controller": "PII_candidato_corto",
+    "param": "c1",
+    "factor": 1.05,
+    "b": 1.6163E-6,
+    "c1": 8.9911500000000011,
+    "ciclo": 0.02601958190468201,
+    "atasc": 0.1877027027027027,
+    "diverge": false
+  },
+  {
+    "controller": "PII_candidato_corto",
+    "param": "c1",
+    "factor": 0.95,
+    "b": 1.6163E-6,
+    "c1": 8.13485,
+    "ciclo": 0.02614424866304299,
+    "atasc": 0.18128947368421053,
+    "diverge": false
+  }
+]

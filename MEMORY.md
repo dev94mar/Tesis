@@ -1,6 +1,6 @@
 # Memoria del proyecto
 
-Actualizada: **2026-10-05**. Estado observado en el commit **`250dc18`**, con cambios locales sin commit (incluida la corrección de esta fecha). La cuarta auditoría y su veredicto se registran al final de esta memoria; sus hallazgos matizan las conclusiones históricas anteriores.
+Actualizada: **2026-10-05**. Estado observado en el commit **`55f6e54`**. Las correcciones de la cuarta auditoría quedaron registradas en `51d37cb`; `55f6e54` renombró `icr/context/Tesis` a **`icr/context/tesis`**, ruta vigente. Las rutas con `Tesis` que aparecen en entradas anteriores son históricas. Esta actualización de memoria y el nuevo dictamen de publicabilidad quedan locales, sin commit. Los informes históricos no certifican los cambios posteriores.
 
 Esta memoria permite retomar el trabajo. Resume decisiones y evidencia; no sustituye las fuentes, los datos ni una validación de cambios posteriores. Las peticiones actuales del usuario prevalecen sobre este resumen.
 
@@ -257,3 +257,34 @@ A petición del usuario se aplicaron a la tesis los ocho hallazgos de [barrido_0
 8. **Referencia incorrecta en la reducción porcentual**: se corrigió el atascamiento de referencia del "mejor PI restringido" de 0,26 s (que era del PI nominal) a 0,3485 s, cambiando la mejora reportada de PII_V2 de 7 % a ~30 %; se añadió que PII_V2 satura por arriba mientras el barrido restringido lo prohibía.
 
 Verificación: la tesis compila sin errores ni avisos (`latexmk main.tex`, 81 páginas, antes 78). El grafo (`icr/grafo/grafo_tesis.json`) se actualizó en los nodos `DIPOLO`, `ENERGIA`, `RIGIDEZ_GRAL` y `PII_V2` con los mismos matices, y su historial (`meta.historial`) registra el cambio fechado 2026-10-05; `python3 consultar.py medir` confirma 188 nodos y 343 aristas, estructura íntegra. No se tocaron las cifras de regulación, seguimiento ni los demás capítulos; los hallazgos que el veredicto califica como "ya incorporados" (sobregeneralizaciones, criterio 57 PI/51 PII, etc.) no requerían cambio adicional.
+
+### Publicabilidad y cierre de memoria, 2026-10-05
+
+A petición del usuario se guardó el dictamen de la conversación en [barrido_04/PUBLICABILIDAD.md](validacion/barrido_04/PUBLICABILIDAD.md), conservando el dictamen anterior. **Hay resultados potencialmente publicables como estudio de simulación, pero todavía no se considera listo para envío.** El aporte propuesto es una comparación reproducible de los compromisos entre oscilación, atascamiento y saturación de PI/PII, limitada a las sintonizaciones, restricciones y modelo explorados; no una superioridad universal ni una atribución causal demostrada a la segunda integración.
+
+Se leyeron la cuarta auditoría y el dictamen previo, y se consultaron de forma dirigida los antecedentes primarios de levitación con fricción (2014) y comparación PI/PII en motor con zona muerta (2020). No se ejecutaron nuevas simulaciones, compilaciones ni una auditoría de las correcciones en esta sesión. El nuevo archivo incluye una nota de vigencia: su lista de pendientes editoriales corresponde al estado auditado y debe contrastarse con las correcciones registradas posteriormente, sin tratarlas como una revalidación numérica.
+
+Al guardar esta memoria se comprobó que HEAD ya es `55f6e54`, precedido por `51d37cb` (correcciones de la cuarta auditoría), y que existe `icr/context/tesis/main.tex`. Esto actualiza el estado «sin commit» de la entrada anterior sobre esas correcciones. La compilación y las métricas estructurales allí citadas son resultados previamente registrados, no pruebas repetidas durante este cierre.
+
+Pendientes científicos principales: revalidar las fronteras con filtros, restricciones, tolerancias y ventanas comunes; consolidar sensibilidad y separación de efectos de fricción/retención; delimitar la correspondencia física y acreditar novedad bibliográfica. Antes de listar errores editoriales como abiertos, revisar las fuentes posteriores a `51d37cb`. Los cinco GIF permanecen sin seguimiento y se mantiene la instrucción de no subirlos a GitHub. Este cierre no realiza commit ni publicación externa.
+
+## Revalidación numérica del dictamen de publicabilidad (2026-10-05)
+
+A petición del usuario ("toma este veredicto y trabaja en sus correcciones") se trabajaron los cuatro pendientes de `validacion/barrido_04/PUBLICABILIDAD.md`. Detalle completo en la sección "Revalidación posterior al dictamen" de ese mismo archivo. Scripts y datos nuevos en `validacion/barrido_04/`: `revalidar_fronteras.m`, `fronteras_revalidadas.json`, `frontera_params.json`, `sensibilidad_planta.m`, `sensibilidad_planta.json`, `maglev_karnopp_param.m`.
+
+**Pendientes 2 y 3 (textuales):** verificados por relectura directa de `icr/context/tesis/capitulos/03_modelo.tex` y `06_doble_integral.tex` tras el commit `51d37cb`: todos corregidos. Cerrados.
+
+**Pendiente 1 (revalidar fronteras):** se resimularon con tolerancias estrictas (`RelTol=1e-9`, `AbsTol=1e-11`) los 21 puntos de las fronteras PI/PII publicadas (11+10), no solo los 3 de la auditoría anterior. **20 de 21 son robustos** (cambios de −4,2 % a +5,7 % en ciclo). **1 no lo es:** el punto extremo de la frontera PII (`kK=4,α=0,3,β=1,15`), citado en el capítulo 6 por su ciclo de 0,003383 cm, cambia a 0,009089 cm (+169 %) y su atascamiento de 0,705 a 1,111 s (+57 %) bajo tolerancias estrictas. **No se editó la tesis con este hallazgo** — queda para que el usuario decida si corregir la frase citada del capítulo 6 y el extremo de `frontera_pii.csv`/`fronteras.tex`.
+
+**Pendiente 4 (sensibilidad, acotado):** se perturbaron `b` y `c1` en ±5 % (12 simulaciones) para el PI/PII nominales y el candidato PII de atascamiento corto (`kK=1,α=2,2,β=1,05`). Los nominales conservan el orden PI<PII. El candidato de atascamiento corto, descrito en el capítulo 6 como robusto frente a tolerancias/ventana, **diverge con `b` +5 %** — un hallazgo nuevo que no estaba documentado. No se editó la tesis; es un sondeo acotado (solo 2 de 5 parámetros, solo ±5 %), no un análisis de incertidumbre completo.
+
+`validacion/barrido_04/PUBLICABILIDAD.md` quedó actualizado con todos estos hallazgos y una conclusión revisada. Pendientes genuinamente abiertos: revisión bibliográfica de novedad, análisis de incertidumbre completo, e identificación física del dispositivo real para el límite de campo lejano del capítulo 3. No se hizo commit.
+
+## Corrección de los dos hallazgos de la revalidación (2026-10-05, misma sesión)
+
+El usuario pidió aplicar ambas correcciones a la tesis. Respaldo previo en `icr/context/tesis/_respaldo_sensibilidad_2026-10-05/`.
+
+- **Punto no robusto de la frontera PII** (`kK=4,α=0,3,β=1,15`): se eliminó de `images/pii_v2_results/tikz/frontera_pii.csv` (quedan 9 puntos). En `capitulos/06_doble_integral.tex`, se añadió una frase junto a la exclusión ya documentada del punto de 9,65 s de la frontera PI, explicando por qué se excluye este punto de la frontera PII (cambio >150 % bajo tolerancias estrictas). Se corrigió también el párrafo siguiente, que usaba el valor original (0,003383 cm) de ese punto como contraejemplo de que "el PI no es mejor en toda amplitud por debajo del cruce"; ese contraejemplo ya no tiene respaldo y se reescribió para decir que, con los puntos robustos restantes, ningún candidato PII por debajo de 0,008 cm supera al mejor PI disponible en ambas métricas. La figura 6.5 ya no muestra el pico espurio a 0,705 s; el cruce cerca de 0,008 cm no cambia (lo sostienen los 9 puntos robustos restantes).
+- **Fragilidad del candidato de atascamiento corto** (`kK=1,α=2,2,β=1,05`): se agregó una frase en el mismo capítulo señalando que, aunque robusto frente a tolerancias de integración y ventana de medición, este candidato diverge si `b` (no identificado de forma independiente para el ECP-730 en configuración atractiva, sección~\ref{sec:parametros}) se perturba +5 %, y que su ventaja debe leerse con esa reserva.
+
+Grafo (`PII_V2`, `R25`) actualizado con el mismo detalle; `consultar.py medir` confirma 188 nodos, 343 aristas, íntegro. Documento recompila sin errores ni avisos, **81 páginas** (sin cambio). No se hizo commit.

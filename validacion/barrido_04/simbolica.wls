@@ -1,0 +1,17 @@
+Clear["Global`*"];
+wp=u/(3 b (a-x)^3); f=u/(b (a-x)^4);
+Print["dWdx=f: ",Simplify[D[wp,x]==f]];
+Print["EulerLagrange residual: ",Simplify[m acc-(-m g+D[wp,x])-(m acc+m g-f)]];
+h=p^2/(2 m)+m g x-wp;
+Print["Hamilton acceleration residual: ",Simplify[-D[h,x]/m-(f/m-g)]];
+Print["dHdt with u(t): ",-udot/(3 b (a-x)^3)];
+pot=-mu mm mc/(2 Pi z^3);
+Print["F_z: ",Simplify[-D[pot,z]]];
+Print["F_x: ",Simplify[-D[pot/.z->a-x,x]]];
+be=mu i rb^2/(2 (z^2+rb^2)^(3/2));
+fe=Simplify[-mm D[be,z]]; fd=3 mu i mm rb^2/(2 z^4);
+ratio=FullSimplify[fe/fd,Assumptions->z>0];
+Print["Fexact/Fdip: ",ratio];
+Print["limit: ",Limit[ratio,rb->0,Assumptions->z>0]];
+Print["errors at rb/z=.1: dip denominator ",N[(1+.1^2)^(-5/2)-1]," exact denominator ",N[(1+.1^2)^(5/2)-1]];
+Get["icr/calculus/Final_Bien/primeros_principios/rigidez_general.wls"];

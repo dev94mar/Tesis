@@ -5,7 +5,7 @@
     "programa": "Maestría en Ciencias en Ingeniería Electromagnética, UAM-Azcapotzalco",
     "director": "Dr. Jesús Ulises Liceaga Castro",
     "codirector": "Dr. César Simón López Monsalvo",
-    "generado": "2026-10-05",
+    "generado": "2026-10-04",
     "version": 5,
     "fuentes": [
       "icr/context/Tesis (LaTeX)",
@@ -124,11 +124,6 @@
         "version": 5,
         "fecha": "2026-10-04",
         "cambio": "Limpieza editorial: se removieron del texto de la tesis las referencias directas a archivos y nombres de software (rutas .wls/.m/.py, Mathematica, MATLAB) en capitulos/03_modelo.tex, 04_controlador.tex, 06_doble_integral.tex y chapters/apendices/simulacion.tex, reemplazadas por descripciones genericas del calculo o la herramienta. Cambio solo de redaccion, no de contenido; los campos fuente/verificacion de los nodos DIPOLO, ENERGIA y RIGIDEZ_GRAL conservan la ruta real del script como metadato del grafo (no citado en la tesis). Commit 47a6abf."
-      },
-      {
-        "version": 5,
-        "fecha": "2026-10-05",
-        "cambio": "Cuarta auditoria (barrido_04, commit 250dc18): corregidas la derivacion de signo de la fuerza dipolo-dipolo (DIPOLO), el alcance fisico de la convergencia dipolar, el estatus de consistencia (no prueba independiente) del modelo energetico (ENERGIA), el caracter heuristico de C(inf) (RIGIDEZ_GRAL), la clasificacion falsa de los controladores nominales respecto al umbral de 0,008 cm, el pie de figura de la extension de ganancia del PII (kK=3 -> kK=3,5), la documentacion del filtrado de las fronteras de Pareto, la robustez de la comparacion PI-destacado/PII_V2 bajo tolerancias y ventanas, y la cifra de referencia erronea en la reduccion porcentual de atascamiento de PII_V2 (7% -> ~30%). Aplicado en capitulos/03_modelo.tex, 06_doble_integral.tex y 07_conclusiones.tex."
       }
     ]
   },
@@ -4666,7 +4661,7 @@
       "id": "PII_V2",
       "tipo": "calc",
       "etiqueta": "PII rediseñado (ventaja acotada: ver R25)",
-      "texto": "\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]\nReescala el PII de la tesis (kK=2.5 en la ganancia, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase: 47.3°/41.0°/37.8°/34.5° en -4/-3/-2.5/-2 cm (todos ≥30°, el umbral de la tesis). En el escalón -2→-3 cm con fricción de Karnopp, zona muerta y u≤3.5 V: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm y 0.26 s del mejor PI del barrido R15 (-17 % y -9 %) y frente a 0.033 cm y 0.335 s del PII de la tesis (-67 % y -29 %). Sobrepaso 29.1 %, sin saturación sostenida. En la rampa de -0.05 cm/s del barrido, error eficaz 0.0024 cm, unas tres veces menor que PI y PII originales (~0.0076 cm). CORRECCIONES (2026-10-05, cuarta auditoría barrido_04): la reducción de atascamiento de PII_V2 frente al 'mejor PI restringido' se recalculó a ~30% (no 7%), porque la cifra de 0,26s usada antes era la del PI nominal, no la del mejor PI restringido (0,3485s/0,346273s). La dominancia puntual del PI destacado (kK=3,5/1,4/1,15) sobre PII_V2 en ambas métricas a la vez no es robusta frente a tolerancias de integración estrictas ni a una ventana de medición posterior (ver valores.robustez_dominancia_PI_destacado); el candidato PII de atascamiento corto (kK=1,alpha=2,2,beta=1,05) sí lo es.",
+      "texto": "\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]\nReescala el PII de la tesis (kK=2.5 en la ganancia, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase: 47.3°/41.0°/37.8°/34.5° en -4/-3/-2.5/-2 cm (todos ≥30°, el umbral de la tesis). En el escalón -2→-3 cm con fricción de Karnopp, zona muerta y u≤3.5 V: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm y 0.26 s del mejor PI del barrido R15 (-17 % y -9 %) y frente a 0.033 cm y 0.335 s del PII de la tesis (-67 % y -29 %). Sobrepaso 29.1 %, sin saturación sostenida. En la rampa de -0.05 cm/s del barrido, error eficaz 0.0024 cm, unas tres veces menor que PI y PII originales (~0.0076 cm).",
       "latex": [
         "C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}"
       ],
@@ -4809,40 +4804,6 @@
           "PII_domina_en_ese_punto": true,
           "script": "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.m",
           "datos": "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.json"
-        },
-        "atasco_medio_s_mejor_pi_NOTA": "0,26 s corresponde al PI NOMINAL de la tabla 6.1, no al mejor PI restringido de ciclo mínimo; ese da 0,3485 s en el JSON R15 (0,346273 s al resimular). La reducción de atascamiento de PII_V2 frente al mejor PI restringido es de aproximadamente 30%, no 7% (corrección 2026-10-05, cuarta auditoría barrido_04). PII_V2 alcanza además saturación superior, mientras el barrido restringido exigía no saturar después de la retención: es un cambio de restricciones, no solo de parámetros.",
-        "robustez_dominancia_PI_destacado": {
-          "nota": "La dominancia simultánea de kK=3,5/1,4/1,15 sobre PII_V2 en ciclo Y atascamiento no es robusta (cuarta auditoría barrido_04, 2026-10-05): con tolerancias estrictas en 25-35s el PII pasa a tener menor atascamiento (0,2348s vs 0,2408s del PI), y con ventana 60-70s también (0,2355s vs 0,2502s). La dominancia en ciclo límite sí se mantiene en los tres casos.",
-          "predeterminado_25_35": {
-            "PI": [
-              0.00789236,
-              0.2411875
-            ],
-            "PII_V2": [
-              0.01101814,
-              0.2443871
-            ]
-          },
-          "estricto_25_35": {
-            "PI": [
-              0.00816165,
-              0.2408125
-            ],
-            "PII_V2": [
-              0.01087412,
-              0.2348438
-            ]
-          },
-          "predeterminado_60_70": {
-            "PI": [
-              0.00853657,
-              0.2501613
-            ],
-            "PII_V2": [
-              0.01072421,
-              0.2355313
-            ]
-          }
         }
       },
       "contenido_html": "<div class=\"math\">\\[C_{PII,v2}(s)=\\frac{381.075\\,(s+8.775)(s+3.3498)(s+19.041)}{s^2\\,(s+331.21)}\\]</div><p>Reescala el PII de la tesis (k<sub>K</sub>=2.5, ceros bajos ×1.8, red de adelanto ×1.1). Margen de fase ≥30° en -4, -3, -2.5 y -2 cm. En el escalón -2→-3 cm: ciclo límite 0.0108 cm y atascamiento medio 0.237 s, frente a 0.013 cm / 0.26 s del mejor PI del barrido (-17 % y -9 %) y a 0.033 cm / 0.335 s del PII original (-67 % y -29 %). Sobrepaso 29.1 %. En la rampa de -0.05 cm/s, error eficaz tres veces menor que ambos controladores originales.</p>",
@@ -4943,11 +4904,11 @@
       "id": "DIPOLO",
       "tipo": "calc",
       "etiqueta": "Fuerza electromagnética desde primeros principios",
-      "texto": "Modelo dipolo-dipolo de campo lejano (bobina e imán como dipolos puntuales, bobina resistiva con i=u/R): reproduce exactamente la forma u/(a-x)^4 del modelo del fabricante (FFLD), verificado simbólicamente en Mathematica (el cociente entre ambas fuerzas es una constante pura, sin x ni u). Explica además por qué los cinco modelos de la literatura citados en el capítulo 3 usan i^2/entrehierro^2: corresponden al régimen de reluctancia cercana (electroimán-armadura), un régimen físico distinto, no un desacuerdo experimental. b se identifica con una combinación de resistencia, geometría de la bobina y momento magnético del imán; sigue siendo un parámetro empírico, no se deriva su valor numérico. Equilibrio, matriz linealizada y G(s) derivados de esta fuerza coinciden exactamente (redondeo) con los del capítulo 3/4. CONVERGENCIA VERIFICADA (2026-10-04): se sustituyó la bobina puntual por una espira circular real (campo exacto de Biot-Savart, sin aproximar). El desarrollo en serie para Rbob/z pequeño reproduce exactamente la fuerza dipolo-dipolo como término líder; el error relativo frente a la fuerza exacta es -1+(1+(Rbob/z)^2)^(-5/2), de orden (Rbob/z)^2, y se anula exactamente cuando Rbob/z->0 (verificado con Limit en Mathematica). Numéricamente: 2,5% de error con entrehierro=10×radio de la bobina, 0,025% con 100×. La aproximación de dipolo puntual no es una forma impuesta: es el límite de campo lejano demostrado de la espira real. CORRECCIÓN (2026-10-05, cuarta auditoría barrido_04): la derivación en z usa U(z)=-m_im B(z), por lo que f_z=-dU/dz=-3μ0 m_im m_bob/(2π z^4) es negativa (atrae hacia z decreciente); la fuerza positiva f_dip(x)=+3μ0 m_im m_bob/(2π(a-x)^4) se obtiene aplicando la regla de la cadena z=a-x (dz/dx=-1), paso que antes faltaba explícito en el texto y daba la impresión de un signo incorrecto. Además, el error de convergencia (Rbob/z)^2 está referido a la aproximación dipolar, no a la fuerza exacta (ambas convenciones difieren: -2,46% vs +2,52% en Rbob/z=0,1); la convergencia demostrada es matemática (espira ideal, imán puntual), no una prueba de que el dispositivo real opere en campo lejano dentro de una tolerancia conocida, porque faltan las dimensiones reales de la bobina y el imán del ECP-730.",
+      "texto": "Modelo dipolo-dipolo de campo lejano (bobina e imán como dipolos puntuales, bobina resistiva con i=u/R): reproduce exactamente la forma u/(a-x)^4 del modelo del fabricante (FFLD), verificado simbólicamente en Mathematica (el cociente entre ambas fuerzas es una constante pura, sin x ni u). Explica además por qué los cinco modelos de la literatura citados en el capítulo 3 usan i^2/entrehierro^2: corresponden al régimen de reluctancia cercana (electroimán-armadura), un régimen físico distinto, no un desacuerdo experimental. b se identifica con una combinación de resistencia, geometría de la bobina y momento magnético del imán; sigue siendo un parámetro empírico, no se deriva su valor numérico. Equilibrio, matriz linealizada y G(s) derivados de esta fuerza coinciden exactamente (redondeo) con los del capítulo 3/4. CONVERGENCIA VERIFICADA (2026-10-04): se sustituyó la bobina puntual por una espira circular real (campo exacto de Biot-Savart, sin aproximar). El desarrollo en serie para Rbob/z pequeño reproduce exactamente la fuerza dipolo-dipolo como término líder; el error relativo frente a la fuerza exacta es -1+(1+(Rbob/z)^2)^(-5/2), de orden (Rbob/z)^2, y se anula exactamente cuando Rbob/z->0 (verificado con Limit en Mathematica). Numéricamente: 2,5% de error con entrehierro=10×radio de la bobina, 0,025% con 100×. La aproximación de dipolo puntual no es una forma impuesta: es el límite de campo lejano demostrado de la espira real.",
       "latex": [
         "f_{\\text{dip}}(u,x) = \\frac{3\\mu_0 N S m_{\\text{im}}}{2\\pi R}\\frac{u}{(a-x)^4}"
       ],
-      "fuente": "icr/calculus/Final_Bien/primeros_principios/derivar_convergencia.wls; corrección de signo y alcance verificada en validacion/barrido_04/fuerza.log y simbolica.log",
+      "fuente": "icr/calculus/Final_Bien/primeros_principios/derivar_convergencia.wls",
       "verificacion": "Mathematica (wolframscript), simbólico",
       "valores": {
         "convergencia": {
@@ -4975,7 +4936,7 @@
       "id": "RIGIDEZ_GRAL",
       "tipo": "calc",
       "etiqueta": "Rigidez general y Ki/Kii verificados analíticamente",
-      "texto": "Validación analítica (sin simular) de por qué el PII no reduce el ciclo límite ni el atascamiento en la sintonización habitual: Ki y Kii se extraen del desarrollo de Laurent de C(s) en s=0 aplicado a las funciones de transferencia reales de PI y PII, coincidiendo con los valores del capítulo 6 (86,2/79,5/63,4). Con el mismo e0 y Δu, el PII tarda analíticamente 14% más en romper la banda de fricción que el PI. Se generaliza la fórmula de rigidez del PD (ahora retirado, ver PDFF) a la ganancia de alta frecuencia C(∞) de cualquier controlador propio: k_ef=C(∞)/[b(a-r)^4]-4mg/(a-r), ecuación (6.4) de la tesis. Predice un ciclo 17% mayor para el PII, consistente en sentido con el 6% medido. PRECISIÓN (2026-10-05, cuarta auditoría barrido_04): C(∞) es un indicador local y heurístico, no una demostración de existencia/unicidad/estabilidad de un ciclo límite. Las amplitudes que predice (0,003906 y 0,004569 cm) difieren de las medidas (0,030910 y 0,033393 cm) por un factor de 7 a 8; no se demuestra que ese error se cancele en el cociente, solo que es consistente en orden de magnitud. Dos PII con kK=1 y el mismo C(∞) dan ciclos de 0,025309 y 0,043034 cm al variar α/β: C(∞) por sí solo no determina la amplitud. La confirmación del 14% de atascamiento vale bajo las hipótesis q0=0, e0=0,0151 cm y Δu=0,346 V; no es una desigualdad general entre PI y PII.",
+      "texto": "Validación analítica (sin simular) de por qué el PII no reduce el ciclo límite ni el atascamiento en la sintonización habitual: Ki y Kii se extraen del desarrollo de Laurent de C(s) en s=0 aplicado a las funciones de transferencia reales de PI y PII, coincidiendo con los valores del capítulo 6 (86,2/79,5/63,4). Con el mismo e0 y Δu, el PII tarda analíticamente 14% más en romper la banda de fricción que el PI. Se generaliza la fórmula de rigidez del PD (ahora retirado, ver PDFF) a la ganancia de alta frecuencia C(∞) de cualquier controlador propio: k_ef=C(∞)/[b(a-r)^4]-4mg/(a-r), ecuación (6.4) de la tesis. Predice un ciclo 17% mayor para el PII, consistente en sentido con el 6% medido.",
       "latex": [
         "k_{ef} = \\frac{C(\\infty)}{b(a-r)^4} - \\frac{4mg}{a-r}"
       ],
@@ -4987,12 +4948,7 @@
         "Ki_PII": 63.367,
         "Cinf_PI": 178.1,
         "Cinf_PII": 152.4,
-        "atasco_14pct_mayor_PII": true,
-        "heuristica_no_demostracion": true,
-        "factor_subestimacion_amplitud": [
-          7.9,
-          7.3
-        ]
+        "atasco_14pct_mayor_PII": true
       },
       "contenido_html": "<p>Ki, Kii y la ganancia de alta frecuencia C(∞) extraídos directamente de las funciones de transferencia, confirman analíticamente el mecanismo del ciclo límite.</p>",
       "metricas": {
@@ -5010,7 +4966,7 @@
       "id": "ENERGIA",
       "tipo": "calc",
       "etiqueta": "Modelo energético sin disipación (Lagrange/Hamilton)",
-      "texto": "Verificación independiente de la fuerza del fabricante (FFLD) por un camino puramente energético, sin el modelo dipolo-dipolo (DIPOLO): se propone la coenergía magnética W'(x,u)=u/[3b(a-x)^3], que cumple dW'/dx=f_fld(u,x). Con el lagrangiano L=½mẋ²-mgx+W'(x,u) (sin fricción), la ecuación de Euler-Lagrange da exactamente mẍ=f_fld(u,x)-mg, idéntica a eq:mec sin el término de fricción. Verificación cruzada con el formalismo hamiltoniano (momento canónico p=mẋ, H=p²/(2m)-W'(x,u)+mgx): las ecuaciones de Hamilton dan el mismo resultado. Ambas verificaciones, simbólicas e independientes entre sí, dieron True en Mathematica. REESCRITO PEDAGÓGICAMENTE (2026-10-04): a petición del usuario, la subsección se amplió para un lector de mitad de carrera con nociones elementales de Euler-Lagrange/Hamilton. Construye T y V_grav paso a paso, y dedica el núcleo de la explicación al ACOPLAMIENTO electromecánico: por qué la fuerza magnética exige un término que dependa de x y u a la vez, por qué ese término es la COENERGÍA W' (no la energía W) cuando la corriente/voltaje es la variable independiente, con el diagrama clásico de áreas en el plano i-λ (figura nueva: energia_coenergia.tex) como justificación gráfica del signo +∂W'/∂x. Muestra además que, para un circuito lineal, W'=½L(x)i² reproduce exactamente la fuerza de reluctancia ya derivada por otro camino en la subsección anterior (conexión explícita entre ambas derivaciones). Nueva figura coenergia_posicion.tex grafica W'(x,u) para tres voltajes, mostrando visualmente el origen de la inestabilidad (crecimiento abrupto cerca de la bobina). PRECISIÓN (2026-10-05, cuarta auditoría barrido_04): Lagrange y Hamilton son dos formulaciones equivalentes del mismo lagrangiano, así que su coincidencia verifica consistencia algebraica, no una validación física independiente de f_fld. La coenergía W' se construye integrando la fuerza ya adoptada, así que reproducirla por derivación es, por diseño, consistente. Se eliminó además la afirmación de que una fuerza lineal en u implique necesariamente un circuito magnético no lineal (un circuito lineal con flujo de imán permanente, λ=L0 i+λpm(x), también da fuerza lineal en i).",
+      "texto": "Verificación independiente de la fuerza del fabricante (FFLD) por un camino puramente energético, sin el modelo dipolo-dipolo (DIPOLO): se propone la coenergía magnética W'(x,u)=u/[3b(a-x)^3], que cumple dW'/dx=f_fld(u,x). Con el lagrangiano L=½mẋ²-mgx+W'(x,u) (sin fricción), la ecuación de Euler-Lagrange da exactamente mẍ=f_fld(u,x)-mg, idéntica a eq:mec sin el término de fricción. Verificación cruzada con el formalismo hamiltoniano (momento canónico p=mẋ, H=p²/(2m)-W'(x,u)+mgx): las ecuaciones de Hamilton dan el mismo resultado. Ambas verificaciones, simbólicas e independientes entre sí, dieron True en Mathematica. REESCRITO PEDAGÓGICAMENTE (2026-10-04): a petición del usuario, la subsección se amplió para un lector de mitad de carrera con nociones elementales de Euler-Lagrange/Hamilton. Construye T y V_grav paso a paso, y dedica el núcleo de la explicación al ACOPLAMIENTO electromecánico: por qué la fuerza magnética exige un término que dependa de x y u a la vez, por qué ese término es la COENERGÍA W' (no la energía W) cuando la corriente/voltaje es la variable independiente, con el diagrama clásico de áreas en el plano i-λ (figura nueva: energia_coenergia.tex) como justificación gráfica del signo +∂W'/∂x. Muestra además que, para un circuito lineal, W'=½L(x)i² reproduce exactamente la fuerza de reluctancia ya derivada por otro camino en la subsección anterior (conexión explícita entre ambas derivaciones). Nueva figura coenergia_posicion.tex grafica W'(x,u) para tres voltajes, mostrando visualmente el origen de la inestabilidad (crecimiento abrupto cerca de la bobina).",
       "latex": [
         "W'(x,u) = u/[3b(a-x)^3]",
         "L = \\tfrac12 m\\dot x^2 - mgx + W'(x,u)"

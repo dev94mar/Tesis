@@ -1,0 +1,206 @@
+[
+  {
+    "family": "PI",
+    "kK": 3.5,
+    "alpha": 1.4,
+    "beta": 1.15,
+    "strict": false,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.0078923631812677364,
+    "atasc": 0.2411875,
+    "episodes": 32,
+    "mean_error": -1.100439048923465E-5,
+    "sat_upper": 0.0024,
+    "sat_lower": 0.00054285714285714289
+  },
+  {
+    "family": "PI",
+    "kK": 3.5,
+    "alpha": 1.4,
+    "beta": 1.15,
+    "strict": false,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.0085365684806730791,
+    "atasc": 0.25016129032258067,
+    "episodes": 31,
+    "mean_error": 5.0354837628230785E-6,
+    "sat_upper": 0.0024,
+    "sat_lower": 0.00054285714285714289
+  },
+  {
+    "family": "PI",
+    "kK": 3.5,
+    "alpha": 1.4,
+    "beta": 1.15,
+    "strict": true,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.0081616483104522963,
+    "atasc": 0.2408125,
+    "episodes": 32,
+    "mean_error": -4.09169345286271E-6,
+    "sat_upper": 0.0024,
+    "sat_lower": 0.00054285714285714289
+  },
+  {
+    "family": "PI",
+    "kK": 3.5,
+    "alpha": 1.4,
+    "beta": 1.15,
+    "strict": true,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.0085358716081032071,
+    "atasc": 0.24021875,
+    "episodes": 32,
+    "mean_error": -2.9293303120794834E-5,
+    "sat_upper": 0.0024,
+    "sat_lower": 0.00054285714285714289
+  },
+  {
+    "family": "PII",
+    "kK": 1,
+    "alpha": 2.2,
+    "beta": 1.05,
+    "strict": false,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.026109177407754647,
+    "atasc": 0.18242105263157896,
+    "episodes": 38,
+    "mean_error": -2.0621766347995463E-5,
+    "sat_upper": 0.002,
+    "sat_lower": 0.0005142857142857143
+  },
+  {
+    "family": "PII",
+    "kK": 1,
+    "alpha": 2.2,
+    "beta": 1.05,
+    "strict": false,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.026357059427592588,
+    "atasc": 0.17528205128205129,
+    "episodes": 39,
+    "mean_error": -5.1352892049134361E-5,
+    "sat_upper": 0.002,
+    "sat_lower": 0.0005142857142857143
+  },
+  {
+    "family": "PII",
+    "kK": 1,
+    "alpha": 2.2,
+    "beta": 1.05,
+    "strict": true,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.025717816898988222,
+    "atasc": 0.17492307692307693,
+    "episodes": 39,
+    "mean_error": 5.949540585535735E-5,
+    "sat_upper": 0.002,
+    "sat_lower": 0.0005142857142857143
+  },
+  {
+    "family": "PII",
+    "kK": 1,
+    "alpha": 2.2,
+    "beta": 1.05,
+    "strict": true,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.026502695834001777,
+    "atasc": 0.1805263157894737,
+    "episodes": 38,
+    "mean_error": -1.4922706793270902E-6,
+    "sat_upper": 0.002,
+    "sat_lower": 0.0005142857142857143
+  },
+  {
+    "family": "PII",
+    "kK": 2.5,
+    "alpha": 1.8,
+    "beta": 1.1,
+    "strict": false,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.011018139831625362,
+    "atasc": 0.24438709677419357,
+    "episodes": 31,
+    "mean_error": 6.8192199700953853E-5,
+    "sat_upper": 0.00084285714285714281,
+    "sat_lower": 0.0005
+  },
+  {
+    "family": "PII",
+    "kK": 2.5,
+    "alpha": 1.8,
+    "beta": 1.1,
+    "strict": false,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.010724205058796343,
+    "atasc": 0.23553125,
+    "episodes": 32,
+    "mean_error": -7.0207565262422956E-5,
+    "sat_upper": 0.00084285714285714281,
+    "sat_lower": 0.0005
+  },
+  {
+    "family": "PII",
+    "kK": 2.5,
+    "alpha": 1.8,
+    "beta": 1.1,
+    "strict": true,
+    "window": [
+      25,
+      35
+    ],
+    "pp": 0.010874115410138163,
+    "atasc": 0.23484375000000002,
+    "episodes": 32,
+    "mean_error": -8.4442140336915553E-5,
+    "sat_upper": 0.00084285714285714281,
+    "sat_lower": 0.0005
+  },
+  {
+    "family": "PII",
+    "kK": 2.5,
+    "alpha": 1.8,
+    "beta": 1.1,
+    "strict": true,
+    "window": [
+      60,
+      70
+    ],
+    "pp": 0.011215428266154071,
+    "atasc": 0.24206451612903226,
+    "episodes": 31,
+    "mean_error": -0.0001269643207416348,
+    "sat_upper": 0.00084285714285714281,
+    "sat_lower": 0.0005
+  }
+]

@@ -1,6 +1,6 @@
 # Memoria del proyecto
 
-Actualizada: **2026-10-04**. Estado observado en el commit **`47a6abf`**.
+Actualizada: **2026-10-05**. Estado observado en el commit **`250dc18`**, con cambios locales sin commit (incluida la corrección de esta fecha). La cuarta auditoría y su veredicto se registran al final de esta memoria; sus hallazgos matizan las conclusiones históricas anteriores.
 
 Esta memoria permite retomar el trabajo. Resume decisiones y evidencia; no sustituye las fuentes, los datos ni una validación de cambios posteriores. Las peticiones actuales del usuario prevalecen sobre este resumen.
 
@@ -231,4 +231,29 @@ Es un cambio de redacción, no de contenido: ninguna cifra ni conclusión cambi�
 
 ## Mantenimiento
 
+### Cuarta auditoría independiente, 2026-10-04 — estado observado en `250dc18`
+
+Informe vigente para esta revisión: [barrido_04/VEREDICTO.md](validacion/barrido_04/VEREDICTO.md). **Validación numérica parcial favorable; aprobación científica integral pendiente de correcciones importantes.** Este resultado matiza los cierres «definitivos» anteriores: las entradas previas se conservan como historia, no como certificación de todas las conclusiones actuales.
+
+Pruebas ejecutadas: validación estructural limpia; 26 CSV contra MAT con error máximo 4,97e-14; métricas de las cuatro señales sobre 9,5 millones de muestras guardadas; diez simulaciones del verificador numérico y seis trayectorias nuevas de 70 s de tres candidatos destacados, con tolerancias originales/estrictas y dos ventanas. Se reprodujeron las amplitudes nominales PI 0,03091046 cm y PII 0,03339335 cm. El candidato PII `(kK=1, alpha=2,2, beta=1,05)` conserva atascamiento corto bajo refinamiento y ventana posterior.
+
+Hallazgos **detectados, todavía no corregidos en la tesis**: signo incorrecto de `−dU/dz` en la derivación dipolar; aplicabilidad física del campo lejano sin demostrar; formulación energética consistente pero no validación física independiente; rigidez C(∞) tratada con más fuerza demostrativa de la que admite la aproximación; nominales de 0,031/0,033 cm clasificados erróneamente por debajo de 0,008 cm; contradicciones residuales en capítulo 6 y filtrado de frontera PI incompletamente reproducible. La ventaja simultánea del PI destacado sobre PII_V2 se reproduce con el método original, pero desaparece con tolerancias estrictas en 25–35 s (PI: 0,00816165 cm / 0,2408125 s; PII_V2: 0,01087412 cm / 0,2348438 s). La comparación de PII_V2 con el mejor PI restringido también usa un atascamiento de referencia incorrecto: 0,26 s es del PI nominal, mientras el mejor PI restringido da aproximadamente 0,3485 s.
+
+No se reejecutó el barrido completo, el mapa de operación ni el seguimiento largo; no se hizo revisión visual del PDF. No se modificaron fuentes de tesis, grafo, resultados originales ni informes anteriores. No hubo commit ni publicación externa. Antes de actualizar texto o declarar lista la tesis, consultar los hallazgos y límites del informe nuevo.
+
 Actualizar fecha y commit cuando cambie el estado del proyecto. Para cada hallazgo distinguir: detectado, corrección observada, prueba ejecutada y resultado confirmado. Enlazar a la evidencia; no sustituir cifras reproducibles por recuerdos ni convertir una tarea propuesta en trabajo realizado.
+
+### Correcciones de la cuarta auditoría aplicadas a la tesis, 2026-10-05
+
+A petición del usuario se aplicaron a la tesis los ocho hallazgos de [barrido_04/VEREDICTO.md](validacion/barrido_04/VEREDICTO.md) (cambios locales, sin commit). Respaldo previo en `icr/context/Tesis/_respaldo_barrido04_2026-10-05/` y `icr/grafo/grafo_tesis.json.respaldo_barrido04_2026-10-05`.
+
+1. **Signo de la fuerza dipolo-dipolo** (`03_modelo.tex`, ecs. 3.11-3.12): se corrigió la derivación para mostrar honestamente que `f_z=-dU/dz` es negativa (atrae hacia z decreciente) y que la fuerza positiva en x se obtiene con la regla de la cadena explícita `z=a-x`, antes implícita.
+2. **Convergencia dipolar** (misma sección, ec. 3.15): se precisó que el error de convergencia está referido a la aproximación dipolar, no a la fuerza exacta (ambas convenciones dan -2,46 %/+2,52 % en Rbob/z=0,1), y se atenuó la conclusión a "convergencia matemática demostrada, aplicabilidad física al ECP-730 real no establecida" (faltan dimensiones reales de bobina e imán).
+3. **Modelo energético** (misma sección): se eliminó la afirmación de que una fuerza lineal en u implica necesariamente un circuito magnético no lineal (contraejemplo: flujo de imán permanente), y se aclaró que Lagrange/Hamilton verifican consistencia algebraica, no una validación física independiente.
+4. **Rigidez C(∞)** (`06_doble_integral.tex`): se reescribió como indicador heurístico/local, no demostración; se documentó el factor de subestimación (7-8×) y el caso de dos PII con el mismo C(∞) y ciclos distintos (0,0253 vs 0,0430 cm).
+5. **Clasificación falsa de los controladores nominales**: se corrigió toda referencia que situaba a los controladores de la tabla 6.1 (PI 0,031 cm / PII 0,033 cm) en el régimen de ciclo pequeño (<0,008 cm) de las fronteras de Pareto optimizadas; están muy por encima de ese umbral y son una comparación distinta. Corregido en `06_doble_integral.tex` (dos lugares) y `07_conclusiones.tex`. También se corrigió el pie de figura de la extensión de ganancia (`kK=3` → `kK=3,5`, con `kK=3` como último punto válido).
+6. **Filtrado de fronteras**: se documentó explícitamente el filtro de divergencia/atascamiento lejos de la referencia (235→193 PI, aplicado igual al PII) y la exclusión del punto `(0,000575 cm; 9,65 s)` por posible efecto de ventana; se suavizó la afirmación de dominio del PI "en toda amplitud menor a 0,008 cm" con los contraejemplos del veredicto.
+7. **Robustez de la dominancia PI-destacado/PII_V2**: se agregó que esa comparación puntual no es robusta bajo tolerancias estrictas ni ventana [60,70]s (el PII pasa a tener menor atascamiento en ambos casos), mientras que el candidato PII de atascamiento corto (kK=1,α=2,2,β=1,05) sí lo es.
+8. **Referencia incorrecta en la reducción porcentual**: se corrigió el atascamiento de referencia del "mejor PI restringido" de 0,26 s (que era del PI nominal) a 0,3485 s, cambiando la mejora reportada de PII_V2 de 7 % a ~30 %; se añadió que PII_V2 satura por arriba mientras el barrido restringido lo prohibía.
+
+Verificación: la tesis compila sin errores ni avisos (`latexmk main.tex`, 81 páginas, antes 78). El grafo (`icr/grafo/grafo_tesis.json`) se actualizó en los nodos `DIPOLO`, `ENERGIA`, `RIGIDEZ_GRAL` y `PII_V2` con los mismos matices, y su historial (`meta.historial`) registra el cambio fechado 2026-10-05; `python3 consultar.py medir` confirma 188 nodos y 343 aristas, estructura íntegra. No se tocaron las cifras de regulación, seguimiento ni los demás capítulos; los hallazgos que el veredicto califica como "ya incorporados" (sobregeneralizaciones, criterio 57 PI/51 PII, etc.) no requerían cambio adicional.

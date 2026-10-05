@@ -1,5 +1,9 @@
 # Tesis: control PII del levitador magnético ECP-730
 
+## Memoria de continuidad
+
+Consultar [MEMORY.md](MEMORY.md) al retomar el proyecto: reúne las validaciones, las correcciones posteriores y los pendientes. El mapa está en [icr/project.md](icr/project.md) y el procedimiento en [icr/workflow.md](icr/workflow.md). Los informes históricos corresponden a sus fuentes auditadas; no certifican cambios posteriores.
+
 Tesis de maestría (MCIE, UAM Azcapotzalco) de Lázaro Marino Ávalos Carvajal: control de posición del sistema de levitación magnética ECP-730 en configuración atractiva (inestable en lazo abierto) con atascamiento-deslizamiento, mediante un controlador lineal con doble acción integral (PII). Todo el trabajo se escribe en español.
 
 ## Estructura

@@ -1,0 +1,764 @@
+{
+  "latex": {
+    "archivos_activos": 67,
+    "etiquetas": 145,
+    "citas": 43,
+    "inputs_faltantes": [],
+    "etiquetas_duplicadas": {},
+    "referencias_sin_etiqueta": [],
+    "citas_sin_bib": [],
+    "csv_faltantes": [],
+    "imagenes_faltantes": []
+  },
+  "grafo": {
+    "nodos": 188,
+    "aristas": 343,
+    "pares_no_dirigidos": 343,
+    "ids_duplicados": [],
+    "extremos_inexistentes": [],
+    "fuentes_inexistentes": [],
+    "metricas_guardadas_coinciden": true,
+    "todas_revisiones_resueltas": true
+  },
+  "familias": {
+    "controladores": 256,
+    "trayectorias": 512,
+    "por_familia": {
+      "PII": 124,
+      "PI": 132
+    },
+    "validos_ambas_pruebas": {
+      "PII": 51,
+      "PI": 57
+    },
+    "mejores": {
+      "PI": {
+        "familia": "PI",
+        "kK": 2.507876406233811,
+        "alpha": 0.757858283255199,
+        "base": false,
+        "prueba": "escalon",
+        "pm_min": 39.21751901007718,
+        "os_lineal": 27.93547643422918,
+        "u_max": 3.477691650390625,
+        "frac_saturado": 0.0,
+        "diverge": false,
+        "sobrepaso_pct": 19.332551956176758,
+        "ciclo_pp_cm": 0.013403177261352539,
+        "error_max_cm": 0.0069427490234375,
+        "frac_atascado": 0.7667,
+        "atasc_medio_s": 0.3485
+      },
+      "PII": {
+        "familia": "PII",
+        "kK": 1.4650780257917604,
+        "alpha": 0.435275281648062,
+        "base": false,
+        "prueba": "escalon",
+        "pm_min": 41.47831648913101,
+        "os_lineal": 25.825738735785176,
+        "u_max": 3.4512176513671875,
+        "frac_saturado": 0.0,
+        "diverge": false,
+        "sobrepaso_pct": 15.147829055786133,
+        "ciclo_pp_cm": 0.026126861572265625,
+        "error_max_cm": 0.013526439666748047,
+        "frac_atascado": 0.8239,
+        "atasc_medio_s": 0.7490000000000001
+      }
+    }
+  },
+  "barrido": {
+    "trayectorias": 7503,
+    "controladores": {
+      "PII_lic": 2501,
+      "PII_sim": 2501,
+      "PI": 2501
+    },
+    "intervalos": {
+      "-4": [
+        -4.0,
+        -3.95
+      ],
+      "-3.5": [
+        -3.6,
+        -2.0
+      ],
+      "-3": [
+        -3.5,
+        -1.5
+      ],
+      "-2": [
+        -3.3,
+        -0.5
+      ],
+      "-1": [
+        -2.5,
+        0.5
+      ]
+    }
+  },
+  "ajuste_ganancia": {
+    "PI": {
+      "n": 6,
+      "exponente": -1.2028643713247256,
+      "coef": 0.03078510568590007
+    },
+    "PII": {
+      "n": 6,
+      "exponente": -1.1224790174475283,
+      "coef": 0.03355700137505158
+    }
+  },
+  "csv": [
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/anatomia_pi.csv",
+      "filas": 3001,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/anatomia_pii.csv",
+      "filas": 3001,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/atasco_pi.csv",
+      "filas": 381,
+      "separadores_nan": 7,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/atasco_pi_teo.csv",
+      "filas": 51,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/atasco_pii.csv",
+      "filas": 368,
+      "separadores_nan": 5,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/atasco_pii_teo.csv",
+      "filas": 51,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pi.csv",
+      "filas": 6,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pii.csv",
+      "filas": 6,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/campo.csv",
+      "filas": 441,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/estable.csv",
+      "filas": 1212,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/lazo_abierto.csv",
+      "filas": 601,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 304,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/lineal_ad.csv",
+      "filas": 1196,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/trayectorias.csv",
+      "filas": 236,
+      "separadores_nan": 10,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/p8_results/tikz/variedad_inestable.csv",
+      "filas": 76,
+      "separadores_nan": 2,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_design/tikz/bode.csv",
+      "filas": 600,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_design/tikz/escalon.csv",
+      "filas": 1200,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_design/tikz/nyquist_neg.csv",
+      "filas": 1076,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_design/tikz/nyquist_pos.csv",
+      "filas": 1076,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/barrido_conjunto_pi.csv",
+      "filas": 193,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/extension_pi.csv",
+      "filas": 7,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/extension_pii.csv",
+      "filas": 4,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/frontera_pi.csv",
+      "filas": 11,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/frontera_pii.csv",
+      "filas": 10,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/nube_pi.csv",
+      "filas": 193,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/pii_v2_results/tikz/nube_pii.csv",
+      "filas": 182,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/r15_results/tikz/base.csv",
+      "filas": 2,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [
+        "familia"
+      ],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/r15_results/tikz/familia_pi.csv",
+      "filas": 57,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/r15_results/tikz/familia_pii.csv",
+      "filas": 51,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/regulation_results/tikz/control.csv",
+      "filas": 1669,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/regulation_results/tikz/error.csv",
+      "filas": 1019,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/regulation_results/tikz/posicion.csv",
+      "filas": 1019,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/regulation_results/tikz/velocidad.csv",
+      "filas": 1019,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/diente_control.csv",
+      "filas": 1985,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/diente_detalle.csv",
+      "filas": 3635,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/diente_error.csv",
+      "filas": 2502,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/diente_posicion.csv",
+      "filas": 2497,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/diente_velocidad.csv",
+      "filas": 2497,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/pulso_control.csv",
+      "filas": 1807,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/pulso_detalle.csv",
+      "filas": 4483,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/pulso_error.csv",
+      "filas": 2376,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/pulso_posicion.csv",
+      "filas": 2376,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/pulso_velocidad.csv",
+      "filas": 2376,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/sen_control.csv",
+      "filas": 1566,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/sen_detalle.csv",
+      "filas": 2189,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/sen_error.csv",
+      "filas": 2002,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/sen_posicion.csv",
+      "filas": 2002,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/sen_velocidad.csv",
+      "filas": 2002,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.csv",
+      "filas": 1758,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/trap_detalle.csv",
+      "filas": 3171,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/trap_error.csv",
+      "filas": 2376,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/trap_posicion.csv",
+      "filas": 2374,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/seguimiento_results/tikz/trap_velocidad.csv",
+      "filas": 2374,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/sin_ad_results/tikz/comparacion.csv",
+      "filas": 1375,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    },
+    {
+      "archivo": "icr/context/Tesis/images/sin_ad_results/tikz/detalle.csv",
+      "filas": 1052,
+      "separadores_nan": 0,
+      "filas_con_nan_parcial": 0,
+      "columnas_texto": [],
+      "filas_invalidas": []
+    }
+  ],
+  "sha256": {
+    "icr/calculus/Final_Bien/R15_sintonizacion/analisis_ciclo.m": "9cb1f48242d937d47d6ed0cb2f1d2681e5342f78c0466a79250aebca0a7528b1",
+    "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PI.json": "251abf7ddb66b99f4ab52fa11fc6d515f4b3695cd47442e92d4d6c72f5b4a110",
+    "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PI.m": "cbc8ac03967c322a6b9698444c70ccfcc79e6f0d8b78ca16cbf58936b76cadbb",
+    "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.json": "6215424cb0d395db8d909f9b1cd311d1ef2e80f2b62329b7bcf121f947acab8c",
+    "icr/calculus/Final_Bien/R15_sintonizacion/barrido_conjunto_PII.m": "8c06e6b43e61e58b9ea860df1dcc25876fc2e89c1a27c81e41e8b3aaab8ca0c9",
+    "icr/calculus/Final_Bien/R15_sintonizacion/buscar_PI_v2.json": "6256e10c9d045a2b797da137b9021c24714bc3286eac8174e1f6e0ca2c5b8f07",
+    "icr/calculus/Final_Bien/R15_sintonizacion/buscar_PI_v2.m": "b9f6c2a1cee416581653f22cc54d3c417731aad5d8228a1a759cccf4ac35f354",
+    "icr/calculus/Final_Bien/R15_sintonizacion/exportar_R15.py": "7222c6e691ccefc3cc7637ffc26f5962d9c0eb2170a2f04665fed2bc321e813f",
+    "icr/calculus/Final_Bien/R15_sintonizacion/exportar_ciclo.py": "2d4180d5be042c0b0a978c03918cef6f7d90a4c0cea58571a0e048ea2ba39bd8",
+    "icr/calculus/Final_Bien/R15_sintonizacion/extender_ambos.m": "f8d92c8f9fd1be82fe1a97192166c1708ac61d35ba93a37fa7154dddda3a1764",
+    "icr/calculus/Final_Bien/R15_sintonizacion/familias_R15.json": "b446af400aaf14f652d1d32d75777dac0d687ae5b196f2354d660a3171eb486d",
+    "icr/calculus/Final_Bien/R15_sintonizacion/familias_R15.m": "baa4a83390eaef5a50ea041a6a382b11246dd82379e56e378c53cab79fc001d7",
+    "icr/calculus/Final_Bien/R15_sintonizacion/probar_PI_dirigido.m": "855976e937273773fd898558b6623e92b8a212d343792531018b09d8543fb971",
+    "icr/calculus/Final_Bien/R15_sintonizacion/resultados_R15.json": "662914431c352694008c641bdc5fc12e405d3236889a17e81a400ce24e6446cf",
+    "icr/calculus/Final_Bien/R15_sintonizacion/simular_R15.py": "b885c977515a0ec334b51514fcaa8186b294f00c865e2196439e023373a7ed9f",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validacion_02/atipicos_ode45.json": "0672443f401fed694feef2bf9fb5b40037f424076a8aaf302f1f5a660111c695",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validacion_02/comparacion_R15.json": "86d4ef6bb4a382795d834e5c17c700e519b3f46e3cf87a3374f516dca1540e06",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validacion_02/numerica_auditoria1.json": "744ebe842bd5f0f3cca3dfe7d14b095df93cf5c1c3228454799999dd3bbc9a7f",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validacion_PII_v2.json": "28eab9562c55036685fe5ffdde6c02b884926f3dee4a85f45b3f096097acf63f",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validacion_PI_v2.json": "39461f27cf64ad2cd7ac39c380842079a2c1e8a08788a7237f7631d26404d80b",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validar_PII_v2.m": "736597d5cbc55d14160c4801afb27b4aa78fef41d45357cdc14a415db92dd92c",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validar_PI_v2.m": "893fb316cbffee9169e5a62aa1232160dd8f73f082157f544a8a2c49829b973f",
+    "icr/calculus/Final_Bien/R15_sintonizacion/validar_R15.m": "436c30c4a4e97e7422d31d65da7e6db82f4449873da0088ea1fbce633c982ed3",
+    "icr/calculus/Final_Bien/R15_sintonizacion/verificar_PII_frontera.m": "cd4b1fa14a76a849f5878b20e2b044eb72d076ec5cf27058c1ae7e32a4e58722",
+    "icr/calculus/Final_Bien/R15_sintonizacion/verificar_candidato.m": "237fe3fa3f2e4bb34199e823f4713e6d075dbb7902ff566e922c5bea9e43255d",
+    "icr/calculus/Final_Bien/R15_sintonizacion/verificar_candidato2.m": "ef103006237a09be2b7422ceaed3545184979b854fd1c78311da5f1a65d0348d",
+    "icr/calculus/Final_Bien/R15_sintonizacion/verificar_candidato3.m": "d5b5c858dac662075a74737d13fbc6b3fe67e674faee59bc93813a63d137d47a",
+    "icr/calculus/Final_Bien/animacion/animar_caso.m": "80b9c26e102150afc201086d659b6e488a148c5de1d4fba5643686c7adb8fc24",
+    "icr/calculus/Final_Bien/animacion/animar_levitador.m": "bc6354fc83a52e631f5565ca4cbcf90b1faf2bf85a415ac6a7d8b951ee011d6d",
+    "icr/calculus/Final_Bien/animacion/generar_resto.m": "d101db3cbaed0172bdadb06ccf1df72f2633f23f745896399e61f00087d29318",
+    "icr/calculus/Final_Bien/estable/PII_estable/CInestable.mat": "dcafb58594d2cacd2e539ef12866d9a60904a41d6a1307761dfb2ab76655fdce",
+    "icr/calculus/Final_Bien/estable/PI_estable/CInestable.mat": "bf7d05696b8a713e2030839f266ab0e58be483163da3044684b54058edfce2da",
+    "icr/calculus/Final_Bien/estable/PI_estable/ControlSystemDesignerSession.mat": "2faa105df59e73cf746dc700b924893664c818ef0508c10e1ea56a2e7e58ef4f",
+    "icr/calculus/Final_Bien/estable/linealization_estable.m": "25ce7779361eaf2fe0de453c0328769471efae355c74c2ea42ac3af9fa6684c4",
+    "icr/calculus/Final_Bien/evidencia_P8.m": "72a953202a78d17298e18c68c4ebb212dedb6af8e4b246a5632800c7468d650c",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/ControlSystemDesignerSession.mat": "eaa33707633d0e74ea28bc92565c436faecff79d7aeb4cb42e900f8a489c8c45",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/PII.mat": "dcafb58594d2cacd2e539ef12866d9a60904a41d6a1307761dfb2ab76655fdce",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/PII_lic.mat": "1c66b16169f070247d240d31fffee979fcf638219981db8fca3b6384048e0cff",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/diseno_PII_tikz.m": "b1aeb3891618fefe323da10cfc8030a4c93c8299a908342ce58d276e19ecade4",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/maglev_karnopp.m": "4e4af9377d58e8d72063c4bba9df07ecc0bce6471d1c28b05cdcb3910ba67421",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/regulacion_P4.m": "0d85878b41253949296f9601509ec163b0797e2e9225e85f26052e86deb11ba4",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/regulacion_P4.mat": "d8f16d757744ead73d8c80fb2e7b70a6872fdf55e1ba141b7d672fca0cf9936f",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/regulacion_sinAD_P3.m": "50e4d8eb34dc04bc9c8cd924d05689de9bb32bbf0e0ab5a8c68c60afa0ee2d85",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/regulacion_sinAD_P3.mat": "d504476f846bc1bee811b35d2c219acc1b0a3e12be82ff8946b503d315069f68",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5.m": "c78282c9905ff161c4b2b002bfd0c0760ff704014dd2d27d5cd610e15c5055c3",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_diente.mat": "5b056707de1dc861d39e2bc54ad0c25a41d6ef1ee2f76c7cf3aa6081eafda99d",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_pulso.mat": "a0fe5b14fde91d4225e5ca8c414cd1f7cce02789d94b256a9c30c24160215d1b",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_sen.mat": "b64c0718a99f713711e67decd1bfb0bc20e2805cd4a0ae1b9d9ed6635b989468",
+    "icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_trap.mat": "0e6c8a51c92851fe5b0114e9bc4e40ac075c5a42b60d01d12ba31e66566b6445",
+    "icr/calculus/Final_Bien/inestable/PI_inestable/ControlSystemDesignerSession.mat": "4f0ec41f96aaf91d91e125fc8914dd14675d08c65f8ea7b55229b64c57f0497a",
+    "icr/calculus/Final_Bien/inestable/PI_inestable/PI.mat": "bf7d05696b8a713e2030839f266ab0e58be483163da3044684b54058edfce2da",
+    "icr/calculus/Final_Bien/inestable/comparar_PI_PII_P6.json": "81dda9e2ffc074875adbbafd6caf73f3b26c784b5e294b431e9e3bda3bfa9515",
+    "icr/calculus/Final_Bien/inestable/comparar_PI_PII_P6.m": "418006012200a3ad34dd83d1df8f52fbfa253e0eb3a7c63e3e74fecf9f106571",
+    "icr/calculus/Final_Bien/inestable/linealization_inestable.m": "8f27bd551f042dc01015475ee36dd1a5815079a98df8ee686fb789a0de52cb66",
+    "icr/calculus/Final_Bien/planta_prueba/ControlSystemDesignerSession.mat": "5eb16ba050ce621aa9edfdc189715b1328e986004ccf3ee49d45b35c7ad2ad6c",
+    "icr/calculus/Final_Bien/planta_prueba/controller.mat": "2319734b8da62d19e6316aaedc4f7f8dfde3e6845d18d3cf50fbd83e077f55b7",
+    "icr/calculus/Final_Bien/planta_prueba/planta_prueba.m": "7cf97929c44c688f138c4c05abe1d781c22bec1aa51e87e80280742d9384360c",
+    "icr/calculus/Final_Bien/planta_prueba/planta_prueba_refactor.m": "9296ecc82a390f94ff6b557d046f56b3eaae1e3c16dcd46fc8e7bf46e733a1df",
+    "icr/calculus/Final_Bien/runge_kuta/euler.m": "601a1fec6b51a69d0e75fb00cfd76183d257484d930bb6ff47d1e0677d2bd1c9",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/driver.m": "96173c1278d77018ca6190b00ecd1be22b7d99776a166bad91ac6f2f8a81a6ca",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/euler.m": "a76a8056c519c52b588fac23a439bd47f2d04c206d63cabbd5fbca177c10c558",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/euler_improve.m": "1d86d6bfc05a7570147d19d4f6ff803cb7292f9db831a58852c4661740f4c40c",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/functionSignatures.json": "10e00ddce4b06cf9c49320d64609c7d60ac2365be3f552786a586deeb025fa05",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/heun.m": "25f426dbd5e2b9c6de751caee58de1418688d02154c2fc972037f6e4d7684c8e",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/heun1Iterator.m": "1c54521da1a8048b2379a4a743b6eb64dd29ee4da221de2b7d369d9e13ae5fc2",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/integrator.m": "0225ce5a96000e8135f768e79180d94bd8176a12b2284fdd67d2c9fc1ee8fe10",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/midpoint.m": "a75bb94a4c8710a7e7cb7f22434b723bbc2f04fb01e17701dec442b31925f8b8",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/rk4.m": "99f116700a314bb0d6f4c623d0cbda316dfe511377dd15bb933ef977ab00b007",
+    "icr/calculus/Final_Bien/runge_kuta/numerical_numbers/rk42M.m": "c856c4498efa1224d3c6a97f53129d3ed94acff476af34764dfe11df4ecbc84a",
+    "icr/calculus/Final_Bien/verificacion_P1/barrido.json": "a766b81aace979bdedde28491537fbc5aabd51a3af21fd9977c1305864fa5e8a",
+    "icr/calculus/Final_Bien/verificacion_P1/barrido_3v5.json": "8dee3cdf9412cba6f0deb5254cbbb53bf4ed1ee7edb27116ab2992c9726c9c62",
+    "icr/calculus/Final_Bien/verificacion_P1/barrido_3v5.py": "f43c58b0bca25ccf8c7da4eda6a10ebc8137b3d21616b56cfc7d87c2914cca17",
+    "icr/calculus/Final_Bien/verificacion_P1/barrido_gpu.py": "cc679c566739407c74ee61c84c67ae09023173ad7ac5082294aab615a83fb51e",
+    "icr/calculus/Final_Bien/verificacion_P1/barrido_validar.json": "50a8cbf66d23963e926cbeaf57963263091490b97ccbe594eb2ae66ea86b97f8",
+    "icr/calculus/Final_Bien/verificacion_P1/controladores.json": "ba5b2f97e35a5c7a9f926c0f4329515ce79cbe4a36944656acf18d32be4452d1",
+    "icr/calculus/Final_Bien/verificacion_P1/exportar_ctrl.m": "bf3b8019f0bdcdffa543dc2b48193a5f5407908923352a573edd6c6c696cdf9a",
+    "icr/calculus/Final_Bien/verificacion_P1/mapa_estabilidad.m": "37f2feb90c432539d4f6af229d7196cb6b133cc8b8c90d85d6b9bcf574b8063b",
+    "icr/calculus/Final_Bien/verificacion_P1/validar_3v5.m": "0450738a1338215b5dc663ce7b5ea3e03ca0cfbe90804b5e35db3c8a76a95d2a",
+    "icr/calculus/Final_Bien/verificacion_P1/validar_matlab.m": "363eb1e5cf2e7123caaaf212cf1abe23096f57a45d1bd9c46df0f8447f8b2c60",
+    "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.m": "c342fb3fac5008ccc4b0757a66a8f86e9db4ba6569d8e3aa8f793f8a004901ff",
+    "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.mat": "1ba159f20ab51831d6cd47b6c2534e0a6aa29a7acfc15aea9e3b56423a918056",
+    "icr/context/Tesis/capitulos/01_introduccion.tex": "531f9b40bad56e7808c8fbe8646c8ba64991c4423379c03a1f749eafb43fa2b0",
+    "icr/context/Tesis/capitulos/02_fundamentos.tex": "88a9551c0e774a7d2c0fb46024b89201625d31322b244bd8745026f763948136",
+    "icr/context/Tesis/capitulos/03_modelo.tex": "43940c3b7b6b0fbd4b9c123c9e718ad9f1044c2d73e1c19aaee6fc1ad7493abe",
+    "icr/context/Tesis/capitulos/04_controlador.tex": "51686241df8e261ad997d49b139dd0a2a24e87e0a85d56ec3cc43a886571f531",
+    "icr/context/Tesis/capitulos/05_desempeno.tex": "c47d635bafede783ad1da51d502212dc8485b9fcba19dbcc20b456f055eff479",
+    "icr/context/Tesis/capitulos/06_doble_integral.tex": "44bf4e31a17d5727162c938dc559a1ee0fed4d504ecd61f8c3fafd6ff2e15457",
+    "icr/context/Tesis/capitulos/07_conclusiones.tex": "1c122922f6473a9768539b9accdedb42eaa80ad905479137586a09df7e4e93a7",
+    "icr/context/Tesis/chapters/apendices/simulacion.tex": "e2d9685c3b70cf85199b25add4462fabb9bbcf48440d773987e02a0172fba32d",
+    "icr/context/Tesis/chapters/apendices/verificacion.tex": "4fffc2f818c3b47004195767c314555937557d27589f7cc241710723844eafc3",
+    "icr/context/Tesis/images/ciclo_results/tikz/ajuste_ganancia.json": "13d07fb1c9fb8e6872f2b2c985ea81e3368e24f3a7f905c3e50b78a51617b223",
+    "icr/context/Tesis/images/ciclo_results/tikz/analisis_ciclo.json": "bd8fe7eb7d0bc31aa72884b2560023e25e5b6470e69d6d33a0348f2a4048bc56",
+    "icr/context/Tesis/images/ciclo_results/tikz/anatomia.tex": "5b51f238788d9a9405f10ead012d1235ff843c308577256340c57f2546f4cd25",
+    "icr/context/Tesis/images/ciclo_results/tikz/anatomia_pi.csv": "0bb2df61a9e6092aed26b57e8b14e92b7b934216a197b0f6c86aff83df064c8c",
+    "icr/context/Tesis/images/ciclo_results/tikz/anatomia_pii.csv": "7d36e862c35d85f64890dbe6a9155207299c1dc53dd54cfef53523fd93853dd9",
+    "icr/context/Tesis/images/ciclo_results/tikz/atasco.tex": "7fb2559f8bba7856f67d9af1b001b5c88ea1e86e57bd5358815642efc1ad34d6",
+    "icr/context/Tesis/images/ciclo_results/tikz/atasco_pi.csv": "05852b58d517cfb58c0dcc5f0dfce794e024fd6155a30d9bd98e36c6c4314874",
+    "icr/context/Tesis/images/ciclo_results/tikz/atasco_pi_teo.csv": "96549e48cac25bc748ee8d159064a4ab9e4dbe82d34f6ef4501bd50b84008409",
+    "icr/context/Tesis/images/ciclo_results/tikz/atasco_pii.csv": "f4ae8f39724d931e2918c21841122bbcb32ce231a2e141042962a84d57b28c64",
+    "icr/context/Tesis/images/ciclo_results/tikz/atasco_pii_teo.csv": "26e0018f414c474efae249a60dd89ed1fe3901f9fa25d4e7525756fe87fe94a5",
+    "icr/context/Tesis/images/ciclo_results/tikz/estilo.tex": "9294c0fc11d6fc1b60f22d3149356aacd329db981fa4d09fc06aee7a30fbf439",
+    "icr/context/Tesis/images/ciclo_results/tikz/ganancia.tex": "b5955b86cd36ea0a1fefd0cb69ce3efcf61aececc0126bf81326a029601204f5",
+    "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pi.csv": "76ddca825c50bd842b03a5845aab0fcd987ae8f2ddce802b17fa80e5d9c4e070",
+    "icr/context/Tesis/images/ciclo_results/tikz/ganancia_pii.csv": "b93edfad3d33620a5d3b036118f6c433a9dcbae72e8a3156d59e06293045fea8",
+    "icr/context/Tesis/images/dispositivo/configuracion.tex": "9b1b2b99197a321ea753e132382992e6bd54f55cb48133ad338e4b52e8589508",
+    "icr/context/Tesis/images/energia/tikz/coenergia_posicion.tex": "e03cdfaf1d54120b0d6c066dd06e6a4568211fada97e64c2df6ca3197d818612",
+    "icr/context/Tesis/images/energia/tikz/energia_coenergia.tex": "f547b235c9e69fd19f0837695dc553248ecacbeaf7acdf1f8364486b2e469b2f",
+    "icr/context/Tesis/images/p8_results/tikz/campo.csv": "7d4d31293d07ff70587202464e85236781ba57de84e82ad05d330e09fb032e7a",
+    "icr/context/Tesis/images/p8_results/tikz/estable.csv": "4281d782f2359e64f0f887404777af1e8e24a73d60673f6b6792b2bd2274ebb8",
+    "icr/context/Tesis/images/p8_results/tikz/estable.tex": "d8f005de343973e9b1ebfd587225a45f5017652167bf67049541cc58fcf306fe",
+    "icr/context/Tesis/images/p8_results/tikz/estilo.tex": "c48ebfb0587c62ef83dbad1f1294730c079228bf5c2ba8211a0e44192113488c",
+    "icr/context/Tesis/images/p8_results/tikz/evidencia_P8_metricas.json": "78851a5ed54ad760e2e1ad08b88ec56e1fa003bd3116d410506d652dfcb7e91b",
+    "icr/context/Tesis/images/p8_results/tikz/lazo_abierto.csv": "c2588d1ff02725b56d5d65f61fb18338ed6798fa694961933dd698513d67deff",
+    "icr/context/Tesis/images/p8_results/tikz/lazo_abierto.tex": "32378c4e75acb76f0b3c07f64f59e329b8b6d1e8855c229293bb976f1acd07ad",
+    "icr/context/Tesis/images/p8_results/tikz/lineal_ad.csv": "7a6c7676179e92e7a311ecc5361e8e3b8422d3d2bb1a4de0b6e2274e11e02577",
+    "icr/context/Tesis/images/p8_results/tikz/lineal_ad.tex": "e55aecd286467238beb3886520074f67fc78244bf6530d67c61f40fb53ae6ac8",
+    "icr/context/Tesis/images/p8_results/tikz/retrato_fase.tex": "855160c51c6a8e68daae6427a975433d66da08451a74680fd7f93f2e24ccfc18",
+    "icr/context/Tesis/images/p8_results/tikz/trayectorias.csv": "ff8f6c737f7f1d1fb82d5dd22cae4e5023584b410fcea61a097de2c6aa187174",
+    "icr/context/Tesis/images/p8_results/tikz/variedad_inestable.csv": "51005a0cc1745a81cc25af6fc129497399ced17cd452544bc0dabbba039b3097",
+    "icr/context/Tesis/images/pii_design/tikz/bode.csv": "47997f3b53bfc7f42da567188d8e26bfe8539d469a5aa34ec8da129cddbae171",
+    "icr/context/Tesis/images/pii_design/tikz/bode.tex": "159115a49151b05e678bc5da1b5cd0bd633fa4e9fedfd78d368a429eeedd8d0f",
+    "icr/context/Tesis/images/pii_design/tikz/escalon.csv": "66ad34c9401d29e893de2341bec48820f3e53c177f7a6041994e807eb91c0a22",
+    "icr/context/Tesis/images/pii_design/tikz/escalon.tex": "818c9e8e592012fc5ac5b2154195adb129604bfd3b0d61f82d6ceff556d1c180",
+    "icr/context/Tesis/images/pii_design/tikz/estilo.tex": "1feddc0f58b86791bed284ad66d023c71ab5acf8e9deb4e11b6f6e3dfe37a4f6",
+    "icr/context/Tesis/images/pii_design/tikz/nyquist.tex": "6cd7bcf0443f48f19b32c4ccf4abf52437dd4a900c8f5c7b04a5e0e6dd520115",
+    "icr/context/Tesis/images/pii_design/tikz/nyquist_neg.csv": "56472d9383366d8715333eeff70e1cb0528ddbea67b20a242e62b7b871873210",
+    "icr/context/Tesis/images/pii_design/tikz/nyquist_pos.csv": "c470fbee26921a2d5d2d7fe9c99184a7f9775369ac34c723440f1fa8b2710096",
+    "icr/context/Tesis/images/pii_design/tikz/valores.tex": "d140c2c8a79848019916ca6a05cf495e0efa3a5a8fa145e30dd903465ec8a971",
+    "icr/context/Tesis/images/pii_v2_results/tikz/atascamiento.tex": "625658e9e7506bf4555948f11c3285501add4baa30f4460fdb2466ee2fe029d6",
+    "icr/context/Tesis/images/pii_v2_results/tikz/barrido_conjunto.tex": "925f7cc0c686190ed99e94e140b7e293608dfa93038ffc23412d59e8761ea8aa",
+    "icr/context/Tesis/images/pii_v2_results/tikz/barrido_conjunto_pi.csv": "8c75442ce361b1d24c907e2f79f31edc84f0c414788765ba79354ee9ac46320e",
+    "icr/context/Tesis/images/pii_v2_results/tikz/estilo.tex": "eed9fc0b3193becd3ca577b07bbbe6db8faf70fc3bff4426257679b7da06b121",
+    "icr/context/Tesis/images/pii_v2_results/tikz/extension.tex": "6f4c1d69a01360903ccfc522cc6728b0d3fb49327f6ef817427fd1798ea86ab3",
+    "icr/context/Tesis/images/pii_v2_results/tikz/extension_pi.csv": "de25ecd446f9dedc3b7b713963a436a54e95182a4233a002064fbcd014097756",
+    "icr/context/Tesis/images/pii_v2_results/tikz/extension_pii.csv": "8051de366f62032649a834a05d8ef679baec3d4334ebbbe0c9e606db1786119f",
+    "icr/context/Tesis/images/pii_v2_results/tikz/frontera_pi.csv": "e24b4b9093031d5811ae9176e6a462a18c270e50b355e1fecce25a7af2c84d22",
+    "icr/context/Tesis/images/pii_v2_results/tikz/frontera_pii.csv": "9934211866d4235628610c6fa9209461f05bae3390c411bb47529c01ebd0a671",
+    "icr/context/Tesis/images/pii_v2_results/tikz/fronteras.tex": "3e54019e4bfc45ebc4e025512eb6acd8f2ab0f2ca70beb9a74fc472423afb953",
+    "icr/context/Tesis/images/pii_v2_results/tikz/nube_pi.csv": "ef5ba938b1a10bc2baa838c4f853d1cee7a735e33a9c123dd3764471f6972e76",
+    "icr/context/Tesis/images/pii_v2_results/tikz/nube_pii.csv": "5f524eec38e1c0ded808805cc2030ddee70cd9d1d107cc5db96701b0ea37aae3",
+    "icr/context/Tesis/images/r15_results/tikz/base.csv": "62ecefdf9624786bfd9f50ee07385c1bdc09efdd8796dff0071e31bf6e55dd58",
+    "icr/context/Tesis/images/r15_results/tikz/familia_pi.csv": "18ff2f5c18470cc772ab4b278720d8890ffc84cc8c81255e32198947ff7cd1fb",
+    "icr/context/Tesis/images/r15_results/tikz/familia_pii.csv": "862382cd0e88f2b78c7e464450595ae1cd746397b93076592be61aa4382cd641",
+    "icr/context/Tesis/images/r15_results/tikz/familias.tex": "e0cd173a70596fdcbc155ddbcb4ff660c92b9bc4fcebdaa2b36f755d3426b378",
+    "icr/context/Tesis/images/r15_results/tikz/resumen_R15.json": "672e1edc7c8d0fbc0ad17d20a908406bde23e4a51d79c1158c3e2cdffdf56fef",
+    "icr/context/Tesis/images/regulation_results/tikz/control.csv": "a5d86509ebe4b4a884d489374ae930988347bf4b6d0eb9f9d2dd71a786671388",
+    "icr/context/Tesis/images/regulation_results/tikz/control.tex": "cdaeadba482442af1893a51a12bc5bea8003acada8a3fc07eec3b8ca40297245",
+    "icr/context/Tesis/images/regulation_results/tikz/error.csv": "aa34e274464b7c2ee1c9217cb9321e350487c68f92f81b5b000f75b44dce82b3",
+    "icr/context/Tesis/images/regulation_results/tikz/error.tex": "e1e901d1a30cfc59d29845c038a63b0df95d6f470557b976f9705cfd325ec3e0",
+    "icr/context/Tesis/images/regulation_results/tikz/estilo.tex": "ad8e9f1e972f5c683e7d88277f9794e22572daeccf534d9a08d9a53aa844318f",
+    "icr/context/Tesis/images/regulation_results/tikz/posicion.csv": "a79fdc39d4f3de611acebcba47adcf83e5651f8f60a9e748ffe6df0160fb2cac",
+    "icr/context/Tesis/images/regulation_results/tikz/posicion.tex": "58991ced30e1855ae9b7839fcab8b1c8c6cc8901b0cab2a3c15311eec95e2b13",
+    "icr/context/Tesis/images/regulation_results/tikz/regulacion_P4_metricas.json": "9144a5101d2273e7431158fc1ec950681088efd92c4076d43814c641b651b3d4",
+    "icr/context/Tesis/images/regulation_results/tikz/velocidad.csv": "f84566b17957e2c6eb5b19d5d96a7d573d1adf8a19ceb16fd9ddb6e9ee345caa",
+    "icr/context/Tesis/images/regulation_results/tikz/velocidad.tex": "26862d0357441abfc36fed3af51621ba586c55e21a1fad288cf2be1cb2a8e0ab",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_control.csv": "d445fad0d80e208dcbeee41f29111d97585c7911fdb3f9bb973b459b61df44b9",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_control.tex": "4c40ea49ff55558f705b438ed99637652cda31261b5760a1c3fb428d69f6b56b",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_detalle.csv": "94aeed0d175f6f777a21b528d958b5831ee282498ed612e764c4759af7797ba3",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_error.csv": "75e72ae83146fbb73a4be7c3d2b323143e90c8a44f798c82234b73bbe188711b",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_error.tex": "8c0a56a19ade86fd01835b4bdfaa9939bf55dd19faa8bf8b6bb4b83705928e64",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_posicion.csv": "fe6eaeccddcc562986663fac5e8a57732e26a9f12ca96c0ccf895b7876fa8208",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_posicion.tex": "54d2b1b854ab62bf7dc4d08c40f0564e29f861483dc4afd2f73dc62b75a23136",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_velocidad.csv": "58dbb9a152608697ebea306674e834460054bd70fdca97819820d2afecab34e0",
+    "icr/context/Tesis/images/seguimiento_results/tikz/diente_velocidad.tex": "3c7b6409be4c6326e4b927833b0018014df4de00238a636cebaac63983d489b2",
+    "icr/context/Tesis/images/seguimiento_results/tikz/estilo.tex": "1bf8332c3c28309a1e8b0cda4f750fd963e643650a86141c0910baac13d85f65",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_control.csv": "67388d38e98c18aeaa0af7a8e50aa1fbbf223e4824674c44e733c7a277d6a060",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_control.tex": "a28ad5906b904cfd7bc358bafd43a0aa10e8e51630304801f7d3d0c947daf1cc",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_detalle.csv": "74e36dd4bd39ffc7e075617dd6a465577d22060ce0172e9295d7d049870f1b5e",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_error.csv": "6c29e434a06eab6ed91462ff2cc94ed0b6b3256041ceb5840d0652aca4db4698",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_error.tex": "edc52c5f8590183803fd4ce02639e6efcedbfd9d2846211b1dd63464cb8ce7fb",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_posicion.csv": "2ee9a51e538dd8549ef46fcfe3071d4e030d6d0cc98c03996a0490cf6925291c",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_posicion.tex": "d9c22dd32252b71caaa39746f5436f632d476b2d447604e2da44b3ba79e47c69",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_velocidad.csv": "b0560a8dff30ba39ea54f95433a02b8bdf50bc8c3975d2fbfcc9856b4cc15c64",
+    "icr/context/Tesis/images/seguimiento_results/tikz/pulso_velocidad.tex": "f575109fa54f16c368a1f75faa32873fbf2ee6b3efa7f5d799bbd21768d198fe",
+    "icr/context/Tesis/images/seguimiento_results/tikz/seguimiento_diente_metricas.json": "97a735402344b9ff67dcd024b712b7e298e1da3611eee7c694f797071743b3ed",
+    "icr/context/Tesis/images/seguimiento_results/tikz/seguimiento_pulso_metricas.json": "bd5aee3d0e7843d7ef2eb68140105a6307202ee3d0c8e181973d17fdd3a39a75",
+    "icr/context/Tesis/images/seguimiento_results/tikz/seguimiento_sen_metricas.json": "64eceda33682cf19dba883e59d05503574d0dccbd242ec54470740311ac43dff",
+    "icr/context/Tesis/images/seguimiento_results/tikz/seguimiento_trap_metricas.json": "cf86fc39f9e6246f8acc11b6b06bc0855364ebb74ea941541fe81cb0050aa917",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_control.csv": "d00633f5e35a1bee973b99802d4b0719a378dfb3ae874e08b538e95604cd9878",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_control.tex": "91cd0e049a8b4deab8d3cdafb459b847d8b9ff3f98af0ed84f048e3d980cc8fd",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_detalle.csv": "126b13a6254d9376c3f3277d90a27c24b13a5f1ef5f7daf4aea94202fa995536",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_error.csv": "1b841b8f7c1324a581bf2f652bac05e4985d6308365ff0c3a8a2738f97c8a9ff",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_error.tex": "42f09e8ed76ca796b7c4d68f982f1ac10a908692fa2c82a5ac17239a34780336",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_posicion.csv": "e5b8e57f080d8df6b490fb9541fa83ea91b2a6e1c9786e7c79ffac0b5757771d",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_posicion.tex": "0fdec4d4836ab8137dd8a6d485c5992728a6e852404760a7835278a3d27f73c3",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_velocidad.csv": "8f23111adcb223cab1b2b453c45ff823db2fa3dd7ab4d78afc4f3f587cada3f2",
+    "icr/context/Tesis/images/seguimiento_results/tikz/sen_velocidad.tex": "831ce156bbc658f8ea9e4c0212fd9fa1d95d119d244178375a20ceec27d207cb",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.csv": "4b8bc04a65a38d3779ad80f2a6c8a29125cdcb5a60d8c88df985c63072d2cfa5",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_control.tex": "5291b2c4b55df9f85e910f3e982843c88a91cd0bf32884f05524172ab39a189f",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_detalle.csv": "37ef49feb8905c4fd39d5ceb759242098794a661432ed0be26eb89c21d954c44",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_error.csv": "1eb83ff00f9a43a24657da15f4b747c4299661ac9dd270e174ce050f358abbcc",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_error.tex": "99329a1d4dd68412fd27a9cb3e05bac8f8cf82455e47cc135771855fbdcf2d02",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_posicion.csv": "5a28fbe058a3e04193a99fefb4c57023abd7d69e6916bf6635f4a03b06cf5319",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_posicion.tex": "7020772df98b5b8cc0355b8260c8b19977114b014a6a3f1a9b2f2eab13049886",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_velocidad.csv": "4477d4059fa1c3e42f60a9ed6d6dd4234ddb9f173e3bfc0b480ddd47ed473dce",
+    "icr/context/Tesis/images/seguimiento_results/tikz/trap_velocidad.tex": "6b14392428158436f8a20f0cee2e2160f19f3bee2ebe17f897d98a024db328fc",
+    "icr/context/Tesis/images/sin_ad_results/tikz/comparacion.csv": "90b578cddaba8560715a3c632add09c541eea569aac1c523b0213c601881d390",
+    "icr/context/Tesis/images/sin_ad_results/tikz/control.tex": "33f08201a6ef6c77bea551c6f29fa1f48304b564672c4cc7c3b9e93993599cd2",
+    "icr/context/Tesis/images/sin_ad_results/tikz/detalle.csv": "519ba8ae7bc5c9dbae2ccb7c0abae7297af77585ef79b7e21dd429b3a4dfe852",
+    "icr/context/Tesis/images/sin_ad_results/tikz/error.tex": "f37b3072ff61d81a1e864409cbe1ab2195c2b844dab07291825a2db989fc7257",
+    "icr/context/Tesis/images/sin_ad_results/tikz/estilo.tex": "14fd3107dbc0a510b52c3d60f5f79a016d545638545c1d2e4992af604c38e12c",
+    "icr/context/Tesis/images/sin_ad_results/tikz/posicion.tex": "694cebb1766f3a0c9c069537a867bf0593f2601c93ca81b0102ac085bb4b2351",
+    "icr/context/Tesis/images/sin_ad_results/tikz/sinAD_metricas.json": "5f8fc664c91289f58f8e10bd52b227f85b79a4cf61a82d77ef3cc43b2a75fff0",
+    "icr/context/Tesis/images/sin_ad_results/tikz/velocidad.tex": "cbef35b536db3494ed158473bb57b9961b87bcc00439257c59865ef87fd0eba7",
+    "icr/context/Tesis/main.tex": "f7d20e2e28e7e97d5d1bf30ef17f92c2f5bb2db21a888a3f81eac7fa7bc4111e",
+    "icr/context/Tesis/packages/packages.tex": "820f8c314a6f4d6d7047bd7ff5508220505347fffca4781e27624cb39baf9ca9",
+    "icr/context/Tesis/preamble/macros.tex": "b7e9b77fb40104abb5053a11ded474976bd3365e02aaa389714fc1854442b0e2",
+    "icr/context/Tesis/preamble/settings.tex": "6d9678ad7ad6a4a7494d384b8b084e0f5e83575f36a4729e0ef74917100da98c",
+    "icr/context/Tesis/preamble/titlepage.tex": "8cef92d21e72fa8ce039b1121f222ab98191fceab1037fedd0e3bffa831427b5",
+    "icr/context/Tesis/preamble/uamdato.tex": "4ec93dc844cca48adcf920020850741b277025e1b9c8afa4e347181796de7b2b",
+    "icr/context/Tesis/sections/abstract.tex": "8a52e431c5c927fdc2699293b67dca9b7ac643e4d645406e035227b3a5f81662",
+    "icr/context/Tesis/sections/resumen.tex": "33e3ee535e723c9db8ed3a914c1f3ff6998608ab090951472957814e4f183477",
+    "icr/grafo/grafo_tesis.json": "1ad536f0d9faed1ac24999564f36f409653b223added9851d1c4e0235c702edd"
+  }
+}

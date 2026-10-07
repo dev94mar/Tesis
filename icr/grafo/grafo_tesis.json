@@ -5,7 +5,7 @@
     "programa": "Maestría en Ciencias en Ingeniería Electromagnética, UAM-Azcapotzalco",
     "director": "Dr. Jesús Ulises Liceaga Castro",
     "codirector": "Dr. César Simón López Monsalvo",
-    "generado": "2026-10-05",
+    "generado": "2026-10-07",
     "version": 5,
     "fuentes": [
       "icr/context/tesis (LaTeX)",
@@ -134,6 +134,11 @@
         "version": 5,
         "fecha": "2026-10-05",
         "cambio": "Revalidacion del dictamen de publicabilidad (validacion/barrido_04/PUBLICABILIDAD.md): se resimularon con tolerancias estrictas los 21 puntos de las fronteras de Pareto PI/PII publicadas en la figura 6.5; el punto kK=4,alpha=0,3 de la frontera PII no fue robusto (cambio >150% en ambas metricas) y se excluyo de frontera_pii.csv y del parrafo que lo citaba como contraejemplo, sin afectar el cruce cerca de 0,008cm (los otros 9 puntos si son robustos). Un sondeo acotado de sensibilidad parametrica (b, c1 en +-5%) encontro que el candidato PII de atascamiento corto (kK=1,alpha=2,2,beta=1,05) diverge con b+5%; se agrego esa reserva en 06_doble_integral.tex. Nodos PII_V2 y R25 actualizados."
+      },
+      {
+        "version": 5,
+        "fecha": "2026-10-07",
+        "cambio": "Mantenimiento editorial y estructural, sin cambios de contenido cientifico (commits 5685535, 6c6fb13, 590df17, eb5654b, 59afc66). Figuras 3.2 y 4.3 (energia_coenergia.tex, escalon.tex): etiquetas de texto separadas de curvas/puntos que quedaban pegadas. Bibliografia IEEE cambiada de sorting=ynt a sorting=none para que el orden de citas coincida con el orden de aparicion en el texto. Limpieza de icr/context/tesis/: se eliminaron 247 archivos obsoletos (respaldos sueltos *.respaldo_*, carpetas _respaldo_* completas, chapters/chapter_{1,2,3} y las secciones de sections/ que main.tex ya no compilaba desde la reestructuracion); respaldo completo fuera del repo. Convencion de decimales invertida a peticion explicita del usuario: coma decimal -> punto decimal en todo el documento (capitulos/, chapters/apendices/, sections/resumen.tex y las figuras TikZ/pgfplots). CLAUDE.md actualizado para reflejar ambos cambios."
       }
     ]
   },

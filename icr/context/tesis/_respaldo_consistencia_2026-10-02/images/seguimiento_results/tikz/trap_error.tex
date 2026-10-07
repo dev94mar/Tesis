@@ -1,7 +1,0 @@
-\input{images/seguimiento_results/tikz/estilo}
-\begin{tikzpicture}
-\begin{axis}[seguimiento, xmin=0, xmax=2500, ylabel={error $e=r-x_1$ [\si{cm}]}]
-  \addplot[refc!60, thin] coordinates {(0,0) (2500,0)};
-  \addplot[tray, line width=0.7pt] table[x=t, y=e] {images/seguimiento_results/tikz/trap_error.csv};
-\end{axis}
-\end{tikzpicture}

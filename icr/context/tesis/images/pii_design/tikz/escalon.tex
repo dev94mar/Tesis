@@ -8,7 +8,7 @@
   \addplot[refc!30, densely dotted, forget plot] coordinates {(0,1.02) (0.6,1.02)};
   \addplot[tray, line width=1pt] table[x=t, y=y] {images/pii_design/tikz/escalon.csv};
   \addplot[marg, only marks, mark=*, mark size=1.8pt] coordinates {(\PIItp,\PIIyp)};
-  \node[font=\small, anchor=south west, inner sep=2pt] at (axis cs:\PIItp,\PIIyp)
+  \node[font=\small, anchor=west, inner sep=2pt, xshift=6pt] at (axis cs:\PIItp,\PIIyp)
     {sobrepaso \SI{\PIIos}{\percent}};
   \draw[marg, densely dashed] (axis cs:\PIIts,0) -- (axis cs:\PIIts,0.98);
   \node[font=\small, anchor=south west, fill=white, inner sep=2pt] at (axis cs:\PIIts,0.08)

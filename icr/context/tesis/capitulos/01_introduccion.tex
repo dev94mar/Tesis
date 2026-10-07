@@ -30,7 +30,7 @@ El segundo trabajo apunta en una dirección complementaria. Pérez-Gómez~\cite{
 
 La doble acción integral parece, entonces, reunir lo que piden ambos antecedentes. Un segundo integrador eleva la ganancia a baja frecuencia, que es la alta ganancia en estado estacionario que recomendaba Hernández Alcántara. Además, mientras el imán permanece atascado, la acción integral acumula el error y modifica el voltaje hasta despegarlo, lo que permite esperar una salida más rápida de la zona muerta y de la fricción estática. Ninguno de los dos trabajos, sin embargo, probó esa idea en un sistema inestable. En la configuración atractiva, el controlador no solo debe vencer la fricción y la zona muerta, sino estabilizar al mismo tiempo un equilibrio que se pierde en fracciones de segundo. Extender el PII a esta configuración, y medir qué aporta realmente su segunda integración, es la motivación central de este trabajo.
 
-A esta motivación se suma una restricción práctica: con el voltaje del actuador limitado a 3{,}5~V, hay que averiguar en qué posiciones puede el sistema moverse de verdad, y no solo sostenerse.
+A esta motivación se suma una restricción práctica: con el voltaje del actuador limitado a 3.5~V, hay que averiguar en qué posiciones puede el sistema moverse de verdad, y no solo sostenerse.
 
 \section{Revisión bibliográfica}
 
@@ -65,7 +65,7 @@ m\ddot{x} = \frac{u}{b\,(a-x)^4} - f_{\text{fr}} - mg .
 \end{equation}
 La posición $x$ del imán se mide en centímetros sobre la varilla y crece hacia la bobina superior, de modo que $a-x$ es la distancia entre ambos. El primer término de la ecuación de movimiento~\eqref{eq:intro_modelo} es la fuerza electromagnética que da el fabricante~\cite{parks}. Esa fuerza es proporcional al voltaje $u$ aplicado a la bobina y crece con la cuarta potencia inversa de la distancia, y esta dependencia es la que vuelve inestables los equilibrios. Los parámetros $a$ y $b$ y la masa $m$ del imán fueron identificados experimentalmente por Hernández Alcántara~\cite{diana_tesis}. El término $f_{\text{fr}}$ reúne la fricción con la varilla: es viscosa mientras el imán desliza y estática, hasta un valor máximo $F_s$, mientras está detenido. El último término es el peso del imán.
 
-El voltaje $u$ que llega a la bobina pasa antes por dos restricciones del actuador. Está acotado al intervalo de 0 a 3{,}5~V y atraviesa una zona muerta centrada en el voltaje de equilibrio de la posición actual. El controlador solo dispone de la medición de la posición.
+El voltaje $u$ que llega a la bobina pasa antes por dos restricciones del actuador. Está acotado al intervalo de 0 a 3.5~V y atraviesa una zona muerta centrada en el voltaje de equilibrio de la posición actual. El controlador solo dispone de la medición de la posición.
 
 Con este modelo, el problema consiste en diseñar, sobre el modelo linealizado alrededor de un punto de equilibrio, un controlador lineal $C(s)$ que lleve al imán de una posición a otra y siga referencias variables en el tiempo dentro del intervalo que permite el actuador, sin compensar explícitamente la fricción ni la zona muerta. El controlador que se propone es un PII, y su desempeño se evalúa por simulación sobre el modelo no lineal completo.
 

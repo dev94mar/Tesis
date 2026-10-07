@@ -4,7 +4,7 @@
     xlabel={tiempo desde el inicio del atascamiento [\si{s}]}, ylabel={cambio de voltaje [\si{V}]},
     legend style={at={(0.98,0.03)}, anchor=south east}, legend cell align=left]
   \addplot[ver, densely dashed, line width=0.9pt] coordinates {(0,0.3461) (0.45,0.3461)};
-  \addlegendentry{$u_e F_s/(mg)=0{,}346$ V}
+  \addlegendentry{$u_e F_s/(mg)=0.346$ V}
   \addplot[ctl2, line width=0.8pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pi.csv};
   \addlegendentry{PI (simulación)}
   \addplot[ctl2!70!black, dashed, line width=1pt] table[x=tau, y=du] {images/ciclo_results/tikz/atasco_pi_teo.csv};

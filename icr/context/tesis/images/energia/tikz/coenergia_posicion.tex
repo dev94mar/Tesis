@@ -9,17 +9,17 @@
     width=0.85\textwidth, height=6cm,
     grid=major, grid style={gray!25},
     tick label style={font=\small}, label style={font=\small}, legend style={font=\small},
-    /pgf/number format/use comma, scaled ticks=false,
+    scaled ticks=false,
     xlabel={posición $x_1$ [\si{cm}]}, ylabel={coenergía $W'$ [\si{kg.cm^2/s^2}]},
     xmin=-4, xmax=-2, ymin=0, ymax=950,
     legend style={at={(0.02,0.98)}, anchor=north west}, legend cell align=left,
     domain=-4:-2, samples=60,
 ]
   \addplot[tray, thick] {1.5/(3*1.6163e-6*(7.17184-x)^3)};
-  \addlegendentry{$u=1{,}5$~V}
+  \addlegendentry{$u=1.5$~V}
   \addplot[ctl2, thick] {2.0/(3*1.6163e-6*(7.17184-x)^3)};
-  \addlegendentry{$u=2{,}0$~V}
+  \addlegendentry{$u=2.0$~V}
   \addplot[ver, thick] {2.5/(3*1.6163e-6*(7.17184-x)^3)};
-  \addlegendentry{$u=2{,}5$~V}
+  \addlegendentry{$u=2.5$~V}
 \end{axis}
 \end{tikzpicture}

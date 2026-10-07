@@ -23,15 +23,15 @@ Usa lualatex (por `.latexmkrc`) y biber. El `biber` de TeX Live 2024 está roto 
 
 ## Convenciones del modelo
 
-- Posición $x$ en cm, positiva hacia la bobina superior; distancia imán–bobina $a - x$. Fuerzas en kg·cm/s² ($mg = 138{,}3$).
-- Parámetros: $a = 7{,}17184$ cm, $b = 1{,}6163\times10^{-6}$, $c_1 = 8{,}563$ s⁻¹ (por unidad de masa), $m = 0{,}141$ kg, $g = 981$ cm/s², $F_s = 20$, $DV = 0{,}02$ cm/s.
-- Actuador $u \in [0, 3{,}5]$ V; zona muerta simulada de −0,02/+0,025 V. Las pruebas se hacen entre −3 y −2 cm (en −4 cm el imán no puede moverse con 3,5 V).
+- Posición $x$ en cm, positiva hacia la bobina superior; distancia imán–bobina $a - x$. Fuerzas en kg·cm/s² ($mg = 138.3$).
+- Parámetros: $a = 7.17184$ cm, $b = 1.6163\times10^{-6}$, $c_1 = 8.563$ s⁻¹ (por unidad de masa), $m = 0.141$ kg, $g = 981$ cm/s², $F_s = 20$, $DV = 0.02$ cm/s.
+- Actuador $u \in [0, 3.5]$ V; zona muerta simulada de −0.02/+0.025 V. Las pruebas se hacen entre −3 y −2 cm (en −4 cm el imán no puede moverse con 3.5 V).
 - Controlador de la tesis: `PII_lic.mat`. Simulador: `inestable/PII_inestable/maglev_karnopp.m` (corregido; no reintroducir la versión anterior).
 
 ## Al editar
 
 - Ya no se guardan respaldos sueltos dentro de `icr/context/tesis/` (se limpiaron el 2026-10-07); para cambios grandes, respaldar fuera del repo (p. ej. `TESIS/backups/`) y verificar que compile sin avisos.
 - Toda cifra del texto debe salir de los datos de simulación (JSON de métricas en `images/*/tikz/` o en los scripts).
-- Coma decimal en el texto en español (`0{,}5`); figuras nuevas en TikZ.
+- Punto decimal en todo el documento, pese al español (`0.5`, no `0{,}5`; cambio hecho el 2026-10-07 a pedido del autor); figuras nuevas en TikZ, sin la opción `/pgf/number format/use comma` en pgfplots.
 - Aplicar las reglas de `~/.claude/reglas/escritura_matematica.md` (toda ecuación desplegada numerada, con `\label` y puntuación; símbolos explicados en prosa; siglas definidas una vez, en su primer uso).
 - Extensiones fijadas por el autor: la introducción ocupa el 10 % de las páginas del documento y las conclusiones entre el 3 y el 5 %. Medirlas tras cualquier cambio que altere el total.

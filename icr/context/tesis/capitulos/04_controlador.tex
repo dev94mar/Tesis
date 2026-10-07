@@ -6,10 +6,10 @@ El capítulo~\ref{chap:modelo} dejó establecida la planta y sus límites. Este 
 
 El diseño parte del modelo linealizado~\eqref{eq:lineal} del capítulo~\ref{chap:modelo}, evaluado en el punto de equilibrio $x_1^*=-4$~cm. La entrada es el voltaje del actuador y la salida es la posición del imán. Con esos datos, la función de transferencia de la planta es
 \begin{equation}
-G(s)=\frac{281{,}7}{s^{2}+8{,}563\,s-351{,}2} .
+G(s)=\frac{281.7}{s^{2}+8.563\,s-351.2} .
 \label{eq:planta}
 \end{equation}
-El numerador $281{,}7$ es la ganancia de entrada $1/\bigl(mb(a-x_1^*)^4\bigr)$ del modelo~\eqref{eq:lineal}, y el término independiente del denominador, $-351{,}2$, es el valor de $4g/(a-x_1^*)$ de la ecuación característica~\eqref{eq:caracteristica}. Su signo negativo produce un polo real en el semiplano derecho, en $14{,}94$~rad/s, que es la inestabilidad en lazo abierto de la configuración atractiva descrita en el capítulo~\ref{chap:introduccion}. El coeficiente $8{,}563$ es la fricción viscosa $c_1$.
+El numerador $281.7$ es la ganancia de entrada $1/\bigl(mb(a-x_1^*)^4\bigr)$ del modelo~\eqref{eq:lineal}, y el término independiente del denominador, $-351.2$, es el valor de $4g/(a-x_1^*)$ de la ecuación característica~\eqref{eq:caracteristica}. Su signo negativo produce un polo real en el semiplano derecho, en $14.94$~rad/s, que es la inestabilidad en lazo abierto de la configuración atractiva descrita en el capítulo~\ref{chap:introduccion}. El coeficiente $8.563$ es la fricción viscosa $c_1$.
 
 El controlador debe cumplir cuatro objetivos. Debe estabilizar el lazo, para lo cual el diagrama de Nyquist ha de rodear el punto $-1$ una vez en sentido antihorario, como exige el criterio con un polo inestable (sección~\ref{sec:fund_nyquist}). Debe dejar márgenes de estabilidad razonables. Debe anular el error estacionario ante escalones y rampas, lo que pide un lazo de tipo dos (sección~\ref{sec:fund_tipo}). Y debe proporcionar alta ganancia a baja frecuencia, la motivación de la doble acción integral expuesta en la sección~\ref{sec:motivacion} del capítulo~\ref{chap:introduccion}.
 
@@ -17,18 +17,18 @@ El controlador debe cumplir cuatro objetivos. Debe estabilizar el lazo, para lo 
 
 El controlador se ajustó sobre la planta~\eqref{eq:planta}, de forma interactiva en los editores de Bode y del lugar de las raíces. El resultado es
 \begin{equation}
-C(s)=\frac{152{,}43\,(s+4{,}875)(s+1{,}861)(s+17{,}31)}
-{s^{2}(s+301{,}1)} .
+C(s)=\frac{152.43\,(s+4.875)(s+1.861)(s+17.31)}
+{s^{2}(s+301.1)} .
 \label{eq:pii}
 \end{equation}
 
 \subsection{Estructura}
 
-El controlador~\eqref{eq:pii} tiene tres partes. El doble integrador $1/s^2$ hace al lazo de tipo dos, lo que anula el error estacionario ante escalones y rampas, y proporciona la acción acumulada que se espera que ayude a salir de la zona muerta. Los ceros en $-1{,}861$ y $-4{,}875$~rad/s compensan el atraso de fase de los dos integradores por debajo de la frecuencia de cruce. El par cero-polo en $-17{,}31$ y $-301{,}1$~rad/s actúa como red de adelanto, con su máximo aporte de fase cerca de $72$~rad/s.
+El controlador~\eqref{eq:pii} tiene tres partes. El doble integrador $1/s^2$ hace al lazo de tipo dos, lo que anula el error estacionario ante escalones y rampas, y proporciona la acción acumulada que se espera que ayude a salir de la zona muerta. Los ceros en $-1.861$ y $-4.875$~rad/s compensan el atraso de fase de los dos integradores por debajo de la frecuencia de cruce. El par cero-polo en $-17.31$ y $-301.1$~rad/s actúa como red de adelanto, con su máximo aporte de fase cerca de $72$~rad/s.
 
 \subsection{Márgenes de estabilidad}
 
-Con esta estructura, el lazo abierto $L(s)=C(s)G(s)$ tiene un margen de fase de $59{,}9^\circ$ en $129{,}3$~rad/s (figura~\ref{bode_fase}). Como la planta tiene un polo inestable, el margen de ganancia es inferior (sección~\ref{sec:fund_nyquist}): el lazo sigue siendo estable si la ganancia aumenta, pero se inestabiliza si disminuye por debajo de $0{,}14$ veces su valor nominal ($-17{,}1$~dB en $9{,}63$~rad/s). Los polos del lazo cerrado son $-143{,}3\pm133{,}7\mathrm{j}$, $-14{,}10$, $-7{,}28$ y $-1{,}71$, todos en el semiplano izquierdo.
+Con esta estructura, el lazo abierto $L(s)=C(s)G(s)$ tiene un margen de fase de $59.9^\circ$ en $129.3$~rad/s (figura~\ref{bode_fase}). Como la planta tiene un polo inestable, el margen de ganancia es inferior (sección~\ref{sec:fund_nyquist}): el lazo sigue siendo estable si la ganancia aumenta, pero se inestabiliza si disminuye por debajo de $0.14$ veces su valor nominal ($-17.1$~dB en $9.63$~rad/s). Los polos del lazo cerrado son $-143.3\pm133.7\mathrm{j}$, $-14.10$, $-7.28$ y $-1.71$, todos en el semiplano izquierdo.
 
 \begin{figure}[ht]
     \centering
@@ -48,7 +48,7 @@ El diagrama de Nyquist (figura~\ref{nyquist}) rodea una vez el punto $-1$ en sen
 
 \subsection{Respuesta al escalón}
 
-En lazo cerrado lineal, la respuesta al escalón (figura~\ref{step_response}) tiene un tiempo de subida de $9{,}3$~ms, un sobrepaso de $16{,}9$\,\% con pico de $1{,}169$ en $23{,}8$~ms y un tiempo de establecimiento de $0{,}284$~s.
+En lazo cerrado lineal, la respuesta al escalón (figura~\ref{step_response}) tiene un tiempo de subida de $9.3$~ms, un sobrepaso de $16.9$\,\% con pico de $1.169$ en $23.8$~ms y un tiempo de establecimiento de $0.284$~s.
 
 \begin{figure}[ht]
     \centering
@@ -59,7 +59,7 @@ En lazo cerrado lineal, la respuesta al escalón (figura~\ref{step_response}) ti
 
 \section{Robustez en el intervalo de operación}\label{sec:robustez_pii}
 
-El controlador se diseñó en $-4$~cm, pero las pruebas se hacen entre $-3$ y $-2$~cm. La sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} justifica ese intervalo por el voltaje que el actuador puede entregar, y la sección~\ref{sec:intervalo} del capítulo~\ref{chap:desempeno} lo confirma con un barrido de escalones. Conviene entonces saber si el diseño se sostiene donde se opera. Al acercarse el imán a la bobina, el polo inestable se desplaza hacia la derecha, de $14{,}94$ a $16{,}84$~rad/s, y la planta se vuelve más difícil de estabilizar. La tabla~\ref{tab:pii_intervalo} reúne el margen de fase y el sobrepaso lineal del mismo controlador~\eqref{eq:pii}, sin reajuste, sobre la planta linealizada en cada posición.
+El controlador se diseñó en $-4$~cm, pero las pruebas se hacen entre $-3$ y $-2$~cm. La sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} justifica ese intervalo por el voltaje que el actuador puede entregar, y la sección~\ref{sec:intervalo} del capítulo~\ref{chap:desempeno} lo confirma con un barrido de escalones. Conviene entonces saber si el diseño se sostiene donde se opera. Al acercarse el imán a la bobina, el polo inestable se desplaza hacia la derecha, de $14.94$ a $16.84$~rad/s, y la planta se vuelve más difícil de estabilizar. La tabla~\ref{tab:pii_intervalo} reúne el margen de fase y el sobrepaso lineal del mismo controlador~\eqref{eq:pii}, sin reajuste, sobre la planta linealizada en cada posición.
 
 \begin{table}[ht]
     \centering
@@ -69,23 +69,23 @@ El controlador se diseñó en $-4$~cm, pero las pruebas se hacen entre $-3$ y $-
         \hline
         $x_1^*$ [cm] & Polo inestable [rad/s] & Margen de fase & Sobrepaso lineal \\
         \hline
-        $-4{,}0$ (diseño) & $14{,}94$ & $59{,}9^\circ$ & $16{,}9$\,\% \\
-        $-3{,}0$ & $15{,}82$ & $54{,}5^\circ$ & $19{,}2$\,\% \\
-        $-2{,}5$ & $16{,}31$ & $51{,}1^\circ$ & $21{,}6$\,\% \\
-        $-2{,}0$ & $16{,}84$ & $47{,}4^\circ$ & $24{,}7$\,\% \\
+        $-4.0$ (diseño) & $14.94$ & $59.9^\circ$ & $16.9$\,\% \\
+        $-3.0$ & $15.82$ & $54.5^\circ$ & $19.2$\,\% \\
+        $-2.5$ & $16.31$ & $51.1^\circ$ & $21.6$\,\% \\
+        $-2.0$ & $16.84$ & $47.4^\circ$ & $24.7$\,\% \\
         \hline
     \end{tabular}
 \end{table}
 
-El lazo permanece estable en todo el intervalo, con menos margen conforme el imán se acerca a la bobina. El margen de fase baja de $59{,}9^\circ$ a $47{,}4^\circ$ y el sobrepaso lineal sube de $16{,}9$\,\% a $24{,}7$\,\%. El controlador, por tanto, no necesita reajustarse para operar entre $-3$ y $-2$~cm, y todas las pruebas de los capítulos siguientes lo emplean tal como está.
+El lazo permanece estable en todo el intervalo, con menos margen conforme el imán se acerca a la bobina. El margen de fase baja de $59.9^\circ$ a $47.4^\circ$ y el sobrepaso lineal sube de $16.9$\,\% a $24.7$\,\%. El controlador, por tanto, no necesita reajustarse para operar entre $-3$ y $-2$~cm, y todas las pruebas de los capítulos siguientes lo emplean tal como está.
 
 \section{El controlador PI de comparación}\label{sec:pi}
 
 La pregunta central del trabajo es qué aporta la segunda integración. Para responderla se necesita un controlador de referencia que difiera del PII en eso y en poco más. El controlador PI de comparación es
 \begin{equation}
-C_{PI}(s)=\frac{178{,}14\,(s+15)(s+12{,}91)}{s\,(s+400)} .
+C_{PI}(s)=\frac{178.14\,(s+15)(s+12.91)}{s\,(s+400)} .
 \label{eq:pi}
 \end{equation}
-A diferencia del PII~\eqref{eq:pii}, tiene un solo integrador, de modo que el lazo es de tipo uno y su ganancia a baja frecuencia crece más lentamente. Conserva la red de adelanto, con un polo en $-400$~rad/s, y dos ceros en $-15$ y $-12{,}91$~rad/s. Sobre la planta~\eqref{eq:planta} tiene un margen de fase de $64{,}1^\circ$ en $118{,}6$~rad/s, un sobrepaso lineal de $17{,}6$\,\% y un tiempo de establecimiento lineal de $0{,}240$~s. Estos valores son comparables a los del PII ($59{,}9^\circ$, $16{,}9$\,\% y $0{,}284$~s), de modo que la diferencia entre ambos lazos queda en la segunda acción integral y no en una respuesta lineal mejor o peor sintonizada.
+A diferencia del PII~\eqref{eq:pii}, tiene un solo integrador, de modo que el lazo es de tipo uno y su ganancia a baja frecuencia crece más lentamente. Conserva la red de adelanto, con un polo en $-400$~rad/s, y dos ceros en $-15$ y $-12.91$~rad/s. Sobre la planta~\eqref{eq:planta} tiene un margen de fase de $64.1^\circ$ en $118.6$~rad/s, un sobrepaso lineal de $17.6$\,\% y un tiempo de establecimiento lineal de $0.240$~s. Estos valores son comparables a los del PII ($59.9^\circ$, $16.9$\,\% y $0.284$~s), de modo que la diferencia entre ambos lazos queda en la segunda acción integral y no en una respuesta lineal mejor o peor sintonizada.
 
 Este controlador servirá en el capítulo~\ref{chap:doble_integral} para aislar el efecto de la segunda integración sobre el comportamiento con atascamiento-deslizamiento y zona muerta. Antes, el capítulo~\ref{chap:desempeno} evalúa el desempeño del PII en simulación.

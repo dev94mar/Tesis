@@ -5,24 +5,24 @@ El capítulo~\ref{chap:controlador} diseñó el controlador PII sobre el modelo 
 \section{Intervalo de operación}
 \label{sec:intervalo}
 
-El actuador está acotado a $u\in[0;\,3{,}5]$~V, y la sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} muestra que con esa cota el imán puede sostenerse en $-4$~cm, el punto de diseño, pero no subir desde ahí. Para delimitar en qué posiciones sí puede desplazarse de forma regulada, se simularon 7503 escalones con distintas posiciones iniciales y finales, con el PII y con el PI, en presencia de atascamiento-deslizamiento. Una referencia se considera alcanzable si el imán se sostiene en la posición inicial antes del escalón, no diverge, y en los últimos 5~s de la simulación de 40~s el error se mantiene por debajo de $0{,}05$~cm. La tabla~\ref{tab:intervalo} resume el resultado con el PII.
+El actuador está acotado a $u\in[0;\,3.5]$~V, y la sección~\ref{sec:actuador_estatico} del capítulo~\ref{chap:modelo} muestra que con esa cota el imán puede sostenerse en $-4$~cm, el punto de diseño, pero no subir desde ahí. Para delimitar en qué posiciones sí puede desplazarse de forma regulada, se simularon 7503 escalones con distintas posiciones iniciales y finales, con el PII y con el PI, en presencia de atascamiento-deslizamiento. Una referencia se considera alcanzable si el imán se sostiene en la posición inicial antes del escalón, no diverge, y en los últimos 5~s de la simulación de 40~s el error se mantiene por debajo de $0.05$~cm. La tabla~\ref{tab:intervalo} resume el resultado con el PII.
 
 \begin{table}[ht]
 \centering
-\caption{Referencias alcanzables con $u\le3{,}5$~V desde distintas posiciones iniciales (PII, con atascamiento-deslizamiento).}
+\caption{Referencias alcanzables con $u\le3.5$~V desde distintas posiciones iniciales (PII, con atascamiento-deslizamiento).}
 \label{tab:intervalo}
 \begin{tabular}{|c|c|}
 \hline
 Posición inicial [cm] & Referencias alcanzables [cm] \\ \hline
-$-4{,}0$ & ninguna: el imán se sostiene pero no sube \\ \hline
-$-3{,}5$ & de $-3{,}6$ a $-2{,}0$ \\ \hline
-$-3{,}0$ & de $-3{,}5$ a $-1{,}5$ \\ \hline
-$-2{,}0$ & de $-3{,}3$ a $-0{,}5$ \\ \hline
-$-1{,}0$ & de $-2{,}5$ a $+0{,}5$ \\ \hline
+$-4.0$ & ninguna: el imán se sostiene pero no sube \\ \hline
+$-3.5$ & de $-3.6$ a $-2.0$ \\ \hline
+$-3.0$ & de $-3.5$ a $-1.5$ \\ \hline
+$-2.0$ & de $-3.3$ a $-0.5$ \\ \hline
+$-1.0$ & de $-2.5$ a $+0.5$ \\ \hline
 \end{tabular}
 \end{table}
 
-Desde $-4$~cm, el criterio marca también como alcanzable la referencia de $-3{,}95$~cm, pero solo porque está a menos de $0{,}05$~cm de la posición inicial, sin que el imán se mueva; la tabla no la cuenta. Los cambios de referencia son viables a partir de unos $-3{,}6$~cm. Por ello, las pruebas de este capítulo se realizan en el intervalo de $-3$ a $-2$~cm, con un escalón de $-2$ a $-3$~cm que deja margen respecto a ambos límites. Los márgenes de estabilidad del PII en ese intervalo se presentaron en la sección~\ref{sec:robustez_pii}.
+Desde $-4$~cm, el criterio marca también como alcanzable la referencia de $-3.95$~cm, pero solo porque está a menos de $0.05$~cm de la posición inicial, sin que el imán se mueva; la tabla no la cuenta. Los cambios de referencia son viables a partir de unos $-3.6$~cm. Por ello, las pruebas de este capítulo se realizan en el intervalo de $-3$ a $-2$~cm, con un escalón de $-2$ a $-3$~cm que deja margen respecto a ambos límites. Los márgenes de estabilidad del PII en ese intervalo se presentaron en la sección~\ref{sec:robustez_pii}.
 
 \section{Simulación no lineal sin atascamiento-deslizamiento}
 
@@ -31,12 +31,12 @@ La primera prueba establece la referencia ideal. El controlador PII se evaluó s
 m\ddot{x} = \frac{u}{b\,(a-x)^4} - m g - m c_1 \dot{x} ,
 \label{eq:nl_sin_ad}
 \end{equation}
-es decir, sin la fricción estática de Karnopp ni la zona muerta del actuador que las secciones~\ref{sec:friccion_modelo} y~\ref{sec:zm_modelo} incorporan a la ecuación de movimiento~\eqref{eq:mec}. Las condiciones son las de la prueba de regulación de la sección~\ref{sec:regulacion}: escalón de referencia de $-2$ a $-3$~cm en $t=10$~s, señal de control acotada a $u\in[0;\,3{,}5]$~V y controlador inicializado en el estado estacionario correspondiente a $x_1=-2$~cm. Para facilitar la comparación, cada figura superpone el resultado con atascamiento-deslizamiento (AD), que se presenta en esa misma sección.
+es decir, sin la fricción estática de Karnopp ni la zona muerta del actuador que las secciones~\ref{sec:friccion_modelo} y~\ref{sec:zm_modelo} incorporan a la ecuación de movimiento~\eqref{eq:mec}. Las condiciones son las de la prueba de regulación de la sección~\ref{sec:regulacion}: escalón de referencia de $-2$ a $-3$~cm en $t=10$~s, señal de control acotada a $u\in[0;\,3.5]$~V y controlador inicializado en el estado estacionario correspondiente a $x_1=-2$~cm. Para facilitar la comparación, cada figura superpone el resultado con atascamiento-deslizamiento (AD), que se presenta en esa misma sección.
 
 \begin{figure}[ht]
     \centering
     \input{images/sin_ad_results/tikz/posicion}
-    \caption[Sin AD: posición]{Posición del imán con el modelo no lineal sin atascamiento-deslizamiento (sin AD) y con él (con AD). Abajo, detalle del transitorio entre 9,8 y 12~s.}
+    \caption[Sin AD: posición]{Posición del imán con el modelo no lineal sin atascamiento-deslizamiento (sin AD) y con él (con AD). Abajo, detalle del transitorio entre 9.8 y 12~s.}
     \label{fig:sinad_pos}
 \end{figure}
 
@@ -61,25 +61,25 @@ es decir, sin la fricción estática de Karnopp ni la zona muerta del actuador q
     \label{fig:sinad_ctrl}
 \end{figure}
 
-La figura~\ref{fig:sinad_pos} muestra que, sin AD, el lazo cerrado no lineal alcanza la nueva referencia con un sobrepaso de $23{,}7$\,\% a los $0{,}15$~s del escalón y entra en la banda de $\pm 2$\,\% del cambio de referencia en $0{,}48$~s. Este sobrepaso se encuentra entre los que predice el modelo linealizado en $x_1^*=-3$~cm ($19{,}2$\,\%) y en $x_1^*=-2$~cm ($24{,}7$\,\%), lo que confirma la coherencia entre el modelo empleado para el diseño y la planta no lineal. La velocidad (figura~\ref{fig:sinad_vel}) se anula una vez concluido el transitorio, el error (figura~\ref{fig:sinad_error}) converge a cero y la señal de control (figura~\ref{fig:sinad_ctrl}) converge al voltaje de equilibrio $u_e=2{,}3934$~V correspondiente a $x_1=-3$~cm, sin alcanzar la saturación superior.
+La figura~\ref{fig:sinad_pos} muestra que, sin AD, el lazo cerrado no lineal alcanza la nueva referencia con un sobrepaso de $23.7$\,\% a los $0.15$~s del escalón y entra en la banda de $\pm 2$\,\% del cambio de referencia en $0.48$~s. Este sobrepaso se encuentra entre los que predice el modelo linealizado en $x_1^*=-3$~cm ($19.2$\,\%) y en $x_1^*=-2$~cm ($24.7$\,\%), lo que confirma la coherencia entre el modelo empleado para el diseño y la planta no lineal. La velocidad (figura~\ref{fig:sinad_vel}) se anula una vez concluido el transitorio, el error (figura~\ref{fig:sinad_error}) converge a cero y la señal de control (figura~\ref{fig:sinad_ctrl}) converge al voltaje de equilibrio $u_e=2.3934$~V correspondiente a $x_1=-3$~cm, sin alcanzar la saturación superior.
 
-La comparación con el caso con AD muestra que el transitorio es prácticamente idéntico (sobrepaso de $23{,}6$\,\%). La diferencia aparece en estado estacionario, donde la fricción estática y la zona muerta sustituyen la convergencia asintótica por un ciclo límite de $0{,}033$~cm pico a pico. Con ello se cumple el tercer objetivo específico de la tesis (capítulo~\ref{chap:introduccion}): simular el desempeño del controlador en el modelo no lineal sin atascamiento-deslizamiento.
+La comparación con el caso con AD muestra que el transitorio es prácticamente idéntico (sobrepaso de $23.6$\,\%). La diferencia aparece en estado estacionario, donde la fricción estática y la zona muerta sustituyen la convergencia asintótica por un ciclo límite de $0.033$~cm pico a pico. Con ello se cumple el tercer objetivo específico de la tesis (capítulo~\ref{chap:introduccion}): simular el desempeño del controlador en el modelo no lineal sin atascamiento-deslizamiento.
 
 \FloatBarrier
 
 \section{Regulación con atascamiento-deslizamiento}
 \label{sec:regulacion}
 
-La prueba de regulación aplica el mismo escalón de $-2$ a $-3$~cm en $t=10$~s al lazo completo: PII, zona muerta y fricción de Karnopp, con la señal de control acotada a $u\in[0;\,3{,}5]$~V. Se simulan 40~s con un periodo de muestreo de 1~ms; el controlador parte del estado estacionario correspondiente a $x_1=-2$~cm, de modo que antes del escalón el imán permanece en reposo.
+La prueba de regulación aplica el mismo escalón de $-2$ a $-3$~cm en $t=10$~s al lazo completo: PII, zona muerta y fricción de Karnopp, con la señal de control acotada a $u\in[0;\,3.5]$~V. Se simulan 40~s con un periodo de muestreo de 1~ms; el controlador parte del estado estacionario correspondiente a $x_1=-2$~cm, de modo que antes del escalón el imán permanece en reposo.
 
-La figura~\ref{posicion} muestra la respuesta. El imán alcanza un mínimo de $-3{,}236$~cm a los $0{,}15$~s del escalón, lo que equivale a un sobrepaso de $23{,}6$\,\%, y entra en la banda de $\pm0{,}05$~cm alrededor de la referencia a los $0{,}40$~s. A partir de ahí no se detiene sobre la referencia: oscila en un ciclo límite (\emph{hunting}, sección~\ref{sec:fund_friccion}) de $0{,}033$~cm pico a pico. En esta tesis, «ciclo límite» designa esa oscilación persistente observada en simulaciones de duración finita; no se demuestra que sea una órbita periódica aislada ni que atraiga a todas las trayectorias. La oscilación tiene un error máximo de $0{,}018$~cm y un error medio de $6\times10^{-5}$~cm en los últimos 10~s. La velocidad (figura~\ref{velocidad}) alterna pulsos de deslizamiento con intervalos en cero, y el imán permanece atascado el 74\,\% del tiempo en estado estacionario. El error (figura~\ref{error}) refleja el mismo comportamiento.
+La figura~\ref{posicion} muestra la respuesta. El imán alcanza un mínimo de $-3.236$~cm a los $0.15$~s del escalón, lo que equivale a un sobrepaso de $23.6$\,\%, y entra en la banda de $\pm0.05$~cm alrededor de la referencia a los $0.40$~s. A partir de ahí no se detiene sobre la referencia: oscila en un ciclo límite (\emph{hunting}, sección~\ref{sec:fund_friccion}) de $0.033$~cm pico a pico. En esta tesis, «ciclo límite» designa esa oscilación persistente observada en simulaciones de duración finita; no se demuestra que sea una órbita periódica aislada ni que atraiga a todas las trayectorias. La oscilación tiene un error máximo de $0.018$~cm y un error medio de $6\times10^{-5}$~cm en los últimos 10~s. La velocidad (figura~\ref{velocidad}) alterna pulsos de deslizamiento con intervalos en cero, y el imán permanece atascado el 74\,\% del tiempo en estado estacionario. El error (figura~\ref{error}) refleja el mismo comportamiento.
 
-La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en el instante del escalón, el límite inferior del actuador, para dejar que el imán se aleje de la bobina. Alcanza un máximo de $3{,}28$~V durante el transitorio y en estado estacionario oscila en diente de sierra alrededor de su valor medio de $2{,}41$~V, sin llegar al límite superior. El capítulo~\ref{chap:doble_integral} analiza el origen de esta oscilación.
+La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en el instante del escalón, el límite inferior del actuador, para dejar que el imán se aleje de la bobina. Alcanza un máximo de $3.28$~V durante el transitorio y en estado estacionario oscila en diente de sierra alrededor de su valor medio de $2.41$~V, sin llegar al límite superior. El capítulo~\ref{chap:doble_integral} analiza el origen de esta oscilación.
 
 \begin{figure}[ht]
     \centering
     \input{images/regulation_results/tikz/posicion}
-    \caption[Posición (regulación)]{Posición del imán ante un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s (PII, $u\in[0;\,3{,}5]$~V). El recuadro amplía el transitorio y el ciclo límite de atascamiento-deslizamiento.}
+    \caption[Posición (regulación)]{Posición del imán ante un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s (PII, $u\in[0;\,3.5]$~V). El recuadro amplía el transitorio y el ciclo límite de atascamiento-deslizamiento.}
     \label{posicion}
 \end{figure}
 
@@ -110,14 +110,14 @@ La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en 
 \label{sec:lineal_ad}
 % Generado a partir de calculus/Final_Bien/evidencia_P8.m (simulador corregido).
 
-El ciclo límite podría deberse a la no linealidad de la fuerza electromagnética o a las no linealidades no suaves del actuador y la fricción. Para separarlas, el PII se probó sobre el modelo linealizado en $x_1^*=-2{,}5$~cm al que se añadieron la zona muerta y la fricción de Karnopp, con la misma prueba de la sección~\ref{sec:regulacion} ($-2\to-3$~cm, $u\in[0;\,3{,}5]$~V). La figura~\ref{fig:p8_lineal_ad} compara ambos resultados. El comportamiento es prácticamente el mismo: sobrepaso de $24{,}4$\,\% frente a $23{,}6$\,\%, entrada en la banda de $\pm5$\,\% en $0{,}41$ frente a $0{,}40$~s y un ciclo límite de $0{,}028$ frente a $0{,}033$~cm pico a pico. La única diferencia apreciable es el voltaje de equilibrio final ($2{,}36$~V en el modelo lineal frente a $2{,}39$~V), consecuencia del error de linealización a $0{,}5$~cm del punto de operación.
+El ciclo límite podría deberse a la no linealidad de la fuerza electromagnética o a las no linealidades no suaves del actuador y la fricción. Para separarlas, el PII se probó sobre el modelo linealizado en $x_1^*=-2.5$~cm al que se añadieron la zona muerta y la fricción de Karnopp, con la misma prueba de la sección~\ref{sec:regulacion} ($-2\to-3$~cm, $u\in[0;\,3.5]$~V). La figura~\ref{fig:p8_lineal_ad} compara ambos resultados. El comportamiento es prácticamente el mismo: sobrepaso de $24.4$\,\% frente a $23.6$\,\%, entrada en la banda de $\pm5$\,\% en $0.41$ frente a $0.40$~s y un ciclo límite de $0.028$ frente a $0.033$~cm pico a pico. La única diferencia apreciable es el voltaje de equilibrio final ($2.36$~V en el modelo lineal frente a $2.39$~V), consecuencia del error de linealización a $0.5$~cm del punto de operación.
 
 El ciclo límite aparece, pues, aun cuando la fuerza electromagnética es lineal. Se debe a la zona muerta y a la fricción estática, no a la no linealidad de la fuerza.
 
 \begin{figure}[ht]
     \centering
     \input{images/p8_results/tikz/lineal_ad}
-    \caption[Modelo lineal con atascamiento-deslizamiento]{Regulación con zona muerta y fricción de Karnopp sobre el modelo lineal (en $x_1^*=-2{,}5$~cm) y sobre el modelo no lineal. Arriba, posición; abajo, señal de control.}
+    \caption[Modelo lineal con atascamiento-deslizamiento]{Regulación con zona muerta y fricción de Karnopp sobre el modelo lineal (en $x_1^*=-2.5$~cm) y sobre el modelo no lineal. Arriba, posición; abajo, señal de control.}
     \label{fig:p8_lineal_ad}
 \end{figure}
 
@@ -125,7 +125,7 @@ El ciclo límite aparece, pues, aun cuando la fuerza electromagnética es lineal
 
 \section{Seguimiento}
 
-La regulación fija la referencia durante decenas de segundos. Las pruebas de seguimiento, en cambio, hacen que la referencia varíe continuamente, de modo que el imán debe romper la fricción estática en ambos sentidos a lo largo de toda la prueba. Se mantiene el intervalo de $-3$ a $-2$~cm, en el que el actuador limitado a $u\in[0;\,3{,}5]$~V puede vencer la fricción estática en ambos sentidos. El antecedente más cercano, el lazo externo con acción integral de Hernández Alcántara et al.~\cite{alcantara} en la configuración repulsiva (estable) del mismo dispositivo, se revisó en la sección~\ref{sec:motivacion}; aquí la tarea es más exigente porque, en configuración atractiva, el controlador debe además estabilizar la planta.
+La regulación fija la referencia durante decenas de segundos. Las pruebas de seguimiento, en cambio, hacen que la referencia varíe continuamente, de modo que el imán debe romper la fricción estática en ambos sentidos a lo largo de toda la prueba. Se mantiene el intervalo de $-3$ a $-2$~cm, en el que el actuador limitado a $u\in[0;\,3.5]$~V puede vencer la fricción estática en ambos sentidos. El antecedente más cercano, el lazo externo con acción integral de Hernández Alcántara et al.~\cite{alcantara} en la configuración repulsiva (estable) del mismo dispositivo, se revisó en la sección~\ref{sec:motivacion}; aquí la tarea es más exigente porque, en configuración atractiva, el controlador debe además estabilizar la planta.
 
 \subsection{Seguimiento de referencia senoidal}
 
@@ -134,7 +134,7 @@ La referencia de posición tiene la forma
   r(t) = x_0 + A\,\sin(2\pi f\, t) ,
   \label{eq:ref_senoidal}
 \end{equation}
-con valor nominal $x_0 = -2{,}5$~cm, amplitud $A = 0{,}5$~cm y frecuencia $f = 0{,}001$~Hz (periodo $T = 1000$~s). La amplitud hace que la referencia excursione simétricamente entre $-3$ y $-2$~cm, el mismo intervalo de la prueba de regulación. Se simularon dos periodos (2000~s).
+con valor nominal $x_0 = -2.5$~cm, amplitud $A = 0.5$~cm y frecuencia $f = 0.001$~Hz (periodo $T = 1000$~s). La amplitud hace que la referencia excursione simétricamente entre $-3$ y $-2$~cm, el mismo intervalo de la prueba de regulación. Se simularon dos periodos (2000~s).
 
 Sin atascamiento-deslizamiento, el lazo cerrado lineal con función de transferencia $T(s)$ y $T(j\omega_0)=|T|\,e^{j\varphi}$ produciría, ante una referencia de frecuencia $\omega_0 = 2\pi f$, el error en estado estacionario
 \begin{equation}
@@ -151,7 +151,7 @@ que es pequeño cuando $T(j\omega_0)$ es próximo a la unidad, como ocurre con u
     \label{fig:sen_pos}
 \end{figure}
 
-La figura~\ref{fig:sen_pos} muestra que, a la escala de la referencia, la posición sigue a la senoide sin desfase ni atenuación apreciables, en concordancia con $|T(j\omega_0)|\approx 1$. La ventana de detalle revela, sin embargo, que el imán avanza en saltos y permanece atascado entre ellos, formando un ciclo límite de aproximadamente $0{,}02$~cm pico a pico y periodo cercano a 1~s.
+La figura~\ref{fig:sen_pos} muestra que, a la escala de la referencia, la posición sigue a la senoide sin desfase ni atenuación apreciables, en concordancia con $|T(j\omega_0)|\approx 1$. La ventana de detalle revela, sin embargo, que el imán avanza en saltos y permanece atascado entre ellos, formando un ciclo límite de aproximadamente $0.02$~cm pico a pico y periodo cercano a 1~s.
 
 \FloatBarrier
 
@@ -173,7 +173,7 @@ La figura~\ref{fig:sen_vel} muestra que la velocidad alterna pulsos de deslizami
     \label{fig:sen_error}
 \end{figure}
 
-La figura~\ref{fig:sen_error} muestra que el error permanece acotado en una banda de $\pm 0{,}02$~cm (error máximo $0{,}0198$~cm, valor eficaz $0{,}0124$~cm) con media prácticamente nula. La amplitud de la banda varía ligeramente con la posición de la referencia, pero no se observan picos aislados: el error está dominado por el ciclo límite y no por la dinámica lineal de seguimiento.
+La figura~\ref{fig:sen_error} muestra que el error permanece acotado en una banda de $\pm 0.02$~cm (error máximo $0.0198$~cm, valor eficaz $0.0124$~cm) con media prácticamente nula. La amplitud de la banda varía ligeramente con la posición de la referencia, pero no se observan picos aislados: el error está dominado por el ciclo límite y no por la dinámica lineal de seguimiento.
 
 \FloatBarrier
 
@@ -184,7 +184,7 @@ La figura~\ref{fig:sen_error} muestra que el error permanece acotado en una band
     \label{fig:sen_ctrl}
 \end{figure}
 
-La figura~\ref{fig:sen_ctrl} muestra que el voltaje sigue la forma de la referencia entre $1{,}33$ y $2{,}78$~V, dentro del rango admisible. El detalle revela un perfil en diente de sierra: el voltaje crece durante cada atascamiento hasta que el imán se libera y cae bruscamente tras la ruptura.
+La figura~\ref{fig:sen_ctrl} muestra que el voltaje sigue la forma de la referencia entre $1.33$ y $2.78$~V, dentro del rango admisible. El detalle revela un perfil en diente de sierra: el voltaje crece durante cada atascamiento hasta que el imán se libera y cae bruscamente tras la ruptura.
 
 \FloatBarrier
 
@@ -225,7 +225,7 @@ La figura~\ref{fig:trap_vel} muestra que el imán permanece en reposo durante el
     \label{fig:trap_error}
 \end{figure}
 
-La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0{,}022$~cm (valor eficaz $0{,}0114$~cm) y media nula, tanto en las rampas como en los segmentos planos. Al inicio de las rampas el error conserva la banda de amplitud casi uniforme que impone el ciclo límite, sin picos aislados.
+La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0.022$~cm (valor eficaz $0.0114$~cm) y media nula, tanto en las rampas como en los segmentos planos. Al inicio de las rampas el error conserva la banda de amplitud casi uniforme que impone el ciclo límite, sin picos aislados.
 
 \FloatBarrier
 
@@ -236,20 +236,20 @@ La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0{,}022$~cm (val
     \label{fig:trap_ctrl}
 \end{figure}
 
-La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal entre $1{,}32$ y $2{,}78$~V, sin alcanzar ninguna de las dos cotas del actuador. El detalle muestra cómo, al inicio de la rampa, el voltaje desciende de forma suave hasta que la fuerza neta vence la fricción estática, y a partir de ese instante adopta el mismo perfil en diente de sierra de la prueba senoidal.
+La figura~\ref{fig:trap_ctrl} muestra que el voltaje sigue el perfil trapezoidal entre $1.32$ y $2.78$~V, sin alcanzar ninguna de las dos cotas del actuador. El detalle muestra cómo, al inicio de la rampa, el voltaje desciende de forma suave hasta que la fuerza neta vence la fricción estática, y a partir de ese instante adopta el mismo perfil en diente de sierra de la prueba senoidal.
 
 \FloatBarrier
 
 \subsection{Seguimiento de referencia diente de sierra}
 
-La referencia en diente de sierra rampa de forma continua de $-2$ a $-3$~cm, con la misma pendiente que las rampas de la prueba trapezoidal, $\dot r=-0{,}004$~cm/s, pero sin los segmentos planos que allí separaban una rampa de la siguiente: al llegar a $-3$~cm, la referencia reinicia de golpe a $-2$~cm,
+La referencia en diente de sierra rampa de forma continua de $-2$ a $-3$~cm, con la misma pendiente que las rampas de la prueba trapezoidal, $\dot r=-0.004$~cm/s, pero sin los segmentos planos que allí separaban una rampa de la siguiente: al llegar a $-3$~cm, la referencia reinicia de golpe a $-2$~cm,
 \begin{equation}
 r(t) = -2 - \frac{1}{250}\left(t - 250\left\lfloor \frac{t}{250}\right\rfloor\right) ,
 \label{eq:ref_diente}
 \end{equation}
 con periodo de $250$~s. A diferencia de la rampa trapezoidal, que siempre parte del reposo en un segmento plano, el reinicio de la referencia~\eqref{eq:ref_diente} es instantáneo: salta $1$~cm mientras el imán permanece, por inercia y por fricción, cerca de donde estaba. Se simularon diez periodos ($2500$~s).
 
-En cada reinicio, el error salta a prácticamente $1$~cm —el salto mismo de la referencia, no un error de seguimiento en el sentido habitual del resto de la prueba— y el controlador debe primero romper la fricción estática y después recorrer buena parte del intervalo de operación para alcanzar la nueva rampa. Este transitorio es más exigente que cualquiera de las pruebas anteriores: el voltaje alcanza brevemente la cota superior de $3{,}5$~V y la posición rebasa, también brevemente, los límites habituales del intervalo de operación.
+En cada reinicio, el error salta a prácticamente $1$~cm —el salto mismo de la referencia, no un error de seguimiento en el sentido habitual del resto de la prueba— y el controlador debe primero romper la fricción estática y después recorrer buena parte del intervalo de operación para alcanzar la nueva rampa. Este transitorio es más exigente que cualquiera de las pruebas anteriores: el voltaje alcanza brevemente la cota superior de $3.5$~V y la posición rebasa, también brevemente, los límites habituales del intervalo de operación.
 
 \begin{figure}[ht]
     \centering
@@ -258,7 +258,7 @@ En cada reinicio, el error salta a prácticamente $1$~cm —el salto mismo de la
     \label{fig:diente_pos}
 \end{figure}
 
-La figura~\ref{fig:diente_pos} muestra que, fuera de los reinicios, el imán sigue la rampa con el mismo patrón de atascamiento-deslizamiento que en la prueba trapezoidal. El detalle muestra el reinicio: la posición tarda una fracción de segundo en alcanzar la nueva referencia y la rebasa brevemente, hasta $-1{,}70$~cm, antes de asentarse en el seguimiento de la rampa siguiente.
+La figura~\ref{fig:diente_pos} muestra que, fuera de los reinicios, el imán sigue la rampa con el mismo patrón de atascamiento-deslizamiento que en la prueba trapezoidal. El detalle muestra el reinicio: la posición tarda una fracción de segundo en alcanzar la nueva referencia y la rebasa brevemente, hasta $-1.70$~cm, antes de asentarse en el seguimiento de la rampa siguiente.
 
 \FloatBarrier
 
@@ -269,7 +269,7 @@ La figura~\ref{fig:diente_pos} muestra que, fuera de los reinicios, el imán sig
     \label{fig:diente_vel}
 \end{figure}
 
-La figura~\ref{fig:diente_vel} muestra que, fuera de los reinicios, la velocidad alterna pulsos de deslizamiento con tramos de reposo igual que en las pruebas anteriores. El imán permaneció atascado el $77{,}9$\,\% del tiempo, con $4236$ rupturas en total ($101{,}7$ por minuto). En cada reinicio aparece, además, un pulso de velocidad considerablemente mayor, necesario para recorrer en poco tiempo la distancia hasta la nueva rampa.
+La figura~\ref{fig:diente_vel} muestra que, fuera de los reinicios, la velocidad alterna pulsos de deslizamiento con tramos de reposo igual que en las pruebas anteriores. El imán permaneció atascado el $77.9$\,\% del tiempo, con $4236$ rupturas en total ($101.7$ por minuto). En cada reinicio aparece, además, un pulso de velocidad considerablemente mayor, necesario para recorrer en poco tiempo la distancia hasta la nueva rampa.
 
 \FloatBarrier
 
@@ -280,7 +280,7 @@ La figura~\ref{fig:diente_vel} muestra que, fuera de los reinicios, la velocidad
     \label{fig:diente_error}
 \end{figure}
 
-La figura~\ref{fig:diente_error} muestra que el error eficaz, $0{,}0177$~cm, es comparable al de las pruebas senoidal y trapezoidal, pero el error máximo, $1{,}012$~cm, lo domina por completo el salto de la referencia en cada reinicio. Fuera de esos instantes, el error se mantiene dentro de la misma banda de ciclo límite que las demás pruebas.
+La figura~\ref{fig:diente_error} muestra que el error eficaz, $0.0177$~cm, es comparable al de las pruebas senoidal y trapezoidal, pero el error máximo, $1.012$~cm, lo domina por completo el salto de la referencia en cada reinicio. Fuera de esos instantes, el error se mantiene dentro de la misma banda de ciclo límite que las demás pruebas.
 
 \FloatBarrier
 
@@ -291,7 +291,7 @@ La figura~\ref{fig:diente_error} muestra que el error eficaz, $0{,}0177$~cm, es 
     \label{fig:diente_ctrl}
 \end{figure}
 
-La figura~\ref{fig:diente_ctrl} muestra que el voltaje, entre $0{,}69$ y $3{,}5$~V, se mantiene dentro del rango admisible durante casi toda la prueba y solo alcanza la cota superior durante una fracción mínima del tiempo ($0{,}017$\,\%), en el instante de cada reinicio, cuando el controlador exige el máximo esfuerzo para perseguir el salto de la referencia.
+La figura~\ref{fig:diente_ctrl} muestra que el voltaje, entre $0.69$ y $3.5$~V, se mantiene dentro del rango admisible durante casi toda la prueba y solo alcanza la cota superior durante una fracción mínima del tiempo ($0.017$\,\%), en el instante de cada reinicio, cuando el controlador exige el máximo esfuerzo para perseguir el salto de la referencia.
 
 \FloatBarrier
 
@@ -306,7 +306,7 @@ r(t) =
 \end{cases}
 \label{eq:ref_pulso}
 \end{equation}
-con periodo de $500$~s. La referencia~\eqref{eq:ref_pulso} equivale a repetir periódicamente el escalón de $-2$ a $-3$~cm de la sección~\ref{sec:regulacion} y su inverso. Los $250$~s de cada plano son muy superiores al tiempo de entrada a la banda de $\pm5$\,\% que allí se midió (del orden de $0{,}3$~s), de modo que el imán alcanza el ciclo límite de régimen entre un escalón y el siguiente; la prueba no deja, por tanto, menos tiempo de asentamiento que la regulación, pero sí repite el escalón diez veces más seguido que cualquiera de las pruebas anteriores. Se simularon cinco periodos ($2500$~s).
+con periodo de $500$~s. La referencia~\eqref{eq:ref_pulso} equivale a repetir periódicamente el escalón de $-2$ a $-3$~cm de la sección~\ref{sec:regulacion} y su inverso. Los $250$~s de cada plano son muy superiores al tiempo de entrada a la banda de $\pm5$\,\% que allí se midió (del orden de $0.3$~s), de modo que el imán alcanza el ciclo límite de régimen entre un escalón y el siguiente; la prueba no deja, por tanto, menos tiempo de asentamiento que la regulación, pero sí repite el escalón diez veces más seguido que cualquiera de las pruebas anteriores. Se simularon cinco periodos ($2500$~s).
 
 \begin{figure}[ht]
     \centering
@@ -315,7 +315,7 @@ con periodo de $500$~s. La referencia~\eqref{eq:ref_pulso} equivale a repetir pe
     \label{fig:pulso_pos}
 \end{figure}
 
-La figura~\ref{fig:pulso_pos} muestra que el imán alcanza cada nivel y permanece ahí, con el mismo ciclo límite de las pruebas anteriores, durante la mayor parte de cada plano. El detalle muestra que, al igual que con la referencia diente de sierra, la posición rebasa brevemente el nivel de destino antes de asentarse: hasta $-3{,}25$~cm al bajar y hasta $-1{,}71$~cm al subir, sobrepasos mayores que los de la prueba diente de sierra porque aquí el salto de referencia es, en ambos sentidos, el intervalo completo de $1$~cm.
+La figura~\ref{fig:pulso_pos} muestra que el imán alcanza cada nivel y permanece ahí, con el mismo ciclo límite de las pruebas anteriores, durante la mayor parte de cada plano. El detalle muestra que, al igual que con la referencia diente de sierra, la posición rebasa brevemente el nivel de destino antes de asentarse: hasta $-3.25$~cm al bajar y hasta $-1.71$~cm al subir, sobrepasos mayores que los de la prueba diente de sierra porque aquí el salto de referencia es, en ambos sentidos, el intervalo completo de $1$~cm.
 
 \FloatBarrier
 
@@ -326,7 +326,7 @@ La figura~\ref{fig:pulso_pos} muestra que el imán alcanza cada nivel y permanec
     \label{fig:pulso_vel}
 \end{figure}
 
-La figura~\ref{fig:pulso_vel} muestra pulsos de deslizamiento de mayor amplitud en cada transición, seguidos del mismo patrón de pulsos cortos y tramos de reposo que en las demás pruebas. El imán permaneció atascado el $77{,}3$\,\% del tiempo, con $4708$ rupturas en total ($113{,}0$ por minuto), la cifra más alta de las cuatro pruebas de seguimiento porque las diez transiciones instantáneas se suman a las rupturas propias del ciclo límite en cada plano.
+La figura~\ref{fig:pulso_vel} muestra pulsos de deslizamiento de mayor amplitud en cada transición, seguidos del mismo patrón de pulsos cortos y tramos de reposo que en las demás pruebas. El imán permaneció atascado el $77.3$\,\% del tiempo, con $4708$ rupturas en total ($113.0$ por minuto), la cifra más alta de las cuatro pruebas de seguimiento porque las diez transiciones instantáneas se suman a las rupturas propias del ciclo límite en cada plano.
 
 \FloatBarrier
 
@@ -337,7 +337,7 @@ La figura~\ref{fig:pulso_vel} muestra pulsos de deslizamiento de mayor amplitud 
     \label{fig:pulso_error}
 \end{figure}
 
-La figura~\ref{fig:pulso_error} muestra un error eficaz de $0{,}0174$~cm, del mismo orden que en las otras tres pruebas de seguimiento, con un error máximo de $1{,}014$~cm que, igual que en la prueba diente de sierra, corresponde al salto de la referencia y no a un error de seguimiento en régimen.
+La figura~\ref{fig:pulso_error} muestra un error eficaz de $0.0174$~cm, del mismo orden que en las otras tres pruebas de seguimiento, con un error máximo de $1.014$~cm que, igual que en la prueba diente de sierra, corresponde al salto de la referencia y no a un error de seguimiento en régimen.
 
 \FloatBarrier
 
@@ -348,31 +348,31 @@ La figura~\ref{fig:pulso_error} muestra un error eficaz de $0{,}0174$~cm, del mi
     \label{fig:pulso_ctrl}
 \end{figure}
 
-La figura~\ref{fig:pulso_ctrl} muestra que el voltaje alcanza, en cada transición, las dos cotas del actuador: baja hasta $0$~V al bajar de nivel y sube hasta $3{,}5$~V al subir, aunque en ambos casos durante una fracción mínima del tiempo total ($0{,}0075$\,\%). Es la única de las cuatro pruebas de seguimiento en la que el voltaje llega a saturar por abajo, consistente con el escalón descendente de la sección~\ref{sec:regulacion}.
+La figura~\ref{fig:pulso_ctrl} muestra que el voltaje alcanza, en cada transición, las dos cotas del actuador: baja hasta $0$~V al bajar de nivel y sube hasta $3.5$~V al subir, aunque en ambos casos durante una fracción mínima del tiempo total ($0.0075$\,\%). Es la única de las cuatro pruebas de seguimiento en la que el voltaje llega a saturar por abajo, consistente con el escalón descendente de la sección~\ref{sec:regulacion}.
 
 \FloatBarrier
 
 % Generado a partir de calculus/Final_Bien/evidencia_P8.m (simulador corregido).
 \section{Configuración estable}
 
-Queda por verificar si el controlador diseñado para la configuración inestable sirve también en la estable. En la configuración repulsiva actúa la bobina inferior. Con $x$ medida hacia arriba, la distancia entre el imán y esa bobina es $a+x$, la fuerza electromagnética es $u/[b(a+x)^4]$ y el modelo linealizado tiene la matriz de estado $\bigl[\begin{smallmatrix}0&1\\-4g/(a+x_1^*)&-c_1\end{smallmatrix}\bigr]$, cuyos polos son complejos con parte real negativa: $-4{,}28\pm21{,}49j$ en $x_1^*=1$~cm y $-4{,}28\pm20{,}24j$ en $x_1^*=2$~cm (factor de amortiguamiento cercano a $0{,}2$). Se evaluaron tres controladores diseñados durante el trabajo: el PI de comparación (sección~\ref{sec:pi}), una versión preliminar del PII y el PII definitivo $C(s)$ de la sección~\ref{sec:pii}. Con la planta linealizada en $x_1^*=1{,}5$~cm, los tres estabilizan el lazo, con márgenes de fase de $50{,}7^\circ$, $51{,}0^\circ$ y $43{,}3^\circ$, respectivamente. El mismo controlador diseñado para la configuración inestable estabiliza, por tanto, también la estable, aunque con un margen de fase menor.
+Queda por verificar si el controlador diseñado para la configuración inestable sirve también en la estable. En la configuración repulsiva actúa la bobina inferior. Con $x$ medida hacia arriba, la distancia entre el imán y esa bobina es $a+x$, la fuerza electromagnética es $u/[b(a+x)^4]$ y el modelo linealizado tiene la matriz de estado $\bigl[\begin{smallmatrix}0&1\\-4g/(a+x_1^*)&-c_1\end{smallmatrix}\bigr]$, cuyos polos son complejos con parte real negativa: $-4.28\pm21.49j$ en $x_1^*=1$~cm y $-4.28\pm20.24j$ en $x_1^*=2$~cm (factor de amortiguamiento cercano a $0.2$). Se evaluaron tres controladores diseñados durante el trabajo: el PI de comparación (sección~\ref{sec:pi}), una versión preliminar del PII y el PII definitivo $C(s)$ de la sección~\ref{sec:pii}. Con la planta linealizada en $x_1^*=1.5$~cm, los tres estabilizan el lazo, con márgenes de fase de $50.7^\circ$, $51.0^\circ$ y $43.3^\circ$, respectivamente. El mismo controlador diseñado para la configuración inestable estabiliza, por tanto, también la estable, aunque con un margen de fase menor.
 
 \begin{table}[ht]
 \centering
-\caption{Configuración estable: escalón de 1 a 2~cm con zona muerta, fricción de Karnopp y $u\in[0;\,3{,}5]$~V.}
+\caption{Configuración estable: escalón de 1 a 2~cm con zona muerta, fricción de Karnopp y $u\in[0;\,3.5]$~V.}
 \label{tab:p8_estable}
 \begin{tabular}{|l|c|c|c|}
 \hline
  & PI & PII preliminar & PII (tesis) \\ \hline
-Margen de fase (lineal, $x_1^*=1{,}5$~cm) & $50{,}7^\circ$ & $51{,}0^\circ$ & $43{,}3^\circ$ \\ \hline
-Sobrepaso (lineal) & $19{,}7$\,\% & $18{,}6$\,\% & $26{,}8$\,\% \\ \hline
-Sobrepaso (no lineal con AD) & $10{,}5$\,\% & $11{,}1$\,\% & $9{,}8$\,\% \\ \hline
-Entrada en la banda de $\pm5$\,\% & $0{,}24$~s & $0{,}36$~s & $0{,}35$~s \\ \hline
-Ciclo límite pico a pico & $0{,}018$~cm & $0{,}023$~cm & $0{,}020$~cm \\ \hline
+Margen de fase (lineal, $x_1^*=1.5$~cm) & $50.7^\circ$ & $51.0^\circ$ & $43.3^\circ$ \\ \hline
+Sobrepaso (lineal) & $19.7$\,\% & $18.6$\,\% & $26.8$\,\% \\ \hline
+Sobrepaso (no lineal con AD) & $10.5$\,\% & $11.1$\,\% & $9.8$\,\% \\ \hline
+Entrada en la banda de $\pm5$\,\% & $0.24$~s & $0.36$~s & $0.35$~s \\ \hline
+Ciclo límite pico a pico & $0.018$~cm & $0.023$~cm & $0.020$~cm \\ \hline
 \end{tabular}
 \end{table}
 
-La figura~\ref{fig:p8_estable} y la tabla~\ref{tab:p8_estable} muestran que los tres controladores llevan el imán de 1 a 2~cm y que, como en la configuración atractiva, la zona muerta y la fricción estática producen un ciclo límite en estado estacionario, aquí de menor amplitud. En el transitorio la señal de control alcanza brevemente la saturación de $3{,}5$~V.
+La figura~\ref{fig:p8_estable} y la tabla~\ref{tab:p8_estable} muestran que los tres controladores llevan el imán de 1 a 2~cm y que, como en la configuración atractiva, la zona muerta y la fricción estática producen un ciclo límite en estado estacionario, aquí de menor amplitud. En el transitorio la señal de control alcanza brevemente la saturación de $3.5$~V.
 
 \begin{figure}[ht]
     \centering

@@ -6,7 +6,7 @@
     xlabel={ciclo límite pico a pico [\si{cm}]}, ylabel={duración media del atascamiento [\si{s}]},
     grid=major, grid style={gray!25}, tick label style={font=\small}, label style={font=\small},
     legend style={font=\small, at={(0.98,0.98)}, anchor=north east}, legend cell align=left,
-    /pgf/number format/use comma, scaled ticks=false, x tick label style={/pgf/number format/fixed, /pgf/number format/precision=2},
+    scaled ticks=false, x tick label style={/pgf/number format/fixed, /pgf/number format/precision=2},
     table/col sep=comma]
   \addplot[only marks, mark=o, mark size=2.2pt, ctl2] table[x=ciclo, y=atasc] {images/r15_results/tikz/familia_pi.csv};
   \addlegendentry{familia PI}

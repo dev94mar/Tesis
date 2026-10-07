@@ -24,7 +24,7 @@
   % guias punteadas al punto de operacion
   \draw[densely dotted, refc] (\izero,0) -- (\izero,\lzero) -- (0,\lzero);
   \fill[refc] (\izero,\lzero) circle (1.3pt);
-  \node[anchor=south east, font=\scriptsize] at (\izero-0.08,\lzero+0.08) {$(i_0,\lambda_0)$};
+  \node[anchor=south east, font=\scriptsize] at (\izero+0.15,\lzero+0.35) {$(i_0,\lambda_0)$};
   \node[anchor=north, font=\scriptsize] at (\izero,-0.05) {$i_0$};
   \node[anchor=east, font=\scriptsize] at (-0.05,\lzero) {$\lambda_0$};
   % etiquetas de las areas (apiladas, para que no se encimen)
@@ -33,5 +33,5 @@
   \node[ctl2!80!black, font=\small] at (\izero*0.14,\lzero*0.75) {$W$};
   \node[ctl2!80!black, font=\scriptsize] at (\izero*0.14,\lzero*0.62) {energía};
   % curva etiquetada, lejos del punto de operacion para no encimarse
-  \node[refc, font=\scriptsize, anchor=south] at (\izero*0.55,\lzero*0.93) {$\lambda(i,x)$, $x$ fija};
+  \node[refc, font=\scriptsize, anchor=south, yshift=4pt] at (\izero*0.55,\lzero*0.93) {$\lambda(i,x)$, $x$ fija};
 \end{tikzpicture}

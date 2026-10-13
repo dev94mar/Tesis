@@ -15,3 +15,6 @@
 *.toc
 *.lof
 *.lot
+
+# Cachés de simulación de seguimiento (regenerables con seguimiento_P5.m)
+icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_*.mat

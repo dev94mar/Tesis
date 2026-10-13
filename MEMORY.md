@@ -1,6 +1,6 @@
 # Memoria del proyecto
 
-Actualizada: **2026-10-07**. Estado observado en el commit **`59afc66`**. Las correcciones de la cuarta auditoría quedaron registradas en `51d37cb`; `55f6e54` renombró `icr/context/Tesis` a **`icr/context/tesis`**, ruta vigente. Las rutas con `Tesis` que aparecen en entradas anteriores son históricas. Los informes históricos no certifican los cambios posteriores.
+Actualizada: **2026-10-12**. Estado observado en el commit **`afe41aa`**. Las correcciones de la cuarta auditoría quedaron registradas en `51d37cb`; `55f6e54` renombró `icr/context/Tesis` a **`icr/context/tesis`**, ruta vigente. Las rutas con `Tesis` que aparecen en entradas anteriores son históricas. Los informes históricos no certifican los cambios posteriores.
 
 Esta memoria permite retomar el trabajo. Resume decisiones y evidencia; no sustituye las fuentes, los datos ni una validación de cambios posteriores. Las peticiones actuales del usuario prevalecen sobre este resumen.
 
@@ -300,3 +300,21 @@ Sesión distinta de las auditorías numéricas anteriores: trabajo puramente edi
   - **Bug propio detectado y corregido en el camino:** al quitar `use comma,` con `sed`, quedaron líneas completamente vacías dentro de argumentos de `\pgfplotsset{...}`; una línea en blanco ahí equivale a `\par` en TeX y rompe el parseo de claves de pgfkeys (`Paragraph ended before \pgfkeys@addpath was complete`). Se detectó comparando contra una compilación limpia del estado anterior (bisección con `git stash`) y se corrigió eliminando las líneas vacías, no solo su contenido. Lección para futuras ediciones por `sed` dentro de argumentos de pgfplots/TikZ: nunca dejar una línea en blanco dentro de un grupo `{...}` que se está parseando como clave-valor.
 
 Todo verificado por compilación (82 páginas en cada paso) y revisión visual del PDF renderizado a PNG. Todos los commits están pusheados a `origin/master`.
+
+## Limpieza de archivos innecesarios en el workspace (2026-10-12)
+
+A petición del usuario se auditó el workspace completo en busca de archivos y carpetas innecesarios para la continuidad del trabajo. No se encontraron restos de la limpieza anterior (`_archivo_*`/`_respaldo_*`, commits `590df17`/`eb5654b`), que ya se había hecho a fondo. Se detectaron tres puntos, y se corrigieron dos a petición explícita del usuario (commit `afe41aa`, pusheado):
+
+- **`.claude/worktrees`**: carpeta local vacía, sin versionar. Eliminada.
+- **`icr/calculus/Final_Bien/inestable/PII_inestable/seguimiento_P5_{diente,sen,trap,pulso}.mat`** (238 MB en total): cachés de simulación con firma SHA-256 (ver `seguimiento_P5.m`), estaban versionadas en git pese a su tamaño. Se sacaron del índice (`git rm --cached`) y se agregaron a `.gitignore`; siguen en disco sin cambios, así que no se perdió ningún resultado ni se invalidó la caché local. Se regeneran solas si se borran y se vuelve a correr el script. El peso ya versionado en commits anteriores a `afe41aa` permanece en el historial de git; no se reescribió la historia (acción destructiva no solicitada).
+- **`rules/*.zip`** (6.1 MB: kits de los skills academic-prose-editor, reglas de escritura matemática, identidad UAM y voice): el usuario pidió explícitamente **no** borrarlos. Se dejaron intactos. Ya estaban ignorados por git (`*.zip` en `.gitignore`), así que no afectan el repositorio remoto.
+
+No se tocó contenido de la tesis, del grafo, de los scripts ni de los datos de validación.
+
+## Simplificación de `icr/context/tesis/` (2026-10-12)
+
+A petición del usuario se simplificó la carpeta de la tesis (commit `4da4faf`, pusheado). Se borraron `indice.tex`, `tesis_estructura.tex`, `README.md` y `sections/content/{cronograma,diagrama}.tex`: eran notas de planeación anteriores, ninguna se incluye en `main.tex` (comentadas o superadas por los capítulos reales). Se limpiaron también los artefactos de compilación sueltos del directorio de trabajo (`main.aux/.log/.toc`, etc., con `latexmk -c`; ya estaban ignorados por git). Las imágenes sin referencia (`images/configurations`, `controladores`, `Imagenes_De_Planta_De_Prueba`, `zm_fricc` y varios `.eps`/`.svg` sueltos, ~3.2 MB) se **conservaron** a petición explícita del usuario, igual que en la limpieza de 2026-10-06/07. Verificado: compila sin errores, 82 páginas, sin cambio.
+
+## Eliminación de `deck/` duplicado (2026-10-12)
+
+`deck/index.html` y `docs/index.html` eran idénticos (el deck de divulgación web, ver sección "El repositorio de GitHub cambió"); `docs/` es la que sirve GitHub Pages (configurado desde `/docs` en `master`) y es la que queda como única fuente. Se eliminó `deck/` por ser la copia redundante; el sitio publicado en https://dev94mar.github.io/Tesis/ no se ve afectado. Si se necesita editar el deck en el futuro, el archivo vigente es `docs/index.html`.

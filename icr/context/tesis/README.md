@@ -1,2 +1,0 @@
-# Tesis
-Tesis de maestria

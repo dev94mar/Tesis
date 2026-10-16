@@ -1476,10 +1476,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Lazo con zona muerta",
       "texto": "Diagrama de bloques del lazo de control con zona muerta.",
-      "fuente": "icr/context/tesis/images/chapter_1/lazo_de_control_con_zm.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.eps",
       "figura": {
         "png": "img/lazo_zm.png",
-        "original": "icr/context/tesis/images/chapter_1/lazo_de_control_con_zm.eps"
+        "original": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.eps"
       },
       "contenido_html": "<p>Diagrama de bloques del lazo de control con zona muerta.</p>",
       "metricas": {
@@ -1498,10 +1498,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Bode (TikZ)",
       "texto": "Magnitud y fase de L(s) = C(s)G(s) en −4 cm, con MG = −17.1 dB y MF = 59.9°.",
-      "fuente": "icr/context/tesis/images/pii_design/tikz/bode.tex",
+      "fuente": "icr/context/tesis/images/pii_design_tikz_bode.tex",
       "figura": {
         "png": "img/diseno_bode.png",
-        "original": "icr/context/tesis/images/pii_design/tikz/bode.tex"
+        "original": "icr/context/tesis/images/pii_design_tikz_bode.tex"
       },
       "contenido_html": "<p>Magnitud y fase de L(s) = C(s)G(s) en −4 cm, con MG = −17.1 dB y MF = 59.9°.</p>",
       "metricas": {
@@ -1520,10 +1520,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Nyquist (TikZ)",
       "texto": "Nyquist real de L(s): rodeo antihorario a −1 (P = 1). La figura original era un lugar de las raíces.",
-      "fuente": "icr/context/tesis/images/pii_design/tikz/nyquist.tex",
+      "fuente": "icr/context/tesis/images/pii_design_tikz_nyquist.tex",
       "figura": {
         "png": "img/diseno_nyquist.png",
-        "original": "icr/context/tesis/images/pii_design/tikz/nyquist.tex"
+        "original": "icr/context/tesis/images/pii_design_tikz_nyquist.tex"
       },
       "contenido_html": "<p>Nyquist real de L(s): rodeo antihorario a −1 (P = 1). La figura original era un lugar de las raíces.</p>",
       "metricas": {
@@ -1542,10 +1542,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Respuesta escalón (TikZ)",
       "texto": "Lazo cerrado lineal: 16.9 % de sobrepaso y ts = 0.284 s.",
-      "fuente": "icr/context/tesis/images/pii_design/tikz/escalon.tex",
+      "fuente": "icr/context/tesis/images/pii_design_tikz_escalon.tex",
       "figura": {
         "png": "img/diseno_escalon.png",
-        "original": "icr/context/tesis/images/pii_design/tikz/escalon.tex"
+        "original": "icr/context/tesis/images/pii_design_tikz_escalon.tex"
       },
       "contenido_html": "<p>Lazo cerrado lineal: 16.9 % de sobrepaso y t<sub>s</sub> = 0.284 s.</p>",
       "metricas": {
@@ -1564,10 +1564,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Posición (regulación)",
       "texto": "Escalón −2 → −3 cm con detalle del transitorio y del ciclo límite.",
-      "fuente": "icr/context/tesis/images/regulation_results/tikz/posicion.tex",
+      "fuente": "icr/context/tesis/images/regulation_results_tikz_posicion.tex",
       "figura": {
         "png": "img/reg_posicion.png",
-        "original": "icr/context/tesis/images/regulation_results/tikz/posicion.tex"
+        "original": "icr/context/tesis/images/regulation_results_tikz_posicion.tex"
       },
       "contenido_html": "<p>Escalón −2 → −3 cm con detalle del transitorio y del ciclo límite.</p>",
       "metricas": {
@@ -1586,10 +1586,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Velocidad (regulación)",
       "texto": "Tramos en cero: atascamiento.",
-      "fuente": "icr/context/tesis/images/regulation_results/tikz/velocidad.tex",
+      "fuente": "icr/context/tesis/images/regulation_results_tikz_velocidad.tex",
       "figura": {
         "png": "img/reg_velocidad.png",
-        "original": "icr/context/tesis/images/regulation_results/tikz/velocidad.tex"
+        "original": "icr/context/tesis/images/regulation_results_tikz_velocidad.tex"
       },
       "contenido_html": "<p>Tramos en cero: atascamiento.</p>",
       "metricas": {
@@ -1608,10 +1608,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Error (regulación)",
       "texto": "Error e = r − x₁.",
-      "fuente": "icr/context/tesis/images/regulation_results/tikz/error.tex",
+      "fuente": "icr/context/tesis/images/regulation_results_tikz_error.tex",
       "figura": {
         "png": "img/reg_error.png",
-        "original": "icr/context/tesis/images/regulation_results/tikz/error.tex"
+        "original": "icr/context/tesis/images/regulation_results_tikz_error.tex"
       },
       "contenido_html": "<p>Error e = r − x₁.</p>",
       "metricas": {
@@ -1630,10 +1630,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Señal de control (regulación)",
       "texto": "Antes y después de la zona muerta; nunca alcanza 3.5 V.",
-      "fuente": "icr/context/tesis/images/regulation_results/tikz/control.tex",
+      "fuente": "icr/context/tesis/images/regulation_results_tikz_control.tex",
       "figura": {
         "png": "img/reg_control.png",
-        "original": "icr/context/tesis/images/regulation_results/tikz/control.tex"
+        "original": "icr/context/tesis/images/regulation_results_tikz_control.tex"
       },
       "contenido_html": "<p>Antes y después de la zona muerta; nunca alcanza 3.5 V.</p>",
       "metricas": {
@@ -1652,10 +1652,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Mapa de polos y ceros",
       "texto": "Polos de G(s): uno a cada lado del eje imaginario.",
-      "fuente": "icr/context/tesis/images/chapter_1/pole_zero_map.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_pole_zero_map.eps",
       "figura": {
         "png": "img/pzmap.png",
-        "original": "icr/context/tesis/images/chapter_1/pole_zero_map.eps"
+        "original": "icr/context/tesis/images/chapter_1_pole_zero_map.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Polos de G(s): uno a cada lado del eje imaginario.</p>",
@@ -1675,10 +1675,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Lugar de las raíces",
       "texto": "Lugar de las raíces de G(s) sin compensar.",
-      "fuente": "icr/context/tesis/images/chapter_1/root_locus.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_root_locus.eps",
       "figura": {
         "png": "img/rlocus.png",
-        "original": "icr/context/tesis/images/chapter_1/root_locus.eps"
+        "original": "icr/context/tesis/images/chapter_1_root_locus.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Lugar de las raíces de G(s) sin compensar.</p>",
@@ -1698,10 +1698,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Retrato de fase",
       "texto": "Retrato de fase del sistema.",
-      "fuente": "icr/context/tesis/images/chapter_1/phase_portrait.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_phase_portrait.eps",
       "figura": {
         "png": "img/phase.png",
-        "original": "icr/context/tesis/images/chapter_1/phase_portrait.eps"
+        "original": "icr/context/tesis/images/chapter_1_phase_portrait.eps"
       },
       "estado": "No incluida (reemplazada por el retrato de fase de P8)",
       "contenido_html": "<p>Retrato de fase del sistema.</p>",
@@ -1721,10 +1721,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Retrato de fase linealizado",
       "texto": "Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.",
-      "fuente": "icr/context/tesis/images/chapter_1/phase_portrait_li.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_phase_portrait_li.eps",
       "figura": {
         "png": "img/phase_li.png",
-        "original": "icr/context/tesis/images/chapter_1/phase_portrait_li.eps"
+        "original": "icr/context/tesis/images/chapter_1_phase_portrait_li.eps"
       },
       "estado": "No incluida (reemplazada por el retrato de fase de P8)",
       "contenido_html": "<p>Campo vectorial en coordenadas modales (z₁, z₂): punto silla, consistente con λ = +14.94 y −23.51.</p>",
@@ -1744,10 +1744,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Fricción",
       "texto": "Curva de fricción estática y dinámica.",
-      "fuente": "icr/context/tesis/images/zm_fricc/friccion.eps",
+      "fuente": "icr/context/tesis/images/zm_fricc_friccion.eps",
       "figura": {
         "png": "img/friccion.png",
-        "original": "icr/context/tesis/images/zm_fricc/friccion.eps"
+        "original": "icr/context/tesis/images/zm_fricc_friccion.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Curva de fricción estática y dinámica.</p>",
@@ -1767,10 +1767,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Zona muerta dinámica",
       "texto": "Zona muerta desplazada al voltaje de equilibrio: de (ucl, ueq, ucr) a (u′cl, u′eq, u′cr) al cambiar la posición.",
-      "fuente": "icr/context/tesis/images/zm_fricc/zm_dinamica.eps",
+      "fuente": "icr/context/tesis/images/zm_fricc_zm_dinamica.eps",
       "figura": {
         "png": "img/zm_dinamica.png",
-        "original": "icr/context/tesis/images/zm_fricc/zm_dinamica.eps"
+        "original": "icr/context/tesis/images/zm_fricc_zm_dinamica.eps"
       },
       "estado": "No incluida en el documento",
       "contenido_html": "<p>Zona muerta desplazada al voltaje de equilibrio: de (u<sub>cl</sub>, u<sub>eq</sub>, u<sub>cr</sub>) a (u′<sub>cl</sub>, u′<sub>eq</sub>, u′<sub>cr</sub>) al cambiar la posición.</p>",
@@ -1790,10 +1790,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Configuración inestable",
       "texto": "Esquema del ECP-730 en configuración atractiva.",
-      "fuente": "icr/context/tesis/images/configurations/configuracion_inestable.eps",
+      "fuente": "icr/context/tesis/images/configurations_configuracion_inestable.eps",
       "figura": {
         "png": "img/config.png",
-        "original": "icr/context/tesis/images/configurations/configuracion_inestable.eps"
+        "original": "icr/context/tesis/images/configurations_configuracion_inestable.eps"
       },
       "estado": "No incluida (reemplazada por el esquema TikZ)",
       "contenido_html": "<p>Esquema del ECP-730 en configuración atractiva.</p>",
@@ -3240,9 +3240,9 @@
       "contenido_html": "<p>Transitorios prácticamente idénticos.</p>",
       "figura": {
         "png": "img/sinad_posicion.png",
-        "original": "icr/context/tesis/images/sin_ad_results/tikz/posicion.tex"
+        "original": "icr/context/tesis/images/sin_ad_results_tikz_posicion.tex"
       },
-      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/posicion.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results_tikz_posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3262,9 +3262,9 @@
       "contenido_html": "<p>Velocidad sin y con atascamiento-deslizamiento.</p>",
       "figura": {
         "png": "img/sinad_velocidad.png",
-        "original": "icr/context/tesis/images/sin_ad_results/tikz/velocidad.tex"
+        "original": "icr/context/tesis/images/sin_ad_results_tikz_velocidad.tex"
       },
-      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/velocidad.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results_tikz_velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3284,9 +3284,9 @@
       "contenido_html": "<p>Sin AD el error converge a cero; con AD queda el ciclo límite.</p>",
       "figura": {
         "png": "img/sinad_error.png",
-        "original": "icr/context/tesis/images/sin_ad_results/tikz/error.tex"
+        "original": "icr/context/tesis/images/sin_ad_results_tikz_error.tex"
       },
-      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/error.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results_tikz_error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3306,9 +3306,9 @@
       "contenido_html": "<p>Sin AD converge a u<sub>e</sub> = 2.3934 V.</p>",
       "figura": {
         "png": "img/sinad_control.png",
-        "original": "icr/context/tesis/images/sin_ad_results/tikz/control.tex"
+        "original": "icr/context/tesis/images/sin_ad_results_tikz_control.tex"
       },
-      "fuente": "icr/context/tesis/images/sin_ad_results/tikz/control.tex",
+      "fuente": "icr/context/tesis/images/sin_ad_results_tikz_control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3328,9 +3328,9 @@
       "contenido_html": "<p>Vista completa y detalle de 244 a 256 s.</p>",
       "figura": {
         "png": "img/seg_sen_posicion.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_posicion.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_sen_posicion.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_posicion.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_sen_posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3350,9 +3350,9 @@
       "contenido_html": "<p>Pulsos de deslizamiento continuos.</p>",
       "figura": {
         "png": "img/seg_sen_velocidad.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_velocidad.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_sen_velocidad.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_velocidad.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_sen_velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3372,9 +3372,9 @@
       "contenido_html": "<p>Banda de ±0.02 cm sin picos aislados.</p>",
       "figura": {
         "png": "img/seg_sen_error.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_error.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_sen_error.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_error.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_sen_error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3394,9 +3394,9 @@
       "contenido_html": "<p>Diente de sierra de la acción integral.</p>",
       "figura": {
         "png": "img/seg_sen_control.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/sen_control.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_sen_control.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/sen_control.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_sen_control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3416,9 +3416,9 @@
       "contenido_html": "<p>Detalle del inicio de la primera rampa.</p>",
       "figura": {
         "png": "img/seg_trap_posicion.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_posicion.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_trap_posicion.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_posicion.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_trap_posicion.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3438,9 +3438,9 @@
       "contenido_html": "<p>Reposo en el primer plano; ciclo límite después.</p>",
       "figura": {
         "png": "img/seg_trap_velocidad.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_velocidad.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_trap_velocidad.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_velocidad.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_trap_velocidad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3460,9 +3460,9 @@
       "contenido_html": "<p>Banda de ±0.022 cm en rampas y planos.</p>",
       "figura": {
         "png": "img/seg_trap_error.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_error.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_trap_error.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_error.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_trap_error.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3482,9 +3482,9 @@
       "contenido_html": "<p>Sigue el perfil trapezoidal sin alcanzar ninguna de las dos cotas del actuador.</p>",
       "figura": {
         "png": "img/seg_trap_control.png",
-        "original": "icr/context/tesis/images/seguimiento_results/tikz/trap_control.tex"
+        "original": "icr/context/tesis/images/seguimiento_results_tikz_trap_control.tex"
       },
-      "fuente": "icr/context/tesis/images/seguimiento_results/tikz/trap_control.tex",
+      "fuente": "icr/context/tesis/images/seguimiento_results_tikz_trap_control.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3504,9 +3504,9 @@
       "contenido_html": "<p>|x₁ − x*| en escala logarítmica: no lineal frente a lineal.</p>",
       "figura": {
         "png": "img/p8_lazo_abierto.png",
-        "original": "icr/context/tesis/images/p8_results/tikz/lazo_abierto.tex"
+        "original": "icr/context/tesis/images/p8_results_tikz_lazo_abierto.tex"
       },
-      "fuente": "icr/context/tesis/images/p8_results/tikz/lazo_abierto.tex",
+      "fuente": "icr/context/tesis/images/p8_results_tikz_lazo_abierto.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3526,9 +3526,9 @@
       "contenido_html": "<p>Punto silla en −4 cm, variedad inestable y banda de atascamiento.</p>",
       "figura": {
         "png": "img/p8_retrato_fase.png",
-        "original": "icr/context/tesis/images/p8_results/tikz/retrato_fase.tex"
+        "original": "icr/context/tesis/images/p8_results_tikz_retrato_fase.tex"
       },
-      "fuente": "icr/context/tesis/images/p8_results/tikz/retrato_fase.tex",
+      "fuente": "icr/context/tesis/images/p8_results_tikz_retrato_fase.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -3548,9 +3548,9 @@
       "contenido_html": "<p>Respuestas casi idénticas.</p>",
       "figura": {
         "png": "img/p8_lineal_ad.png",
-        "original": "icr/context/tesis/images/p8_results/tikz/lineal_ad.tex"
+        "original": "icr/context/tesis/images/p8_results_tikz_lineal_ad.tex"
       },
-      "fuente": "icr/context/tesis/images/p8_results/tikz/lineal_ad.tex",
+      "fuente": "icr/context/tesis/images/p8_results_tikz_lineal_ad.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -3570,9 +3570,9 @@
       "contenido_html": "<p>Escalón 1 → 2 cm con el PI y el PII de la tesis.</p>",
       "figura": {
         "png": "img/p8_estable.png",
-        "original": "icr/context/tesis/images/p8_results/tikz/estable.tex"
+        "original": "icr/context/tesis/images/p8_results_tikz_estable.tex"
       },
-      "fuente": "icr/context/tesis/images/p8_results/tikz/estable.tex",
+      "fuente": "icr/context/tesis/images/p8_results_tikz_estable.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4070,9 +4070,9 @@
       "texto": "Ciclo límite frente a duración media del atascamiento para los 57 PI y 51 PII cuyo voltaje aplicado no alcanza 3.5 V en el escalón ni en la rampa.",
       "figura": {
         "png": "img/r15_familias.png",
-        "original": "icr/context/tesis/images/r15_results/tikz/familias.tex"
+        "original": "icr/context/tesis/images/r15_results_tikz_familias.tex"
       },
-      "fuente": "icr/context/tesis/images/r15_results/tikz/familias.tex",
+      "fuente": "icr/context/tesis/images/r15_results_tikz_familias.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4200,9 +4200,9 @@
       "texto": "Posición, velocidad y voltaje durante tres segundos con el PII; las rupturas ocurren en los bordes de la banda.",
       "figura": {
         "png": "img/ciclo_anatomia.png",
-        "original": "icr/context/tesis/images/ciclo_results/tikz/anatomia.tex"
+        "original": "icr/context/tesis/images/ciclo_results_tikz_anatomia.tex"
       },
-      "fuente": "icr/context/tesis/images/ciclo_results/tikz/anatomia.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results_tikz_anatomia.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4222,9 +4222,9 @@
       "texto": "Rampa del PI y parábola del PII, con la predicción teórica.",
       "figura": {
         "png": "img/ciclo_atasco.png",
-        "original": "icr/context/tesis/images/ciclo_results/tikz/atasco.tex"
+        "original": "icr/context/tesis/images/ciclo_results_tikz_atasco.tex"
       },
-      "fuente": "icr/context/tesis/images/ciclo_results/tikz/atasco.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results_tikz_atasco.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4266,9 +4266,9 @@
       "texto": "Escala log-log: amplitud ≈ 1/kK en ambas familias.",
       "figura": {
         "png": "img/ciclo_ganancia.png",
-        "original": "icr/context/tesis/images/ciclo_results/tikz/ganancia.tex"
+        "original": "icr/context/tesis/images/ciclo_results_tikz_ganancia.tex"
       },
-      "fuente": "icr/context/tesis/images/ciclo_results/tikz/ganancia.tex",
+      "fuente": "icr/context/tesis/images/ciclo_results_tikz_ganancia.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,
@@ -4435,9 +4435,9 @@
       "texto": "Configuración atractiva: bobina superior, varilla guía, imán, distancia a − x y fuerzas ffld, mg y ffr.",
       "figura": {
         "png": "img/dispositivo.png",
-        "original": "icr/context/tesis/images/dispositivo/configuracion.tex"
+        "original": "icr/context/tesis/images/dispositivo_configuracion.tex"
       },
-      "fuente": "icr/context/tesis/images/dispositivo/configuracion.tex",
+      "fuente": "icr/context/tesis/images/dispositivo_configuracion.tex",
       "metricas": {
         "grado": 2,
         "grado_entrada": 2,
@@ -4457,9 +4457,9 @@
       "texto": "Zona muerta centrada en ue con pendientes ml, mr, umbrales bl, br y saltos hl, hr.",
       "figura": {
         "png": "img/zm_levitador.png",
-        "original": "icr/context/tesis/images/chapter_1/zm_levitador.eps"
+        "original": "icr/context/tesis/images/chapter_1_zm_levitador.eps"
       },
-      "fuente": "icr/context/tesis/images/chapter_1/zm_levitador.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_zm_levitador.eps",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,

@@ -35,28 +35,28 @@ es decir, sin la fricción estática de Karnopp ni la zona muerta del actuador q
 
 \begin{figure}[ht]
     \centering
-    \input{images/sin_ad_results/tikz/posicion}
+    \input{images/sin_ad_results_tikz_posicion}
     \caption[Sin AD: posición]{Posición del imán con el modelo no lineal sin atascamiento-deslizamiento (sin AD) y con él (con AD). Abajo, detalle del transitorio entre 9.8 y 12~s.}
     \label{fig:sinad_pos}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/sin_ad_results/tikz/velocidad}
+    \input{images/sin_ad_results_tikz_velocidad}
     \caption[Sin AD: velocidad]{Velocidad del imán sin y con atascamiento-deslizamiento.}
     \label{fig:sinad_vel}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/sin_ad_results/tikz/error}
+    \input{images/sin_ad_results_tikz_error}
     \caption[Sin AD: error]{Error de posición sin y con atascamiento-deslizamiento. Abajo, detalle entre 15 y 40~s.}
     \label{fig:sinad_error}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/sin_ad_results/tikz/control}
+    \input{images/sin_ad_results_tikz_control}
     \caption[Sin AD: señal de control]{Señal de control sin y con atascamiento-deslizamiento.}
     \label{fig:sinad_ctrl}
 \end{figure}
@@ -78,28 +78,28 @@ La señal de control (figura~\ref{senal_control}) cae momentáneamente a 0~V en 
 
 \begin{figure}[ht]
     \centering
-    \input{images/regulation_results/tikz/posicion}
+    \input{images/regulation_results_tikz_posicion}
     \caption[Posición (regulación)]{Posición del imán ante un escalón de referencia de $-2$ a $-3$~cm en $t=10$~s (PII, $u\in[0;\,3.5]$~V). El recuadro amplía el transitorio y el ciclo límite de atascamiento-deslizamiento.}
     \label{posicion}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/regulation_results/tikz/velocidad}
+    \input{images/regulation_results_tikz_velocidad}
     \caption[Velocidad (regulación)]{Velocidad del imán. Los tramos en cero corresponden al régimen de atascamiento.}
     \label{velocidad}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/regulation_results/tikz/error}
+    \input{images/regulation_results_tikz_error}
     \caption[Error (regulación)]{Error de posición $e=r-x_1$.}
     \label{error}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/regulation_results/tikz/control}
+    \input{images/regulation_results_tikz_control}
     \caption[Señal de control (regulación)]{Señal de control antes y después de la zona muerta.}
     \label{senal_control}
 \end{figure}
@@ -116,7 +116,7 @@ El ciclo límite aparece, pues, aun cuando la fuerza electromagnética es lineal
 
 \begin{figure}[ht]
     \centering
-    \input{images/p8_results/tikz/lineal_ad}
+    \input{images/p8_results_tikz_lineal_ad}
     \caption[Modelo lineal con atascamiento-deslizamiento]{Regulación con zona muerta y fricción de Karnopp sobre el modelo lineal (en $x_1^*=-2.5$~cm) y sobre el modelo no lineal. Arriba, posición; abajo, señal de control.}
     \label{fig:p8_lineal_ad}
 \end{figure}
@@ -146,7 +146,7 @@ que es pequeño cuando $T(j\omega_0)$ es próximo a la unidad, como ocurre con u
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/sen_posicion}
+    \input{images/seguimiento_results_tikz_sen_posicion}
     \caption[Seguimiento senoidal: posición]{Seguimiento de la referencia senoidal. Arriba, posición del imán (línea continua) y referencia (discontinua) durante dos periodos; la banda sombreada marca la ventana de detalle de abajo (244--256~s, máximo de la referencia), donde se observa el ciclo límite de atascamiento-deslizamiento alrededor de la referencia.}
     \label{fig:sen_pos}
 \end{figure}
@@ -157,7 +157,7 @@ La figura~\ref{fig:sen_pos} muestra que, a la escala de la referencia, la posici
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/sen_velocidad}
+    \input{images/seguimiento_results_tikz_sen_velocidad}
     \caption[Seguimiento senoidal: velocidad]{Velocidad del imán durante el seguimiento senoidal. Los pulsos corresponden a los eventos de deslizamiento y los tramos en cero al régimen de atascamiento (75\,\% del tiempo).}
     \label{fig:sen_vel}
 \end{figure}
@@ -168,7 +168,7 @@ La figura~\ref{fig:sen_vel} muestra que la velocidad alterna pulsos de deslizami
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/sen_error}
+    \input{images/seguimiento_results_tikz_sen_error}
     \caption[Seguimiento senoidal: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia senoidal.}
     \label{fig:sen_error}
 \end{figure}
@@ -179,7 +179,7 @@ La figura~\ref{fig:sen_error} muestra que el error permanece acotado en una band
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/sen_control}
+    \input{images/seguimiento_results_tikz_sen_control}
     \caption[Seguimiento senoidal: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento senoidal. Abajo, detalle de 244 a 256~s: perfil en diente de sierra del voltaje en estado estacionario.}
     \label{fig:sen_ctrl}
 \end{figure}
@@ -198,7 +198,7 @@ Al inicio de cada rampa el imán debe abandonar el atascamiento en que quedó du
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/trap_posicion}
+    \input{images/seguimiento_results_tikz_trap_posicion}
     \caption[Seguimiento trapezoidal: posición]{Seguimiento de la referencia trapezoidal. Arriba, posición y referencia durante dos periodos; abajo, detalle de 246 a 266~s, que incluye el inicio de la primera rampa en $t=250$~s.}
     \label{fig:trap_pos}
 \end{figure}
@@ -209,7 +209,7 @@ La figura~\ref{fig:trap_pos} muestra que el imán sigue las rampas y los segment
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/trap_velocidad}
+    \input{images/seguimiento_results_tikz_trap_velocidad}
     \caption[Seguimiento trapezoidal: velocidad]{Velocidad del imán durante el seguimiento trapezoidal. El imán permanece en reposo durante el primer segmento plano; a partir de la primera rampa, los pulsos de deslizamiento se mantienen durante el resto de la prueba.}
     \label{fig:trap_vel}
 \end{figure}
@@ -220,7 +220,7 @@ La figura~\ref{fig:trap_vel} muestra que el imán permanece en reposo durante el
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/trap_error}
+    \input{images/seguimiento_results_tikz_trap_error}
     \caption[Seguimiento trapezoidal: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia trapezoidal.}
     \label{fig:trap_error}
 \end{figure}
@@ -231,7 +231,7 @@ La figura~\ref{fig:trap_error} muestra un error acotado en $\pm 0.022$~cm (valor
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/trap_control}
+    \input{images/seguimiento_results_tikz_trap_control}
     \caption[Seguimiento trapezoidal: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento trapezoidal. Abajo, detalle de 246 a 266~s.}
     \label{fig:trap_ctrl}
 \end{figure}
@@ -253,7 +253,7 @@ En cada reinicio, el error salta a prácticamente $1$~cm —el salto mismo de la
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/diente_posicion}
+    \input{images/seguimiento_results_tikz_diente_posicion}
     \caption[Seguimiento diente de sierra: posición]{Seguimiento de la referencia diente de sierra. Arriba, posición y referencia durante los $2500$~s simulados; abajo, detalle de 240 a 260~s, que incluye uno de los reinicios instantáneos de la referencia.}
     \label{fig:diente_pos}
 \end{figure}
@@ -264,7 +264,7 @@ La figura~\ref{fig:diente_pos} muestra que, fuera de los reinicios, el imán sig
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/diente_velocidad}
+    \input{images/seguimiento_results_tikz_diente_velocidad}
     \caption[Seguimiento diente de sierra: velocidad]{Velocidad del imán durante el seguimiento diente de sierra. El detalle muestra el pulso de velocidad, varias veces mayor que los de deslizamiento ordinario, que produce cada reinicio instantáneo de la referencia.}
     \label{fig:diente_vel}
 \end{figure}
@@ -275,7 +275,7 @@ La figura~\ref{fig:diente_vel} muestra que, fuera de los reinicios, la velocidad
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/diente_error}
+    \input{images/seguimiento_results_tikz_diente_error}
     \caption[Seguimiento diente de sierra: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia diente de sierra. Los picos de aproximadamente $1$~cm, uno por periodo, corresponden al salto instantáneo de la referencia y no a un error de seguimiento en régimen.}
     \label{fig:diente_error}
 \end{figure}
@@ -286,7 +286,7 @@ La figura~\ref{fig:diente_error} muestra que el error eficaz, $0.0177$~cm, es co
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/diente_control}
+    \input{images/seguimiento_results_tikz_diente_control}
     \caption[Seguimiento diente de sierra: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento diente de sierra. Abajo, detalle de 240 a 260~s.}
     \label{fig:diente_ctrl}
 \end{figure}
@@ -310,7 +310,7 @@ con periodo de $500$~s. La referencia~\eqref{eq:ref_pulso} equivale a repetir pe
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/pulso_posicion}
+    \input{images/seguimiento_results_tikz_pulso_posicion}
     \caption[Seguimiento pulso cuadrado: posición]{Seguimiento de la referencia de pulso cuadrado. Arriba, posición y referencia durante los $2500$~s simulados; abajo, detalle de 240 a 270~s, que incluye una transición completa.}
     \label{fig:pulso_pos}
 \end{figure}
@@ -321,7 +321,7 @@ La figura~\ref{fig:pulso_pos} muestra que el imán alcanza cada nivel y permanec
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/pulso_velocidad}
+    \input{images/seguimiento_results_tikz_pulso_velocidad}
     \caption[Seguimiento pulso cuadrado: velocidad]{Velocidad del imán durante el seguimiento de pulso cuadrado. El detalle muestra el pulso de velocidad de cada transición, seguido del régimen de atascamiento-deslizamiento habitual en el nuevo plano.}
     \label{fig:pulso_vel}
 \end{figure}
@@ -332,7 +332,7 @@ La figura~\ref{fig:pulso_vel} muestra pulsos de deslizamiento de mayor amplitud 
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/pulso_error}
+    \input{images/seguimiento_results_tikz_pulso_error}
     \caption[Seguimiento pulso cuadrado: error]{Error de seguimiento $e(t)=r(t)-x_1(t)$ para la referencia de pulso cuadrado. Los picos de aproximadamente $1$~cm corresponden a las diez transiciones instantáneas de la referencia.}
     \label{fig:pulso_error}
 \end{figure}
@@ -343,7 +343,7 @@ La figura~\ref{fig:pulso_error} muestra un error eficaz de $0.0174$~cm, del mism
 
 \begin{figure}[ht]
     \centering
-    \input{images/seguimiento_results/tikz/pulso_control}
+    \input{images/seguimiento_results_tikz_pulso_control}
     \caption[Seguimiento pulso cuadrado: señal de control]{Voltaje de control antes y después de la zona muerta durante el seguimiento de pulso cuadrado. Abajo, detalle de 240 a 270~s.}
     \label{fig:pulso_ctrl}
 \end{figure}
@@ -376,7 +376,7 @@ La figura~\ref{fig:p8_estable} y la tabla~\ref{tab:p8_estable} muestran que los 
 
 \begin{figure}[ht]
     \centering
-    \input{images/p8_results/tikz/estable}
+    \input{images/p8_results_tikz_estable}
     \caption[Configuración estable]{Regulación en la configuración estable (repulsiva) con el PI y con el PII de la tesis, escalón de 1 a 2~cm. Arriba, posición; abajo, señal de control.}
     \label{fig:p8_estable}
 \end{figure}

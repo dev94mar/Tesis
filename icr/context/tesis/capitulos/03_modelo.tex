@@ -15,7 +15,7 @@ La posición $x$ del imán se mide sobre el eje vertical y crece hacia la bobina
 
 \begin{figure}[ht]
     \centering
-    \input{images/dispositivo/configuracion}
+    \input{images/dispositivo_configuracion}
     \caption[Esquema del ECP-730 en configuración atractiva]{Esquema del sistema de levitación ECP-730 en configuración atractiva. La bobina superior atrae al imán, que se desliza sobre una varilla guía; el contacto entre ambos produce la fricción $f_{\text{fr}}$. La bobina inferior solo se emplea en la configuración repulsiva.}
     \label{fig:dispositivo}
 \end{figure}
@@ -156,7 +156,7 @@ Para sistemas puramente mecánicos basta con la energía potencial $V(x)$, y la 
 
 \begin{figure}[ht]
     \centering
-    \input{images/energia/tikz/energia_coenergia}
+    \input{images/energia_tikz_energia_coenergia}
     \caption[Energía y coenergía magnética]{Energía $W$ y coenergía $W'$ como las dos áreas en que la curva $\lambda(i,x)$, a posición $x$ fija, divide el rectángulo del punto de operación $(i_0,\lambda_0)$. Cuando la corriente es la variable que se fija externamente, como ocurre en este trabajo, la fuerza mecánica se obtiene derivando la coenergía, $F=+\partial W'/\partial x$, no la energía.}
     \label{fig:energia_coenergia}
 \end{figure}
@@ -172,7 +172,7 @@ La figura~\ref{fig:coenergia_posicion} muestra la coenergía~\eqref{eq:coenergia
 
 \begin{figure}[ht]
     \centering
-    \input{images/energia/tikz/coenergia_posicion}
+    \input{images/energia_tikz_coenergia_posicion}
     \caption[Coenergía magnética contra la posición]{Coenergía $W'(x,u)$ de~\eqref{eq:coenergia} contra la posición del imán, para tres voltajes del intervalo de operación. Crece con el voltaje y, para cualquier voltaje fijo, mucho más al acercarse a la bobina que al alejarse de ella.}
     \label{fig:coenergia_posicion}
 \end{figure}
@@ -248,7 +248,7 @@ La zona muerta~\eqref{eq:zm} transforma el voltaje comandado $u$ en la salida $v
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.45\textwidth]{images/chapter_1/zm_levitador.eps}
+    \includegraphics[width=0.45\textwidth]{images/chapter_1_zm_levitador.eps}
     \caption[Zona muerta centrada en el voltaje de equilibrio]{Zona muerta $v=D(u)$ centrada en el voltaje de equilibrio $u_e$, con pendientes $m_l$, $m_r$, umbrales $b_l$, $b_r$ y saltos $h_l$, $h_r$.}
     \label{fig:zm}
 \end{figure}
@@ -261,7 +261,7 @@ La figura~\ref{lazo_de_control_con_zm} muestra el lazo de control completo, con 
 
 \begin{figure}[ht]
     \centering
-       \includegraphics[width=0.6\textwidth]{images/chapter_1/lazo_de_control_con_zm.eps}
+       \includegraphics[width=0.6\textwidth]{images/chapter_1_lazo_de_control_con_zm.eps}
     \caption{Lazo de control con zona muerta}
     \label{lazo_de_control_con_zm}
 \end{figure}
@@ -348,7 +348,7 @@ Para caracterizar la inestabilidad de la configuración atractiva, se simuló el
 
 \begin{figure}[ht]
     \centering
-    \input{images/p8_results/tikz/lazo_abierto}
+    \input{images/p8_results_tikz_lazo_abierto}
     \caption[Lazo abierto en los puntos de equilibrio]{Desviación respecto al equilibrio en lazo abierto, con $u=u_e$ y una perturbación inicial de $0.01$~cm. Líneas continuas: modelo no lineal; discontinuas: modelo linealizado.}
     \label{fig:p8_lazo_abierto}
 \end{figure}
@@ -358,7 +358,7 @@ El retrato de fase alrededor de $x_1^*=-4$~cm (figura~\ref{fig:p8_retrato}) conf
 
 \begin{figure}[ht]
     \centering
-    \input{images/p8_results/tikz/retrato_fase}
+    \input{images/p8_results_tikz_retrato_fase}
     \caption[Retrato de fase en lazo abierto]{Retrato de fase del modelo no lineal sin fricción estática alrededor de $x_1^*=-4$~cm, con $u=u_e$. La banda verde indica las posiciones en las que, con el imán en reposo, la fricción estática lo mantiene atascado.}
     \label{fig:p8_retrato}
 \end{figure}

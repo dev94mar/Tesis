@@ -36,7 +36,7 @@ Cada controlador se simuló en dos pruebas, el escalón de $-2$ a $-3$~cm y una 
 
 \begin{figure}[ht]
     \centering
-    \input{images/r15_results/tikz/familias}
+    \input{images/r15_results_tikz_familias}
     \caption[Familias PI y PII]{Ciclo límite y duración media de los atascamientos en el escalón de $-2$ a $-3$~cm para los 57 PI y 51 PII aceptados, cuyo voltaje aplicado no alcanza la cota superior de $3.5$~V ni en el escalón ni en la rampa. Los símbolos rellenos corresponden a los controladores de la tabla~\ref{tab:pi_pii}.}
     \label{fig:r15_familias}
 \end{figure}
@@ -66,14 +66,14 @@ La ventaja que parecía mostrar~\eqref{eq:pii_v2} depende, por tanto, de la form
 
 \begin{figure}[ht]
     \centering
-    \input{images/pii_v2_results/tikz/extension}
+    \input{images/pii_v2_results_tikz_extension}
     \caption[Ciclo límite al extender la ganancia]{Ciclo límite pico a pico contra el factor de ganancia $k_K$, extendiendo el PI y el PII de la sección~\ref{sec:barrido_familias} sobre su propio óptimo, con el cero de baja frecuencia y la red de adelanto de cada uno fijos. El PII pierde el margen de fase de $30^\circ$ en $k_K=3.5$, con $k_K=3$ como su último punto válido; el PI conserva ese margen hasta $k_K=4.5$.}
     \label{fig:extension_ciclo}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \input{images/pii_v2_results/tikz/atascamiento}
+    \input{images/pii_v2_results_tikz_atascamiento}
     \caption[Atascamiento al extender la ganancia]{Atascamiento medio contra el factor de ganancia $k_K$, misma extensión que la figura~\ref{fig:extension_ciclo}. El PI tiene, en todo $k_K$ común a ambos, un atascamiento más corto.}
     \label{fig:extension_atasco}
 \end{figure}
@@ -82,7 +82,7 @@ Para cerrar la pregunta, se optimizó conjuntamente la ganancia, el cero bajo y 
 
 \begin{figure}[ht]
     \centering
-    \input{images/pii_v2_results/tikz/barrido_conjunto}
+    \input{images/pii_v2_results_tikz_barrido_conjunto}
     \caption[Barrido conjunto del PI contra PII\_V2]{Ciclo límite contra atascamiento medio de los 193 candidatos válidos del barrido conjunto de ganancia, cero bajo y red de adelanto del PI, junto con~\eqref{eq:pii_v2}, el mejor PII de la extensión de solo ganancia (figuras~\ref{fig:extension_ciclo} y~\ref{fig:extension_atasco}) y los PI sobresalientes de este barrido. Mejor es más cerca del origen en ambos ejes.}
     \label{fig:barrido_conjunto}
 \end{figure}
@@ -95,7 +95,7 @@ El cruce entre las dos fronteras es orientativo y no un umbral demostrado para u
 
 \begin{figure}[ht]
     \centering
-    \input{images/pii_v2_results/tikz/fronteras}
+    \input{images/pii_v2_results_tikz_fronteras}
     \caption[Fronteras de Pareto, PI contra PII]{Frontera de Pareto de ciclo límite contra atascamiento medio para el PI y el PII, cada uno con el mismo barrido conjunto de ganancia, cero bajo y red de adelanto. Los puntos tenues son los candidatos válidos de cada barrido; las líneas son sus fronteras. Las fronteras se cruzan cerca de $0.008$~cm: por debajo, el PI es mejor; por encima, el PII.}
     \label{fig:fronteras}
 \end{figure}
@@ -134,7 +134,7 @@ Cada ciclo completo tiene dos atascamientos y dura en promedio $0.98$~s con el P
 
 \begin{figure}[ht]
     \centering
-    \input{images/ciclo_results/tikz/anatomia}
+    \input{images/ciclo_results_tikz_anatomia}
     \caption[Anatomía del ciclo límite]{Tres segundos del ciclo límite con el PII en $x_1=-3$~cm. De arriba abajo: posición, velocidad y voltaje. Las líneas verdes discontinuas son los bordes de la banda~\eqref{eq:banda_voltaje}: el imán solo se despega cuando el voltaje llega a uno de ellos.}
     \label{fig:anatomia}
 \end{figure}
@@ -163,7 +163,7 @@ Los valores de $K_i$ y $K_{ii}$ se extrajeron, de forma independiente, del desar
 
 \begin{figure}[ht]
     \centering
-    \input{images/ciclo_results/tikz/atasco}
+    \input{images/ciclo_results_tikz_atasco}
     \caption[Voltaje durante el atascamiento]{Cambio de voltaje durante cada atascamiento, alineado al instante en que comienza y con el signo del error. Las curvas discontinuas son el cambio de voltaje~\eqref{eq:rampa_atasco} con el error medio de atascamiento y estado inicial nulo, $q_0=0$. La ruptura ocurre al alcanzar $u_eF_s/(mg)$.}
     \label{fig:atasco}
 \end{figure}
@@ -184,7 +184,7 @@ La figura~\ref{fig:ganancia} lo confirma con las familias de controladores de la
 
 \begin{figure}[ht]
     \centering
-    \input{images/ciclo_results/tikz/ganancia}
+    \input{images/ciclo_results_tikz_ganancia}
     \caption[Ciclo límite contra la ganancia]{Amplitud del ciclo límite contra el factor de ganancia $k_K$, con los ceros de baja frecuencia fijos. Con ganancias mayores, el voltaje aplicado alcanza la cota superior de $3.5$~V.}
     \label{fig:ganancia}
 \end{figure}

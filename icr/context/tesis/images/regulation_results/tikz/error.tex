@@ -1,7 +1,0 @@
-\input{images/regulation_results/tikz/estilo}
-\begin{tikzpicture}
-\begin{axis}[regulacion, ylabel={error $e=r-x_1$ [\si{cm}]}]
-  \addplot[refc!60, thin] coordinates {(0,0) (40,0)};
-  \addplot[tray, line width=0.9pt] table[x=t, y=e] {images/regulation_results/tikz/error.csv};
-\end{axis}
-\end{tikzpicture}

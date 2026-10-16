@@ -315,6 +315,14 @@ No se tocó contenido de la tesis, del grafo, de los scripts ni de los datos de 
 
 A petición del usuario se simplificó la carpeta de la tesis (commit `4da4faf`, pusheado). Se borraron `indice.tex`, `tesis_estructura.tex`, `README.md` y `sections/content/{cronograma,diagrama}.tex`: eran notas de planeación anteriores, ninguna se incluye en `main.tex` (comentadas o superadas por los capítulos reales). Se limpiaron también los artefactos de compilación sueltos del directorio de trabajo (`main.aux/.log/.toc`, etc., con `latexmk -c`; ya estaban ignorados por git). Las imágenes sin referencia (`images/configurations`, `controladores`, `Imagenes_De_Planta_De_Prueba`, `zm_fricc` y varios `.eps`/`.svg` sueltos, ~3.2 MB) se **conservaron** a petición explícita del usuario, igual que en la limpieza de 2026-10-06/07. Verificado: compila sin errores, 82 páginas, sin cambio.
 
+## Aplanado de `icr/context/tesis/images/` sin subcarpetas (2026-10-15)
+
+A petición del usuario se movieron los 162 archivos de 19 subcarpetas (`*/tikz/`, `titlepage/`, `chapter_1/`, y las sin referenciar `configurations`, `controladores/{estable,inestable}`, `Imagenes_De_Planta_De_Prueba`, `zm_fricc`) directamente a `images/`, con el nombre de la carpeta de origen como prefijo para evitar colisiones (11 nombres se repetían entre carpetas: `estilo.tex`, `bode.eps`, etc.). Se actualizaron todas las referencias (`\input`, `\includegraphics`, rutas de CSV) en los capítulos, en las propias figuras TikZ, en `icr/grafo/grafo_tesis.json` y en `CLAUDE.md`. Se eliminaron dos artefactos de compilación obsoletos (`-eps-converted-to.pdf`) y un `.DS_Store`.
+
+Verificado: compila sin avisos, 83 páginas sin cambio; `validacion/validar_estructura.py` da 0 `csv_faltantes`, 0 `imagenes_faltantes`, 0 `inputs_faltantes`, 188 nodos y 343 aristas íntegros. Respaldo previo fuera del repo en `TESIS/backups/tesis_pre_aplanado_imagenes_20261015_225259.tar.gz`. Commits `f40e559` y `95e9cc2` (el segundo corrige que `CLAUDE.md` no había quedado incluido en el primero, por un problema de mayúsculas en `git add` sobre el filesystem insensible a mayúsculas de macOS). Al agregar figuras nuevas en el futuro, seguir el mismo esquema de prefijo en vez de recrear subcarpetas.
+
+**Pendiente de confirmación:** `docs/index.html` (deck web) sigue con un cambio sin confirmar de la sesión anterior (hallazgos de sensibilidad/bibliografía agregados a la sección de hallazgos); no se incluyó en estos commits a propósito.
+
 ## Cierre de los tres pendientes de publicabilidad: bibliografía, sensibilidad completa, geometría (2026-10-15)
 
 Detalle en memoria auto-guardada del asistente (`cierre_pendientes_publicabilidad`) y en la nueva sección "Cierre de los tres pendientes de alcance mayor" de `validacion/barrido_04/PUBLICABILIDAD.md`.

@@ -1,0 +1,25 @@
+% Zona muerta v=D(u) centrada en el voltaje de equilibrio u_e.
+\begin{tikzpicture}[>=stealth, font=\small]
+  % ejes
+  \draw[->, thick] (-0.3,0) -- (6.2,0) node[below right] {$u_{(t)}$};
+  \draw[->, thick] (0,-2.1) -- (0,3.1) node[above left] {$v_{(t)}$};
+  \node[below left, font=\scriptsize] at (0,0) {$0$};
+
+  % banda muerta: de b_l a b_r, v=0
+  \draw[very thick] (1.3,0) -- (3.9,0);
+  \node[above, font=\scriptsize] at (1.3,0) {$b_l$};
+  \node[above, font=\scriptsize] at (3.9,0) {$b_r$};
+  \node[below, font=\scriptsize] at (2.6,0) {$u_e$};
+
+  % rama izquierda: salto h_l y pendiente m_l
+  \draw[very thick] (1.3,0) -- (1.3,-0.9);
+  \draw[very thick] (1.3,-0.9) -- (0.5,-1.7);
+  \node[right, font=\scriptsize] at (1.35,-0.45) {$h_l$};
+  \node[below right, font=\scriptsize] at (0.6,-1.75) {$m_l$};
+
+  % rama derecha: salto h_r y pendiente m_r
+  \draw[very thick] (3.9,0) -- (3.9,1.0);
+  \draw[very thick] (3.9,1.0) -- (4.8,1.9);
+  \node[left, font=\scriptsize] at (3.85,0.5) {$h_r$};
+  \node[above left, font=\scriptsize] at (4.7,1.95) {$m_r$};
+\end{tikzpicture}

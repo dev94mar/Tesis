@@ -4457,9 +4457,9 @@
       "texto": "Zona muerta centrada en ue con pendientes ml, mr, umbrales bl, br y saltos hl, hr.",
       "figura": {
         "png": "img/zm_levitador.png",
-        "original": "icr/context/tesis/images/chapter_1_zm_levitador.eps"
+        "original": "icr/context/tesis/images/chapter_1_zm_levitador.tex"
       },
-      "fuente": "icr/context/tesis/images/chapter_1_zm_levitador.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_zm_levitador.tex",
       "metricas": {
         "grado": 1,
         "grado_entrada": 1,

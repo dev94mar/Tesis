@@ -1,6 +1,6 @@
 {
   "latex": {
-    "archivos_activos": 67,
+    "archivos_activos": 68,
     "etiquetas": 146,
     "citas": 43,
     "inputs_faltantes": [],
@@ -200,18 +200,19 @@
     "icr/calculus/Final_Bien/verificacion_P1/verificar_P1.mat": "1ba159f20ab51831d6cd47b6c2534e0a6aa29a7acfc15aea9e3b56423a918056",
     "icr/context/tesis/capitulos/01_introduccion.tex": "f49bcdf2ad8a5c3390ea8d3b31a410b237ac9e0b9701bcefa6195aab0fe31cc7",
     "icr/context/tesis/capitulos/02_fundamentos.tex": "88a9551c0e774a7d2c0fb46024b89201625d31322b244bd8745026f763948136",
-    "icr/context/tesis/capitulos/03_modelo.tex": "79f2171faa7f1c7c515c80952e121055c65c80adaffbe181b7e42c31c32a6a32",
+    "icr/context/tesis/capitulos/03_modelo.tex": "d016d832f7b94b7d335efc0f8902ad346d74ecdea277cadde294a8b01aaef543",
     "icr/context/tesis/capitulos/04_controlador.tex": "f2054bc1a7b106cab4e246f069123a8274469bbe798a63604856e5a90b031932",
     "icr/context/tesis/capitulos/05_desempeno.tex": "150c5c613a937360eb7b4f0eec52c2edf0f5407faa9cf075195d613ada58cb43",
     "icr/context/tesis/capitulos/06_doble_integral.tex": "81a4b14d2a5a2edca87158c8a872b89be48611b2c5503445837f35066a4a3179",
     "icr/context/tesis/capitulos/07_conclusiones.tex": "04434d390b6e6daa809faddd2654538973d8d663d494e279e5aab576937eab12",
     "icr/context/tesis/chapters/apendices/simulacion.tex": "42b5a025e9f46f167502f074d7e26ab5a5e04cce5bfe5f183b97ef92a9b5e032",
     "icr/context/tesis/chapters/apendices/verificacion.tex": "5c82fb8c73176f3b811e13b4d4ad0deab809dd8c15282dc01e9c2c3245314ffc",
+    "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.tex": "db55b17a82dfa502f45c574bd6cd5d830d736058f0ab79ac6d2f751e1deea6ea",
     "icr/context/tesis/images/ciclo_results_tikz_anatomia.tex": "4f4680a44e4e86bba8107255737f45a1ab1fd9db712f23ecd02f8d93f110ae65",
     "icr/context/tesis/images/ciclo_results_tikz_atasco.tex": "3c465361bfe47125755e8babb852f9ef88ada95558df9da098deccc57aef09c1",
     "icr/context/tesis/images/ciclo_results_tikz_estilo.tex": "583cea8f1d11a0b0cd83c966d401dcff50bbb45765df3ce56c3b8c25984f5430",
     "icr/context/tesis/images/ciclo_results_tikz_ganancia.tex": "781bbc8ab4edb835329a68ee0efee1fd124f5105290a2eec016112c9ed4d8ae5",
-    "icr/context/tesis/images/dispositivo_configuracion.tex": "9b1b2b99197a321ea753e132382992e6bd54f55cb48133ad338e4b52e8589508",
+    "icr/context/tesis/images/dispositivo_configuracion.tex": "7ff6322857d22c868112de70daa63e0f17ff6fc54b571aa2f82e98085c96f1f7",
     "icr/context/tesis/images/energia_tikz_coenergia_posicion.tex": "411e3b9e9f7e3ec702f10cca5aac2b0d009114c11f4291886726ffaed552f61e",
     "icr/context/tesis/images/energia_tikz_energia_coenergia.tex": "296de11c973fc0938cc442b0c39a0a0959935659afbb0361fc57d494dd390338",
     "icr/context/tesis/images/p8_results_tikz_estable.tex": "51cbbb61c46a4207c85b16f46bd6afb4c1ea561130a6db850897319db8b1a0fa",
@@ -265,6 +266,6 @@
     "icr/context/tesis/preamble/uamdato.tex": "24182b20ef99c22bf68ba13121c50a9a5110898ad9c6d4d3721226828581555b",
     "icr/context/tesis/sections/abstract.tex": "8a52e431c5c927fdc2699293b67dca9b7ac643e4d645406e035227b3a5f81662",
     "icr/context/tesis/sections/resumen.tex": "e4bc681f01fb101af9be7afb5aa485e792c8ccaea7281bdcd6e6e7b36680a069",
-    "icr/grafo/grafo_tesis.json": "21176ecfd508702fb1f4c7dd96030bc113099a2afeb387033037e0921f758b1d"
+    "icr/grafo/grafo_tesis.json": "1eb3320658ad8f84230592113a0053d3a4a468f926e096938c8abe479f4a402f"
   }
 }

@@ -1476,10 +1476,10 @@
       "tipo": "fig",
       "etiqueta": "Fig. Lazo con zona muerta",
       "texto": "Diagrama de bloques del lazo de control con zona muerta.",
-      "fuente": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.eps",
+      "fuente": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.tex",
       "figura": {
         "png": "img/lazo_zm.png",
-        "original": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.eps"
+        "original": "icr/context/tesis/images/chapter_1_lazo_de_control_con_zm.tex"
       },
       "contenido_html": "<p>Diagrama de bloques del lazo de control con zona muerta.</p>",
       "metricas": {

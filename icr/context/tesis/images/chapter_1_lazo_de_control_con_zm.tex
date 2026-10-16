@@ -1,0 +1,47 @@
+% Lazo de control con zona muerta (diagrama de bloques).
+\usetikzlibrary{fit}
+\begin{tikzpicture}[>=stealth, font=\small,
+  block/.style={draw, fill=gray!40, minimum width=2.1cm, minimum height=0.9cm, text width=1.9cm, align=center},
+  sum/.style={draw, circle, inner sep=0pt, minimum size=0.32cm},
+  intblock/.style={draw, fill=white, minimum width=0.55cm, minimum height=0.55cm, font=\scriptsize}]
+
+  % nodos del lazo principal
+  \node[sum] (s1) at (0,0) {};
+  \node[block] (ctl) at (2.1,0) {controlador};
+  \node[sum] (s2) at (4.6,0) {};
+  \node[block] (planta) at (6.7,0) {disco levitante};
+  \node[intblock] (i1) at (8.9,0) {$1/s$};
+  \node[intblock] (i2) at (10.0,0) {$1/s$};
+
+  % bloque de fricción, dentro de la zona muerta
+  \node[block, font=\scriptsize, text width=1.7cm] (fric) at (6.7,-1.9) {modelo de fuerza de fricción};
+  \node[below=0.22cm of fric, font=\scriptsize] (zmlabel) {zona muerta};
+  \node[fit=(fric)(zmlabel), inner xsep=0.3cm, inner ysep=0.22cm, draw, dashed] (zmbox) {};
+
+  % trayectoria principal
+  \node[anchor=east] (ref) at (-1.3,0) {Referencia};
+  \draw[->] (ref) -- (s1);
+  \node[font=\scriptsize] at (-0.22,0.33) {$+$};
+  \node[font=\scriptsize] at (-0.32,-0.28) {$-$};
+  \draw[->] (s1) -- (ctl);
+  \draw[->] (ctl) -- node[above] {$u$} (s2);
+  \node[font=\scriptsize] at (4.35,0.33) {$+$};
+  \node[font=\scriptsize] at (4.32,-0.28) {$-$};
+  \draw[->] (s2) -- (planta);
+  \draw[->] (planta) -- (i1);
+  \coordinate (vnode) at (9.45,0);
+  \draw[->] (i1) -- (vnode) -- (i2);
+  \node[above, font=\scriptsize] at (vnode) {$v$};
+  \coordinate (xbranch) at (10.9,0);
+  \draw (i2) -- (xbranch);
+  \draw[->] (xbranch) -- (11.6,0);
+  \node[above, font=\scriptsize] at (xbranch) {$x$};
+
+  % realimentación de la fricción hacia el segundo sumador
+  \draw[->] (vnode) |- (fric.east);
+  \draw[->] (fric.west) -| (s2.south);
+
+  % realimentación externa hacia el primer sumador
+  \draw (xbranch) -- ++(0,-3.6) coordinate (xbase);
+  \draw[->] (xbase) -| (s1.south);
+\end{tikzpicture}

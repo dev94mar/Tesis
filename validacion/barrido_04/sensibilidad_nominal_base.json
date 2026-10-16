@@ -1,0 +1,20 @@
+[
+  {
+    "controller": "PI_nominal",
+    "ciclo": 0.030910462692983032,
+    "atasc": 0.26167857142857143,
+    "diverge": false
+  },
+  {
+    "controller": "PII_nominal",
+    "ciclo": 0.034123982795611241,
+    "atasc": 0.35442857142857143,
+    "diverge": false
+  },
+  {
+    "controller": "PII_candidato_corto",
+    "ciclo": 0.026109177407754647,
+    "atasc": 0.18242105263157896,
+    "diverge": false
+  }
+]

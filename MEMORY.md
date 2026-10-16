@@ -323,6 +323,18 @@ Verificado: compila sin avisos, 83 páginas sin cambio; `validacion/validar_estr
 
 **Pendiente de confirmación:** `docs/index.html` (deck web) sigue con un cambio sin confirmar de la sesión anterior (hallazgos de sensibilidad/bibliografía agregados a la sección de hallazgos); no se incluyó en estos commits a propósito.
 
+## Figuras 3.1, 3.4 y 3.5 reconstruidas en TikZ (2026-10-15)
+
+A petición del usuario se reemplazaron las tres figuras del capítulo 3 que usaban `.eps` como contenido técnico, por diagramas TikZ equivalentes. Commits `1d5d629` y `95bd802`, pusheados.
+
+- **Figura 3.5** (lazo de control con zona muerta): diagrama de bloques en TikZ (`images/chapter_1_lazo_de_control_con_zm.tex`). El cuadro punteado de la zona muerta usa `\usetikzlibrary{fit}` para encerrar con margen al bloque del modelo de fricción y su etiqueta; las ramas de realimentación parten de un punto sobre el cable, no de la punta de flecha; los signos +/- de los sumadores están separados de las flechas.
+- **Figura 3.1** (esquema del dispositivo, `images/dispositivo_configuracion.tex`): se quitó la etiqueta redundante "(opuesta a ẋ)"; la varilla guía ya no atraviesa visualmente la bobina inferior inactiva (termina en su borde superior); el texto "bobina inferior" ya no está apretado contra el borde punteado; ambas bobinas (superior e inferior) tienen la misma área (3.8×0.7).
+- **Figura 3.4** (zona muerta `v=D(u)`, `images/chapter_1_zm_levitador.tex`): reconstruida en TikZ con banda muerta, saltos `h_l`/`h_r` y pendientes `m_l`/`m_r`, sin las superposiciones de etiquetas del primer intento.
+
+**Los dos logotipos institucionales UAM** (portada y pie de página, `titlepage_logo_uam_reconstruido.eps`/`titlepage_logo_footer.eps`) se dejaron sin tocar, a petición explícita del usuario tras preguntarle: son emblemas oficiales sujetos al Acuerdo 06/2012 y no deben aproximarse a mano en TikZ. Con esto, las tres figuras de la tesis que usaban formato raster/EPS como contenido técnico ya están en TikZ; no queda ninguna figura de contenido en `.eps`/`.pdf` pendiente de conversión.
+
+Verificado en cada paso: compila sin avisos, 83 páginas sin cambio; validador estructural limpio (0 csv/imágenes/inputs faltantes, 188 nodos y 343 aristas íntegros). Se actualizaron las referencias correspondientes en `icr/grafo/grafo_tesis.json`.
+
 ## Cierre de los tres pendientes de publicabilidad: bibliografía, sensibilidad completa, geometría (2026-10-15)
 
 Detalle en memoria auto-guardada del asistente (`cierre_pendientes_publicabilidad`) y en la nueva sección "Cierre de los tres pendientes de alcance mayor" de `validacion/barrido_04/PUBLICABILIDAD.md`.
